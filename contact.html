@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | King Systems</title>
+    <meta name="description" content="Contact King Systems for luxury smart home and commercial AV integration in Colorado.">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-900">
+
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="/" class="flex items-center">
+                        <img src="https://www.genspark.ai/api/files/s/fTE9fdBr" alt="King Systems" class="h-16 w-auto">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/residential.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Residential</a>
+                    <a href="/commercial.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Commercial</a>
+                    <a href="/about.html" class="text-gray-700 hover:text-blue-900 font-medium transition">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative h-96 flex items-center justify-center text-white" style="background: linear-gradient(135deg, rgba(30, 58, 138, 0.6), rgba(12, 74, 110, 0.5)), url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=2000') center/cover; margin-top: 80px;">
+        <div class="text-center z-10">
+            <h1 class="text-5xl font-bold mb-4">Get Started</h1>
+            <p class="text-xl">Let's discuss your project</p>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Request a Consultation</h2>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Name *</label>
+                            <input type="text" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Email *</label>
+                            <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Phone</label>
+                            <input type="tel" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Project Type *</label>
+                            <select name="project_type" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900">
+                                <option value="">Select...</option>
+                                <option value="residential">Residential Smart Home</option>
+                                <option value="commercial">Commercial AV</option>
+                                <option value="both">Both Residential & Commercial</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Message *</label>
+                            <textarea name="message" required rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-amber-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-amber-700 transition">
+                            Send Message
+                        </button>
+                    </form>
+                    <div id="form-message" class="mt-4 hidden"></div>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Contact Information</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-900 text-2xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold mb-1">Location</h4>
+                                <p class="text-gray-600">Serving Colorado<br>Denver Metro • Aspen • Vail • Crested Butte</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-phone text-blue-900 text-2xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold mb-1">Phone</h4>
+                                <p class="text-gray-600">(720) 555-KING<br>(720) 555-5464</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-blue-900 text-2xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold mb-1">Email</h4>
+                                <p class="text-gray-600">info@kingsystemsllc.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-blue-900 text-2xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold mb-1">Business Hours</h4>
+                                <p class="text-gray-600">Monday - Friday: 8:00 AM - 6:00 PM<br>24/7 Emergency Support Available</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 bg-blue-50 rounded-xl p-6">
+                        <h3 class="text-xl font-bold mb-3">Established 2002</h3>
+                        <p class="text-gray-600 mb-4">
+                            Over 22 years serving Colorado's residential and commercial technology needs.
+                        </p>
+                        <div class="flex gap-4">
+                            <span class="text-gray-400">
+                                <i class="fab fa-facebook text-2xl"></i>
+                            </span>
+                            <span class="text-gray-400">
+                                <i class="fab fa-linkedin text-2xl"></i>
+                            </span>
+                            <span class="text-gray-400">
+                                <i class="fab fa-instagram text-2xl"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-sm text-gray-400">© 2024 King Systems LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

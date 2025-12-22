@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King Systems - Luxury Technology for Colorado Living & Working</title>
+    <meta name="description" content="Colorado's premier luxury AV integration specialists. Crestron, Lutron, and Savant systems designed for mountain estates and modern workplaces.">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-900 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="/" class="flex items-center">
+                        <img src="https://www.genspark.ai/api/files/s/fTE9fdBr" alt="King Systems" class="h-16 w-auto">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/residential.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Residential</a>
+                    <a href="/commercial.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Commercial</a>
+                    <a href="/case-studies.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Portfolio</a>
+                    <a href="/blog.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Blog</a>
+                    <a href="/about.html" class="text-gray-700 hover:text-blue-900 font-medium transition">About</a>
+                    <a href="/service-plans.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Service Plans</a>
+                    <a href="/contact.html" class="bg-amber-600 text-white px-6 py-2 rounded-lg hover:bg-amber-700 transition">Get Started</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-900">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="/residential.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Residential</a>
+                <a href="/commercial.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Commercial</a>
+                <a href="/case-studies.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Portfolio</a>
+                <a href="/blog.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Blog</a>
+                <a href="/about.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">About</a>
+                <a href="/service-plans.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Service Plans</a>
+                <a href="/contact.html" class="block px-4 py-2 bg-amber-600 text-white text-center rounded-lg">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center text-white" style="background: linear-gradient(135deg, rgba(30, 58, 138, 0.6) 0%, rgba(12, 74, 110, 0.5) 100%), url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000') center/cover; margin-top: 80px;">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                Enterprise AV Integration & Smart Building Technology
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 text-gray-100 max-w-3xl mx-auto">
+                From Fortune 500 boardrooms and government facilities to luxury estates—we design, install, and support mission-critical technology systems across Colorado.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="/commercial.html" class="bg-blue-900 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-800 transition inline-flex items-center shadow-xl">
+                    <i class="fas fa-building mr-2"></i>Commercial AV Solutions
+                </a>
+                <a href="/residential.html" class="bg-white text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition inline-flex items-center">
+                    <i class="fas fa-home mr-2"></i>Residential Services
+                </a>
+            </div>
+            <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center text-sm">
+                <a href="/case-studies.html" class="text-white underline hover:text-gray-200 transition">View Our Portfolio →</a>
+                <span class="text-gray-300 hidden sm:inline">|</span>
+                <a href="/about.html" class="text-white underline hover:text-gray-200 transition">Notable Commercial Projects →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Logos Section -->
+    <section class="bg-gray-50 py-12 border-b overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <p class="text-gray-600 font-medium uppercase tracking-wide">Certified Partners. Colorado-Tested Solutions.</p>
+            </div>
+            <div class="logo-slider">
+                <div class="logo-track">
+                    <div class="logo-item">Crestron</div>
+                    <div class="logo-item">Lutron</div>
+                    <div class="logo-item">Control4</div>
+                    <div class="logo-item">Savant</div>
+                    <div class="logo-item">Cisco</div>
+                    <div class="logo-item">Extreme Networks</div>
+                    <div class="logo-item">Ruckus</div>
+                    <div class="logo-item">Sony</div>
+                    <div class="logo-item">Samsung</div>
+                    <div class="logo-item">McIntosh</div>
+                    <div class="logo-item">QSC</div>
+                    <div class="logo-item">Biamp</div>
+                    <div class="logo-item">Sonus Faber</div>
+                    <div class="logo-item">Sonos</div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="logo-item">Crestron</div>
+                    <div class="logo-item">Lutron</div>
+                    <div class="logo-item">Control4</div>
+                    <div class="logo-item">Savant</div>
+                    <div class="logo-item">Cisco</div>
+                    <div class="logo-item">Extreme Networks</div>
+                    <div class="logo-item">Ruckus</div>
+                    <div class="logo-item">Sony</div>
+                    <div class="logo-item">Samsung</div>
+                    <div class="logo-item">McIntosh</div>
+                    <div class="logo-item">QSC</div>
+                    <div class="logo-item">Biamp</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose King Systems -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Why Enterprises & Institutions Choose King Systems</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Trusted by Fortune 500 companies, government agencies, and Colorado's most prestigious institutions since 2002.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition border border-gray-100">
+                    <div class="text-5xl mb-6 text-blue-900">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Mission-Critical Reliability</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        99.8% uptime with SLA-backed response times. Our enterprise-grade systems are designed for business continuity—from boardrooms to command centers.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition border border-gray-100">
+                    <div class="text-5xl mb-6 text-blue-900">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Proven Enterprise Experience</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Denver Art Museum, U.S. Air Force Academy, Wells Fargo, and 200+ commercial installations. We've delivered systems for Colorado's largest organizations.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition border border-gray-100">
+                    <div class="text-5xl mb-6 text-blue-900">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Dedicated Account Management</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        24/7 support, dedicated account managers, quarterly business reviews. Our enterprise service plans ensure your technology roadmap aligns with business goals.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Clients Section -->
+    <section class="bg-white py-16 border-t border-b overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <p class="text-gray-600 font-medium uppercase tracking-wide mb-2">Trusted by Leading Companies & Institutions</p>
+                <p class="text-sm text-gray-500">We're proud to serve some of the nation's most innovative companies and institutions</p>
+            </div>
+            <div class="client-logo-grid">
+                <div class="client-logo-track">
+                    <!-- Original Logos -->
+                    <div class="client-logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/X_logo_2023_%28white%29.png" alt="X (Twitter)" class="client-logo-img" style="max-width: 60px;">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Comcast-logo.svg" alt="Comcast" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <div class="text-center">
+                            <div class="font-bold text-gray-700" style="font-size: 0.7rem; line-height: 1.2;">UNITED STATES<br>AIR FORCE<br>ACADEMY</div>
+                        </div>
+                    </div>
+                    
+                    <!-- New Client Logos -->
+                    <div class="client-logo-item">
+                        <img src="/images/clients/university-of-denver.png" alt="University of Denver" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/army-national-guard.png" alt="Army National Guard" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/lakewood-country-club.png" alt="Lakewood Country Club" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/orangetheory-fitness.png" alt="Orangetheory Fitness" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/drcog.png" alt="DRCOG" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/accent-aesthetics.png" alt="Accent Aesthetics" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/aurora-mental-health.png" alt="Aurora Mental Health Center" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/beacon-capital.png" alt="Beacon Capital Partners" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/azurity-pharmaceuticals.png" alt="Azurity Pharmaceuticals" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/caerus-operating.png" alt="Caerus Operating LLC" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/catholic-health.png" alt="Catholic Health Initiatives" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/christy-sports.png" alt="Christy Sports" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/delta-dental.png" alt="Delta Dental" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/western-colorado.png" alt="Western Colorado University" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/alterra-mountain.png" alt="Alterra Mountain Company" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/lba-realty.png" alt="LBA Realty" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/lodge-mountaineer.png" alt="The Lodge at Mountaineer Square" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/steelwave.png" alt="SteelWave" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/colorado-school-mines.png" alt="Colorado School of Mines" class="client-logo-img">
+                    </div>
+                    
+                    <!-- Duplicate for seamless loop -->
+                    <div class="client-logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/X_logo_2023_%28white%29.png" alt="X (Twitter)" class="client-logo-img" style="max-width: 60px;">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Comcast-logo.svg" alt="Comcast" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <div class="text-center">
+                            <div class="font-bold text-gray-700" style="font-size: 0.7rem; line-height: 1.2;">UNITED STATES<br>AIR FORCE<br>ACADEMY</div>
+                        </div>
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/university-of-denver.png" alt="University of Denver" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/army-national-guard.png" alt="Army National Guard" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/lakewood-country-club.png" alt="Lakewood Country Club" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/orangetheory-fitness.png" alt="Orangetheory Fitness" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/drcog.png" alt="DRCOG" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/accent-aesthetics.png" alt="Accent Aesthetics" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/aurora-mental-health.png" alt="Aurora Mental Health Center" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/beacon-capital.png" alt="Beacon Capital Partners" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/azurity-pharmaceuticals.png" alt="Azurity Pharmaceuticals" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/caerus-operating.png" alt="Caerus Operating LLC" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/catholic-health.png" alt="Catholic Health Initiatives" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/christy-sports.png" alt="Christy Sports" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/delta-dental.png" alt="Delta Dental" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/western-colorado.png" alt="Western Colorado University" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/alterra-mountain.png" alt="Alterra Mountain Company" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/lba-realty.png" alt="LBA Realty" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/lodge-mountaineer.png" alt="The Lodge at Mountaineer Square" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/steelwave.png" alt="SteelWave" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/colorado-school-mines.png" alt="Colorado School of Mines" class="client-logo-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Featured Colorado Projects</h2>
+                <p class="text-xl text-gray-600">From Aspen estates to Denver boardrooms—see our work across Colorado.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <a href="case-studies.html" class="block">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition cursor-pointer">
+                        <div class="h-64 bg-gradient-to-br from-blue-900 to-blue-700" style="background: linear-gradient(135deg, rgba(30, 58, 138, 0.4), rgba(12, 74, 110, 0.35)), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800') center/cover;"></div>
+                        <div class="p-6">
+                            <div class="text-sm text-amber-600 font-semibold mb-2">RESIDENTIAL • CRESTED BUTTE</div>
+                            <h3 class="text-2xl font-bold mb-3 text-gray-900">Modern Mountain Lodge</h3>
+                            <p class="text-gray-600 mb-4">
+                                Whole-home AV, Lutron shading for high-altitude light control, Crestron automation. 12,000 sq ft estate.
+                            </p>
+                            <span class="text-blue-900 font-semibold hover:text-amber-600 transition">View Project →</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Project 2 -->
+                <a href="case-studies.html" class="block">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition cursor-pointer">
+                        <div class="h-64 bg-gradient-to-br from-blue-900 to-blue-700" style="background: linear-gradient(135deg, rgba(30, 58, 138, 0.4), rgba(12, 74, 110, 0.35)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800') center/cover;"></div>
+                        <div class="p-6">
+                            <div class="text-sm text-amber-600 font-semibold mb-2">COMMERCIAL • DENVER</div>
+                            <h3 class="text-2xl font-bold mb-3 text-gray-900">Executive Boardroom</h3>
+                            <p class="text-gray-600 mb-4">
+                                Crestron conferencing, beamforming audio, single-touch start. 4K wireless presentation for Fortune 500 firm.
+                            </p>
+                            <span class="text-blue-900 font-semibold hover:text-amber-600 transition">View Project →</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Project 3 -->
+                <a href="case-studies.html" class="block">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition cursor-pointer">
+                        <div class="h-64 bg-gradient-to-br from-blue-900 to-blue-700" style="background: linear-gradient(135deg, rgba(30, 58, 138, 0.4), rgba(12, 74, 110, 0.35)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800') center/cover;"></div>
+                        <div class="p-6">
+                            <div class="text-sm text-amber-600 font-semibold mb-2">RESIDENTIAL • ASPEN</div>
+                            <h3 class="text-2xl font-bold mb-3 text-gray-900">Hillside Residence</h3>
+                            <p class="text-gray-600 mb-4">
+                                Outdoor audio with snow-rated enclosures, network backhaul, climate-aware lighting scenes. 8,500 sq ft.
+                            </p>
+                            <span class="text-blue-900 font-semibold hover:text-amber-600 transition">View Project →</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="text-center mt-12">
+                <a href="case-studies.html" class="bg-blue-900 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-800 transition inline-flex items-center">
+                    View All Projects
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Plans Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Remote Support Plans</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Keep your systems running perfectly with 24/7 remote support, routine maintenance, and priority service.
+                </p>
+                <p class="text-lg text-gray-500 mt-2"><em>Commercial rates are 2x residential pricing</em></p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                <!-- Plan 1 -->
+                <div class="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-xl transition">
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">Essentials Plus</h3>
+                    <div class="text-3xl font-bold text-blue-900 mb-4">$59<span class="text-lg text-gray-600">/mo</span></div>
+                    <p class="text-sm text-gray-500 mb-4">Commercial: $118/mo</p>
+                    <ul class="space-y-2 mb-6 text-sm text-gray-600">
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>24/7/365 phone/text/email</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>60 min response time</li>
+                        <li><i class="fas fa-times text-gray-400 mr-2"></i><span class="text-gray-400">No system checks</span></li>
+                        <li><i class="fas fa-times text-gray-400 mr-2"></i><span class="text-gray-400">No pre-arrival visits</span></li>
+                    </ul>
+                    <a href="/service-plans.html" class="block w-full bg-gray-200 text-gray-900 text-center py-2 rounded-lg font-semibold hover:bg-gray-300 transition text-sm">Learn More</a>
+                </div>
+                <!-- Plan 2 - Most Popular -->
+                <div class="bg-white border-4 border-amber-600 rounded-xl p-6 hover:shadow-xl transition transform scale-105 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-amber-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg whitespace-nowrap">
+                        MOST POPULAR
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">Priority</h3>
+                    <div class="text-3xl font-bold text-blue-900 mb-4">$179<span class="text-lg text-gray-600">/mo</span></div>
+                    <p class="text-sm text-gray-500 mb-4">Commercial: $358/mo</p>
+                    <ul class="space-y-2 mb-6 text-sm text-gray-600">
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>24/7/365 phone/text/email</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>30 min response time</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>1 pre-arrival visit/year</li>
+                        <li><i class="fas fa-times text-gray-400 mr-2"></i><span class="text-gray-400">Always-on monitoring</span></li>
+                    </ul>
+                    <a href="/service-plans.html" class="block w-full bg-amber-600 text-white text-center py-2 rounded-lg font-semibold hover:bg-amber-700 transition text-sm">Get Started</a>
+                </div>
+                <!-- Plan 3 -->
+                <div class="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-xl transition">
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">Proactive</h3>
+                    <div class="text-3xl font-bold text-blue-900 mb-4">$239<span class="text-lg text-gray-600">/mo</span></div>
+                    <p class="text-sm text-gray-500 mb-4">Commercial: $478/mo</p>
+                    <ul class="space-y-2 mb-6 text-sm text-gray-600">
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>24/7/365 phone/text/email</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>30 min response time</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>2 pre-arrival visits/year</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>Always-on monitoring</li>
+                    </ul>
+                    <a href="/service-plans.html" class="block w-full bg-gray-200 text-gray-900 text-center py-2 rounded-lg font-semibold hover:bg-gray-300 transition text-sm">Learn More</a>
+                </div>
+                <!-- Plan 4 -->
+                <div class="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-xl transition">
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">Signature</h3>
+                    <div class="text-3xl font-bold text-blue-900 mb-4">$599<span class="text-lg text-gray-600">/mo</span></div>
+                    <p class="text-sm text-gray-500 mb-4">Commercial: $1,198/mo</p>
+                    <ul class="space-y-2 mb-6 text-sm text-gray-600">
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>24/7/365 concierge support</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>15 min response time</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>4 pre-arrival visits/year</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>Premium monitoring</li>
+                    </ul>
+                    <a href="/service-plans.html" class="block w-full bg-gray-200 text-gray-900 text-center py-2 rounded-lg font-semibold hover:bg-gray-300 transition text-sm">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-blue-900 to-blue-700 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-6">Transform Your Workplace</h2>
+            <p class="text-xl mb-8">Let's discuss your commercial AV needs.</p>
+            <a href="/contact.html" class="bg-amber-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-amber-700 transition inline-flex items-center">
+                Request Consultation
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4"><span class="text-amber-600">KING</span> SYSTEMS</h3>
+                    <p class="text-gray-400 text-sm">Colorado's premier luxury technology integration specialists since 2002.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/case-studies.html" class="hover:text-white transition">Case Studies</a></li>
+                        <li><a href="/blog.html" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="/service-plans.html" class="hover:text-white transition">Service Plans</a></li>
+                        <li><a href="/testimonials.html" class="hover:text-white transition">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Commercial</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/commercial/conference-rooms.html" class="hover:text-white transition">Conference Rooms</a></li>
+                        <li><a href="/commercial/training-rooms.html" class="hover:text-white transition">Training Rooms</a></li>
+                        <li><a href="/commercial/hospitality.html" class="hover:text-white transition">Hospitality</a></li>
+                        <li><a href="/commercial/sound-masking.html" class="hover:text-white transition">Sound Masking</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Residential</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/residential.html" class="hover:text-white transition">Smart Home Integration</a></li>
+                        <li><a href="/residential/home-theater.html" class="hover:text-white transition">Home Theater</a></li>
+                        <li><a href="/residential/whole-home-audio.html" class="hover:text-white transition">Whole-Home Audio</a></li>
+                        <li><a href="/residential/lighting-control.html" class="hover:text-white transition">Lighting Control</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+                <p>© 2024 King Systems LLC. All rights reserved. | Colorado's Luxury Technology Specialists</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

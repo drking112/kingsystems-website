@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial AV Integration | King Systems</title>
+    <meta name="description" content="Professional AV and automation for Colorado businesses. Conference rooms, training facilities, hospitality, and enterprise IT solutions.">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="/" class="flex items-center">
+                        <img src="https://www.genspark.ai/api/files/s/fTE9fdBr" alt="King Systems" class="h-16 w-auto">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/residential.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Residential</a>
+                    <a href="/commercial.html" class="text-blue-900 font-medium">Commercial</a>
+                    <a href="/case-studies.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Portfolio</a>
+                    <a href="/blog.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Blog</a>
+                    <a href="/about.html" class="text-gray-700 hover:text-blue-900 font-medium transition">About</a>
+                    <a href="/service-plans.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Service Plans</a>
+                    <a href="/contact.html" class="bg-amber-600 text-white px-6 py-2 rounded-lg hover:bg-amber-700 transition">Get Started</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-900">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative h-96 flex items-center justify-center text-white" style="background: linear-gradient(135deg, rgba(30, 58, 138, 0.6), rgba(12, 74, 110, 0.5)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000') center/cover; margin-top: 80px;">
+        <div class="text-center z-10">
+            <h1 class="text-5xl font-bold mb-4">Workplace Technology Solutions</h1>
+            <p class="text-xl">Boardrooms, hospitality venues, and corporate spaces—technology that empowers productivity.</p>
+        </div>
+    </section>
+
+    <!-- Trusted By Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Trusted by Leading Organizations</h2>
+                <p class="text-gray-600">We're proud to serve some of the nation's most innovative companies and institutions</p>
+            </div>
+            <div class="client-logo-grid">
+                <div class="client-logo-track">
+                    <!-- Original Logos -->
+                    <div class="client-logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/X_logo_2023_%28white%29.png" alt="X (Twitter)" class="client-logo-img" style="max-width: 60px;">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Comcast-logo.svg" alt="Comcast" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <div class="text-center">
+                            <div class="font-bold text-gray-700" style="font-size: 0.7rem; line-height: 1.2;">UNITED STATES<br>AIR FORCE<br>ACADEMY</div>
+                        </div>
+                    </div>
+                    
+                    <!-- New Client Logos -->
+                    <div class="client-logo-item">
+                        <img src="/images/clients/university-of-denver.png" alt="University of Denver" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/army-national-guard.png" alt="Army National Guard" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/lakewood-country-club.png" alt="Lakewood Country Club" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/orangetheory-fitness.png" alt="Orangetheory Fitness" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/drcog.png" alt="DRCOG" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/accent-aesthetics.png" alt="Accent Aesthetics" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/aurora-mental-health.png" alt="Aurora Mental Health Center" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/beacon-capital.png" alt="Beacon Capital Partners" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/azurity-pharmaceuticals.png" alt="Azurity Pharmaceuticals" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/caerus-operating.png" alt="Caerus Operating LLC" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/catholic-health.png" alt="Catholic Health Initiatives" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/christy-sports.png" alt="Christy Sports" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/delta-dental.png" alt="Delta Dental" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/western-colorado.png" alt="Western Colorado University" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/alterra-mountain.png" alt="Alterra Mountain Company" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/lba-realty.png" alt="LBA Realty" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/lodge-mountaineer.png" alt="The Lodge at Mountaineer Square" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/steelwave.png" alt="SteelWave" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/colorado-school-mines.png" alt="Colorado School of Mines" class="client-logo-img">
+                    </div>
+                    
+                    <!-- Duplicate for seamless loop -->
+                    <div class="client-logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/X_logo_2023_%28white%29.png" alt="X (Twitter)" class="client-logo-img" style="max-width: 60px;">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Comcast-logo.svg" alt="Comcast" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <div class="text-center">
+                            <div class="font-bold text-gray-700" style="font-size: 0.7rem; line-height: 1.2;">UNITED STATES<br>AIR FORCE<br>ACADEMY</div>
+                        </div>
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/university-of-denver.png" alt="University of Denver" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/army-national-guard.png" alt="Army National Guard" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/lakewood-country-club.png" alt="Lakewood Country Club" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/orangetheory-fitness.png" alt="Orangetheory Fitness" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/drcog.png" alt="DRCOG" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/accent-aesthetics.png" alt="Accent Aesthetics" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/aurora-mental-health.png" alt="Aurora Mental Health Center" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/beacon-capital.png" alt="Beacon Capital Partners" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/azurity-pharmaceuticals.png" alt="Azurity Pharmaceuticals" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/caerus-operating.png" alt="Caerus Operating LLC" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/catholic-health.png" alt="Catholic Health Initiatives" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/christy-sports.png" alt="Christy Sports" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/delta-dental.png" alt="Delta Dental" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/western-colorado.png" alt="Western Colorado University" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/alterra-mountain.png" alt="Alterra Mountain Company" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/lba-realty.png" alt="LBA Realty" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/lodge-mountaineer.png" alt="The Lodge at Mountaineer Square" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/steelwave.png" alt="SteelWave" class="client-logo-img">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="/images/clients/colorado-school-mines.png" alt="Colorado School of Mines" class="client-logo-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-amber-600 font-semibold mb-2">PROFESSIONAL AV AND AUTOMATION FOR COLORADO BUSINESSES</p>
+                <h2 class="text-4xl font-bold mb-4">Commercial Solutions</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Conference Rooms -->
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition">
+                    <div class="text-5xl text-blue-900 mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Conference Rooms</h3>
+                    <p class="text-gray-600 mb-6">
+                        Crestron control systems, wireless presentation, and unified communications for seamless meetings.
+                    </p>
+                    <a href="/commercial/conference-rooms.html" class="text-blue-900 font-semibold hover:text-amber-600 transition">
+                        Learn More →
+                    </a>
+                </div>
+                <!-- Training Rooms -->
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition">
+                    <div class="text-5xl text-blue-900 mb-4">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Training Rooms</h3>
+                    <p class="text-gray-600 mb-6">
+                        Interactive displays, lecture capture, and scalable AV for education and corporate training.
+                    </p>
+                    <a href="/commercial/training-rooms.html" class="text-blue-900 font-semibold hover:text-amber-600 transition">
+                        Learn More →
+                    </a>
+                </div>
+                <!-- Hospitality -->
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition">
+                    <div class="text-5xl text-blue-900 mb-4">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Hospitality</h3>
+                    <p class="text-gray-600 mb-6">
+                        Guest room automation, digital signage, and distributed audio/video for hotels and resorts.
+                    </p>
+                    <a href="/commercial/hospitality.html" class="text-blue-900 font-semibold hover:text-amber-600 transition">
+                        Learn More →
+                    </a>
+                </div>
+                <!-- Sound Masking -->
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition">
+                    <div class="text-5xl text-blue-900 mb-4">
+                        <i class="fas fa-volume-mute"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Sound Masking</h3>
+                    <p class="text-gray-600 mb-6">
+                        Privacy and acoustic management for open offices and executive suites.
+                    </p>
+                    <a href="/commercial/sound-masking.html" class="text-blue-900 font-semibold hover:text-amber-600 transition">
+                        Learn More →
+                    </a>
+                </div>
+                <!-- Digital Signage -->
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition">
+                    <div class="text-5xl text-blue-900 mb-4">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Digital Signage</h3>
+                    <p class="text-gray-600 mb-6">
+                        Content management and display systems for lobbies, retail, and multi-site franchises.
+                    </p>
+                    <a href="/commercial/digital-signage.html" class="text-blue-900 font-semibold hover:text-amber-600 transition">
+                        Learn More →
+                    </a>
+                </div>
+                <!-- Cabling & IT -->
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition">
+                    <div class="text-5xl text-blue-900 mb-4">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Cabling and Fiber Optics</h3>
+                    <p class="text-gray-600 mb-6">
+                        Structured cabling, network infrastructure, and server room design for growing businesses.
+                    </p>
+                    <a href="/commercial/cabling-fiber.html" class="text-blue-900 font-semibold hover:text-amber-600 transition">
+                        Learn More →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Industries We Serve</h2>
+                <p class="text-xl text-gray-600">Specialized solutions for Colorado's leading sectors.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="text-center p-6">
+                    <div class="text-4xl text-blue-900 mb-3"><i class="fas fa-building"></i></div>
+                    <h4 class="font-semibold">Corporate</h4>
+                </div>
+                <div class="text-center p-6">
+                    <div class="text-4xl text-blue-900 mb-3"><i class="fas fa-graduation-cap"></i></div>
+                    <h4 class="font-semibold">Education</h4>
+                </div>
+                <div class="text-center p-6">
+                    <div class="text-4xl text-blue-900 mb-3"><i class="fas fa-hospital"></i></div>
+                    <h4 class="font-semibold">Healthcare</h4>
+                </div>
+                <div class="text-center p-6">
+                    <div class="text-4xl text-blue-900 mb-3"><i class="fas fa-landmark"></i></div>
+                    <h4 class="font-semibold">Government</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-blue-900 to-blue-700 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6">Transform Your Workplace</h2>
+            <p class="text-xl mb-8">Let's discuss your commercial AV needs.</p>
+            <a href="/contact.html" class="bg-amber-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-amber-700 transition inline-block">
+                Request Consultation
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-sm text-gray-400">
+                <p>© 2024 King Systems LLC. All rights reserved. | Colorado's Luxury Technology Specialists</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
