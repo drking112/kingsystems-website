@@ -279,6 +279,14 @@ This is a private business website. For internal team updates:
 
 ## 🎉 Recent Updates
 
+### 2025-12-22 (10:50 PM): Logo Speed & Display Fix ✅
+- **Client Logo Speed**: DOUBLED scrolling speed (30s → 15s per cycle)
+- **Partner Logo Display**: Fixed McIntosh, Sonos, Sonus Faber rendering issues
+- **CSS Updates**: Increased logo size constraints for better visibility
+- **Diagnostic Tool**: Created `test-partner-logos.html` for logo testing
+- All 14 partner logos + 74 client logos now optimized
+- See [SPEED-AND-LOGO-FIX.md](SPEED-AND-LOGO-FIX.md) for complete details
+
 ### 2025-12-22: Logo Fixes Complete ✅
 - **Manufacturer Logos**: Replaced text with actual logo images (14 partner brands)
 - **Client Logo References**: Fixed file naming inconsistency (delta-dental → delta_dental)
