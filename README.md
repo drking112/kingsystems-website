@@ -279,6 +279,14 @@ This is a private business website. For internal team updates:
 
 ## 🎉 Recent Updates
 
+### 2025-12-22 (11:30 PM): ROOT CAUSE IDENTIFIED - Client Logo Issue 🔍
+- **CRITICAL DISCOVERY**: GenSpark only has 3 client logos, but HTML references 27+
+- **Problem**: Copying from GenSpark to GitHub DELETES your 74 existing logo files
+- **Solution**: Created diagnostic tool `test-client-logos.html` to identify which logos exist
+- **Action Required**: User must run diagnostic and report which logos are in GitHub
+- **DO NOT**: Copy `images/clients/` folder from GenSpark to GitHub anymore!
+- See [ROOT-CAUSE-CLIENT-LOGOS.md](ROOT-CAUSE-CLIENT-LOGOS.md) for full details
+
 ### 2025-12-22 (11:15 PM): EMERGENCY Client Logo Fix ✅
 - **CRITICAL**: Removed all Wikipedia placeholder logos (Microsoft, Google, X, Comcast)
 - **Fixed**: Corrupt duplicate section causing backwards scrolling
