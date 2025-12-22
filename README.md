@@ -1,219 +1,286 @@
-# King Systems LLC - Website
+# King Systems - Luxury AV Integration Website
 
-**Colorado's Premier Luxury Technology Integration Specialists Since 2002**
-
-🌐 **PRODUCTION READY** - All 18 pages complete with 25 client logos
+🚀 **Live Site**: https://kingsystems-website.pages.dev
 
 ---
 
-## 🚀 Quick Start - Deploy Now!
+## 📖 About This Project
 
-Your website is **100% ready for deployment**. To see all 25 logos working:
-
-### **Option 1: Use the Publish Tab** (Easiest)
-1. Click the **"Publish"** or **"Deploy"** button in this interface
-2. Your site goes live instantly with all features working
-3. Get your live URL and share it!
-
-### **Option 2: Download & Deploy to Netlify**
-1. Download this project as ZIP
-2. Go to https://app.netlify.com/drop
-3. Drag and drop your ZIP file  
-4. Site is live in 30 seconds!
-
-📖 **See DEPLOYMENT-GUIDE.md for detailed instructions**
+King Systems is Colorado's premier luxury AV integration specialist, offering cutting-edge technology solutions for residential estates and commercial properties. This website showcases our services, portfolio, and expertise in Crestron, Lutron, and Savant systems.
 
 ---
 
-## 📊 Website Overview
+## 🛠️ Technology Stack
 
-- **Total Pages:** 18 professionally designed HTML pages
-- **Client Logos:** 25 (including Microsoft, Google, Air Force Academy + 20 Colorado clients)
-- **Service Plans:** 8 tiers across commercial and residential
-- **Portfolio:** Denver Art Museum + featured projects
-- **Technologies:** HTML5, CSS3, JavaScript, Tailwind CSS
-- **Status:** Production-ready, fully tested
-
----
-
-## ⚠️ Important: Logo Display
-
-**Why logos show in code but not in preview:**
-The 20 customer logos are saved in `/images/clients/` folder but the development sandbox has limitations serving local files. **All 25 logos will work perfectly once deployed to production hosting.** See `LOGO-ISSUE-EXPLANATION.md` for details.
+- **HTML5** - Semantic structure
+- **CSS3** - Custom styling
+- **Tailwind CSS** - Utility-first framework (CDN)
+- **JavaScript** - Interactive features
+- **Font Awesome** - Icons
+- **Cloudflare Pages** - Hosting & CDN
 
 ---
 
-## 📁 Complete File Structure
+## 📁 Project Structure
 
 ```
-King Systems Website/
-├── index.html (Homepage with 25 logos)
-├── about.html
-├── blog.html  
-├── case-studies.html
-├── commercial.html
-├── contact.html
-├── residential.html
-├── service-plans.html (Selector page)
-├── commercial-service-plans.html ($118-958/mo)
-├── residential-service-plans.html ($59-479/mo)
-├── sitemap.html
-├── test-logos.html (Logo testing page)
-├── css/style.css (All styling + animations)
-├── js/main.js (Interactive features)
-├── images/clients/ (19 logo image files)
-├── commercial/ (6 service detail pages)
-└── case-studies/ (Denver Art Museum)
+kingsystems-website/
+├── index.html                          # Homepage
+├── about.html                          # About Us
+├── contact.html                        # Contact Form
+├── residential.html                    # Residential Services
+├── commercial.html                     # Commercial Services
+├── case-studies.html                   # Portfolio/Case Studies
+├── blog.html                          # Blog Listing
+├── service-plans.html                 # Service Plans Overview
+├── residential-service-plans.html     # Residential Plans
+├── commercial-service-plans.html      # Commercial Plans
+├── sitemap.html                       # Site Map
+├── test-logos.html                    # Logo Testing Page
+│
+├── case-studies/
+│   └── denver-art-museum.html         # Case Study Example
+│
+├── commercial/
+│   ├── conference-rooms.html          # Conference Room Solutions
+│   ├── training-rooms.html            # Training Room Tech
+│   ├── hospitality.html               # Hospitality Solutions
+│   ├── sound-masking.html             # Sound Masking Systems
+│   ├── digital-signage.html           # Digital Signage
+│   └── cabling-fiber.html             # Cabling & Fiber
+│
+├── css/
+│   └── style.css                      # Custom styles
+│
+├── js/
+│   └── main.js                        # Main JavaScript
+│
+├── images/
+│   ├── logo/                          # Company logos
+│   ├── hero/                          # Hero images
+│   ├── portfolio/                     # Portfolio images
+│   └── clients/                       # Client logos
+│
+├── .gitignore                         # Git ignore rules
+├── README.md                          # This file
+├── GITHUB-SETUP-GUIDE.md              # Setup instructions
+├── DEPLOYMENT-WORKFLOW.md             # Deployment guide
+├── PROJECT_SUMMARY.md                 # Project overview
+└── LOGO_UPDATE.md                     # Logo fix documentation
 ```
 
 ---
 
-## ✨ Key Features
+## 🚀 Deployment
 
-### **25 Client Logos** (Auto-scrolling, hover effects)
-- Microsoft, Google, X, Comcast, U.S. Air Force Academy
-- University of Denver, Colorado School of Mines, Western Colorado University
-- Army National Guard
-- Catholic Health Initiatives, Aurora Mental Health, Accent Aesthetics, Delta Dental
-- Beacon Capital Partners, Caerus Operating, LBA Realty, Alterra Mountain, SteelWave
-- The Lodge at Mountaineer Square, Lakewood Country Club
-- Orangetheory Fitness, Christy Sports
-- DRCOG, Azurity Pharmaceuticals
+### **Current Setup: Cloudflare Pages + GitHub**
 
-### **Professional Design**
-- Blue (#1e3a8a) and Amber (#d97706) color scheme
-- Smooth animations and transitions
-- Responsive across all devices
-- Auto-scrolling logo sections
-- Interactive hover effects
+**Automatic Deployment:**
+1. Push changes to `main` branch
+2. Cloudflare automatically detects changes
+3. Site deploys in ~30 seconds
+4. Live at: https://kingsystems-website.pages.dev
 
-### **Complete Content**
-- 6 commercial service solutions
-- 8 service plan tiers with detailed pricing
-- Denver Art Museum portfolio case study
-- Company history and values
-- Contact form and information
-- Full navigation and sitemap
+**Manual Deployment:**
+- Cloudflare Dashboard → Pages → kingsystemsstaging
+- "Create deployment" → Upload ZIP
 
 ---
 
-## 🎯 Service Plans
+## 🔧 Local Development
 
-### Commercial Plans
-- Business Essentials: **$118/month**
-- Business Priority: **$358/month** ⭐ Most Popular
-- Enterprise Proactive: **$558/month**
-- Enterprise Concierge: **$958/month**
+### **Requirements:**
+- Any text editor (VS Code, Sublime, Notepad++)
+- Web browser
+- Git (for version control)
 
-### Residential Plans
-- Essentials Plus: **$59/month**
-- Priority: **$179/month** ⭐ Most Popular
-- Proactive: **$279/month**
-- Signature: **$479/month**
+### **Setup:**
+```bash
+# Clone repository
+git clone https://github.com/YOUR-USERNAME/kingsystems-website.git
 
----
+# Navigate to project
+cd kingsystems-website
 
-## 📞 Company Information
+# Open in browser
+# Simply open index.html in your browser
+# Or use VS Code Live Server extension
+```
 
-**King Systems LLC**
-- **Founded:** 2002
-- **Service Area:** Colorado (Denver Metro, Aspen, Vail, Crested Butte)
-- **Phone:** (720) 555-5464
-- **Email:** info@kingsystemsllc.com
-- **Specialization:** Luxury AV integration & smart home automation
+### **Making Changes:**
+```bash
+# 1. Edit files locally
+# 2. Test in browser
 
----
+# 3. Commit changes
+git add .
+git commit -m "Description of changes"
 
-## 🛠️ Technologies Used
+# 4. Push to GitHub
+git push origin main
 
-- HTML5 (Semantic markup)
-- CSS3 (Custom animations)
-- JavaScript (Vanilla, no dependencies)
-- Tailwind CSS (via CDN)
-- Font Awesome icons
-- Google Fonts (Inter)
-- Responsive design
-- SEO optimized
+# 5. Cloudflare auto-deploys
+```
 
 ---
 
-## 📱 Browser Support
+## 📝 Content Pages
 
-✅ Chrome/Edge (latest)
-✅ Firefox (latest)
-✅ Safari (latest)
-✅ Mobile browsers (iOS/Android)
-✅ Tablet responsive
-✅ Desktop optimized
+### **Main Pages:**
+- **Homepage** (`index.html`) - Hero, services overview, featured projects
+- **Residential** (`residential.html`) - Home automation, theaters, lighting
+- **Commercial** (`commercial.html`) - Enterprise solutions, conference rooms
+- **Portfolio** (`case-studies.html`) - Project showcases
+- **About** (`about.html`) - Company information
+- **Contact** (`contact.html`) - Contact form and information
+- **Service Plans** (`service-plans.html`) - Maintenance and support
 
----
+### **Commercial Solutions Pages:**
+- Conference Rooms
+- Training Rooms
+- Hospitality Solutions
+- Sound Masking
+- Digital Signage
+- Cabling & Fiber
 
-## 📄 Documentation Files
-
-- **README.md** - This file (overview)
-- **DEPLOYMENT-GUIDE.md** - Complete deployment instructions
-- **LOGO-ISSUE-EXPLANATION.md** - Why logos need production hosting
-- **LOGO_UPDATE.md** - Logo addition history
-- **PROJECT_SUMMARY.md** - Detailed project documentation
-
----
-
-## ✅ Quality Checklist
-
-- [x] All 18 pages functional
-- [x] All navigation links working
-- [x] Mobile responsive design
-- [x] 25 client logos integrated
-- [x] Service plans with pricing
-- [x] Portfolio case study
-- [x] Contact information
-- [x] SEO meta tags
-- [x] Professional styling
-- [x] Fast page load
-- [x] Browser tested
-- [x] Production ready
+### **Case Studies:**
+- Denver Art Museum (example)
 
 ---
 
-## 🔄 Future Enhancements
+## 🖼️ Media Management
 
-**Ready to add:**
-- More case studies
-- Blog posts
-- Video testimonials
-- Live chat
-- Form backend integration
-- Google Analytics
-- More client logos
+### **Logo & Small Assets:**
+- Store in `/images/logo/`
+- Committed to repository
+- Reference: `/images/logo/logo.png`
 
----
-
-## 🎉 Ready for Launch!
-
-This website is **complete and production-ready**:
-
-✅ All content from backup restored
-✅ 25 client logos integrated
-✅ All pages functional and linked
-✅ Professional design implemented
-✅ Mobile responsive
-✅ Fast and optimized
-
-**Next Step:** Click the Publish tab or follow DEPLOYMENT-GUIDE.md to go live!
+### **Large Media Files:**
+- Use ImgBB: https://imgbb.com (free)
+- Upload images, get direct links
+- Reference in HTML: `<img src="https://i.ibb.co/xxxxx/image.jpg">`
 
 ---
 
-## 📞 Support
+## 🐛 Known Issues & To-Do
 
-Need help with:
-- Deployment
-- Custom domain setup
-- Adding more content
-- Further customization
+### **Current Issues:**
+- [x] ✅ FIXED: Logo URLs pointing to temporary GenSpark URLs (need permanent hosting)
+- [x] ✅ FIXED: Image paths updated to relative URLs for proper deployment
+- [ ] Some portfolio images using external temporary URLs
 
-Just ask!
+### **Planned Features:**
+- [ ] Blog post system (static HTML or CMS integration)
+- [ ] Contact form backend (FormSpree or Cloudflare Workers)
+- [ ] Image gallery/lightbox for case studies
+- [ ] Client testimonials section
+- [ ] Video integration for project showcases
+
+### **SEO Optimization:**
+- [ ] Add robots.txt
+- [ ] Add sitemap.xml
+- [ ] Optimize meta descriptions
+- [ ] Add structured data (Schema.org)
+- [ ] Image alt text optimization
+- [ ] Page speed optimization
 
 ---
 
-**Built with ❤️ for King Systems LLC**
-**Colorado's Luxury Technology Specialists Since 2002** 🏔️
+## 🎯 Production Deployment Plan
+
+### **When Ready to Replace WordPress Site:**
+
+1. **Pre-Launch Checklist:**
+   - [ ] SEO team approval
+   - [ ] All images using permanent URLs
+   - [ ] Contact form tested and working
+   - [ ] Mobile responsiveness verified
+   - [ ] Cross-browser testing completed
+   - [ ] Page speed optimized (>90 score)
+
+2. **DNS Configuration:**
+   - Add custom domain in Cloudflare Pages settings
+   - Update DNS for kingsystemsllc.com to point to Cloudflare
+   - SSL certificate (auto-generated by Cloudflare)
+
+3. **WordPress Migration:**
+   - Export WordPress content (if needed)
+   - Set up 301 redirects from old URLs
+   - Update Google Search Console
+   - Update social media links
+
+---
+
+## 📊 SEO Testing
+
+**Current Site URL:**
+https://kingsystems-website.pages.dev
+
+**Testing Tools:**
+- Google PageSpeed Insights
+- GTmetrix
+- Mobile-Friendly Test
+- Lighthouse (Chrome DevTools)
+
+**Prevent Indexing During Staging:**
+Add to `<head>` of all pages:
+```html
+<meta name="robots" content="noindex, nofollow">
+```
+(Remove before production launch)
+
+---
+
+## 🤝 Contributing
+
+This is a private business website. For internal team updates:
+
+1. Create feature branch: `git checkout -b feature/new-page`
+2. Make changes and test locally
+3. Commit: `git commit -m "Add new feature"`
+4. Push: `git push origin feature/new-page`
+5. Create pull request on GitHub
+6. Review and merge to main
+
+---
+
+## 📧 Contact
+
+**King Systems**
+- Website: https://kingsystemsllc.com
+- Live Site: https://kingsystems-website.pages.dev
+- Email: [Your Email]
+- Phone: [Your Phone]
+
+---
+
+## 📄 License
+
+© 2024 King Systems LLC. All rights reserved.
+
+---
+
+## 🔗 Useful Links
+
+- [GitHub Setup Guide](GITHUB-SETUP-GUIDE.md)
+- [Deployment Workflow](DEPLOYMENT-WORKFLOW.md)
+- [Cloudflare Pages Docs](https://developers.cloudflare.com/pages)
+- [Tailwind CSS Docs](https://tailwindcss.com/docs)
+- [Font Awesome Icons](https://fontawesome.com/icons)
+
+---
+
+**Last Updated**: 2025-12-22
+
+---
+
+## 🎉 Recent Updates
+
+### 2025-12-22: Complete Image Path Fix ✅
+- **Client Logos**: Fixed all client logo image paths (85 references)
+- **Company Logo**: Updated King Systems logo in 18 HTML files
+- Changed from absolute paths (`/images/...`) to relative paths (`images/...`)
+- Changed from GenSpark URLs to local files (`images/logo/king-systems-logo.jpg`)
+- Ensures proper image loading on Cloudflare Pages deployment
+- All 19 client logos + company logo now use correct paths
+- See [FILES-UPDATED-SUMMARY.md](FILES-UPDATED-SUMMARY.md) for complete details

@@ -1,0 +1,91 @@
+# Git Ignore File for King Systems Website
+# Prevents unnecessary files from being committed to repository
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Editor/IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary Files
+*.tmp
+*.temp
+*.log
+*.cache
+
+# Node Modules (if you add Node.js tools later)
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Build Output (if you add build tools later)
+dist/
+build/
+.cache/
+
+# Environment Variables (if you add backend later)
+.env
+.env.local
+.env.production
+.env.development
+
+# Backup Files
+*.bak
+*.backup
+*-backup.*
+*.old
+
+# Large Media Files (store externally instead)
+# Uncomment if you want to prevent large files
+# *.mp4
+# *.mov
+# *.avi
+# *.zip
+# *.tar.gz
+
+# Development Test Files
+test-*.html
+draft-*.html
+*.draft.html
+
+# Documentation Drafts (keep final docs)
+# DRAFT-*.md
+
+# Cloudflare Wrangler (if using Cloudflare Workers)
+.wrangler/
+wrangler.toml
+
+# Mac Compressed Files
+*.dmg
+
+# Windows Compressed Files
+*.zip
+*.rar
+
+# Compressed Source Archives
+*.tar
+*.gz
+*.7z
+
+# AI Editor Project Files (optional)
+PROJECT_SUMMARY.md
+LOGO_UPDATE.md
+LOGO-ISSUE-EXPLANATION.md
+test-logos.html
