@@ -107,7 +107,7 @@
 .client-logo-track {
     display: flex;
     gap: 4rem;
-    animation: scrollClients 15s linear infinite;
+    animation: scrollClients 25s linear infinite;
     align-items: center;
 }
 
