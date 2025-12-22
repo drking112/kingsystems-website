@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Verification - King Systems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .logo-box {
+            border: 2px solid #e5e7eb;
+            padding: 20px;
+            border-radius: 8px;
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        .logo-box:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .logo-box img {
+            max-width: 100%;
+            max-height: 80px;
+            object-fit: contain;
+        }
+        .status-good { border-color: #10b981; background: #f0fdf4; }
+        .status-error { border-color: #ef4444; background: #fef2f2; }
+        .badge-good { background: #10b981; color: white; padding: 4px 12px; border-radius: 12px; font-size: 12px; }
+        .badge-error { background: #ef4444; color: white; padding: 4px 12px; border-radius: 12px; font-size: 12px; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 py-12">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">✅ Logo Verification Page</h1>
+            <p class="text-xl text-gray-600 mb-2">King Systems - All Logos Test</p>
+            <p class="text-sm text-gray-500">If all logos show green borders, you're ready to deploy! 🚀</p>
+        </div>
+
+        <!-- Partner/Manufacturer Logos Section -->
+        <div class="bg-white p-8 rounded-lg shadow-lg mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                <span class="text-3xl mr-3">🏭</span>
+                Manufacturer Partner Logos (14 Total)
+            </h2>
+            <p class="text-gray-600 mb-6">These should all display as actual logo images (not text):</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                <div class="text-center">
+                    <div class="logo-box">
+                        <img src="https://www.crestron.com/getmedia/2a0c05b1-7b1e-4a94-a66f-0a8e25b5c4c9/Crestron-Logo-Horiz-PMS.png" alt="Crestron" onload="this.parentElement.classList.add('status-good')" onerror="this.parentElement.classList.add('status-error')">
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">Crestron</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="logo-box">
+                        <img src="https://www.lutron.com/Style%20Library/images/logo/lutron_logo_rgb.png" alt="Lutron" onload="this.parentElement.classList.add('status-good')" onerror="this.parentElement.classList.add('status-error')">
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">Lutron</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="logo-box">
+                        <img src="https://www.control4.com/docs/product/image/en-us/control4_logo_horizontal.png" alt="Control4" onload="this.parentElement.classList.add('status-good')" onerror="this.parentElement.classList.add('status-error')">
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">Control4</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="logo-box">
+                        <img src="https://www.savant.com/assets/img/savant-logo.svg" alt="Savant" onload="this.parentElement.classList.add('status-good')" onerror="this.parentElement.classList.add('status-error')">
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">Savant</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="logo-box">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Cisco_logo_blue_2016.svg" alt="Cisco" onload="this.parentElement.classList.add('status-good')" onerror="this.parentElement.classList.add('status-error')">
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">Cisco</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="logo-box">
+                        <img src="https://www.extremenetworks.com/wp-content/uploads/2023/06/EXTR_Logo_Primary_RGB.png" alt="Extreme Networks" onload="this.parentElement.classList.add('status-good')" onerror="this.parentElement.classList.add('status-error')">
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">Extreme Networks</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="logo-box">
+                        <img src="https://res.cloudinary.com/ruckus-wireless/image/upload/ar_2.4,c_pad,f_auto,h_110,q_auto:best/v1574716453/site-logos/logo-gradient" alt="Ruckus" onload="this.parentElement.classList.add('status-good')" onerror="this.parentElement.classList.add('status-error')">
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">Ruckus</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="logo-box">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Sony_logo.svg" alt="Sony" onload="this.parentElement.classList.add('status-good')" onerror="this.parentElement.classList.add('status-error')">
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">Sony</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="logo-box">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Samsung" onload="this.parentElement.classList.add('status-good')" onerror="this.parentElement.classList.add('status-error')">
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">Samsung</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="logo-box">
+                        <img src="https://www.mcintoshlabs.com/assets/McIntosh_Logo_Red_RGB.svg" alt="McIntosh" onload="this.parentElement.classList.add('status-good')" onerror="this.parentElement.classList.add('status-error')">
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">McIntosh</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="logo-box">
+                        <img src="https://www.qsc.com/resource/qsc_logo.svg" alt="QSC" onload="this.parentElement.classList.add('status-good')" onerror="this.parentElement.classList.add('status-error')">
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">QSC</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="logo-box">
+                        <img src="https://www.biamp.com/themes/custom/biamp_base_theme/assets/images/biamp_logo.png" alt="Biamp" onload="this.parentElement.classList.add('status-good')" onerror="this.parentElement.classList.add('status-error')">
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">Biamp</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="logo-box">
+                        <img src="https://www.sonusfaber.com/themes/custom/sf_theme/logo.svg" alt="Sonus Faber" onload="this.parentElement.classList.add('status-good')" onerror="this.parentElement.classList.add('status-error')">
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">Sonus Faber</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="logo-box">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Sonos_logo.svg" alt="Sonos" onload="this.parentElement.classList.add('status-good')" onerror="this.parentElement.classList.add('status-error')">
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">Sonos</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Client Logos Section -->
+        <div class="bg-white p-8 rounded-lg shadow-lg mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                <span class="text-3xl mr-3">🏢</span>
+                Client Logos (From GitHub Repo)
+            </h2>
+            <p class="text-gray-600 mb-2">Testing key client logos from your repository:</p>
+            <p class="text-sm text-red-600 mb-6">⚠️ Red boxes = Missing from GitHub repo (need to add files)</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="text-center">
+                    <div class="logo-box">
+                        <img src="images/clients/university_of_denver.png" alt="University of Denver" onload="this.parentElement.classList.add('status-good')" onerror="this.parentElement.classList.add('status-error')">
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">University of Denver</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="logo-box">
+                        <img src="images/clients/army_national_guard.png" alt="Army National Guard" onload="this.parentElement.classList.add('status-good')" onerror="this.parentElement.classList.add('status-error')">
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">Army National Guard</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="logo-box">
+                        <img src="images/clients/delta_dental.png" alt="Delta Dental (FIXED!)" onload="this.parentElement.classList.add('status-good')" onerror="this.parentElement.classList.add('status-error')">
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">Delta Dental ✅ FIXED</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="logo-box">
+                        <img src="images/clients/drcog.png" alt="DRCOG" onload="this.parentElement.classList.add('status-good')" onerror="this.parentElement.classList.add('status-error')">
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">DRCOG</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="logo-box">
+                        <img src="images/clients/orange_theory.png" alt="Orangetheory Fitness" onload="this.parentElement.classList.add('status-good')" onerror="this.parentElement.classList.add('status-error')">
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">Orangetheory</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="logo-box">
+                        <img src="images/clients/alterra.png" alt="Alterra Mountain" onload="this.parentElement.classList.add('status-good')" onerror="this.parentElement.classList.add('status-error')">
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">Alterra Mountain</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="logo-box">
+                        <img src="images/clients/beacon.png" alt="Beacon Capital" onload="this.parentElement.classList.add('status-good')" onerror="this.parentElement.classList.add('status-error')">
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">Beacon Capital</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="logo-box">
+                        <img src="images/clients/steelwave.png" alt="Steelwave" onload="this.parentElement.classList.add('status-good')" onerror="this.parentElement.classList.add('status-error')">
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">Steelwave</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="bg-blue-50 border-2 border-blue-300 p-8 rounded-lg text-center">
+            <h3 class="text-2xl font-bold text-blue-900 mb-4">✨ Verification Complete!</h3>
+            <p class="text-blue-800 mb-4">If all boxes above show <span class="badge-good">GREEN</span>, you're ready to deploy!</p>
+            <p class="text-sm text-blue-700">Any <span class="badge-error">RED</span> boxes mean those logo files need to be added to your GitHub repository.</p>
+            <div class="mt-6">
+                <a href="index.html" class="inline-block bg-blue-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition">
+                    View Full Homepage →
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Count loaded logos
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const total = document.querySelectorAll('.logo-box').length;
+                const good = document.querySelectorAll('.status-good').length;
+                const errors = document.querySelectorAll('.status-error').length;
+                
+                console.log('✅ Logos loaded:', good);
+                console.log('❌ Logos failed:', errors);
+                console.log('📊 Total logos:', total);
+                
+                if (errors === 0) {
+                    console.log('🎉 ALL LOGOS LOADED SUCCESSFULLY!');
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
