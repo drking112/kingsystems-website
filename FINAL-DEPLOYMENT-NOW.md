@@ -15,6 +15,7 @@
 2. **css/style.css** ← Faster animations  
 3. **commercial.html**
 4. **README.md**
+
 ### Partner Logos (14) - ALL IN YOUR GITHUB ALREADY:
 5-18. All 14 PNG files in `images/partners/` (you already pushed these)
 
