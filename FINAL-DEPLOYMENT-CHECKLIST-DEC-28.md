@@ -13,13 +13,31 @@
 - ✅ Fixed missing Logitech/Yealink references (replaced with Sonos)
 - ✅ Logos display on: Homepage, Conference Rooms page, All case studies
 
-### 3. Files Fixed
+### 3. Industry Images Updated (Education, Government & Corporate)
+- ✅ **Education:** New lecture hall image showing projection technology & AV systems
+- ✅ **Government:** New council chambers image with comprehensive AV technology
+- ✅ **Corporate:** New executive boardroom image (distinct from main commercial page)
+- ✅ Updated on commercial page tiles AND landing page heroes
+
+### 4. Files Fixed
 - ✅ `index.html` - Updated partner logos
+- ✅ `commercial.html` - Updated partner logos + Education/Government tile images
 - ✅ `commercial/conference-rooms.html` - Updated partner logos
-- ✅ `case-studies.html` - Portfolio grid with 9 projects
+- ✅ `industries/education.html` - New hero image (lecture hall with AV tech)
+- ✅ `industries/government.html` - New hero image (council chambers with AV)
+- ✅ `case-studies.html` - Portfolio grid with 9 projects + FIXED image paths (URL-encoded spaces) + NEW hero image (Denver commercial skyline)
 - ✅ `case-studies/davita-corporate-headquarters.html` - NEW case study
 - ✅ `case-studies/air-force-academy-falcon-stadium.html` - 11 photos + fixed logos
 - ✅ `case-studies/unicom-capital-penthouse.html` - Fixed logos
+
+### 5. Portfolio Image Path Fix
+- ✅ **All portfolio image paths now use URL encoding for spaces**
+- ✅ Fixed: `USAF Academy` → `USAF%20Academy`
+- ✅ Fixed: `City of Brighton` → `City%20of%20Brighton`
+- ✅ Fixed: `SquareTwo Financial` → `SquareTwo%20Financial`
+- ✅ Fixed: `Isaacson Rosenbaum` → `Isaacson%20Rosenbaum`
+- ✅ Fixed: `Service Source` → `Service%20Source`
+- ✅ Fixed: `Fortis Bank` → `Fortis%20Bank`
 
 ---
 
@@ -30,7 +48,11 @@ C:\Users\David.King\Documents\GitHub\kingsystems-website\
 
 HTML FILES:
 ✅ index.html (partner logos fixed)
+✅ commercial.html (partner logos + Education/Government images)
 ✅ commercial/conference-rooms.html (partner logos fixed)
+✅ industries/corporate.html (NEW hero image - executive boardroom)
+✅ industries/education.html (NEW hero image - lecture hall)
+✅ industries/government.html (NEW hero image - council chambers)
 ✅ case-studies.html (9 projects)
 ✅ case-studies/davita-corporate-headquarters.html (NEW)
 ✅ case-studies/air-force-academy-falcon-stadium.html (11 photos)
@@ -108,7 +130,11 @@ cd C:\Users\David.King\Documents\GitHub\kingsystems-website
 
 # Add all updated files
 git add index.html
+git add commercial.html
 git add commercial/conference-rooms.html
+git add industries/corporate.html
+git add industries/education.html
+git add industries/government.html
 git add case-studies.html
 git add case-studies/davita-corporate-headquarters.html
 git add case-studies/air-force-academy-falcon-stadium.html
@@ -116,7 +142,7 @@ git add case-studies/unicom-capital-penthouse.html
 git add images/partners/
 
 # Commit with descriptive message
-git commit -m "Portfolio expansion + improved partner logos
+git commit -m "Portfolio expansion + improved logos and industry images
 
 Portfolio Updates:
 - Add DaVita Corporate Headquarters case study
@@ -127,7 +153,12 @@ Portfolio Updates:
 Logo Improvements:
 - Replace all 14 partner logos with higher-quality versions
 - Fix missing Logitech/Yealink references
-- Consistent logo display across all pages"
+- Consistent logo display across all pages
+
+Industry Image Updates:
+- Education: New lecture hall image with projection technology
+- Government: New council chambers with comprehensive AV systems
+- Updated on both commercial tiles and landing pages"
 
 # Push to GitHub
 git push origin main
