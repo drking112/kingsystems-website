@@ -25,7 +25,7 @@
 - ✅ `commercial/conference-rooms.html` - Updated partner logos
 - ✅ `industries/education.html` - New hero image (lecture hall with AV tech)
 - ✅ `industries/government.html` - New hero image (council chambers with AV)
-- ✅ `case-studies.html` - Portfolio grid with 9 projects + FIXED image paths (URL-encoded spaces) + NEW hero image (Denver commercial skyline)
+- ✅ `case-studies.html` - Portfolio grid with 9 projects + FIXED image paths + NEW hero image (street-level downtown) + Updated text "Across the Nation"
 - ✅ `case-studies/davita-corporate-headquarters.html` - NEW case study
 - ✅ `case-studies/air-force-academy-falcon-stadium.html` - 11 photos + fixed logos
 - ✅ `case-studies/unicom-capital-penthouse.html` - Fixed logos

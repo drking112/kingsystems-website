@@ -2,64 +2,74 @@
 
 ## ❌ Problem
 
-The Portfolio/Case Studies page header had a **residential house image**, which didn't match the enterprise commercial focus of the portfolio content.
+The Portfolio/Case Studies page had two issues:
+1. **Residential house image** that didn't match enterprise commercial focus
+2. Text said "Our Work Across Colorado" (too limited in scope)
 
-**Old Image:** Residential luxury home exterior
+**Old Image:** Residential luxury home exterior  
+**Old Text:** "Our Work Across Colorado"
 
 ---
 
 ## ✅ Solution
 
-**Replaced with Denver downtown commercial skyline** showing modern office buildings and corporate business district.
+**1. Updated Image:** Street-level downtown commercial district view  
+**2. Updated Text:** "Our Work Across the Nation"
 
 ### New Portfolio Hero Image:
-**Denver Downtown at Sunset**
-- Professional Colorado business district
-- Modern commercial office buildings
-- Enterprise-focused skyline view
-- Represents your Colorado service area
-- Matches the commercial/corporate portfolio projects below
+**Downtown Street with Commercial Buildings**
+- Street-level perspective showing modern commercial architecture
+- Professional urban business district
+- Shows building facades and street view (not aerial/rooftop)
+- Enterprise-focused commercial environment
+- Better represents nationwide portfolio reach
 
-**Image URL:** https://sspark.genspark.ai/cfimages?u1=FmxRTMoCH6Q8dK8qQyfKIk7pye2UasGPkTmBSbHe0vCbJgWEhKd%2BjC81EF51px8M6VUw52yJ5g8itHX4oEj8Q4izAD60yaHdcU%2Ff0BC1ML5KIT9xY7nZ1BJMZ93W8huzHjL68y%2B86nv0lMRshXgFNcgY0gUilfYRsZvbGw%3D%3D&u2=LlbuiRxT2VH0mgjF&width=2560
+**Image URL:** https://sspark.genspark.ai/cfimages?u1=H4XFVMZvIX5pK2KVPeeQOEd6jXmuuWA%2FL1wTgXiWu1fZ16eIlNQvZyiZB2P0WdPMWbiuRX35dh3%2B%2BYgdOZoXKeCQzaMqRErJqE7ggXBIPeOOD7LnluGSJm4cNB30gLgjdXpLxX2YLDaQI0LGnCpt%2FK1NepV1MfrAk5muyz%2B99eb9luabh9U2947C7g%3D%3D&u2=fPE5MoacUOO%2BEAz0&width=2560
+
+### Text Update:
+- **Before:** "Our Work Across Colorado"
+- **After:** "Our Work Across the Nation" ✅
 
 ---
 
 ## 📄 File Updated
 
-**`case-studies.html`** - Portfolio page hero banner
+**`case-studies.html`** - Portfolio page hero banner (image + text)
 
 ---
 
 ## 🎯 Result
 
 ### Before:
-- ❌ Residential house image on portfolio page
-- ❌ Mismatch with commercial/corporate content below
-- ❌ Didn't represent enterprise clients (Air Force Academy, DaVita, Unicom Capital, etc.)
+- ❌ Residential house image (wrong focus)
+- ❌ "Across Colorado" (limited scope)
+- ❌ Aerial/rooftop view
+- ❌ Didn't represent national reach
 
 ### After:
-- ✅ **Professional Denver commercial skyline**
-- ✅ **Matches enterprise/commercial portfolio focus**
-- ✅ **Shows Colorado business district** (your service area)
-- ✅ **Sets proper tone** for corporate clients viewing your work
+- ✅ **Street-level downtown commercial district**
+- ✅ **"Across the Nation"** (broader scope)
+- ✅ **Professional building facades visible**
+- ✅ **Represents enterprise/commercial work**
+- ✅ **Matches nationwide client base**
 
 ---
 
 ## 💡 Why This Matters
 
-**Page Content:**
-The portfolio showcases:
-- US Air Force Academy Falcon Stadium (Government)
-- Unicom Capital Penthouse (Corporate Financial)
-- DaVita Corporate Headquarters (Fortune 500)
-- City of Brighton City Hall (Government)
-- SquareTwo Financial (Financial Services)
-- Multiple corporate/enterprise projects
+**Nationwide Reach:**
+Your portfolio includes projects across multiple states and demonstrates national capabilities. "Across the Nation" better represents your reach beyond just Colorado.
+
+**Street-Level View:**
+- Shows building architecture and commercial environment
+- More relatable and professional than aerial shots
+- Better represents the type of facilities you work in
+- Gives sense of scale and urban business district
 
 **Visual Consistency:**
-- Header should match the commercial/corporate nature of the projects
-- Denver skyline reinforces local expertise
-- Professional imagery appeals to enterprise clients
+- Matches commercial/corporate portfolio focus
+- Professional imagery for enterprise clients
+- Sets appropriate tone for Fortune 500 and government work
 
 ---
 
