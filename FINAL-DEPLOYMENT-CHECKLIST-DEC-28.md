@@ -15,7 +15,7 @@
 
 ### 3. Industry Images Updated (Education, Government & Corporate)
 - ✅ **Education:** New lecture hall image showing projection technology & AV systems
-- ✅ **Government:** New council chambers image with comprehensive AV technology
+- ✅ **Government:** New council chambers image with comprehensive AV technology + CLIENT LOGOS ADDED ⭐ NEW
 - ✅ **Corporate:** New executive boardroom image (distinct from main commercial page)
 - ✅ Updated on commercial page tiles AND landing page heroes
 
@@ -24,7 +24,7 @@
 - ✅ `commercial.html` - Updated partner logos + Education/Government tile images
 - ✅ `commercial/conference-rooms.html` - Updated partner logos
 - ✅ `industries/education.html` - New hero image (lecture hall with AV tech)
-- ✅ `industries/government.html` - New hero image (council chambers with AV)
+- ✅ `industries/government.html` - New hero image (council chambers with AV) + CLIENT LOGOS ADDED (DRCOG, City of Aurora, USAF Space Command) ⭐ NEW
 - ✅ `case-studies.html` - Portfolio grid with 9 projects + FIXED image paths + NEW hero image (street-level downtown) + Updated text "Across the Nation"
 - ✅ `case-studies/davita-corporate-headquarters.html` - NEW case study
 - ✅ `case-studies/air-force-academy-falcon-stadium.html` - 11 photos + fixed logos
@@ -52,7 +52,7 @@ HTML FILES:
 ✅ commercial/conference-rooms.html (partner logos fixed)
 ✅ industries/corporate.html (NEW hero image - executive boardroom)
 ✅ industries/education.html (NEW hero image - lecture hall)
-✅ industries/government.html (NEW hero image - council chambers)
+✅ industries/government.html (NEW hero image - council chambers + GOVERNMENT CLIENT LOGOS)
 ✅ case-studies.html (9 projects)
 ✅ case-studies/davita-corporate-headquarters.html (NEW)
 ✅ case-studies/air-force-academy-falcon-stadium.html (11 photos)
