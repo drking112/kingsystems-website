@@ -121,6 +121,276 @@
                 </div>
             </div>
 
+            <!-- Smart Boardroom Demo -->
+            <div class="bg-gradient-to-br from-gray-900 to-blue-900 text-white rounded-2xl p-8 md:p-12 mb-16">
+                <div class="text-center mb-8">
+                    <h3 class="text-3xl md:text-4xl font-bold mb-4">Interactive Boardroom Demo</h3>
+                    <p class="text-xl text-blue-100">Experience one-touch control of enterprise AV systems</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Control Panel (Left) -->
+                    <div class="lg:col-span-1 bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                        <h4 class="text-xl font-bold mb-4 text-center">Control Panel</h4>
+                        
+                        <!-- Meeting Controls -->
+                        <div class="space-y-4">
+                            <button onclick="startMeeting()" class="w-full bg-green-600 hover:bg-green-700 text-white py-4 rounded-lg font-semibold transition flex items-center justify-center">
+                                <i class="fas fa-play mr-2"></i> Start Meeting
+                            </button>
+                            
+                            <button onclick="endMeeting()" class="w-full bg-red-600 hover:bg-red-700 text-white py-4 rounded-lg font-semibold transition flex items-center justify-center">
+                                <i class="fas fa-stop mr-2"></i> End Meeting
+                            </button>
+                        </div>
+
+                        <!-- Video Source Selection -->
+                        <div class="mt-6">
+                            <h5 class="font-semibold mb-3">Video Source</h5>
+                            <div class="grid grid-cols-2 gap-2">
+                                <button onclick="selectSource('laptop')" class="bg-white/20 hover:bg-white/30 py-3 rounded-lg transition text-sm">
+                                    <i class="fas fa-laptop mb-1"></i><br>Laptop
+                                </button>
+                                <button onclick="selectSource('camera')" class="bg-white/20 hover:bg-white/30 py-3 rounded-lg transition text-sm">
+                                    <i class="fas fa-video mb-1"></i><br>Camera
+                                </button>
+                                <button onclick="selectSource('wireless')" class="bg-white/20 hover:bg-white/30 py-3 rounded-lg transition text-sm">
+                                    <i class="fas fa-wifi mb-1"></i><br>Wireless
+                                </button>
+                                <button onclick="selectSource('hdmi')" class="bg-white/20 hover:bg-white/30 py-3 rounded-lg transition text-sm">
+                                    <i class="fas fa-plug mb-1"></i><br>HDMI
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Volume Control -->
+                        <div class="mt-6">
+                            <h5 class="font-semibold mb-3">Audio Level</h5>
+                            <div class="flex items-center gap-3">
+                                <i class="fas fa-volume-down"></i>
+                                <input type="range" id="volumeSlider" min="0" max="100" value="70" class="flex-1" onchange="adjustVolume(this.value)">
+                                <i class="fas fa-volume-up"></i>
+                            </div>
+                            <p class="text-center text-sm mt-2">Volume: <span id="volumeDisplay">70</span>%</p>
+                        </div>
+
+                        <!-- Lighting Presets -->
+                        <div class="mt-6">
+                            <h5 class="font-semibold mb-3">Lighting Scenes</h5>
+                            <div class="grid grid-cols-2 gap-2">
+                                <button onclick="setLighting('presentation')" class="bg-white/20 hover:bg-white/30 py-3 rounded-lg transition text-sm">
+                                    <i class="fas fa-presentation-screen mb-1"></i><br>Presentation
+                                </button>
+                                <button onclick="setLighting('video')" class="bg-white/20 hover:bg-white/30 py-3 rounded-lg transition text-sm">
+                                    <i class="fas fa-video mb-1"></i><br>Video Call
+                                </button>
+                                <button onclick="setLighting('bright')" class="bg-white/20 hover:bg-white/30 py-3 rounded-lg transition text-sm">
+                                    <i class="fas fa-sun mb-1"></i><br>Full Bright
+                                </button>
+                                <button onclick="setLighting('off')" class="bg-white/20 hover:bg-white/30 py-3 rounded-lg transition text-sm">
+                                    <i class="fas fa-moon mb-1"></i><br>Lights Off
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Shades Control -->
+                        <div class="mt-6">
+                            <h5 class="font-semibold mb-3">Window Shades</h5>
+                            <div class="flex gap-2">
+                                <button onclick="setShades('open')" class="flex-1 bg-white/20 hover:bg-white/30 py-3 rounded-lg transition text-sm">
+                                    <i class="fas fa-chevron-up mb-1"></i><br>Open
+                                </button>
+                                <button onclick="setShades('close')" class="flex-1 bg-white/20 hover:bg-white/30 py-3 rounded-lg transition text-sm">
+                                    <i class="fas fa-chevron-down mb-1"></i><br>Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Display Area (Center/Right) -->
+                    <div class="lg:col-span-2 bg-black rounded-xl p-6 flex flex-col">
+                        <div class="flex-1 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg p-8 flex items-center justify-center relative overflow-hidden">
+                            <!-- Status Display -->
+                            <div id="displayStatus" class="text-center">
+                                <i class="fas fa-desktop text-6xl text-gray-600 mb-4"></i>
+                                <p class="text-2xl text-gray-400">System Ready</p>
+                                <p class="text-gray-500 mt-2">Press "Start Meeting" to begin</p>
+                            </div>
+                            
+                            <!-- Active Display (hidden by default) -->
+                            <div id="activeDisplay" class="hidden text-center w-full">
+                                <div class="mb-6">
+                                    <i id="sourceIcon" class="fas fa-laptop text-6xl text-blue-400 mb-4"></i>
+                                    <p class="text-2xl"><span id="sourceName">Laptop</span> Connected</p>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 mt-8 text-left">
+                                    <div class="bg-white/10 rounded-lg p-4">
+                                        <i class="fas fa-microphone text-green-400 mr-2"></i>
+                                        <span class="text-sm">Microphone: <span id="micStatus">Active</span></span>
+                                    </div>
+                                    <div class="bg-white/10 rounded-lg p-4">
+                                        <i class="fas fa-volume-up text-blue-400 mr-2"></i>
+                                        <span class="text-sm">Volume: <span id="volumeStatus">70%</span></span>
+                                    </div>
+                                    <div class="bg-white/10 rounded-lg p-4">
+                                        <i class="fas fa-lightbulb text-yellow-400 mr-2"></i>
+                                        <span class="text-sm">Lights: <span id="lightStatus">Full Bright</span></span>
+                                    </div>
+                                    <div class="bg-white/10 rounded-lg p-4">
+                                        <i class="fas fa-window-maximize text-purple-400 mr-2"></i>
+                                        <span class="text-sm">Shades: <span id="shadeStatus">Open</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Status Bar -->
+                        <div class="mt-4 bg-white/10 rounded-lg p-4 flex items-center justify-between text-sm">
+                            <div class="flex items-center gap-2">
+                                <div id="connectionIndicator" class="w-3 h-3 rounded-full bg-gray-500"></div>
+                                <span id="connectionStatus">System Standby</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <span><i class="fas fa-clock mr-1"></i> <span id="currentTime">--:--</span></span>
+                                <span><i class="fas fa-calendar mr-1"></i> <span id="currentDate">-- -- --</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Highlights -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                    <div class="text-center p-4 bg-white/10 rounded-lg">
+                        <i class="fas fa-touch text-3xl mb-2 text-blue-300"></i>
+                        <p class="text-sm font-semibold">One-Touch Control</p>
+                    </div>
+                    <div class="text-center p-4 bg-white/10 rounded-lg">
+                        <i class="fas fa-mobile-alt text-3xl mb-2 text-green-300"></i>
+                        <p class="text-sm font-semibold">Mobile Control</p>
+                    </div>
+                    <div class="text-center p-4 bg-white/10 rounded-lg">
+                        <i class="fas fa-network-wired text-3xl mb-2 text-purple-300"></i>
+                        <p class="text-sm font-semibold">Unified System</p>
+                    </div>
+                    <div class="text-center p-4 bg-white/10 rounded-lg">
+                        <i class="fas fa-headset text-3xl mb-2 text-yellow-300"></i>
+                        <p class="text-sm font-semibold">24/7 Support</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-8">
+                    <p class="text-blue-100 mb-4">Want to see this in your boardroom?</p>
+                    <a href="/contact.html" class="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition inline-block">
+                        Schedule a Live Demo
+                    </a>
+                </div>
+            </div>
+
+            <script>
+                // Interactive Demo Functions
+                let meetingActive = false;
+
+                function updateClock() {
+                    const now = new Date();
+                    document.getElementById('currentTime').textContent = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+                    document.getElementById('currentDate').textContent = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                }
+
+                function startMeeting() {
+                    meetingActive = true;
+                    document.getElementById('displayStatus').classList.add('hidden');
+                    document.getElementById('activeDisplay').classList.remove('hidden');
+                    document.getElementById('connectionIndicator').className = 'w-3 h-3 rounded-full bg-green-500 animate-pulse';
+                    document.getElementById('connectionStatus').textContent = 'Meeting Active';
+                    showNotification('Meeting Started', 'success');
+                }
+
+                function endMeeting() {
+                    meetingActive = false;
+                    document.getElementById('displayStatus').classList.remove('hidden');
+                    document.getElementById('activeDisplay').classList.add('hidden');
+                    document.getElementById('connectionIndicator').className = 'w-3 h-3 rounded-full bg-gray-500';
+                    document.getElementById('connectionStatus').textContent = 'System Standby';
+                    showNotification('Meeting Ended', 'info');
+                }
+
+                function selectSource(source) {
+                    if (!meetingActive) {
+                        showNotification('Please start a meeting first', 'warning');
+                        return;
+                    }
+                    const icons = {
+                        'laptop': 'fa-laptop',
+                        'camera': 'fa-video',
+                        'wireless': 'fa-wifi',
+                        'hdmi': 'fa-plug'
+                    };
+                    const names = {
+                        'laptop': 'Laptop',
+                        'camera': 'Camera',
+                        'wireless': 'Wireless Display',
+                        'hdmi': 'HDMI Input'
+                    };
+                    document.getElementById('sourceIcon').className = `fas ${icons[source]} text-6xl text-blue-400 mb-4`;
+                    document.getElementById('sourceName').textContent = names[source];
+                    showNotification(`Source changed to ${names[source]}`, 'success');
+                }
+
+                function adjustVolume(value) {
+                    document.getElementById('volumeDisplay').textContent = value;
+                    document.getElementById('volumeStatus').textContent = value + '%';
+                    if (meetingActive) {
+                        showNotification(`Volume set to ${value}%`, 'info');
+                    }
+                }
+
+                function setLighting(scene) {
+                    const scenes = {
+                        'presentation': 'Presentation',
+                        'video': 'Video Call',
+                        'bright': 'Full Bright',
+                        'off': 'Lights Off'
+                    };
+                    document.getElementById('lightStatus').textContent = scenes[scene];
+                    showNotification(`Lighting: ${scenes[scene]}`, 'success');
+                }
+
+                function setShades(action) {
+                    const status = action === 'open' ? 'Open' : 'Closed';
+                    document.getElementById('shadeStatus').textContent = status;
+                    showNotification(`Shades ${status}`, 'success');
+                }
+
+                function showNotification(message, type) {
+                    const colors = {
+                        'success': 'bg-green-500',
+                        'info': 'bg-blue-500',
+                        'warning': 'bg-yellow-500'
+                    };
+                    const notification = document.createElement('div');
+                    notification.className = `fixed top-24 right-4 ${colors[type]} text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-fade-in`;
+                    notification.textContent = message;
+                    document.body.appendChild(notification);
+                    setTimeout(() => {
+                        notification.remove();
+                    }, 2000);
+                }
+
+                // Initialize clock
+                updateClock();
+                setInterval(updateClock, 1000);
+            </script>
+
+            <style>
+                @keyframes fade-in {
+                    from { opacity: 0; transform: translateY(-10px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+                .animate-fade-in {
+                    animation: fade-in 0.3s ease-out;
+                }
+            </style>
+
             <!-- Corporate Challenges -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
                 <div class="bg-gray-50 rounded-xl p-8">
