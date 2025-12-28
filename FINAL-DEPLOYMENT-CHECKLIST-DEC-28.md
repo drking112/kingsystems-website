@@ -26,9 +26,17 @@
 - ✅ `industries/education.html` - New hero image (lecture hall with AV tech)
 - ✅ `industries/government.html` - New hero image (council chambers with AV) + CLIENT LOGOS ADDED (DRCOG, City of Aurora, USAF Space Command) ⭐ NEW
 - ✅ `case-studies.html` - Portfolio grid with 9 projects + FIXED image paths + NEW hero image (street-level downtown) + Updated text "Across the Nation"
-- ✅ `case-studies/davita-corporate-headquarters.html` - NEW case study
-- ✅ `case-studies/air-force-academy-falcon-stadium.html` - 11 photos + fixed logos
-- ✅ `case-studies/unicom-capital-penthouse.html` - Fixed logos
+- ✅ `case-studies/davita-corporate-headquarters.html` - NEW case study + EXTERNAL REFERENCES ADDED ⭐ NEW
+- ✅ `case-studies/air-force-academy-falcon-stadium.html` - 11 photos + fixed logos + EXTERNAL REFERENCES ADDED ⭐ NEW
+- ✅ `case-studies/unicom-capital-penthouse.html` - Fixed logos + EXTERNAL REFERENCES ADDED ⭐ NEW
+
+### 6. Authority Signals & External Validation ⭐ NEW
+- ✅ **Added "External References & Press" sections to 3 major case studies**
+- ✅ **12 total external article links** (4 per project)
+- ✅ **Builds trust** through third-party validation
+- ✅ **Improves SEO** with quality outbound links to authority domains
+- ✅ **Competitive advantage** - proves projects actually happened
+- External sources include: Government sites, news media, industry publications, construction firms
 
 ### 5. Portfolio Image Path Fix
 - ✅ **All portfolio image paths now use URL encoding for spaces**
@@ -54,9 +62,9 @@ HTML FILES:
 ✅ industries/education.html (NEW hero image - lecture hall)
 ✅ industries/government.html (NEW hero image - council chambers + GOVERNMENT CLIENT LOGOS)
 ✅ case-studies.html (9 projects)
-✅ case-studies/davita-corporate-headquarters.html (NEW)
-✅ case-studies/air-force-academy-falcon-stadium.html (11 photos)
-✅ case-studies/unicom-capital-penthouse.html (logo fix)
+✅ case-studies/davita-corporate-headquarters.html (NEW + EXTERNAL REFERENCES)
+✅ case-studies/air-force-academy-falcon-stadium.html (11 photos + EXTERNAL REFERENCES)
+✅ case-studies/unicom-capital-penthouse.html (logo fix + EXTERNAL REFERENCES)
 
 IMAGES FOLDER (CRITICAL!):
 ✅ images/partners/ (entire folder - 14 improved PNG logos)
