@@ -48,7 +48,7 @@ C:\Users\David.King\Documents\GitHub\kingsystems-website\
 
 HTML FILES:
 ✅ index.html (partner logos fixed)
-✅ commercial.html (partner logos + Education/Government images)
+✅ commercial.html (partner logos + Education/Government images + NEW hero: commercial reception)
 ✅ commercial/conference-rooms.html (partner logos fixed)
 ✅ industries/corporate.html (NEW hero image - executive boardroom)
 ✅ industries/education.html (NEW hero image - lecture hall)
