@@ -1,0 +1,36 @@
+<!-- Standard Navigation Header -->
+<nav class="bg-white shadow-md fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            <div class="flex-shrink-0">
+                <a href="/" class="flex items-center">
+                    <img src="images/logo/king-systems-logo.jpg" alt="King Systems" class="h-16 w-auto">
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="/residential.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Residential</a>
+                <a href="/commercial.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Commercial</a>
+                <a href="/case-studies.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Portfolio</a>
+                <a href="/blog.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Blog</a>
+                <a href="/about.html" class="text-gray-700 hover:text-blue-900 font-medium transition">About</a>
+                <a href="/service-plans.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Service Plans</a>
+                <a href="/contact.html" class="bg-amber-600 text-white px-6 py-2 rounded-lg hover:bg-amber-700 transition">Get Started</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-900">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
+            <a href="/residential.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Residential</a>
+            <a href="/commercial.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Commercial</a>
+            <a href="/case-studies.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Portfolio</a>
+            <a href="/blog.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Blog</a>
+            <a href="/about.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">About</a>
+            <a href="/service-plans.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Service Plans</a>
+            <a href="/contact.html" class="block px-4 py-2 bg-amber-600 text-white text-center rounded-lg">Get Started</a>
+        </div>
+    </div>
+</nav>
