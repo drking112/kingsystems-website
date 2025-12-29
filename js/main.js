@@ -134,6 +134,91 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // ========================================
+    // FLOATING CHAT BUTTON & CONTACT MODAL
+    // ========================================
+    const chatButton = document.getElementById('chatButton');
+    const contactModal = document.getElementById('contactModal');
+    const modalContent = document.getElementById('modalContent');
+    const closeModal = document.getElementById('closeModal');
+    const contactForm = document.getElementById('contactForm');
+
+    // Open modal when chat button is clicked
+    if (chatButton && contactModal && modalContent) {
+        chatButton.addEventListener('click', () => {
+            contactModal.classList.remove('hidden');
+            contactModal.classList.add('flex');
+            
+            // Animate modal in
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+                modalContent.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        });
+    }
+
+    // Close modal function
+    function closeContactModal() {
+        if (modalContent && contactModal) {
+            modalContent.classList.remove('scale-100', 'opacity-100');
+            modalContent.classList.add('scale-95', 'opacity-0');
+            
+            setTimeout(() => {
+                contactModal.classList.add('hidden');
+                contactModal.classList.remove('flex');
+            }, 300);
+        }
+    }
+
+    // Close modal when X button is clicked
+    if (closeModal) {
+        closeModal.addEventListener('click', closeContactModal);
+    }
+
+    // Close modal when clicking outside
+    if (contactModal) {
+        contactModal.addEventListener('click', (e) => {
+            if (e.target === contactModal) {
+                closeContactModal();
+            }
+        });
+    }
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && contactModal && !contactModal.classList.contains('hidden')) {
+            closeContactModal();
+        }
+    });
+
+    // Handle contact form submission
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData.entries());
+            
+            // Log form data (in production, send to backend/email service)
+            console.log('Contact Form Submitted:', data);
+            
+            // Show success message
+            alert('Thank you! Your message has been received. Our team will contact you shortly.');
+            
+            // Reset form and close modal
+            contactForm.reset();
+            closeContactModal();
+            
+            // In production, you would integrate with:
+            // - Formspree: https://formspree.io/
+            // - EmailJS: https://www.emailjs.com/
+            // - Your own backend API
+            // - HubSpot Forms API
+            // - Mailchimp
+        });
+    }
+
     // Keyboard navigation support
     document.addEventListener('keydown', (e) => {
         // Close mobile menu with Escape key
