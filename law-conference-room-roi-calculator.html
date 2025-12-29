@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Law Firm Conference Room ROI Calculator | King Systems</title>
+    <meta name="description" content="Calculate how much time and money your law firm loses to conference room technology issues. See your potential ROI from modern AV systems.">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-900">
+
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="/" class="flex items-center">
+                        <img src="images/logo/king-systems-logo.jpg" alt="King Systems" class="h-16 w-auto">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/residential.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Residential</a>
+                    <a href="/commercial.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Commercial</a>
+                    <a href="/portfolio.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Portfolio</a>
+                    <a href="/blog.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Blog</a>
+                    <a href="/about.html" class="text-gray-700 hover:text-blue-900 font-medium transition">About</a>
+                    <a href="/service-plans.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Service Plans</a>
+                    <a href="/contact.html" class="bg-amber-600 text-white px-6 py-2 rounded-lg hover:bg-amber-700 transition">Get Started</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-900">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="/residential.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Residential</a>
+                <a href="/commercial.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Commercial</a>
+                <a href="/portfolio.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Portfolio</a>
+                <a href="/blog.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Blog</a>
+                <a href="/about.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">About</a>
+                <a href="/service-plans.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Service Plans</a>
+                <a href="/contact.html" class="block px-4 py-2 bg-amber-600 text-white text-center rounded-lg">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative h-96 flex items-center justify-center text-white" style="background: linear-gradient(135deg, rgba(30, 58, 138, 0.9), rgba(12, 74, 110, 0.85)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2000') center/cover; margin-top: 80px;">
+        <div class="text-center z-10 max-w-4xl mx-auto px-4">
+            <h1 class="text-5xl font-bold mb-4">Conference Room ROI Calculator</h1>
+            <p class="text-xl mb-6">Discover how much time and money your law firm loses to conference room technology issues—and how much you could save.</p>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Calculator Form -->
+            <div class="bg-gray-50 p-8 rounded-xl shadow-lg mb-12">
+                <h2 class="text-3xl font-bold mb-8 text-center">Calculate Your Potential ROI</h2>
+                
+                <form id="roi-calculator" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Number of Attorneys</label>
+                            <input type="number" id="num-attorneys" min="1" value="25" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900">
+                            <p class="text-sm text-gray-500 mt-1">How many attorneys use your conference rooms?</p>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Average Billable Rate ($/hour)</label>
+                            <input type="number" id="billable-rate" min="0" step="50" value="350" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900">
+                            <p class="text-sm text-gray-500 mt-1">Average hourly rate across your firm</p>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Conference Rooms</label>
+                            <input type="number" id="num-rooms" min="1" value="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900">
+                            <p class="text-sm text-gray-500 mt-1">Total conference rooms in your office</p>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Meetings Per Week (per room)</label>
+                            <input type="number" id="meetings-per-week" min="1" value="15" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900">
+                            <p class="text-sm text-gray-500 mt-1">Average meetings per conference room weekly</p>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Minutes Lost Per Meeting (Tech Issues)</label>
+                            <input type="number" id="minutes-lost" min="0" step="1" value="8" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900">
+                            <p class="text-sm text-gray-500 mt-1">Industry average: 5-12 minutes per meeting</p>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Average Attendees Per Meeting</label>
+                            <input type="number" id="avg-attendees" min="1" value="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900">
+                            <p class="text-sm text-gray-500 mt-1">How many people typically attend?</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-8">
+                        <button type="button" onclick="calculateROI()" class="bg-blue-900 text-white px-12 py-4 rounded-lg text-lg font-semibold hover:bg-blue-800 transition">
+                            Calculate Your ROI
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Results Section (Hidden Initially) -->
+            <div id="results-section" class="hidden">
+                <!-- Annual Cost of Technology Issues -->
+                <div class="bg-red-50 border-l-4 border-red-600 p-8 rounded-xl shadow-lg mb-8">
+                    <h3 class="text-2xl font-bold mb-6 text-red-900">Annual Cost of Conference Room Technology Issues</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-red-600 mb-2" id="hours-wasted">0</div>
+                            <p class="text-gray-700 font-semibold">Billable Hours Lost</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-red-600 mb-2" id="revenue-lost">$0</div>
+                            <p class="text-gray-700 font-semibold">Lost Revenue</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-red-600 mb-2" id="productivity-cost">$0</div>
+                            <p class="text-gray-700 font-semibold">Productivity Cost</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-6 border-t border-red-200">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-semibold text-gray-700">Total Annual Cost:</span>
+                            <span class="text-4xl font-bold text-red-600" id="total-annual-cost">$0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROI with Modern AV Systems -->
+                <div class="bg-green-50 border-l-4 border-green-600 p-8 rounded-xl shadow-lg mb-8">
+                    <h3 class="text-2xl font-bold mb-6 text-green-900">Potential Savings with Modern AV Systems</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-white p-6 rounded-lg">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="font-semibold text-gray-700">Year 1 Savings</span>
+                                <span class="text-3xl font-bold text-green-600" id="year1-savings">$0</span>
+                            </div>
+                            <p class="text-sm text-gray-600">85% reduction in technical issues after implementation</p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="font-semibold text-gray-700">5-Year Savings</span>
+                                <span class="text-3xl font-bold text-green-600" id="year5-savings">$0</span>
+                            </div>
+                            <p class="text-sm text-gray-600">Cumulative savings over typical AV system lifespan</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg">
+                        <h4 class="font-bold mb-4 text-lg">Investment Estimate</h4>
+                        <div class="space-y-3">
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">Estimated System Cost:</span>
+                                <span class="font-bold" id="estimated-cost">$0</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">Payback Period:</span>
+                                <span class="font-bold text-green-600" id="payback-period">0 months</span>
+                            </div>
+                            <div class="flex justify-between pt-3 border-t border-gray-200">
+                                <span class="text-lg font-semibold text-gray-700">5-Year ROI:</span>
+                                <span class="text-2xl font-bold text-green-600" id="roi-percentage">0%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Breakdown -->
+                <div class="bg-blue-50 p-8 rounded-xl shadow-lg mb-8">
+                    <h3 class="text-2xl font-bold mb-6 text-blue-900">The Breakdown</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold mb-4 text-blue-900">Current Situation</h4>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex justify-between">
+                                    <span>Minutes lost per meeting:</span>
+                                    <span class="font-semibold" id="breakdown-minutes">0</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>Total meetings per year:</span>
+                                    <span class="font-semibold" id="breakdown-meetings">0</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>Total attendees per year:</span>
+                                    <span class="font-semibold" id="breakdown-attendees">0</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>Person-hours wasted annually:</span>
+                                    <span class="font-semibold" id="breakdown-person-hours">0</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold mb-4 text-green-700">With Modern AV</h4>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+                                    <span>One-touch meeting start—no IT support needed</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+                                    <span>Wireless presentation from any device</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+                                    <span>Automatic camera framing and audio leveling</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+                                    <span>Calendar integration (walk in and meet)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+                                    <span>85% reduction in technical difficulties</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="bg-gradient-to-r from-blue-900 to-blue-700 text-white p-8 rounded-xl shadow-lg text-center">
+                    <h3 class="text-3xl font-bold mb-4">Ready to Recover Those Lost Billable Hours?</h3>
+                    <p class="text-xl mb-6 opacity-90">Schedule a complimentary technology assessment and see how we can help your firm.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="law-assessment-page.html" class="bg-amber-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-amber-700 transition inline-block">
+                            Schedule Free Assessment
+                        </a>
+                        <a href="contact.html" class="bg-white text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition inline-block">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Assumptions & Methodology -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-2xl font-bold mb-6 text-center">Calculator Methodology</h3>
+            
+            <div class="bg-white p-6 rounded-xl shadow">
+                <h4 class="font-bold mb-4">Our Calculations Are Based On:</h4>
+                <ul class="space-y-2 text-gray-700">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-blue-600 mr-2 mt-1"></i>
+                        <span><strong>Industry Research:</strong> Studies show employees waste 5-12 minutes per meeting on AV/IT issues (Harvard Business Review, Barco ClickShare studies)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-blue-600 mr-2 mt-1"></i>
+                        <span><strong>Billable vs Non-Billable Time:</strong> We assume 50% of wasted time represents lost billable hours; the other 50% is productivity loss valued at support staff rates</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-blue-600 mr-2 mt-1"></i>
+                        <span><strong>Modern AV Performance:</strong> 85% reduction in technical issues based on our 22 years of installation data and client feedback</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-blue-600 mr-2 mt-1"></i>
+                        <span><strong>System Cost Estimate:</strong> $15,000-$35,000 per conference room depending on size and features (includes installation, programming, and training)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-blue-600 mr-2 mt-1"></i>
+                        <span><strong>System Lifespan:</strong> Professional AV systems typically last 7-10 years; we use a conservative 5-year calculation period</span>
+                    </li>
+                </ul>
+
+                <div class="mt-6 p-4 bg-gray-50 rounded-lg">
+                    <p class="text-sm text-gray-600">
+                        <strong>Note:</strong> These calculations provide an estimate based on industry averages and our experience. Your actual results may vary depending on your specific technology, usage patterns, and firm size. Every law firm is different—schedule a free assessment for a customized ROI analysis.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <img src="images/logo-2/King Systems Hoodie Logo 2024 - 1000 x 701.png" alt="King Systems" class="h-16 w-auto mb-4">
+                    <p class="text-gray-400 text-sm">Colorado's premier luxury technology integration specialists since 2002.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/case-studies.html" class="hover:text-white transition">Case Studies</a></li>
+                        <li><a href="/blog.html" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="/service-plans.html" class="hover:text-white transition">Service Plans</a></li>
+                        <li><a href="/testimonials.html" class="hover:text-white transition">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Commercial</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/commercial/conference-rooms.html" class="hover:text-white transition">Conference Rooms</a></li>
+                        <li><a href="/commercial/training-rooms.html" class="hover:text-white transition">Training Rooms</a></li>
+                        <li><a href="/commercial/hospitality.html" class="hover:text-white transition">Hospitality</a></li>
+                        <li><a href="/commercial/sound-masking.html" class="hover:text-white transition">Sound Masking</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Residential</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/residential.html" class="hover:text-white transition">Smart Home Integration</a></li>
+                        <li><a href="/residential/home-theater.html" class="hover:text-white transition">Home Theater</a></li>
+                        <li><a href="/residential/whole-home-audio.html" class="hover:text-white transition">Whole-Home Audio</a></li>
+                        <li><a href="/residential/lighting-control.html" class="hover:text-white transition">Lighting Control</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+                <p>© 2024 King Systems LLC. All rights reserved. | Colorado's Luxury Technology Specialists</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        function calculateROI() {
+            // Get input values
+            const numAttorneys = parseFloat(document.getElementById('num-attorneys').value) || 0;
+            const billableRate = parseFloat(document.getElementById('billable-rate').value) || 0;
+            const numRooms = parseFloat(document.getElementById('num-rooms').value) || 0;
+            const meetingsPerWeek = parseFloat(document.getElementById('meetings-per-week').value) || 0;
+            const minutesLost = parseFloat(document.getElementById('minutes-lost').value) || 0;
+            const avgAttendees = parseFloat(document.getElementById('avg-attendees').value) || 0;
+
+            // Calculations
+            const totalMeetingsPerYear = numRooms * meetingsPerWeek * 52;
+            const totalMinutesLostPerYear = totalMeetingsPerYear * minutesLost * avgAttendees;
+            const totalHoursLost = totalMinutesLostPerYear / 60;
+            
+            // Assume 50% is billable time, 50% is productivity loss
+            const billableHoursLost = totalHoursLost * 0.5;
+            const productivityHoursLost = totalHoursLost * 0.5;
+            
+            const revenueLost = billableHoursLost * billableRate;
+            const productivityCost = productivityHoursLost * (billableRate * 0.3); // Value productivity at 30% of billable rate
+            const totalAnnualCost = revenueLost + productivityCost;
+
+            // Savings with 85% improvement
+            const year1Savings = totalAnnualCost * 0.85;
+            const year5Savings = year1Savings * 5;
+
+            // System cost estimate ($20k-$30k per room average)
+            const estimatedSystemCost = numRooms * 25000;
+            
+            // Payback period in months
+            const paybackMonths = (estimatedSystemCost / year1Savings) * 12;
+            
+            // 5-year ROI
+            const roiPercentage = ((year5Savings - estimatedSystemCost) / estimatedSystemCost) * 100;
+
+            // Update DOM
+            document.getElementById('hours-wasted').textContent = Math.round(billableHoursLost).toLocaleString();
+            document.getElementById('revenue-lost').textContent = '$' + Math.round(revenueLost).toLocaleString();
+            document.getElementById('productivity-cost').textContent = '$' + Math.round(productivityCost).toLocaleString();
+            document.getElementById('total-annual-cost').textContent = '$' + Math.round(totalAnnualCost).toLocaleString();
+            
+            document.getElementById('year1-savings').textContent = '$' + Math.round(year1Savings).toLocaleString();
+            document.getElementById('year5-savings').textContent = '$' + Math.round(year5Savings).toLocaleString();
+            
+            document.getElementById('estimated-cost').textContent = '$' + Math.round(estimatedSystemCost).toLocaleString();
+            document.getElementById('payback-period').textContent = Math.round(paybackMonths) + ' months';
+            document.getElementById('roi-percentage').textContent = Math.round(roiPercentage) + '%';
+
+            // Breakdown
+            document.getElementById('breakdown-minutes').textContent = minutesLost + ' minutes';
+            document.getElementById('breakdown-meetings').textContent = Math.round(totalMeetingsPerYear).toLocaleString();
+            document.getElementById('breakdown-attendees').textContent = Math.round(totalMeetingsPerYear * avgAttendees).toLocaleString();
+            document.getElementById('breakdown-person-hours').textContent = Math.round(totalHoursLost).toLocaleString();
+
+            // Show results
+            document.getElementById('results-section').classList.remove('hidden');
+            
+            // Smooth scroll to results
+            document.getElementById('results-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Calculate on page load with default values
+        window.addEventListener('load', function() {
+            // Optional: auto-calculate with defaults on load
+            // calculateROI();
+        });
+    </script>
+</body>
+</html>

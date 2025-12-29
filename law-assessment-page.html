@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Law Firm Technology Assessment | King Systems</title>
+    <meta name="description" content="Schedule a complimentary technology assessment for your law firm. Optimize conference rooms, video conferencing, and case presentation systems.">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-900">
+
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="/" class="flex items-center">
+                        <img src="images/logo/king-systems-logo.jpg" alt="King Systems" class="h-16 w-auto">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/residential.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Residential</a>
+                    <a href="/commercial.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Commercial</a>
+                    <a href="/portfolio.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Portfolio</a>
+                    <a href="/blog.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Blog</a>
+                    <a href="/about.html" class="text-gray-700 hover:text-blue-900 font-medium transition">About</a>
+                    <a href="/service-plans.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Service Plans</a>
+                    <a href="/contact.html" class="bg-amber-600 text-white px-6 py-2 rounded-lg hover:bg-amber-700 transition">Get Started</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-900">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="/residential.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Residential</a>
+                <a href="/commercial.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Commercial</a>
+                <a href="/portfolio.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Portfolio</a>
+                <a href="/blog.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Blog</a>
+                <a href="/about.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">About</a>
+                <a href="/service-plans.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Service Plans</a>
+                <a href="/contact.html" class="block px-4 py-2 bg-amber-600 text-white text-center rounded-lg">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative h-96 flex items-center justify-center text-white" style="background: linear-gradient(135deg, rgba(30, 58, 138, 0.9), rgba(12, 74, 110, 0.85)), url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=2000') center/cover; margin-top: 80px;">
+        <div class="text-center z-10 max-w-4xl mx-auto px-4">
+            <h1 class="text-5xl font-bold mb-4">Complimentary Technology Assessment for Law Firms</h1>
+            <p class="text-xl mb-6">Optimize your conference rooms, video conferencing, and case presentation systems to increase efficiency and impress clients.</p>
+            <a href="#assessment-form" class="bg-amber-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-amber-700 transition inline-block">
+                Schedule Your Free Assessment
+            </a>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Why Technology Matters for Your Law Firm</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Modern AV technology isn't just about equipment—it's about winning cases, retaining clients, and maximizing billable hours.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="text-5xl mb-6 text-blue-900">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Win More Cases</h3>
+                    <p class="text-gray-600">Present evidence with crystal-clear displays, wireless presentation, and seamless video playback. First impressions matter in depositions and courtroom presentations.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="text-5xl mb-6 text-blue-900">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Remote Depositions & Hearings</h3>
+                    <p class="text-gray-600">Enterprise-grade video conferencing that works every time. No technical difficulties during critical depositions or remote court appearances.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="text-5xl mb-6 text-blue-900">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Recover Billable Hours</h3>
+                    <p class="text-gray-600">Reduce time wasted on technical issues, IT troubleshooting, and meeting delays. Every minute counts when you bill by the hour.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="text-5xl mb-6 text-blue-900">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Impress High-Value Clients</h3>
+                    <p class="text-gray-600">Professional conference rooms signal competence and success. Show clients their retainer is well-invested from the moment they walk in.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="text-5xl mb-6 text-blue-900">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Secure & Confidential</h3>
+                    <p class="text-gray-600">Attorney-client privilege protected with enterprise security, encrypted video conferencing, and no cloud recording unless you choose to enable it.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="text-5xl mb-6 text-blue-900">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Partner & Associate Retention</h3>
+                    <p class="text-gray-600">Modern technology attracts and retains top legal talent. Outdated conference rooms frustrate attorneys and drive them to competitors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">What's Included in Your Complimentary Assessment</h2>
+                <p class="text-xl text-gray-600">No obligation. No sales pressure. Just expert recommendations.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-start mb-4">
+                        <div class="text-3xl text-amber-600 mr-4">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Conference Room Evaluation</h3>
+                            <p class="text-gray-600">We'll assess your existing conference rooms, identify pain points, and recommend upgrades that deliver measurable ROI.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-start mb-4">
+                        <div class="text-3xl text-amber-600 mr-4">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Network & Infrastructure Review</h3>
+                            <p class="text-gray-600">Is your network ready for 4K video conferencing? We'll verify bandwidth, WiFi coverage, and network reliability.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-start mb-4">
+                        <div class="text-3xl text-amber-600 mr-4">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">ROI Analysis</h3>
+                            <p class="text-gray-600">See exactly how much time and money you're losing to technical issues—and how much you'll save with proper AV.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-start mb-4">
+                        <div class="text-3xl text-amber-600 mr-4">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Written Recommendations</h3>
+                            <p class="text-gray-600">Receive a detailed report with prioritized recommendations, budget estimates, and implementation timeline.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Law Firm Specific Solutions -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Technology Solutions for Law Firms</h2>
+                <p class="text-xl text-gray-600">Specialized systems designed for legal practice environments</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-blue-900">Conference Room Systems</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-600 mr-3 mt-1"></i>
+                            <span>One-touch meeting start for Zoom, Teams, or WebEx</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-600 mr-3 mt-1"></i>
+                            <span>Wireless presentation from any device (no dongles)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-600 mr-3 mt-1"></i>
+                            <span>Crystal-clear audio for depositions and hearings</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-600 mr-3 mt-1"></i>
+                            <span>Dual displays for evidence review and video calls</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-600 mr-3 mt-1"></i>
+                            <span>Recording capabilities for depositions (with proper consent)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-blue-900">Courtroom Presentation Systems</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-600 mr-3 mt-1"></i>
+                            <span>Mobile trial presentation systems</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-600 mr-3 mt-1"></i>
+                            <span>Evidence annotation and zoom capabilities</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-600 mr-3 mt-1"></i>
+                            <span>Multiple video format support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-600 mr-3 mt-1"></i>
+                            <span>HDMI and laptop connectivity</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-600 mr-3 mt-1"></i>
+                            <span>Backup systems for mission-critical presentations</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-blue-900">Video Conferencing</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-600 mr-3 mt-1"></i>
+                            <span>Zoom Rooms, Microsoft Teams Rooms, Cisco Webex</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-600 mr-3 mt-1"></i>
+                            <span>HD cameras with attorney-focused framing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-600 mr-3 mt-1"></i>
+                            <span>Echo cancellation and noise reduction</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-600 mr-3 mt-1"></i>
+                            <span>Calendar integration (Outlook, Google)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-600 mr-3 mt-1"></i>
+                            <span>IT support and monitoring included</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-blue-900">Security & Privacy</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-600 mr-3 mt-1"></i>
+                            <span>Encrypted video conferencing platforms</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-600 mr-3 mt-1"></i>
+                            <span>No data stored on end-user devices</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-600 mr-3 mt-1"></i>
+                            <span>Camera privacy shutters for confidential discussions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-600 mr-3 mt-1"></i>
+                            <span>Compliance with attorney-client privilege requirements</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-600 mr-3 mt-1"></i>
+                            <span>On-premise recording options (no cloud requirement)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Assessment Form -->
+    <section id="assessment-form" class="py-20 bg-blue-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Schedule Your Complimentary Assessment</h2>
+                <p class="text-xl opacity-90">No cost. No obligation. Just expert guidance for your law firm.</p>
+            </div>
+
+            <form id="law-assessment-form" class="bg-white text-gray-900 p-8 rounded-xl shadow-2xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">First Name *</label>
+                        <input type="text" name="first_name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Last Name *</label>
+                        <input type="text" name="last_name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900">
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <label class="block text-sm font-semibold mb-2">Law Firm Name *</label>
+                    <input type="text" name="firm_name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Email *</label>
+                        <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Phone *</label>
+                        <input type="tel" name="phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900">
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <label class="block text-sm font-semibold mb-2">Number of Attorneys</label>
+                    <select name="attorney_count" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900">
+                        <option value="">Select...</option>
+                        <option value="1-5">1-5 attorneys</option>
+                        <option value="6-10">6-10 attorneys</option>
+                        <option value="11-25">11-25 attorneys</option>
+                        <option value="26-50">26-50 attorneys</option>
+                        <option value="51-100">51-100 attorneys</option>
+                        <option value="100+">100+ attorneys</option>
+                    </select>
+                </div>
+
+                <div class="mt-6">
+                    <label class="block text-sm font-semibold mb-2">What challenges are you experiencing? *</label>
+                    <div class="space-y-2">
+                        <label class="flex items-center">
+                            <input type="checkbox" name="challenges[]" value="video_conferencing" class="mr-2">
+                            <span>Video conferencing reliability issues</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="challenges[]" value="wireless_presentation" class="mr-2">
+                            <span>Difficulty sharing presentations wirelessly</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="challenges[]" value="audio_quality" class="mr-2">
+                            <span>Poor audio quality in conference rooms</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="challenges[]" value="complex_systems" class="mr-2">
+                            <span>Systems too complicated for attorneys to use</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="challenges[]" value="client_impression" class="mr-2">
+                            <span>Conference rooms don't impress clients</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="challenges[]" value="remote_depositions" class="mr-2">
+                            <span>Need better remote deposition capabilities</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <label class="block text-sm font-semibold mb-2">Additional Details (Optional)</label>
+                    <textarea name="additional_details" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900" placeholder="Tell us more about your technology needs..."></textarea>
+                </div>
+
+                <div class="mt-6">
+                    <label class="block text-sm font-semibold mb-2">Preferred Assessment Date/Time</label>
+                    <input type="text" name="preferred_time" placeholder="e.g., Next Tuesday afternoon, Week of January 15th" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-900">
+                </div>
+
+                <div class="mt-8">
+                    <button type="submit" class="w-full bg-amber-600 text-white py-4 rounded-lg text-lg font-semibold hover:bg-amber-700 transition">
+                        Request Your Free Assessment
+                    </button>
+                </div>
+
+                <p class="text-sm text-gray-600 mt-4 text-center">
+                    We'll contact you within 1 business day to schedule your assessment. No sales pressure—just expert recommendations.
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Trust Signals -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h3 class="text-2xl font-bold mb-4">Trusted by Colorado Law Firms Since 2002</h3>
+                <p class="text-gray-600">22+ years serving legal, corporate, and government clients</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-blue-900 mb-2">22+</div>
+                    <p class="text-gray-600">Years in Business</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-blue-900 mb-2">500+</div>
+                    <p class="text-gray-600">Projects Completed</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-blue-900 mb-2">99.8%</div>
+                    <p class="text-gray-600">System Uptime</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-blue-900 mb-2">24/7</div>
+                    <p class="text-gray-600">Support Available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <img src="images/logo-2/King Systems Hoodie Logo 2024 - 1000 x 701.png" alt="King Systems" class="h-16 w-auto mb-4">
+                    <p class="text-gray-400 text-sm">Colorado's premier luxury technology integration specialists since 2002.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/case-studies.html" class="hover:text-white transition">Case Studies</a></li>
+                        <li><a href="/blog.html" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="/service-plans.html" class="hover:text-white transition">Service Plans</a></li>
+                        <li><a href="/testimonials.html" class="hover:text-white transition">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Commercial</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/commercial/conference-rooms.html" class="hover:text-white transition">Conference Rooms</a></li>
+                        <li><a href="/commercial/training-rooms.html" class="hover:text-white transition">Training Rooms</a></li>
+                        <li><a href="/commercial/hospitality.html" class="hover:text-white transition">Hospitality</a></li>
+                        <li><a href="/commercial/sound-masking.html" class="hover:text-white transition">Sound Masking</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Residential</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/residential.html" class="hover:text-white transition">Smart Home Integration</a></li>
+                        <li><a href="/residential/home-theater.html" class="hover:text-white transition">Home Theater</a></li>
+                        <li><a href="/residential/whole-home-audio.html" class="hover:text-white transition">Whole-Home Audio</a></li>
+                        <li><a href="/residential/lighting-control.html" class="hover:text-white transition">Lighting Control</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+                <p>© 2024 King Systems LLC. All rights reserved. | Colorado's Luxury Technology Specialists</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Form submission handler
+        document.getElementById('law-assessment-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const formData = new FormData(this);
+            
+            // Here you would normally send to your CRM or email system
+            console.log('Assessment form submitted:', Object.fromEntries(formData));
+            
+            // Show success message
+            alert('Thank you! We will contact you within 1 business day to schedule your complimentary assessment.');
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
