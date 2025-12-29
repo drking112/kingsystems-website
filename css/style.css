@@ -10,7 +10,7 @@
 .logo-track {
     display: flex;
     gap: 4rem;
-    animation: scroll 25s linear infinite;
+    animation: scroll 15s linear infinite;
 }
 
 .logo-track:hover {
@@ -107,7 +107,7 @@
 .client-logo-track {
     display: flex;
     gap: 4rem;
-    animation: scrollClients 120s linear infinite;
+    animation: scrollClients 30s linear infinite;
     align-items: center;
 }
 

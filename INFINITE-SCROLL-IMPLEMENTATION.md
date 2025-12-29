@@ -15,8 +15,8 @@ Infinite scrolling uses a clever duplication technique:
 ### Partner Logos Section
 - **Location**: Near top of homepage
 - **Total Logos**: 16 unique logos (32 total with duplicates)
-- **Animation**: 25 seconds duration
-- **Speed**: Moderate pace to highlight premium brands
+- **Animation**: 15 seconds duration
+- **Speed**: Fast-paced to showcase all premium brands quickly
 
 **Logos Include:**
 - Crestron, Lutron, Control4, Savant (Control Systems)
@@ -29,8 +29,8 @@ Infinite scrolling uses a clever duplication technique:
 ### Client Logos Section
 - **Location**: After "Why Choose King Systems" section
 - **Total Logos**: 60 unique logos (120 total with duplicates)
-- **Animation**: 120 seconds duration (2 minutes)
-- **Speed**: Slower pace due to higher quantity
+- **Animation**: 30 seconds duration
+- **Speed**: Fast-paced to showcase impressive client roster efficiently
 
 **Includes:**
 - Fortune 500 companies (Comcast, Xcel Energy, Twitter/X)
@@ -135,8 +135,27 @@ To add a new logo to either carousel:
 
 ### Adjusting Speed
 To change animation speed, edit the duration in `css/style.css`:
-- **Faster**: Reduce the seconds (e.g., `90s` instead of `120s`)
-- **Slower**: Increase the seconds (e.g., `180s` instead of `120s`)
+
+**Partner Logos:**
+```css
+.logo-track {
+    animation: scroll 15s linear infinite;  /* Current: 15 seconds */
+}
+```
+
+**Client Logos:**
+```css
+.client-logo-track {
+    animation: scrollClients 30s linear infinite;  /* Current: 30 seconds */
+}
+```
+
+- **Faster**: Reduce the seconds (e.g., `10s` or `20s`)
+- **Slower**: Increase the seconds (e.g., `20s` or `45s`)
+
+**Recommended speeds:**
+- Partner logos: 10-20 seconds (16 logos)
+- Client logos: 25-40 seconds (60 logos)
 
 ### Responsive Behavior
 Mobile adjustments are already included:
