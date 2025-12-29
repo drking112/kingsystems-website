@@ -10,7 +10,7 @@
 .logo-track {
     display: flex;
     gap: 0;
-    animation: scroll 60s linear infinite;
+    animation: scroll 90s linear infinite;
     width: max-content;
 }
 
@@ -34,13 +34,12 @@
     font-size: 1.25rem;
     font-weight: 600;
     color: #6b7280;
-    filter: grayscale(100%);
     transition: all 0.3s ease;
 }
 
 .logo-item:hover {
-    filter: grayscale(0%);
     color: #1e3a8a;
+    transform: scale(1.05);
 }
 
 .partner-logo-img {
@@ -49,13 +48,11 @@
     width: auto;
     height: auto;
     object-fit: contain;
-    filter: grayscale(100%);
     transition: all 0.3s ease;
     display: block;
 }
 
 .logo-item:hover .partner-logo-img {
-    filter: grayscale(0%);
     transform: scale(1.1);
 }
 
@@ -78,7 +75,7 @@
 .client-track {
     display: flex;
     gap: 6rem;
-    animation: scrollClients 40s linear infinite;
+    animation: scrollClients 60s linear infinite;
 }
 
 .client-track:hover {
@@ -95,13 +92,12 @@
     font-size: 1.125rem;
     font-weight: 600;
     color: #6b7280;
-    filter: grayscale(100%);
     transition: all 0.3s ease;
 }
 
 .client-item:hover {
-    filter: grayscale(0%);
     color: #1e3a8a;
+    transform: scale(1.05);
 }
 
 /* Client Logo Grid with Images */
@@ -114,7 +110,7 @@
 .client-logo-track {
     display: flex;
     gap: 0;
-    animation: scrollClients 90s linear infinite;
+    animation: scrollClients 120s linear infinite;
     align-items: center;
     width: max-content;
 }
@@ -147,12 +143,10 @@
     width: auto;
     height: auto;
     object-fit: contain;
-    filter: grayscale(100%) opacity(70%);
     transition: all 0.3s ease;
 }
 
 .client-logo-item:hover .client-logo-img {
-    filter: grayscale(0%) opacity(100%);
     transform: scale(1.1);
 }
 

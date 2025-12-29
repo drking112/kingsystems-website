@@ -279,10 +279,48 @@ This is a private business website. For internal team updates:
 
 ## 🎉 Recent Updates
 
-### 2025-12-29: Logo Scroll Speed & Project Card Fixes 🎨
-- **Logo Animation Speed**: Slowed down customer logo scrolling animation
-  - Partner logo scroll: 30s → 60s (slower, more readable)
-  - Client logo scroll: 60s → 90s (slower, more professional)
+### 2025-12-29: Contact Form Matched to Current Site ✅
+- **Exact Match Implementation**: Form now matches www.kingsystemsllc.com perfectly
+  - ❌ Removed bounce animation (button now static like current site)
+  - ➕ Added Zip Code field (optional, 5-digit validation)
+  - ✅ Kept Project Type dropdown (confirmed present on current site)
+  - ✅ Kept phone field simple (no country code dropdown)
+  - ✅ Auto-open timing: 10 seconds (same as current)
+- **Updated on ALL Pages**: index, commercial, residential, about, case-studies
+- **Form Fields Order**: First Name, Last Name, Email, Phone, Zip Code, Project Type, Message
+- **Files Modified**: 5 HTML pages updated
+
+### 2025-12-29: Let's Talk Button Added to All Pages 💬
+- **Site-Wide Contact Button**: "Let's talk!" button now on ALL major pages
+  - Added to: commercial.html, residential.html, about.html, case-studies.html
+  - Fixed position in bottom-right corner with smooth animations
+  - Opens professional contact form modal
+  - Fully functional with form validation
+- **Consistent Experience**: Users can contact you from any page
+- **JavaScript Integration**: All pages use main.js for button functionality
+- **Files Modified**: 4 HTML pages updated
+
+### 2025-12-29: Commercial Page Logo Section Fixed 🔧
+- **Fixed Structure Mismatch**: Commercial page logo section now matches homepage
+  - Removed inline styles that were overriding CSS (25s → 120s animation)
+  - Added proper `client-logo-set` wrapper divs for seamless scrolling
+  - Now uses CSS file settings consistently across all pages
+- **Consistent Behavior**: Homepage and commercial page now identical
+  - Same 120-second scroll speed
+  - Same full-color logo display
+  - Same hover effects and animations
+- **Files Modified**: `commercial.html`
+
+### 2025-12-29: Logo Display & Scroll Speed Improvements 🎨
+- **Logo Colors Restored**: Removed greyscale and opacity filters
+  - Partner logos now display in full color (was 100% greyscale)
+  - Client logos now display in full color and 100% opacity (was greyscale + 70% opacity)
+  - Hover effect now shows subtle scale animation instead of color change
+  - Creates vibrant, professional brand showcase
+- **Logo Animation Speed**: Further slowed down scrolling for better readability
+  - Partner logo scroll: 30s → 90s (3x slower)
+  - Client logo scroll: 60s → 120s (2x slower)
+  - Provides ample time to recognize and appreciate each brand
 - **Featured Project Cards**: Fixed missing images and clickable links
   - Added high-quality Unsplash images for City of Brighton, SquareTwo Financial, Isaacson Rosenbaum, Service Source, and Fortis Bank
   - Made all project cards clickable (link to case studies or contact page)
