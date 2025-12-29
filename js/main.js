@@ -143,9 +143,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeModal = document.getElementById('closeModal');
     const contactForm = document.getElementById('contactForm');
 
-    // Open modal when chat button is clicked
-    if (chatButton && contactModal && modalContent) {
-        chatButton.addEventListener('click', () => {
+    // Auto-open modal after 10 seconds (configurable)
+    let autoOpenTimer = null;
+    let modalHasBeenOpened = false;
+    
+    function startAutoOpenTimer() {
+        // Only auto-open once per session
+        if (!modalHasBeenOpened && !sessionStorage.getItem('chatModalShown')) {
+            autoOpenTimer = setTimeout(() => {
+                openContactModal();
+                sessionStorage.setItem('chatModalShown', 'true');
+            }, 10000); // 10 seconds - adjust this number as needed
+        }
+    }
+    
+    // Start the timer when page loads
+    startAutoOpenTimer();
+
+    // Function to open modal
+    function openContactModal() {
+        if (contactModal && modalContent) {
+            modalHasBeenOpened = true;
             contactModal.classList.remove('hidden');
             contactModal.classList.add('flex');
             
@@ -154,6 +172,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 modalContent.classList.remove('scale-95', 'opacity-0');
                 modalContent.classList.add('scale-100', 'opacity-100');
             }, 10);
+            
+            // Clear the auto-open timer if it exists
+            if (autoOpenTimer) {
+                clearTimeout(autoOpenTimer);
+            }
+        }
+    }
+
+    // Open modal when chat button is clicked
+    if (chatButton) {
+        chatButton.addEventListener('click', () => {
+            openContactModal();
         });
     }
 
@@ -216,6 +246,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // - Your own backend API
             // - HubSpot Forms API
             // - Mailchimp
+            // - OneFirefly (your current provider)
         });
     }
 

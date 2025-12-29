@@ -10,7 +10,7 @@
 .logo-track {
     display: flex;
     gap: 0;
-    animation: scroll 30s linear infinite;
+    animation: scroll 60s linear infinite;
     width: max-content;
 }
 
@@ -114,7 +114,7 @@
 .client-logo-track {
     display: flex;
     gap: 0;
-    animation: scrollClients 60s linear infinite;
+    animation: scrollClients 90s linear infinite;
     align-items: center;
     width: max-content;
 }
@@ -354,6 +354,38 @@ select:focus {
 @media (prefers-contrast: high) {
     .text-gray-600 {
         color: #000;
+    }
+}
+
+/* Chat Button Animation */
+@keyframes bounce-slow {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.animate-bounce-slow {
+    animation: bounce-slow 2s ease-in-out infinite;
+}
+
+#chatButton:hover {
+    animation: none; /* Stop bouncing on hover */
+}
+
+/* Mobile Chat Button Adjustments */
+@media (max-width: 768px) {
+    #chatButton {
+        bottom: 1rem;
+        right: 1rem;
+        padding: 1rem 1.5rem;
+        font-size: 0.875rem;
+    }
+    
+    #chatButton span {
+        display: inline; /* Always show text on mobile too */
     }
 }
 

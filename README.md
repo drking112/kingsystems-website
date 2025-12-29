@@ -279,6 +279,17 @@ This is a private business website. For internal team updates:
 
 ## 🎉 Recent Updates
 
+### 2025-12-29: Logo Scroll Speed & Project Card Fixes 🎨
+- **Logo Animation Speed**: Slowed down customer logo scrolling animation
+  - Partner logo scroll: 30s → 60s (slower, more readable)
+  - Client logo scroll: 60s → 90s (slower, more professional)
+- **Featured Project Cards**: Fixed missing images and clickable links
+  - Added high-quality Unsplash images for City of Brighton, SquareTwo Financial, Isaacson Rosenbaum, Service Source, and Fortis Bank
+  - Made all project cards clickable (link to case studies or contact page)
+  - Fixed image loading issues in `case-studies.html` and `portfolio-commercial.html`
+- **UX Improvements**: All project cards now properly navigate when clicked
+- **Files Modified**: `css/style.css`, `case-studies.html`, `portfolio-commercial.html`
+
 ### 2025-12-29: Floating Contact Form Added 💬
 - **NEW FEATURE**: Professional floating chat button with contact form popup
 - **Location**: Bottom-right corner (fixed, always visible)
