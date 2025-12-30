@@ -126,6 +126,94 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Contact Modal (Let's Talk Button)
+    const chatButton = document.getElementById('chatButton');
+    const contactModal = document.getElementById('contactModal');
+    const closeModalBtn = document.getElementById('closeModal');
+    const modalContent = document.getElementById('modalContent');
+    const contactForm = document.getElementById('contactForm');
+
+    // Open modal
+    if (chatButton && contactModal) {
+        chatButton.addEventListener('click', () => {
+            contactModal.classList.remove('hidden');
+            contactModal.classList.add('flex');
+            // Animate modal appearance
+            setTimeout(() => {
+                if (modalContent) {
+                    modalContent.classList.remove('scale-95', 'opacity-0');
+                    modalContent.classList.add('scale-100', 'opacity-100');
+                }
+            }, 10);
+        });
+    }
+
+    // Close modal function
+    function closeModal() {
+        if (modalContent) {
+            modalContent.classList.add('scale-95', 'opacity-0');
+            modalContent.classList.remove('scale-100', 'opacity-100');
+        }
+        setTimeout(() => {
+            if (contactModal) {
+                contactModal.classList.add('hidden');
+                contactModal.classList.remove('flex');
+            }
+        }, 300);
+    }
+
+    // Close button click
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', closeModal);
+    }
+
+    // Close on outside click
+    if (contactModal) {
+        contactModal.addEventListener('click', (e) => {
+            if (e.target === contactModal) {
+                closeModal();
+            }
+        });
+    }
+
+    // Close on ESC key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && contactModal && !contactModal.classList.contains('hidden')) {
+            closeModal();
+        }
+    });
+
+    // Handle form submission
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData.entries());
+            
+            // Log to console (replace with actual backend integration)
+            console.log('Contact form submitted:', data);
+            
+            // Show success message
+            alert('Thank you! Your message has been received. We\'ll be in touch soon.');
+            
+            // Reset form and close modal
+            contactForm.reset();
+            closeModal();
+        });
+    }
+
+    // Auto-open modal after 10 seconds (only once per session)
+    if (!sessionStorage.getItem('modalShown') && chatButton && contactModal) {
+        setTimeout(() => {
+            if (chatButton && contactModal) {
+                chatButton.click();
+                sessionStorage.setItem('modalShown', 'true');
+            }
+        }, 10000);
+    }
+
     // External link handling
     document.querySelectorAll('a[href^="http"]').forEach(link => {
         if (!link.href.includes(window.location.hostname)) {
