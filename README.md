@@ -279,6 +279,61 @@ This is a private business website. For internal team updates:
 
 ## 🎉 Recent Updates
 
+### 2025-12-29: Portfolio Images - Now Using Real GitHub Images ✅
+- **User Strategy**: Uploaded portfolio images directly to GitHub (smart move to avoid AI Editor crashes!)
+- **Solution**: Updated HTML to point to real GitHub Portfolio images instead of Unsplash placeholders
+- **Files Updated**: case-studies.html, portfolio-commercial.html (10 image path updates)
+- **Projects Now Using Real Photos**:
+  - ✅ City of Brighton
+  - ✅ SquareTwo Financial
+  - ✅ Isaacson Rosenbaum
+  - ✅ Service Source
+  - ✅ Fortis Bank
+  - ✅ DaVita
+  - ✅ USAF Academy (13 photos)
+- **Workflow**: Images in GitHub → AI Editor updates HTML only → Copy HTML files to GitHub → Deploy
+- **Status**: ✅ READY TO DEPLOY - Just copy HTML files to GitHub (images already there!)
+
+### 2025-12-29: Portfolio Images - Case Sensitivity Fixed ✅
+- **Issue**: HTML referenced `images/portfolio/` but GitHub has `images/Portfolio/`
+- **Impact**: Images wouldn't load due to case sensitivity on Linux servers (Cloudflare Pages)
+- **Solution**: Updated all HTML files to use `Portfolio` (capital P)
+- **Files Updated**: case-studies.html, portfolio-commercial.html, and 2 case study pages (18 occurrences)
+- **Status**: ✅ Paths fixed - Using real GitHub images now
+
+### 2025-12-29: Let's Talk Button - JavaScript Fix ✅
+- **Issue**: Button existed but didn't open the modal (no JavaScript)
+- **Root Cause**: Event handlers completely missing from `js/main.js`
+- **Solution**: Added complete modal functionality (~95 lines of JavaScript)
+- **Features Now Working**:
+  - ✅ Button click opens modal with smooth animation
+  - ✅ Multiple close methods (X button, outside click, ESC key)
+  - ✅ Form submission with validation and success message
+  - ✅ Auto-open after 10 seconds (once per session)
+  - ✅ SessionStorage prevents modal spam
+- **Works On**: All pages with the button (index, commercial, residential, about, case-studies)
+- **Status**: ✅ FIXED - Fully functional contact modal
+
+### 2025-12-29: Logo Color & Speed - Cache Fix ✅
+- **Issue**: Homepage logos appeared grey/muted while Commercial page showed full color
+- **Root Cause**: Browser cache serving old CSS file with grayscale filters
+- **Solution**: Added cache-busting parameter `?v=20251229-2` to all CSS links
+- **Result**: Both pages now show identical full-color logos
+- **Scroll Speed**: 120 seconds (slow, professional)
+- **Files Updated**: index.html, commercial.html, residential.html, about.html, case-studies.html, portfolio-commercial.html
+- **Status**: ✅ Fixed - Full-color logos on all pages
+
+### 2025-12-29: 🚨 Portfolio Images - Missing Folders Issue
+- **CRITICAL**: Only 1 portfolio folder exists in AI Editor session
+- **Issue**: Website references 7+ project image folders, but only `usaf-academy/` exists
+- **Missing Folders**: DaVita, City of Brighton, SquareTwo Financial, Isaacson Rosenbaum, Service Source, Fortis Bank
+- **Temporary Fix**: Using high-quality Unsplash placeholder images
+- **Action Required**: Upload missing portfolio image folders (see PORTFOLIO-IMAGES-MISSING-FOLDERS.md)
+- **Options**: 
+  1. Upload folders to AI Editor, then copy to GitHub
+  2. Upload directly to GitHub repo at `images/portfolio/`
+- **Impact**: Portfolio cards work but show placeholders instead of real project photos
+
 ### 2025-12-29: Contact Form Matched to Current Site ✅
 - **Exact Match Implementation**: Form now matches www.kingsystemsllc.com perfectly
   - ❌ Removed bounce animation (button now static like current site)
