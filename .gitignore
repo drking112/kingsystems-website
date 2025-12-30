@@ -85,7 +85,53 @@ wrangler.toml
 *.7z
 
 # AI Editor Project Files (optional)
-PROJECT_SUMMARY.md
-LOGO_UPDATE.md
-LOGO-ISSUE-EXPLANATION.md
+# Keep only README.md, exclude all other documentation
+*.md
+!README.md
+
+# All documentation and guide files
+*-GUIDE.md
+*-SUMMARY.md
+*-STATUS.md
+*-UPDATE.md
+*-FIX.md
+*-COMPLETE.md
+*-IMPLEMENTATION.md
+*-INTEGRATION.md
+*-ANALYSIS.md
+*-DEPLOYMENT*.md
+*-CHECKLIST.md
+*-PROGRESS.md
+*-PLAN.md
+*-REPORT.md
+*-REFERENCE.md
+*-WORKFLOW.md
+*-EXPLANATION.md
+*-COMPARISON.md
+*-LOCATIONS.md
+
+# Test and diagnostic files
+test-*.html
+verify-*.html
+*-diagnostic.html
 test-logos.html
+test-partner-logos.html
+test-client-logos.html
+test-image-paths.html
+
+# Template files
+*-TEMPLATE.*
+*-template.*
+STANDARD-FOOTER.html
+NAVIGATION-TEMPLATE.txt
+FOOTER-TEMPLATE.txt
+LETS-TALK-BUTTON-TEMPLATE.txt
+
+# Analysis and data files
+video-analysis-results.json
+schema-markup-templates.js
+*-analysis*.json
+
+# Build scripts
+build.sh
+*.sh

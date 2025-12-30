@@ -6,7 +6,7 @@
     <title>King Systems - Luxury Technology for Colorado Living & Working</title>
     <meta name="description" content="Colorado's premier luxury AV integration specialists. Crestron, Lutron, and Savant systems designed for mountain estates and modern workplaces.">
     <!-- Force rebuild 2025-12-22 -->
-    <link rel="stylesheet" href="css/style.css?v=20251229-2">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
     
@@ -786,7 +786,7 @@
     </footer>
 
     <!-- Floating Chat Button with "Let's talk!" -->
-    <button id="chatButton" class="fixed bottom-6 right-6 bg-blue-900 text-white rounded-full px-6 py-4 flex items-center gap-3 shadow-2xl hover:bg-blue-800 transition-all duration-300 hover:scale-105 z-50">
+    <button id="chatButton" class="fixed bottom-6 right-6 bg-blue-900 text-white rounded-full px-6 py-4 flex items-center gap-3 shadow-2xl hover:bg-blue-800 transition-all duration-300 hover:scale-105 z-50 animate-bounce-slow">
         <i class="fas fa-comments text-2xl"></i>
         <span class="font-semibold text-lg whitespace-nowrap">Let's talk!</span>
     </button>
@@ -843,18 +843,6 @@
                             class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-transparent transition">
                     </div>
 
-                    <!-- Zip Code -->
-                    <div>
-                        <label for="zipCode" class="block text-sm font-medium text-gray-700 mb-1">
-                            Zip Code
-                        </label>
-                        <input type="text" id="zipCode" name="zipCode"
-                            pattern="[0-9]{5}"
-                            maxlength="5"
-                            placeholder="12345"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-transparent transition">
-                    </div>
-
                     <!-- Project Type -->
                     <div>
                         <label for="projectType" class="block text-sm font-medium text-gray-700 mb-1">
@@ -897,6 +885,6 @@
         </div>
     </div>
 
-    <script src="js/main.js?v=20251229-3"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
