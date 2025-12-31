@@ -10,7 +10,7 @@
 .logo-track {
     display: flex;
     gap: 0;
-    animation: scroll 90s linear infinite;
+    animation: scroll 180s linear infinite;
     width: max-content;
 }
 
@@ -110,7 +110,7 @@
 .client-logo-track {
     display: flex;
     gap: 0;
-    animation: scrollClients 120s linear infinite;
+    animation: scrollClients 180s linear infinite;
     align-items: center;
     width: max-content;
 }
@@ -258,14 +258,14 @@ select:focus {
     background: #0c4a6e;
 }
 
-/* Hero Section Overlay */
+/* Hero Section Overlay - Reduced opacity for better image visibility */
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(30, 58, 138, 0.6) 0%, rgba(12, 74, 110, 0.5) 100%);
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.40) 0%, rgba(12, 74, 110, 0.35) 100%);
 }
 
 /* Service Plans Card Scaling */
