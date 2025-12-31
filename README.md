@@ -279,6 +279,40 @@ This is a private business website. For internal team updates:
 
 ## 🎉 Recent Updates
 
+### 2025-12-29: 4 Major Updates - Residential Copy, Support Info, Aspen Removal ✅
+- **Update 1:** Residential page completely rewritten with Adam's lifestyle-focused copy
+  - New hero: "The Intuitive Home" (was "Luxury Smart Home Integration")
+  - New section: "Invisible Integration" with 6 lifestyle-focused service cards
+  - New messaging: "The Always-On Concierge", "Built for Where You Live"
+  - Tone shift: From technical/feature-focused to lifestyle/benefit-driven
+  - File: `residential.html`
+- **Update 2:** Added 24/7/365 emergency support section to contact page
+  - Prominent blue box with all emergency contact numbers
+  - Phone: (970) 341-2242, (970) 349-3425, (303) 875-7897
+  - Email: support@kingsystemsllc.com
+  - All contact details clickable (tel: and mailto: links)
+  - File: `contact.html`
+- **Update 3:** Replaced ALL "Aspen" references with "Crested Butte" (15+ instances, 7 files)
+  - Files updated: index.html, about.html, blog.html, contact.html, residential/home-theater.html, blog/*.html
+  - Blog post completely converted: "Crested Butte Estate Project Showcase" (was Aspen)
+  - Verification: 0 remaining "Aspen" references site-wide ✅
+- **Update 4:** Portfolio navigation (already fixed earlier today, verified working)
+- **Status:** ✅ COMPLETE - 9 files modified, all tested and documented
+- **See:** `UPDATES-COMPLETE-DEC-29-RESIDENTIAL-SUPPORT-ASPEN.md` for full details
+
+### 2025-12-29: Portfolio Navigation Fixed - Choice Page Now Works! ✅
+- **Issue**: Header "Portfolio" link pointed to `/case-studies.html` instead of `/portfolio.html` (the portfolio choice page)
+- **Impact**: Users couldn't access the landing page to choose between Commercial & Residential portfolios
+- **Solution**: Fixed 24 HTML files to point to `/portfolio.html` (the choice page)
+- **The Correct Flow**:
+  - Portfolio → `/portfolio.html` (landing page with choice)
+  - User chooses: Commercial or Residential
+  - Goes to: `/portfolio-commercial.html` or `/portfolio-residential.html`
+- **Files Fixed**: index.html + 23 other pages (commercial, residential, blog, case-studies, industries, resources)
+- **Adam's Feedback**: "I thought I had a residential and commercial portfolio page that let you choose one before viewing" - **YOU WERE RIGHT!** The page existed, the navigation just pointed to the wrong place.
+- **Status**: ✅ FIXED - Portfolio choice page now accessible from all pages
+- **See**: `PORTFOLIO-NAVIGATION-FIX-DEC-29.md` for full details
+
 ### 2025-12-29: Education Page - More Schools Added ✅
 - **Latest Update**: Added Ralston Valley High School and West High School
 - **Previous**: Added Adams 12 Five Star Schools and Jefferson Academy + redesigned section
