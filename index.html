@@ -79,8 +79,8 @@
                     </a>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="/residential.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Residential</a>
                     <a href="/commercial.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Commercial</a>
+                    <a href="/residential.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Residential</a>
                     <a href="/portfolio.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Portfolio</a>
                     <a href="/blog.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Blog</a>
                     <a href="/about.html" class="text-gray-700 hover:text-blue-900 font-medium transition">About</a>
@@ -95,8 +95,8 @@
             </div>
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden pb-4">
-                <a href="/residential.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Residential</a>
                 <a href="/commercial.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Commercial</a>
+                <a href="/residential.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Residential</a>
                 <a href="/portfolio.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Portfolio</a>
                 <a href="/blog.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Blog</a>
                 <a href="/about.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">About</a>
@@ -113,7 +113,7 @@
                 Technology Made Simple
             </h1>
             <p class="text-xl md:text-2xl mb-10 text-gray-100 max-w-3xl mx-auto">
-                Luxury integration for Colorado living and working. From mountain estates to Fortune 500 boardrooms—we design systems that simply work.
+                From mountain estates to Fortune 500 boardrooms—we design systems that simply work.
             </p>
             <div class="flex flex-col sm:flex-row gap-8 justify-center items-start">
                 <!-- Commercial Column -->
@@ -454,138 +454,389 @@
         </div>
     </section>
 
-    <!-- Awards & Recognition Section -->
-    <section class="py-20 bg-gradient-to-br from-blue-900 to-blue-800 text-white">
+    <!-- Client Reviews Section -->
+    <section class="py-20 bg-gradient-to-br from-blue-900 to-blue-800 text-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <div class="inline-flex items-center gap-3 bg-amber-500/20 px-6 py-2 rounded-full mb-4">
-                    <i class="fas fa-trophy text-amber-400 text-2xl"></i>
-                    <p class="text-amber-300 font-semibold uppercase tracking-wide text-sm">Industry Recognition</p>
+                    <i class="fas fa-star text-amber-400 text-2xl"></i>
+                    <p class="text-amber-300 font-semibold uppercase tracking-wide text-sm">Client Reviews</p>
                 </div>
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Nationally Recognized Excellence</h2>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">What Our Clients Say</h2>
                 <p class="text-xl text-blue-100 max-w-3xl mx-auto">
-                    Honored by leading industry publications for our exceptional service, technical expertise, and commitment to innovation
+                    From Fortune 500 boardrooms to mountain estates—real feedback from the clients we serve
                 </p>
             </div>
             
-            <!-- Main Award Feature -->
-            <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
-                <!-- Award Visual -->
-                <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition">
-                    <div class="flex items-start gap-6">
-                        <div class="flex-shrink-0">
-                            <div class="w-24 h-24 bg-gradient-to-br from-amber-400 to-amber-600 rounded-2xl flex items-center justify-center shadow-xl">
-                                <i class="fas fa-trophy text-white text-4xl"></i>
-                            </div>
-                        </div>
-                        <div class="flex-1">
-                            <div class="inline-block bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
-                                2024 & 2025 WINNER
-                            </div>
-                            <h3 class="text-3xl font-bold mb-2">CE Pro 100</h3>
-                            <p class="text-xl text-blue-100 mb-4">Top 100 Custom Integration Companies</p>
-                            <div class="border-t border-white/20 pt-4 mt-4">
-                                <p class="text-blue-200 leading-relaxed">
-                                    Recognized nationally for excellence in custom AV integration, smart home technology, and enterprise solutions. This prestigious award is based on revenue, innovation, client satisfaction, and industry leadership.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <!-- Scrolling Reviews Container -->
+            <div class="relative">
+                <!-- Gradient Overlays -->
+                <div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-blue-900 to-transparent z-10 pointer-events-none"></div>
+                <div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-blue-800 to-transparent z-10 pointer-events-none"></div>
                 
-                <!-- Award Details -->
-                <div class="space-y-6">
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-6">
-                        <div class="flex items-start gap-4">
-                            <i class="fas fa-medal text-amber-400 text-2xl mt-1"></i>
+                <!-- Reviews Track -->
+                <div class="reviews-track flex gap-6">
+                    <!-- Review 1 -->
+                    <div class="review-card flex-shrink-0 w-96 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+                        <div class="flex gap-1 mb-4">
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                        </div>
+                        <p class="text-blue-100 mb-6 leading-relaxed">
+                            "King Systems transformed our conference rooms into state-of-the-art spaces. The Crestron system is intuitive, reliable, and our executive team loves it. Worth every penny."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">M.J.</span>
+                            </div>
                             <div>
-                                <h4 class="text-xl font-bold mb-2">Two-Time Winner</h4>
-                                <p class="text-blue-100">
-                                    Honored for consecutive years (2024 & 2025), demonstrating consistent excellence and sustained growth in the competitive integration industry
-                                </p>
+                                <p class="font-bold">Michael J.</p>
+                                <p class="text-sm text-blue-200">VP of Operations, Fortune 500 Company</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-6">
-                        <div class="flex items-start gap-4">
-                            <i class="fas fa-chart-line text-amber-400 text-2xl mt-1"></i>
+                    <!-- Review 2 -->
+                    <div class="review-card flex-shrink-0 w-96 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+                        <div class="flex gap-1 mb-4">
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                        </div>
+                        <p class="text-blue-100 mb-6 leading-relaxed">
+                            "Our smart home is a dream. Lighting, shades, audio—everything works perfectly. King Systems made technology invisible, which is exactly what we wanted."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">S.T.</span>
+                            </div>
                             <div>
-                                <h4 class="text-xl font-bold mb-2">National Recognition</h4>
-                                <p class="text-blue-100">
-                                    Selected from thousands of integration companies nationwide based on revenue performance, technical capability, and client satisfaction
-                                </p>
+                                <p class="font-bold">Sarah T.</p>
+                                <p class="text-sm text-blue-200">Homeowner, Crested Butte Estate</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-6">
-                        <div class="flex items-start gap-4">
-                            <i class="fas fa-users text-amber-400 text-2xl mt-1"></i>
+                    <!-- Review 3 -->
+                    <div class="review-card flex-shrink-0 w-96 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+                        <div class="flex gap-1 mb-4">
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                        </div>
+                        <p class="text-blue-100 mb-6 leading-relaxed">
+                            "Professional from day one. They understood our requirements, delivered on time, and their support is outstanding. Our training rooms have never worked better."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">D.K.</span>
+                            </div>
                             <div>
-                                <h4 class="text-xl font-bold mb-2">Industry Leadership</h4>
-                                <p class="text-blue-100">
-                                    Trusted by Fortune 500 companies, government agencies, and luxury residential clients across Colorado and beyond
-                                </p>
+                                <p class="font-bold">David K.</p>
+                                <p class="text-sm text-blue-200">IT Director, Healthcare Organization</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="text-center pt-4">
-                        <a href="https://www.cepro.com/news/ce-pro-100-see-great-potential-in-2025/617382/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-amber-300 hover:text-amber-200 font-semibold transition">
-                            <span>Read the CE Pro 100 Article</span>
-                            <i class="fas fa-external-link-alt text-sm"></i>
-                        </a>
+                    <!-- Review 4 -->
+                    <div class="review-card flex-shrink-0 w-96 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+                        <div class="flex gap-1 mb-4">
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                        </div>
+                        <p class="text-blue-100 mb-6 leading-relaxed">
+                            "Best integrator we've worked with. They know their stuff, communicate clearly, and actually show up when they say they will. Rare in this industry."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">R.P.</span>
+                            </div>
+                            <div>
+                                <p class="font-bold">Robert P.</p>
+                                <p class="text-sm text-blue-200">Architect, Denver</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Review 5 -->
+                    <div class="review-card flex-shrink-0 w-96 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+                        <div class="flex gap-1 mb-4">
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                        </div>
+                        <p class="text-blue-100 mb-6 leading-relaxed">
+                            "The private cinema King Systems built for us is cinema quality. Friends can't believe it's a residential install. Incredible attention to detail."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">J.W.</span>
+                            </div>
+                            <div>
+                                <p class="font-bold">Jennifer W.</p>
+                                <p class="text-sm text-blue-200">Homeowner, Denver</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Review 6 -->
+                    <div class="review-card flex-shrink-0 w-96 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+                        <div class="flex gap-1 mb-4">
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                        </div>
+                        <p class="text-blue-100 mb-6 leading-relaxed">
+                            "We needed AV for multiple municipal facilities. King Systems coordinated everything seamlessly. Their project management is top-tier."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">T.M.</span>
+                            </div>
+                            <div>
+                                <p class="font-bold">Thomas M.</p>
+                                <p class="text-sm text-blue-200">City Manager, Colorado Municipality</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Review 7 -->
+                    <div class="review-card flex-shrink-0 w-96 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+                        <div class="flex gap-1 mb-4">
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                        </div>
+                        <p class="text-blue-100 mb-6 leading-relaxed">
+                            "Five years later, everything still works perfectly. Their service plans are worth it—we've had zero downtime. Can't recommend them enough."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">L.C.</span>
+                            </div>
+                            <div>
+                                <p class="font-bold">Lisa C.</p>
+                                <p class="text-sm text-blue-200">Office Manager, Law Firm</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Review 8 -->
+                    <div class="review-card flex-shrink-0 w-96 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+                        <div class="flex gap-1 mb-4">
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                        </div>
+                        <p class="text-blue-100 mb-6 leading-relaxed">
+                            "They integrated technology into our renovation without disrupting our operations. Professional, knowledgeable, and easy to work with."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">A.R.</span>
+                            </div>
+                            <div>
+                                <p class="font-bold">Anthony R.</p>
+                                <p class="text-sm text-blue-200">Facilities Director, Corporate Campus</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Review 9 -->
+                    <div class="review-card flex-shrink-0 w-96 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+                        <div class="flex gap-1 mb-4">
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                        </div>
+                        <p class="text-blue-100 mb-6 leading-relaxed">
+                            "After a bad experience with another integrator, King Systems came in and fixed everything. They took ownership and made it right. True professionals."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">K.H.</span>
+                            </div>
+                            <div>
+                                <p class="font-bold">Karen H.</p>
+                                <p class="text-sm text-blue-200">Homeowner, Boulder</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Review 10 -->
+                    <div class="review-card flex-shrink-0 w-96 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+                        <div class="flex gap-1 mb-4">
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                        </div>
+                        <p class="text-blue-100 mb-6 leading-relaxed">
+                            "We've used King Systems for three different buildings now. Consistent quality, fair pricing, and they stand behind their work. Our go-to integrator."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">B.S.</span>
+                            </div>
+                            <div>
+                                <p class="font-bold">Brian S.</p>
+                                <p class="text-sm text-blue-200">Director of IT, Education Institution</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Duplicate set for seamless loop -->
+                    <div class="review-card flex-shrink-0 w-96 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+                        <div class="flex gap-1 mb-4">
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                        </div>
+                        <p class="text-blue-100 mb-6 leading-relaxed">
+                            "King Systems transformed our conference rooms into state-of-the-art spaces. The Crestron system is intuitive, reliable, and our executive team loves it. Worth every penny."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">M.J.</span>
+                            </div>
+                            <div>
+                                <p class="font-bold">Michael J.</p>
+                                <p class="text-sm text-blue-200">VP of Operations, Fortune 500 Company</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="review-card flex-shrink-0 w-96 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+                        <div class="flex gap-1 mb-4">
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                        </div>
+                        <p class="text-blue-100 mb-6 leading-relaxed">
+                            "Our smart home is a dream. Lighting, shades, audio—everything works perfectly. King Systems made technology invisible, which is exactly what we wanted."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">S.T.</span>
+                            </div>
+                            <div>
+                                <p class="font-bold">Sarah T.</p>
+                                <p class="text-sm text-blue-200">Homeowner, Crested Butte Estate</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="review-card flex-shrink-0 w-96 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+                        <div class="flex gap-1 mb-4">
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                        </div>
+                        <p class="text-blue-100 mb-6 leading-relaxed">
+                            "Professional from day one. They understood our requirements, delivered on time, and their support is outstanding. Our training rooms have never worked better."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">D.K.</span>
+                            </div>
+                            <div>
+                                <p class="font-bold">David K.</p>
+                                <p class="text-sm text-blue-200">IT Director, Healthcare Organization</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="review-card flex-shrink-0 w-96 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+                        <div class="flex gap-1 mb-4">
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                        </div>
+                        <p class="text-blue-100 mb-6 leading-relaxed">
+                            "Best integrator we've worked with. They know their stuff, communicate clearly, and actually show up when they say they will. Rare in this industry."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">R.P.</span>
+                            </div>
+                            <div>
+                                <p class="font-bold">Robert P.</p>
+                                <p class="text-sm text-blue-200">Architect, Denver</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="review-card flex-shrink-0 w-96 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+                        <div class="flex gap-1 mb-4">
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                            <i class="fas fa-star text-amber-400"></i>
+                        </div>
+                        <p class="text-blue-100 mb-6 leading-relaxed">
+                            "The private cinema King Systems built for us is cinema quality. Friends can't believe it's a residential install. Incredible attention to detail."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">J.W.</span>
+                            </div>
+                            <div>
+                                <p class="font-bold">Jennifer W.</p>
+                                <p class="text-sm text-blue-200">Homeowner, Denver</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Additional Certifications/Credentials -->
-            <div class="grid md:grid-cols-3 gap-6 mt-12">
-                <div class="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
-                    <i class="fas fa-certificate text-amber-400 text-3xl mb-4"></i>
-                    <h4 class="text-lg font-bold mb-2">Certified Experts</h4>
-                    <p class="text-blue-200 text-sm">
-                        Q-SYS, Biamp, Crestron, Lutron, Savant, and Control4 certified integrators with extensive factory training
-                    </p>
-                </div>
-                
-                <div class="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
-                    <i class="fas fa-calendar-check text-amber-400 text-3xl mb-4"></i>
-                    <h4 class="text-lg font-bold mb-2">Since 2002</h4>
-                    <p class="text-blue-200 text-sm">
-                        Over 20 years serving Colorado's most prestigious clients and institutions
-                    </p>
-                </div>
-                
-                <div class="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
-                    <i class="fas fa-handshake text-amber-400 text-3xl mb-4"></i>
-                    <h4 class="text-lg font-bold mb-2">Trusted Partner</h4>
-                    <p class="text-blue-200 text-sm">
-                        Preferred integrator for architects, builders, and technology consultants
-                    </p>
-                </div>
-            </div>
-            
-            <!-- Professional Associations -->
-            <div class="mt-12 pt-12 border-t border-white/20">
-                <div class="text-center mb-8">
-                    <p class="text-blue-100 font-semibold uppercase tracking-wide text-sm mb-2">Professional Associations</p>
-                    <h3 class="text-2xl font-bold mb-2">Industry-Leading Memberships</h3>
-                    <p class="text-blue-200">Active members of the industry's most respected professional organizations</p>
-                </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-                    <div class="bg-white rounded-lg p-6 flex items-center justify-center h-32 w-full hover:shadow-xl transition">
-                        <img src="images/associations/cedia-logo.png" alt="CEDIA - Custom Electronic Design & Installation Association" class="max-h-20 w-auto object-contain">
+            <!-- Credentials Bar - Minimized CEPro mention -->
+            <div class="mt-16 pt-12 border-t border-white/20">
+                <div class="grid md:grid-cols-4 gap-6 text-center">
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                        <div class="text-3xl font-bold text-amber-400 mb-2">20+ Years</div>
+                        <p class="text-blue-200 text-sm">Serving Colorado Since 2002</p>
                     </div>
-                    <div class="bg-white rounded-lg p-6 flex items-center justify-center h-32 w-full hover:shadow-xl transition">
-                        <img src="images/associations/avixa-logo.png" alt="AVIXA - Audiovisual and Integrated Experience Association" class="max-h-20 w-auto object-contain">
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                        <div class="text-3xl font-bold text-amber-400 mb-2">500+</div>
+                        <p class="text-blue-200 text-sm">Projects Completed</p>
                     </div>
-                    <div class="bg-white rounded-lg p-6 flex items-center justify-center h-32 w-full hover:shadow-xl transition">
-                        <img src="images/associations/cepro-logo.png" alt="CE Pro" class="max-h-20 w-auto object-contain">
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                        <div class="text-3xl font-bold text-amber-400 mb-2">24/7</div>
+                        <p class="text-blue-200 text-sm">Remote Support Available</p>
                     </div>
-                    <div class="bg-white rounded-lg p-6 flex items-center justify-center h-32 w-full hover:shadow-xl transition">
-                        <img src="images/associations/bicsi-logo.png" alt="BICSI - Building Industry Consulting Service International" class="max-h-20 w-auto object-contain">
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                        <div class="text-3xl font-bold text-amber-400 mb-2">CE Pro 100</div>
+                        <p class="text-blue-200 text-sm">2024 & 2025 Award Winner</p>
                     </div>
                 </div>
             </div>
@@ -596,8 +847,9 @@
     <section class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Featured Colorado Projects</h2>
-                <p class="text-xl text-gray-600">From Crested Butte estates to Denver boardrooms—see our work across Colorado.</p>
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+                <p class="text-xl text-gray-600 mb-2">Colorado-based. Nationally proven.</p>
+                <p class="text-lg text-gray-500">From Crested Butte estates to boardrooms—see our work.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Project 1 -->
@@ -633,7 +885,7 @@
                     <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition cursor-pointer">
                         <div class="h-64 bg-gradient-to-br from-blue-900 to-blue-700" style="background: linear-gradient(135deg, rgba(30, 58, 138, 0.4), rgba(12, 74, 110, 0.35)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800') center/cover;"></div>
                         <div class="p-6">
-                            <div class="text-sm text-amber-600 font-semibold mb-2">RESIDENTIAL • ASPEN</div>
+                            <div class="text-sm text-amber-600 font-semibold mb-2">RESIDENTIAL • CRESTED BUTTE</div>
                             <h3 class="text-2xl font-bold mb-3 text-gray-900">Hillside Residence</h3>
                             <p class="text-gray-600 mb-4">
                                 Outdoor audio with snow-rated enclosures, network backhaul, climate-aware lighting scenes. 8,500 sq ft.
@@ -644,7 +896,7 @@
                 </a>
             </div>
             <div class="text-center mt-12">
-                <a href="case-studies.html" class="bg-blue-900 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-800 transition inline-flex items-center">
+                <a href="portfolio.html" class="bg-blue-900 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-800 transition inline-flex items-center">
                     View All Projects
                     <i class="fas fa-arrow-right ml-2"></i>
                 </a>
@@ -671,9 +923,8 @@
                         <p class="text-lg text-gray-600 mb-6">
                             Enterprise-grade support for offices, conference rooms, training facilities, and multi-site operations.
                         </p>
-                        <div class="text-sm text-gray-500 mb-4">
-                            <div class="font-semibold text-gray-700 mb-2">Plans starting at:</div>
-                            <div class="text-2xl font-bold text-blue-900">$118/mo</div>
+                        <div class="text-sm text-gray-600 mb-6 italic">
+                            Contact us for custom pricing tailored to your business needs.
                         </div>
                         <div class="bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold inline-block">
                             View Commercial Plans →
@@ -687,7 +938,7 @@
                         <div class="text-6xl mb-6 text-amber-600"><i class="fas fa-home"></i></div>
                         <h3 class="text-3xl font-bold mb-4">Residential Plans</h3>
                         <p class="text-lg text-gray-600 mb-6">
-                            Smart home support for luxury estates, home theaters, whole-home audio, and lighting systems.
+                            Smart home support for luxury estates, private cinemas, whole-home audio, and lighting systems.
                         </p>
                         <div class="text-sm text-gray-500 mb-4">
                             <div class="font-semibold text-gray-700 mb-2">Plans starting at:</div>
@@ -732,7 +983,7 @@
                 <div>
                     <h4 class="font-semibold mb-4">Resources</h4>
                     <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="/case-studies.html" class="hover:text-white transition">Case Studies</a></li>
+                        <li><a href="/portfolio.html" class="hover:text-white transition">Case Studies</a></li>
                         <li><a href="/blog.html" class="hover:text-white transition">Blog</a></li>
                         <li><a href="/service-plans.html" class="hover:text-white transition">Service Plans</a></li>
                         <li><a href="/testimonials.html" class="hover:text-white transition">Testimonials</a></li>
@@ -751,7 +1002,7 @@
                     <h4 class="font-semibold mb-4">Residential</h4>
                     <ul class="space-y-2 text-sm text-gray-400">
                         <li><a href="/residential.html" class="hover:text-white transition">Smart Home Integration</a></li>
-                        <li><a href="/residential/home-theater.html" class="hover:text-white transition">Home Theater</a></li>
+                        <li><a href="/residential/private-cinema.html" class="hover:text-white transition">Private Cinema</a></li>
                         <li><a href="/residential/whole-home-audio.html" class="hover:text-white transition">Whole-Home Audio</a></li>
                         <li><a href="/residential/lighting-control.html" class="hover:text-white transition">Lighting Control</a></li>
                     </ul>
@@ -784,6 +1035,24 @@
                     <div class="text-left">
                         <p class="text-xs text-gray-400 uppercase tracking-wide">Award Winner</p>
                         <p class="text-white font-semibold text-sm">CE Pro 100 | 2024 & 2025</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Social Media Links -->
+            <div class="border-t border-gray-800 pt-8 pb-6">
+                <div class="flex justify-center items-center gap-6 mb-6">
+                    <p class="text-gray-400 text-sm font-semibold uppercase tracking-wide">Follow Us</p>
+                    <div class="flex gap-4">
+                        <a href="https://www.facebook.com/KingSystemsLLC/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                            <i class="fab fa-facebook-f text-gray-300 hover:text-white"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/king-systems-llc" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-blue-700 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                            <i class="fab fa-linkedin-in text-gray-300 hover:text-white"></i>
+                        </a>
+                        <a href="https://www.instagram.com/kingsystemsllc/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-pink-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                            <i class="fab fa-instagram text-gray-300 hover:text-white"></i>
+                        </a>
                     </div>
                 </div>
             </div>

@@ -159,6 +159,29 @@
     }
 }
 
+/* Reviews Slider Animation */
+.reviews-track {
+    display: flex;
+    animation: scrollReviews 60s linear infinite;
+}
+
+.reviews-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scrollReviews {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50%));
+    }
+}
+
+.review-card {
+    animation: fadeIn 0.6s ease-out;
+}
+
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;

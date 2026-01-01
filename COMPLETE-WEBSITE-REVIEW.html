@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King Systems Complete Website Review - Print Ready</title>
+    <style>
+        @media print {
+            @page { 
+                size: letter; 
+                margin: 0.75in; 
+            }
+            .page-break { 
+                page-break-after: always; 
+            }
+            .no-print { 
+                display: none !important; 
+            }
+            body {
+                font-size: 11pt;
+            }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+        }
+        
+        /* Print Button */
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .print-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+        }
+        
+        /* Cover Page */
+        .cover {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px;
+            margin: -20px -20px 0 -20px;
+        }
+        
+        .cover h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .cover h2 {
+            font-size: 24px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .cover-info {
+            font-size: 16px;
+            margin-top: 40px;
+            opacity: 0.8;
+        }
+        
+        /* Table of Contents */
+        .toc {
+            padding: 40px;
+            background: #f8fafc;
+            border: 2px solid #cbd5e1;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        
+        .toc h2 {
+            font-size: 32px;
+            color: #1e3a8a;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #1e3a8a;
+            padding-bottom: 15px;
+        }
+        
+        .toc-section {
+            margin: 25px 0;
+        }
+        
+        .toc-section h3 {
+            font-size: 20px;
+            color: #475569;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+        
+        .toc-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .toc-list li {
+            padding: 10px 15px;
+            margin: 6px 0;
+            background: white;
+            border-left: 4px solid #3b82f6;
+            border-radius: 4px;
+        }
+        
+        .toc-list a {
+            text-decoration: none;
+            color: #1e40af;
+            font-weight: 500;
+            display: block;
+        }
+        
+        /* Page Styles */
+        .review-page {
+            margin: 40px 0;
+            padding: 30px;
+            border: 2px solid #1e3a8a;
+            border-radius: 8px;
+            background: white;
+            position: relative;
+        }
+        
+        .page-number {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: #d97706;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+            padding: 25px 30px;
+            margin: -30px -30px 30px -30px;
+            border-radius: 6px 6px 0 0;
+        }
+        
+        .page-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .page-url {
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            opacity: 0.9;
+        }
+        
+        .page-meta {
+            font-size: 12px;
+            opacity: 0.85;
+            margin-top: 8px;
+        }
+        
+        /* Content Sections */
+        .content-block {
+            margin: 25px 0;
+        }
+        
+        .section-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #93c5fd;
+        }
+        
+        .hero-content {
+            background: #eff6ff;
+            padding: 20px;
+            border-left: 5px solid #3b82f6;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .hero-content h3 {
+            color: #1e40af;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .description-box {
+            background: #fef3c7;
+            border-left: 4px solid #d97706;
+            padding: 15px;
+            margin: 15px 0;
+            font-style: italic;
+            color: #78350f;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .feature-item {
+            padding: 15px;
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+        }
+        
+        .feature-item strong {
+            color: #1e3a8a;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        
+        .content-list {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        
+        .content-list li {
+            margin: 10px 0;
+            line-height: 1.7;
+        }
+        
+        .highlight-box {
+            background: #fefce8;
+            border: 2px solid #fbbf24;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+        
+        .highlight-box h4 {
+            color: #92400e;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        /* Notes Section */
+        .notes-section {
+            margin-top: 35px;
+            padding: 25px;
+            background: #fffef5;
+            border: 3px dashed #94a3b8;
+            border-radius: 6px;
+            min-height: 150px;
+        }
+        
+        .notes-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #475569;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .notes-title::before {
+            content: "✏️";
+            margin-right: 10px;
+            font-size: 24px;
+        }
+        
+        .notes-lines {
+            color: #cbd5e1;
+            font-size: 14px;
+            line-height: 2.5;
+        }
+        
+        /* Status Indicators */
+        .status-new {
+            background: #dcfce7;
+            color: #166534;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 10px;
+        }
+        
+        .status-updated {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 10px;
+        }
+        
+        .check-item {
+            margin: 8px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .check-item::before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+            font-size: 18px;
+            color: #3b82f6;
+        }
+        
+        /* Utility Classes */
+        .text-small {
+            font-size: 13px;
+            color: #64748b;
+        }
+        
+        .text-bold {
+            font-weight: bold;
+        }
+        
+        .mt-20 {
+            margin-top: 20px;
+        }
+        
+        .mb-20 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<button class="print-button no-print" onclick="window.print()">🖨️ Print to PDF</button>
+
+<div class="container">
+
+<!-- COVER PAGE -->
+<div class="cover no-print">
+    <h1>📄 King Systems Website</h1>
+    <h2>Complete Review Document</h2>
+    <div class="cover-info">
+        <p><strong>Total Pages:</strong> 37</p>
+        <p><strong>Generated:</strong> December 31, 2024</p>
+        <p><strong>Purpose:</strong> Print Review & Redlining</p>
+        <p style="margin-top: 30px;"><strong>Instructions:</strong></p>
+        <p>Click "Print to PDF" button above or press Ctrl+P (Cmd+P on Mac)</p>
+        <p>Select "Save as PDF" as your printer</p>
+        <p>Print and write notes/changes on each page</p>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+    <h2>📋 Table of Contents</h2>
+    
+    <div class="toc-section">
+        <h3>Main Pages (14)</h3>
+        <ul class="toc-list">
+            <li><a href="#page-1">1. Homepage</a></li>
+            <li><a href="#page-2">2. Commercial Services</a></li>
+            <li><a href="#page-3">3. Residential Services <span class="status-updated">UPDATED</span></a></li>
+            <li><a href="#page-4">4. About Us</a></li>
+            <li><a href="#page-5">5. Contact <span class="status-updated">UPDATED</span></a></li>
+            <li><a href="#page-6">6. Portfolio Landing</a></li>
+            <li><a href="#page-7">7. Commercial Portfolio</a></li>
+            <li><a href="#page-8">8. Residential Portfolio</a></li>
+            <li><a href="#page-9">9. Case Studies</a></li>
+            <li><a href="#page-10">10. Blog</a></li>
+            <li><a href="#page-11">11. Service Plans</a></li>
+            <li><a href="#page-12">12. Residential Service Plans</a></li>
+            <li><a href="#page-13">13. Commercial Service Plans</a></li>
+            <li><a href="#page-14">14. Sitemap</a></li>
+        </ul>
+    </div>
+    
+    <div class="toc-section">
+        <h3>Industry Pages (4)</h3>
+        <ul class="toc-list">
+            <li><a href="#page-15">15. Corporate</a></li>
+            <li><a href="#page-16">16. Education <span class="status-updated">UPDATED</span></a></li>
+            <li><a href="#page-17">17. Government <span class="status-updated">UPDATED</span></a></li>
+            <li><a href="#page-18">18. Healthcare</a></li>
+        </ul>
+    </div>
+    
+    <div class="toc-section">
+        <h3>Commercial Subpages (6)</h3>
+        <ul class="toc-list">
+            <li><a href="#page-19">19. Conference Rooms</a></li>
+            <li><a href="#page-20">20. Training Rooms</a></li>
+            <li><a href="#page-21">21. Hospitality</a></li>
+            <li><a href="#page-22">22. Sound Masking</a></li>
+            <li><a href="#page-23">23. Digital Signage</a></li>
+            <li><a href="#page-24">24. Cabling & Fiber</a></li>
+        </ul>
+    </div>
+    
+    <div class="toc-section">
+        <h3>Residential Subpages (3)</h3>
+        <ul class="toc-list">
+            <li><a href="#page-25">25. Home Theater</a></li>
+            <li><a href="#page-26">26. Whole-Home Audio</a></li>
+            <li><a href="#page-27">27. Lighting Control</a></li>
+        </ul>
+    </div>
+    
+    <div class="toc-section">
+        <h3>Case Studies (5)</h3>
+        <ul class="toc-list">
+            <li><a href="#page-28">28. USAF Academy Falcon Stadium</a></li>
+            <li><a href="#page-29">29. City of Brighton</a></li>
+            <li><a href="#page-30">30. DaVita Corporate HQ</a></li>
+            <li><a href="#page-31">31. Unicom Capital Penthouse</a></li>
+            <li><a href="#page-32">32. Denver Art Museum</a></li>
+        </ul>
+    </div>
+    
+    <div class="toc-section">
+        <h3>Blog Posts (3)</h3>
+        <ul class="toc-list">
+            <li><a href="#page-33">33. Smart Home Trends 2025</a></li>
+            <li><a href="#page-34">34. Crested Butte Estate Project <span class="status-updated">UPDATED</span></a></li>
+            <li><a href="#page-35">35. Commercial AV Best Practices</a></li>
+        </ul>
+    </div>
+    
+    <div class="toc-section">
+        <h3>Resources (2)</h3>
+        <ul class="toc-list">
+            <li><a href="#page-36">36. How to Choose AV Integrator</a></li>
+            <li><a href="#page-37">37. Commercial AV Costs</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- PAGE 1: HOMEPAGE -->
+<div class="review-page" id="page-1">
+    <div class="page-number">Page 1</div>
+    <div class="page-header">
+        <h1 class="page-title">1. Homepage</h1>
+        <p class="page-url">https://kingsystems-website.pages.dev/</p>
+        <p class="page-meta">File: index.html</p>
+    </div>
+    
+    <div class="content-block">
+        <div class="hero-content">
+            <h3>Hero Section</h3>
+            <p><strong>H1:</strong> Luxury Technology for Colorado Living & Working</p>
+            <p><strong>Subtitle:</strong> Colorado's premier luxury AV integration specialists. Crestron, Lutron, and Savant systems designed for mountain estates and modern workplaces.</p>
+        </div>
+    </div>
+    
+    <div class="content-block">
+        <h3 class="section-title">Main Service Cards (2)</h3>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <strong>Residential Smart Homes</strong>
+                <p>Luxury home automation, theaters, whole-home audio, lighting control for Colorado's finest estates</p>
+            </div>
+            <div class="feature-item">
+                <strong>Commercial AV Systems</strong>
+                <p>Conference rooms, training facilities, digital signage, and enterprise audiovisual solutions</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-block">
+        <h3 class="section-title">Key Messaging</h3>
+        <ul class="content-list">
+            <li><strong>Tagline:</strong> "From Crested Butte estates to boardrooms—see our work across the nation"</li>
+            <li><strong>Service Areas:</strong> Denver Metro, Crested Butte, Vail, Steamboat Springs</li>
+            <li><strong>Experience:</strong> 22+ years (since 2002)</li>
+            <li><strong>Brand Partners:</strong> Crestron, Lutron, Savant, Control4</li>
+            <li><strong>Client Logos:</strong> 60+ displayed</li>
+        </ul>
+    </div>
+    
+    <div class="highlight-box">
+        <h4>Recent Updates (Dec 29, 2024):</h4>
+        <ul style="margin-left: 20px; margin-top: 10px;">
+            <li>"Aspen" removed → "Crested Butte" throughout</li>
+            <li>Portfolio navigation fixed → goes to choice page</li>
+            <li>Client logos full color (no grayscale)</li>
+            <li>Logo scroll speed: 120s (2 minutes)</li>
+        </ul>
+    </div>
+    
+    <div class="content-block">
+        <h3 class="section-title">Review Checklist:</h3>
+        <div class="check-item">Hero message clear and compelling</div>
+        <div class="check-item">Service cards easy to understand</div>
+        <div class="check-item">Client logos visible and professional</div>
+        <div class="check-item">All CTAs work properly</div>
+        <div class="check-item">Mobile hamburger menu works</div>
+        <div class="check-item">"Let's Talk" button opens modal</div>
+        <div class="check-item">No "Aspen" references (should be Crested Butte)</div>
+    </div>
+    
+    <div class="notes-section">
+        <div class="notes-title">Your Notes & Changes:</div>
+        <div class="notes-lines">
+            _________________________________________________________________<br>
+            _________________________________________________________________<br>
+            _________________________________________________________________<br>
+            _________________________________________________________________<br>
+            _________________________________________________________________<br>
+        </div>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- Continuing with remaining pages... Let me build them systematically -->

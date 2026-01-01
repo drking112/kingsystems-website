@@ -4,6 +4,34 @@
 
 ---
 
+## 📅 Latest Updates (December 31, 2025)
+
+### Completed Today
+1. ✅ **Homepage Hero** → "Technology Made Simple" (more concise messaging)
+2. ✅ **Logo Scroll Speed** → 180 seconds (slower, more readable)
+3. ✅ **Client Logo Organization** → Reorganized by tier (Fortune 500 first, then government/education, then regional/local)
+4. ✅ **Hero Image Visibility** → Reduced overlay opacity from 0.6/0.5 to 0.40/0.35 for better image "pop"
+5. ✅ **Commercial Pricing** → Removed all dollar amounts, replaced with "Contact for Pricing"
+6. ✅ **Residential Copy** → Updated with lifestyle-focused "The Intuitive Home" messaging
+7. ✅ **24/7 Support** → Added prominent support info to contact page
+8. ✅ **Aspen → Crested Butte** → Find/replace completed across all 15+ references site-wide
+9. ✅ **Portfolio Navigation** → Fixed 24 files to point to /portfolio.html choice page
+
+### Files Ready to Deploy (41 files)
+- **Core**: index.html, css/style.css, js/main.js, README.md
+- **Main Pages**: commercial.html, residential.html, about.html, contact.html, portfolio.html, portfolio-commercial.html, portfolio-residential.html, case-studies.html, blog.html
+- **Subpages**: All commercial/, residential/, industries/, case-studies/, blog/, resources/ pages
+- **Service Plans**: commercial-service-plans.html, residential-service-plans.html
+
+### Pending Tasks
+- **Phosphor Icons Migration** (2-3 hours) - Systematic replacement of FontAwesome across 37+ HTML files
+- **Blog Posts Import** - Manual import from kingsystemsllc.com (static sites cannot auto-fetch external content)
+- **Google Reviews** - Awaiting decision on implementation method (manual/widget/link)
+
+📄 See `DEC-31-UPDATES-COMPLETE.md` for detailed documentation.
+
+---
+
 ## 📖 About This Project
 
 King Systems is Colorado's premier luxury AV integration specialist, offering cutting-edge technology solutions for residential estates and commercial properties. This website showcases our services, portfolio, and expertise in Crestron, Lutron, and Savant systems.
