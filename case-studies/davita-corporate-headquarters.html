@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DaVita Corporate Headquarters | King Systems Portfolio</title>
-    <meta name="description" content="Enterprise AV technology for DaVita's corporate headquarters including conference rooms, training facilities, and executive spaces.">
+    <meta name="description" content="Enterprise AV technology for DaVita's corporate headquarters including conference rooms, executive boardrooms, and collaboration spaces.">
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
@@ -14,8 +14,9 @@
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "DaVita Corporate Headquarters AV Integration",
-      "description": "Enterprise AV systems for DaVita's corporate headquarters including conference rooms and collaboration spaces.",
+      "headline": "DaVita Corporate Headquarters AV Solutions",
+      "description": "Enterprise AV technology for DaVita's corporate headquarters including conference rooms, executive boardrooms, and collaboration spaces.",
+      "image": "https://kingsystems-website.pages.dev/images/Portfolio/DaVita/Picture1.jpg",
       "author": {
         "@type": "Organization",
         "name": "King Systems LLC"
@@ -45,18 +46,44 @@
                     <a href="/about.html" class="text-gray-700 hover:text-blue-900 font-medium transition">About</a>
                     <a href="/contact.html" class="bg-amber-600 text-white px-6 py-2 rounded-lg hover:bg-amber-700 transition">Get Started</a>
                 </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="/commercial.html" class="block text-gray-700 hover:text-blue-900 py-2">Commercial</a>
+                <a href="/residential.html" class="block text-gray-700 hover:text-blue-900 py-2">Residential</a>
+                <a href="/portfolio.html" class="block text-gray-700 hover:text-blue-900 py-2">Portfolio</a>
+                <a href="/about.html" class="block text-gray-700 hover:text-blue-900 py-2">About</a>
+                <a href="/contact.html" class="block bg-amber-600 text-white px-6 py-2 rounded-lg hover:bg-amber-700 text-center">Get Started</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero -->
-    <section class="relative h-96 flex items-center justify-center text-white" style="background: url('../images/Portfolio/DaVita/Picture1.jpg') center/cover; margin-top: 80px;">
+    <section class="relative h-96 flex items-center justify-center text-white" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/Portfolio/DaVita/Picture1.jpg') center/cover; margin-top: 80px;">
         <div class="text-center z-10 max-w-4xl px-4">
-            <div class="text-amber-400 font-semibold mb-3 text-lg">CORPORATE • FORTUNE 500</div>
-            <h1 class="text-5xl font-bold mb-4">DaVita<br>Corporate Headquarters</h1>
-            <p class="text-xl">Enterprise AV Technology for Healthcare Industry Leader</p>
+            <div class="text-amber-400 font-semibold mb-3 text-lg">CORPORATE • HEALTHCARE</div>
+            <h1 class="text-5xl font-bold mb-4">DaVita Corporate Headquarters</h1>
+            <p class="text-xl">Enterprise AV Solutions for Conference Rooms, Boardrooms & Collaboration Spaces</p>
         </div>
     </section>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-50 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="flex items-center text-sm text-gray-600">
+                <a href="/portfolio.html" class="hover:text-blue-900 transition">Portfolio</a>
+                <i class="fas fa-chevron-right mx-2 text-xs"></i>
+                <span class="text-gray-900 font-medium">DaVita Corporate Headquarters</span>
+            </div>
+        </div>
+    </div>
 
     <!-- Project Overview -->
     <section class="py-16 bg-white">
@@ -66,11 +93,17 @@
                 <div class="lg:col-span-2">
                     <h2 class="text-4xl font-bold mb-6">Project Overview</h2>
                     <p class="text-xl text-gray-600 mb-6 leading-relaxed">
-                        King Systems partnered with DaVita, one of the nation's leading healthcare providers, to deliver comprehensive AV technology solutions for their corporate headquarters. As a Fortune 500 company managing kidney care facilities nationwide, DaVita required enterprise-grade systems that support executive decision-making, training initiatives, and seamless collaboration across their organization.
+                        King Systems partnered with DaVita, one of the nation's leading providers of kidney care services, to design and implement comprehensive audiovisual technology solutions for their corporate headquarters. This enterprise-scale project required sophisticated AV systems that support executive leadership, enable seamless collaboration across distributed teams, and facilitate critical healthcare business operations.
                     </p>
                     <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                        Our team designed and installed integrated AV systems throughout their Denver headquarters, including executive conference rooms, training facilities, and collaborative workspaces—all engineered to support DaVita's mission-critical healthcare operations.
+                        Our scope included state-of-the-art conference room technology, executive boardrooms with high-end video conferencing capabilities, and modern collaboration spaces equipped for hybrid work environments. The installation supports DaVita's mission-critical communications while maintaining the professional standards expected in a Fortune 500 healthcare organization.
                     </p>
+                    <div class="bg-blue-50 border-l-4 border-blue-900 p-6 mb-6">
+                        <p class="text-gray-700">
+                            <i class="fas fa-info-circle text-blue-900 mr-2"></i>
+                            <strong>Client:</strong> DaVita is a leading provider of dialysis services with headquarters in Denver, serving over 200,000 patients at nearly 3,000 centers across the United States.
+                        </p>
+                    </div>
                 </div>
 
                 <!-- Quick Facts -->
@@ -82,10 +115,6 @@
                             <div class="font-semibold">DaVita Inc.</div>
                         </div>
                         <div>
-                            <div class="text-blue-200 text-sm mb-1">INDUSTRY</div>
-                            <div class="font-semibold">Healthcare • Fortune 500</div>
-                        </div>
-                        <div>
                             <div class="text-blue-200 text-sm mb-1">LOCATION</div>
                             <div class="font-semibold">Denver, Colorado</div>
                         </div>
@@ -94,296 +123,251 @@
                             <div class="font-semibold">Corporate Headquarters</div>
                         </div>
                         <div>
-                            <div class="text-blue-200 text-sm mb-1">SCOPE</div>
-                            <div class="font-semibold text-sm">Conference Rooms, Training, Collaboration Spaces</div>
+                            <div class="text-blue-200 text-sm mb-1">INDUSTRY</div>
+                            <div class="font-semibold">Healthcare Services</div>
+                        </div>
+                        <div>
+                            <div class="text-blue-200 text-sm mb-1">SERVICES</div>
+                            <div class="font-semibold">Conference Rooms<br>Executive Boardrooms<br>Collaboration Spaces</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Project Photo Gallery -->
+            <!-- Challenges & Solutions -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <div>
+                    <h3 class="text-3xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-exclamation-triangle text-amber-600 mr-3"></i>
+                        Challenges
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-900 mt-1 mr-3"></i>
+                            <span class="text-gray-700"><strong>Enterprise Scale:</strong> Supporting hundreds of employees across multiple floors with consistent AV experiences</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-900 mt-1 mr-3"></i>
+                            <span class="text-gray-700"><strong>Healthcare Compliance:</strong> Meeting HIPAA requirements for secure communications and patient data privacy</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-900 mt-1 mr-3"></i>
+                            <span class="text-gray-700"><strong>24/7 Operations:</strong> Minimal disruption to business operations during installation and configuration</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-900 mt-1 mr-3"></i>
+                            <span class="text-gray-700"><strong>Hybrid Work:</strong> Seamless integration between on-site and remote participants in meetings</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-lightbulb text-amber-600 mr-3"></i>
+                        Solutions
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-blue-900 mt-1 mr-3"></i>
+                            <span class="text-gray-700"><strong>Standardized Systems:</strong> Consistent Crestron-based room controls across all spaces for easy adoption</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-blue-900 mt-1 mr-3"></i>
+                            <span class="text-gray-700"><strong>Secure Architecture:</strong> Enterprise-grade network segmentation and encrypted video conferencing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-blue-900 mt-1 mr-3"></i>
+                            <span class="text-gray-700"><strong>Phased Installation:</strong> Evening and weekend work to avoid disrupting critical business functions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-blue-900 mt-1 mr-3"></i>
+                            <span class="text-gray-700"><strong>Zoom Rooms:</strong> Fully integrated Zoom Rooms with intelligent camera tracking and noise cancellation</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Featured Image -->
+            <div class="mb-16">
+                <img src="../images/Portfolio/DaVita/Picture1.jpg" alt="DaVita Corporate AV Installation" class="w-full h-auto rounded-lg shadow-lg">
+                <p class="text-center text-gray-600 mt-4 italic">DaVita corporate headquarters featuring state-of-the-art conference room technology</p>
+            </div>
+
+            <!-- Project Gallery -->
             <div class="mb-16">
                 <h3 class="text-3xl font-bold mb-8 text-center">Project Gallery</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="rounded-xl overflow-hidden shadow-lg">
-                        <img src="../images/Portfolio/DaVita/Picture1.jpg" alt="DaVita Conference Room" class="w-full h-64 object-cover">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="rounded-lg overflow-hidden shadow-lg">
+                        <img src="../images/Portfolio/siteimages/Davita/davita-1.jpg" 
+                             alt="DaVita Conference Room" 
+                             class="w-full h-64 object-cover hover:scale-105 transition duration-300">
                     </div>
-                    <div class="rounded-xl overflow-hidden shadow-lg">
-                        <img src="../images/Portfolio/DaVita/Picture2.jpg" alt="DaVita Technology Installation" class="w-full h-64 object-cover">
+                    <div class="rounded-lg overflow-hidden shadow-lg">
+                        <img src="../images/Portfolio/siteimages/Davita/davita-2.jpg" 
+                             alt="DaVita Boardroom Technology" 
+                             class="w-full h-64 object-cover hover:scale-105 transition duration-300">
                     </div>
-                    <div class="rounded-xl overflow-hidden shadow-lg">
-                        <img src="../images/Portfolio/DaVita/Picture3.jpg" alt="DaVita AV Systems" class="w-full h-64 object-cover">
+                    <div class="rounded-lg overflow-hidden shadow-lg">
+                        <img src="../images/Portfolio/siteimages/Davita/davita-3.jpg" 
+                             alt="DaVita Collaboration Space" 
+                             class="w-full h-64 object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="rounded-lg overflow-hidden shadow-lg">
+                        <img src="../images/Portfolio/siteimages/Davita/davita-4.jpg" 
+                             alt="DaVita Display Technology" 
+                             class="w-full h-64 object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="rounded-lg overflow-hidden shadow-lg">
+                        <img src="../images/Portfolio/siteimages/Davita/davita-5.jpg" 
+                             alt="DaVita AV Equipment" 
+                             class="w-full h-64 object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="rounded-lg overflow-hidden shadow-lg">
+                        <img src="../images/Portfolio/siteimages/Davita/davita-5.jpg" 
+                             alt="DaVita Meeting Room" 
+                             class="w-full h-64 object-cover hover:scale-105 transition duration-300">
                     </div>
                 </div>
             </div>
 
-            <!-- Scope of Work -->
+            <!-- Technology Deployed -->
             <div class="mb-16">
-                <h3 class="text-3xl font-bold mb-8 text-center">Technology Solutions Delivered</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Executive Conference -->
-                    <div class="bg-white rounded-xl p-8 shadow-lg border-2 border-gray-100 hover:border-blue-900 transition">
-                        <div class="text-5xl text-blue-900 mb-4 text-center">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h4 class="text-2xl font-bold mb-4 text-center">Executive Conference Rooms</h4>
-                        <ul class="space-y-3 text-gray-600">
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Crestron control systems for one-touch operation</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>4K displays and wireless presentation</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Integrated video conferencing (Teams, Zoom)</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Professional audio with DSP</span>
-                            </li>
-                        </ul>
+                <h3 class="text-3xl font-bold mb-8 text-center">Technology Deployed</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-lg text-center">
+                        <i class="fas fa-video text-4xl text-blue-900 mb-4"></i>
+                        <h4 class="font-bold mb-2">Video Conferencing</h4>
+                        <p class="text-sm text-gray-600">Zoom Rooms with PTZ cameras and intelligent tracking</p>
                     </div>
-
-                    <!-- Training Facilities -->
-                    <div class="bg-white rounded-xl p-8 shadow-lg border-2 border-gray-100 hover:border-blue-900 transition">
-                        <div class="text-5xl text-blue-900 mb-4 text-center">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                        </div>
-                        <h4 class="text-2xl font-bold mb-4 text-center">Training Facilities</h4>
-                        <ul class="space-y-3 text-gray-600">
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Interactive displays for healthcare training</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Lecture capture and recording systems</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Multi-zone audio distribution</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Scalable system architecture</span>
-                            </li>
-                        </ul>
+                    <div class="bg-gray-50 p-6 rounded-lg text-center">
+                        <i class="fas fa-desktop text-4xl text-blue-900 mb-4"></i>
+                        <h4 class="font-bold mb-2">Display Systems</h4>
+                        <p class="text-sm text-gray-600">4K displays with wireless presentation capabilities</p>
                     </div>
+                    <div class="bg-gray-50 p-6 rounded-lg text-center">
+                        <i class="fas fa-sliders-h text-4xl text-blue-900 mb-4"></i>
+                        <h4 class="font-bold mb-2">Control Systems</h4>
+                        <p class="text-sm text-gray-600">Crestron touch panels and automation</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg text-center">
+                        <i class="fas fa-microphone text-4xl text-blue-900 mb-4"></i>
+                        <h4 class="font-bold mb-2">Audio Systems</h4>
+                        <p class="text-sm text-gray-600">QSC DSP with beamforming microphones</p>
+                    </div>
+                </div>
+            </div>
 
-                    <!-- Collaboration Spaces -->
-                    <div class="bg-white rounded-xl p-8 shadow-lg border-2 border-gray-100 hover:border-blue-900 transition">
-                        <div class="text-5xl text-blue-900 mb-4 text-center">
-                            <i class="fas fa-laptop-house"></i>
-                        </div>
-                        <h4 class="text-2xl font-bold mb-4 text-center">Collaboration Spaces</h4>
-                        <ul class="space-y-3 text-gray-600">
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Digital whiteboards and touchscreens</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>BYOD-friendly wireless connectivity</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Huddle room AV packages</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                                <span>Consistent user experience across spaces</span>
-                            </li>
-                        </ul>
+            <!-- Results -->
+            <div class="bg-gradient-to-r from-blue-900 to-blue-700 text-white rounded-xl p-8 md:p-12 mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-center">Results & Impact</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <div class="text-4xl font-bold text-amber-400 mb-2">20+</div>
+                        <div class="text-blue-100">Conference Rooms Equipped</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-amber-400 mb-2">100%</div>
+                        <div class="text-blue-100">One-Touch Meeting Start</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-amber-400 mb-2">24/7</div>
+                        <div class="text-blue-100">Technical Support Available</div>
                     </div>
                 </div>
             </div>
 
             <!-- Technology Partners -->
-            <div class="bg-gray-50 rounded-2xl p-12 mb-16">
-                <h3 class="text-3xl font-bold mb-8 text-center">Technology Partners</h3>
-                <div class="flex flex-wrap justify-center items-center gap-8">
-                    <img src="../images/partners/crestron.png" alt="Crestron" class="h-10 grayscale hover:grayscale-0 transition">
-                    <img src="../images/partners/cisco.png" alt="Cisco" class="h-10 grayscale hover:grayscale-0 transition">
-                    <img src="../images/partners/samsung.png" alt="Samsung" class="h-10 grayscale hover:grayscale-0 transition">
-                    <img src="../images/partners/biamp.png" alt="Biamp" class="h-10 grayscale hover:grayscale-0 transition">
-                    <img src="../images/partners/qsc.png" alt="QSC" class="h-10 grayscale hover:grayscale-0 transition">
-                    <img src="../images/partners/sony.png" alt="Sony" class="h-10 grayscale hover:grayscale-0 transition">
-                </div>
-            </div>
-
-            <!-- Results -->
             <div class="mb-16">
-                <h3 class="text-3xl font-bold mb-8 text-center">Results & Benefits</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-white rounded-lg p-6 shadow-md border-l-4 border-blue-900">
-                        <h4 class="font-bold mb-2 text-lg">Enterprise Reliability</h4>
-                        <p class="text-gray-600">Mission-critical systems supporting daily healthcare operations</p>
-                    </div>
-                    <div class="bg-white rounded-lg p-6 shadow-md border-l-4 border-blue-900">
-                        <h4 class="font-bold mb-2 text-lg">Consistent Experience</h4>
-                        <p class="text-gray-600">Standardized AV systems across all meeting spaces</p>
-                    </div>
-                    <div class="bg-white rounded-lg p-6 shadow-md border-l-4 border-blue-900">
-                        <h4 class="font-bold mb-2 text-lg">Training Excellence</h4>
-                        <p class="text-gray-600">Enhanced medical training capabilities with advanced AV</p>
-                    </div>
-                    <div class="bg-white rounded-lg p-6 shadow-md border-l-4 border-blue-900">
-                        <h4 class="font-bold mb-2 text-lg">Easy Operation</h4>
-                        <p class="text-gray-600">Intuitive controls reducing IT support burden</p>
-                    </div>
-                    <div class="bg-white rounded-lg p-6 shadow-md border-l-4 border-blue-900">
-                        <h4 class="font-bold mb-2 text-lg">Future-Ready</h4>
-                        <p class="text-gray-600">Scalable infrastructure for growth</p>
-                    </div>
-                    <div class="bg-white rounded-lg p-6 shadow-md border-l-4 border-blue-900">
-                        <h4 class="font-bold mb-2 text-lg">Remote Support</h4>
-                        <p class="text-gray-600">Network-enabled monitoring and maintenance</p>
-                    </div>
+                <h3 class="text-3xl font-bold mb-8 text-center">Technology Partners</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
+                    <img src="../images/partners/crestron.png" alt="Crestron" class="h-10 w-auto grayscale hover:grayscale-0 transition">
+                    <img src="../images/partners/qsc.png" alt="QSC" class="h-10 w-auto grayscale hover:grayscale-0 transition">
+                    <img src="../images/partners/sony.png" alt="Sony" class="h-10 w-auto grayscale hover:grayscale-0 transition">
+                    <img src="../images/partners/samsung.png" alt="Samsung" class="h-10 w-auto grayscale hover:grayscale-0 transition">
+                    <img src="../images/partners/biamp.png" alt="Biamp" class="h-10 w-auto grayscale hover:grayscale-0 transition">
+                    <img src="../images/partners/Logitech_logo.png" alt="Logitech" class="h-10 w-auto grayscale hover:grayscale-0 transition">
                 </div>
             </div>
 
-            <!-- External References & Press -->
-            <div class="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-12 mb-16 border-2 border-blue-100">
-                <div class="text-center mb-8">
-                    <i class="fas fa-newspaper text-4xl text-blue-900 mb-4"></i>
-                    <h3 class="text-3xl font-bold mb-4">Project Recognition & External Coverage</h3>
-                    <p class="text-gray-600 max-w-3xl mx-auto">
-                        DaVita's headquarters has been featured in local and industry media, showcasing the building's innovative design and technology integration.
-                    </p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-                    <a href="https://303magazine.com/2012/11/big-city-lights-the-davita-building/" target="_blank" rel="noopener noreferrer" class="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group">
-                        <div class="flex items-start">
-                            <i class="fas fa-external-link-alt text-blue-900 mr-4 mt-1 group-hover:text-amber-600 transition"></i>
-                            <div>
-                                <h4 class="font-bold text-lg mb-2 group-hover:text-blue-900 transition">Big City Lights: The DaVita Building</h4>
-                                <p class="text-sm text-gray-600 mb-2">303 Magazine feature on DaVita's iconic downtown Denver headquarters building</p>
-                                <span class="text-xs text-blue-600 font-semibold">303 Magazine →</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://denverinfill.com/2010/07/davita-world-hq-planned-for-union-station-district.html" target="_blank" rel="noopener noreferrer" class="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group">
-                        <div class="flex items-start">
-                            <i class="fas fa-external-link-alt text-blue-900 mr-4 mt-1 group-hover:text-amber-600 transition"></i>
-                            <div>
-                                <h4 class="font-bold text-lg mb-2 group-hover:text-blue-900 transition">DaVita World HQ: Union Station District</h4>
-                                <p class="text-sm text-gray-600 mb-2">Denver Infill coverage of the headquarters planning and construction</p>
-                                <span class="text-xs text-blue-600 font-semibold">DenverInfill.com →</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://denverurbanism.com/2015/03/doors-open-denver-preview-davita-world-headquarters.html" target="_blank" rel="noopener noreferrer" class="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group">
-                        <div class="flex items-start">
-                            <i class="fas fa-external-link-alt text-blue-900 mr-4 mt-1 group-hover:text-amber-600 transition"></i>
-                            <div>
-                                <h4 class="font-bold text-lg mb-2 group-hover:text-blue-900 transition">Doors Open Denver: DaVita World Headquarters</h4>
-                                <p class="text-sm text-gray-600 mb-2">Denver Urbanism tour and profile of DaVita's innovative workspace</p>
-                                <span class="text-xs text-blue-600 font-semibold">DenverUrbanism.com →</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://www.saundersinc.com/portfolio/projects/davita-world-headquarters/" target="_blank" rel="noopener noreferrer" class="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group">
-                        <div class="flex items-start">
-                            <i class="fas fa-external-link-alt text-blue-900 mr-4 mt-1 group-hover:text-amber-600 transition"></i>
-                            <div>
-                                <h4 class="font-bold text-lg mb-2 group-hover:text-blue-900 transition">DaVita World Headquarters Project</h4>
-                                <p class="text-sm text-gray-600 mb-2">Saunders Construction case study documenting the building completion</p>
-                                <span class="text-xs text-blue-600 font-semibold">SaundersInc.com →</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="text-center mt-8">
-                    <p class="text-sm text-gray-500 italic">
-                        <i class="fas fa-info-circle mr-2"></i>
-                        External media coverage validates project completion and demonstrates our Fortune 500 corporate experience
-                    </p>
-                </div>
-            </div>
+        </div>
+    </section>
 
-            <!-- Related Services -->
-            <div class="bg-gray-50 rounded-2xl p-12">
-                <h3 class="text-3xl font-bold mb-8 text-center">Related Services</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <a href="/industries/corporate.html" class="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition text-center">
-                        <i class="fas fa-building text-4xl text-blue-900 mb-4"></i>
-                        <h4 class="font-bold text-lg mb-2">Corporate AV Solutions</h4>
-                        <p class="text-gray-600 text-sm">Enterprise technology for modern business</p>
-                    </a>
-                    <a href="/industries/healthcare.html" class="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition text-center">
-                        <i class="fas fa-hospital text-4xl text-blue-900 mb-4"></i>
-                        <h4 class="font-bold text-lg mb-2">Healthcare Technology</h4>
-                        <p class="text-gray-600 text-sm">HIPAA-compliant AV systems</p>
-                    </a>
-                    <a href="/commercial/conference-rooms.html" class="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition text-center">
-                        <i class="fas fa-video text-4xl text-blue-900 mb-4"></i>
-                        <h4 class="font-bold text-lg mb-2">Conference Rooms</h4>
-                        <p class="text-gray-600 text-sm">Professional meeting technology</p>
-                    </a>
-                </div>
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-6">Ready for Your Enterprise AV Project?</h2>
+            <p class="text-xl mb-8 text-blue-100">Let King Systems design and implement AV solutions for your corporate headquarters.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/contact.html" class="bg-amber-600 text-white px-8 py-3 rounded-lg hover:bg-amber-700 transition text-lg font-semibold">Schedule Consultation</a>
+                <a href="/portfolio.html" class="bg-white text-blue-900 px-8 py-3 rounded-lg hover:bg-gray-100 transition text-lg font-semibold">View More Projects</a>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="py-20 bg-gradient-to-br from-blue-900 to-blue-700 text-white">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold mb-6">Planning a Corporate AV Project?</h2>
-            <p class="text-xl text-blue-100 mb-8">
-                From Fortune 500 headquarters to healthcare facilities, we deliver enterprise-grade solutions that perform.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/contact.html" class="bg-white text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition inline-block">
-                    Request Consultation
+    <!-- Related Projects -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl font-bold mb-8 text-center">Related Projects</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- USAF -->
+                <a href="/case-studies/air-force-academy-falcon-stadium.html" class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div class="h-48" style="background: url('../images/Portfolio/USAF/Picture1.jpg') center/cover;"></div>
+                    <div class="p-6">
+                        <div class="text-blue-900 font-semibold mb-2">GOVERNMENT • SPORTS</div>
+                        <h4 class="text-2xl font-bold mb-3 group-hover:text-blue-900 transition">US Air Force Academy Falcon Stadium</h4>
+                        <p class="text-gray-600 mb-4">Premium AV technology for locker rooms, club facilities, and luxury suites</p>
+                        <span class="text-amber-600 font-semibold group-hover:underline">View Case Study →</span>
+                    </div>
                 </a>
-                <a href="/case-studies.html" class="bg-blue-800 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition inline-block">
-                    View More Projects
+                
+                <!-- City of Brighton -->
+                <a href="/case-studies/city-of-brighton-municipal-projects.html" class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div class="h-48" style="background: url('../images/Portfolio/City%20of%20Brighton/Picture1.jpg') center/cover;"></div>
+                    <div class="p-6">
+                        <div class="text-blue-900 font-semibold mb-2">GOVERNMENT • MUNICIPAL</div>
+                        <h4 class="text-2xl font-bold mb-3 group-hover:text-blue-900 transition">City of Brighton Municipal Projects</h4>
+                        <p class="text-gray-600 mb-4">Comprehensive AV solutions for city council, police, and fire departments</p>
+                        <span class="text-amber-600 font-semibold group-hover:underline">View Case Study →</span>
+                    </div>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <img src="../images/logo-2/King Systems Logo_2024 - 600c267.png" alt="King Systems" class="h-16 w-auto mb-4">
-                    <p class="text-gray-400 text-sm">Colorado's premier luxury technology integration specialists since 2002.</p>
+    <footer class="bg-gray-900 text-gray-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-1">
+                    <img src="../images/logo-2/King Systems Logo_2024 - 600c267.png" alt="King Systems" class="h-16 mb-4">
+                    <p class="text-gray-400 text-sm">Professional AV integration services across Colorado since 2002.</p>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Resources</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="/portfolio.html" class="hover:text-white transition">Case Studies</a></li>
-                        <li><a href="/blog.html" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="/service-plans.html" class="hover:text-white transition">Service Plans</a></li>
-                        <li><a href="/testimonials.html" class="hover:text-white transition">Testimonials</a></li>
+                    <h4 class="font-bold text-white mb-4">Solutions</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/commercial.html" class="hover:text-amber-600 transition">Commercial AV</a></li>
+                        <li><a href="/residential.html" class="hover:text-amber-600 transition">Residential Automation</a></li>
+                        <li><a href="/service-plans.html" class="hover:text-amber-600 transition">Service Plans</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Commercial</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="/commercial/conference-rooms.html" class="hover:text-white transition">Conference Rooms</a></li>
-                        <li><a href="/commercial/training-rooms.html" class="hover:text-white transition">Training Rooms</a></li>
-                        <li><a href="/commercial/hospitality.html" class="hover:text-white transition">Hospitality</a></li>
-                        <li><a href="/commercial/sound-masking.html" class="hover:text-white transition">Sound Masking</a></li>
+                    <h4 class="font-bold text-white mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/about.html" class="hover:text-amber-600 transition">About Us</a></li>
+                        <li><a href="/portfolio.html" class="hover:text-amber-600 transition">Portfolio</a></li>
+                        <li><a href="/contact.html" class="hover:text-amber-600 transition">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Residential</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="/residential.html" class="hover:text-white transition">Smart Home Integration</a></li>
-                        <li><a href="/residential/private-cinema.html" class="hover:text-white transition">Private Cinema</a></li>
-                        <li><a href="/residential/whole-home-audio.html" class="hover:text-white transition">Whole-Home Audio</a></li>
-                        <li><a href="/residential/lighting-control.html" class="hover:text-white transition">Lighting Control</a></li>
+                    <h4 class="font-bold text-white mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fas fa-phone mr-2"></i>720-999-4636</li>
+                        <li><i class="fas fa-envelope mr-2"></i>info@kingsystemsllc.com</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Denver, Colorado</li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
-                <p>© 2024 King Systems LLC. All rights reserved. | Colorado's Luxury Technology Specialists</p>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2025 King Systems LLC. All rights reserved.</p>
             </div>
         </div>
     </footer>
