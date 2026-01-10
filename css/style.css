@@ -10,7 +10,7 @@
 .logo-track {
     display: flex;
     gap: 0;
-    animation: scroll 180s linear infinite;
+    animation: scroll 60s linear infinite;
     width: max-content;
 }
 
