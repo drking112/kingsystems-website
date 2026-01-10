@@ -28,33 +28,176 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Contact Form Handling
+    // Contact Form Handling with Formspree
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData.entries());
-            
-            // Display success message
+            const submitButton = contactForm.querySelector('button[type="submit"]');
             const messageDiv = document.getElementById('form-message');
-            if (messageDiv) {
-                messageDiv.className = 'message-success fade-in';
-                messageDiv.textContent = 'Thank you! Your message has been sent. We\'ll be in touch soon.';
-                messageDiv.classList.remove('hidden');
-                
-                // Reset form
-                contactForm.reset();
-                
-                // Hide message after 5 seconds
-                setTimeout(() => {
-                    messageDiv.classList.add('hidden');
-                }, 5000);
-            }
+            const formData = new FormData(contactForm);
             
-            // In a real implementation, you would send this data to a server
-            console.log('Form submitted:', data);
+            // Disable submit button and show loading state
+            const originalButtonText = submitButton.textContent;
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+            
+            try {
+                // Send data to Formspree
+                const response = await fetch('https://formspree.io/f/mwvveraz', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Success
+                    if (messageDiv) {
+                        messageDiv.className = 'mt-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg';
+                        messageDiv.textContent = 'Thank you! Your message has been sent successfully. We\'ll be in touch soon.';
+                        messageDiv.classList.remove('hidden');
+                    }
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Hide message after 8 seconds
+                    setTimeout(() => {
+                        if (messageDiv) {
+                            messageDiv.classList.add('hidden');
+                        }
+                    }, 8000);
+                } else {
+                    // Error from Formspree
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                // Error handling
+                if (messageDiv) {
+                    messageDiv.className = 'mt-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg';
+                    messageDiv.textContent = 'Sorry, there was an error sending your message. Please try again or email us directly at answers@kingsystemsllc.com';
+                    messageDiv.classList.remove('hidden');
+                }
+                
+                console.error('Form submission error:', error);
+            } finally {
+                // Re-enable submit button
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            }
+        });
+    }
+
+    // Let's Talk Modal Form Handling with Formspree
+    const letsTalkForm = document.getElementById('contactForm');
+    if (letsTalkForm) {
+        letsTalkForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitButton = letsTalkForm.querySelector('button[type="submit"]');
+            const formData = new FormData(letsTalkForm);
+            
+            // Disable submit button and show loading state
+            const originalButtonText = submitButton.textContent;
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+            
+            try {
+                // Send data to Formspree
+                const response = await fetch('https://formspree.io/f/xaqqwpkn', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Success - Show success message in modal
+                    alert('Thank you! Your message has been sent successfully. We\'ll be in touch soon.');
+                    
+                    // Reset form
+                    letsTalkForm.reset();
+                    
+                    // Close modal if function exists
+                    if (typeof closeContactModal === 'function') {
+                        closeContactModal();
+                    }
+                } else {
+                    // Error from Formspree
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                // Error handling
+                alert('Sorry, there was an error sending your message. Please try again or email us directly at answers@kingsystemsllc.com');
+                console.error('Form submission error:', error);
+            } finally {
+                // Re-enable submit button
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            }
+        });
+    }
+
+    // Law Firm Assessment Form Handling with Formspree
+    const lawAssessmentForm = document.getElementById('law-assessment-form');
+    if (lawAssessmentForm) {
+        lawAssessmentForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitButton = lawAssessmentForm.querySelector('button[type="submit"]');
+            const formData = new FormData(lawAssessmentForm);
+            
+            // Disable submit button and show loading state
+            const originalButtonText = submitButton.textContent;
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+            
+            try {
+                // Send data to Formspree
+                const response = await fetch('https://formspree.io/f/xdaanwjo', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Success - Replace form with success message
+                    lawAssessmentForm.innerHTML = `
+                        <div class="text-center py-12">
+                            <div class="bg-green-100 text-green-800 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-check text-4xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 text-gray-900">Assessment Request Received!</h3>
+                            <p class="text-gray-700 mb-6">
+                                Thank you for your interest in King Systems. We'll contact you within 1 business day to schedule your complimentary technology assessment.
+                            </p>
+                            <p class="text-gray-600">
+                                Need immediate assistance? Call us at <a href="tel:1-855-285-2854" class="text-blue-900 font-semibold hover:text-amber-600">1-855-AVKINGS</a>
+                            </p>
+                        </div>
+                    `;
+                    
+                    // Scroll to success message
+                    lawAssessmentForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    // Error from Formspree
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                // Error handling
+                alert('Sorry, there was an error sending your assessment request. Please try again or call us directly at 1-855-AVKINGS (1-855-285-2854)');
+                console.error('Form submission error:', error);
+                
+                // Re-enable submit button
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            }
         });
     }
 
