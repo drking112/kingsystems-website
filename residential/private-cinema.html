@@ -1,38 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Private Cinema Design & Installation | King Systems</title>
-    <meta name="description" content="Custom private cinema design and installation in Colorado. Premium acoustics, 4K projection, Dolby Atmos, and luxury seating for the ultimate viewing experience.">
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <title>Home Theater & Private Cinema | King Systems Colorado</title>
+    <meta name="description" content="Luxury home theaters featuring Pro Audio Technology, McIntosh, and Sonus Faber. Reference-grade cinema experiences for Colorado homes.">
     
-    <!-- JSON-LD Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Private Cinema Design & Installation",
-      "provider": {
-        "@type": "Organization",
-        "name": "King Systems LLC",
-        "url": "https://kingsystems-website.pages.dev"
-      },
-      "areaServed": {
-        "@type": "State",
-        "name": "Colorado"
-      },
-      "description": "Custom private cinema design and installation in Colorado. Premium acoustics, 4K projection, Dolby Atmos, and luxury seating for the ultimate viewing experience.",
-      "offers": {
-        "@type": "Offer",
-        "availability": "https://schema.org/InStock"
-      }
-    }
-    </script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
-<body class="bg-white text-gray-900">
+<body class="bg-white text-gray-900 font-sans antialiased">
 
     <!-- Navigation -->
     <nav class="bg-white shadow-md fixed w-full top-0 z-50">
@@ -40,12 +27,12 @@
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0">
                     <a href="/" class="flex items-center">
-                        <img src="../images/logo/ks-logo.png" alt="King Systems" class="h-16 w-auto">
+                        <img src="../images/logo/ks-logo.png" alt="King Systems" class="h-16 w-auto mb-4">
                     </a>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="/commercial.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Commercial</a>
-                    <a href="/residential.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Residential</a>
+                    <a href="/residential.html" class="text-blue-900 font-medium">Residential</a>
                     <a href="/portfolio.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Portfolio</a>
                     <a href="/blog.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Blog</a>
                     <a href="/about.html" class="text-gray-700 hover:text-blue-900 font-medium transition">About</a>
@@ -61,7 +48,7 @@
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden pb-4">
                 <a href="/commercial.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Commercial</a>
-                <a href="/residential.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Residential</a>
+                <a href="/residential.html" class="block px-4 py-2 text-blue-900 font-semibold rounded">Residential</a>
                 <a href="/portfolio.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Portfolio</a>
                 <a href="/blog.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Blog</a>
                 <a href="/about.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">About</a>
@@ -71,179 +58,267 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative h-96 flex items-center justify-center text-white" style="background: linear-gradient(135deg, rgba(30, 58, 138, 0.7), rgba(12, 74, 110, 0.6)), url('https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?q=80&w=2000') center/cover; margin-top: 80px;">
-        <div class="text-center z-10">
-            <h1 class="text-5xl font-bold mb-4">Private Cinema Design & Installation</h1>
-            <p class="text-xl">Cinematic experiences in the comfort of your Colorado home</p>
+    <!-- Hero Section - McIntosh-inspired luxury audio -->
+    <section class="relative h-[600px] flex items-center justify-center text-white" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1593784991095-a205069470b6?q=80&w=2000') center/cover; margin-top: 80px;">
+        <div class="text-center z-10 max-w-4xl mx-auto px-4">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Home Theater & Private Cinema</h1>
+            <p class="text-xl md:text-2xl mb-8">Reference-grade performance. Theater-quality immersion. The magic of cinema, refined for your home.</p>
+            <a href="/contact.html" class="bg-amber-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-amber-700 transition inline-block">
+                Design Your Cinema
+            </a>
         </div>
     </section>
 
     <!-- Main Content -->
     <section class="py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Breadcrumb Navigation -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Breadcrumb -->
             <div class="mb-8">
                 <a href="/residential.html" class="inline-flex items-center text-blue-900 hover:text-amber-600 font-semibold transition">
                     <i class="fas fa-arrow-left mr-2"></i>
-                    Back to Residential Solutions
+                    Back to Residential Services
                 </a>
             </div>
 
-            <div class="mb-12">
+            <!-- Introduction -->
+            <div class="max-w-4xl mx-auto mb-16 text-center">
+                <h2 class="text-4xl font-bold mb-6">The Immersion of the Box Office, Without the Crowds</h2>
                 <p class="text-xl text-gray-600 leading-relaxed mb-6">
-                    Transform your basement, bonus room, or dedicated space into a world-class private cinema. King Systems designs and installs custom private cinemas throughout Colorado, from Crested Butte to Denver, featuring premium acoustics, cutting-edge projection, and immersive audio.
+                    King Systems designs and installs private cinemas that rival commercial theaters—combining reference-grade acoustics from Pro Audio Technology, legendary audio performance from McIntosh, and the handcrafted elegance of Sonus Faber speakers. Whether you're watching the latest blockbuster or revisiting a classic, every frame, every note, every whisper is delivered with stunning clarity and emotional impact.
                 </p>
                 <p class="text-lg text-gray-600 leading-relaxed">
-                    Whether you're a movie enthusiast, sports fan, or gaming aficionado, we create spaces that rival commercial cinemas—with the comfort and convenience of home.
+                    From intimate screening rooms to grand 20-seat theaters, we create spaces where technology disappears and storytelling takes center stage.
                 </p>
             </div>
 
-            <!-- Features Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-                <div class="bg-gray-50 rounded-xl p-8">
-                    <div class="text-4xl text-blue-900 mb-4">
-                        <i class="fas fa-film"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">4K/8K Projection</h3>
-                    <p class="text-gray-600">
-                        Sony, JVC, and Epson projectors with native 4K resolution, HDR support, and laser light sources for stunning image quality on screens up to 200 inches.
-                    </p>
-                </div>
+            <!-- Featured Manufacturers -->
+            <div class="mb-20">
+                <h3 class="text-3xl font-bold mb-12 text-center">World-Class Audio & Video Partners</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    
+                    <!-- Pro Audio Technology -->
+                    <a href="https://www.proaudiotech.com/" target="_blank" rel="noopener" class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-8 shadow-lg hover:shadow-2xl transition group text-white">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                <div class="text-2xl font-bold text-gray-900">PAT</div>
+                            </div>
+                            <h4 class="text-xl font-bold mb-3">Pro Audio Technology</h4>
+                            <p class="text-sm text-gray-300 mb-4">Reference-grade cinema speakers with studio-monitor accuracy and dynamic range</p>
+                            <span class="text-amber-400 font-semibold text-sm group-hover:underline">Visit Pro Audio Technology →</span>
+                        </div>
+                    </a>
 
-                <div class="bg-gray-50 rounded-xl p-8">
-                    <div class="text-4xl text-blue-900 mb-4">
-                        <i class="fas fa-volume-up"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Dolby Atmos Audio</h3>
-                    <p class="text-gray-600">
-                        Immersive 3D sound with height channels, premium speakers from McIntosh, Bowers & Wilkins, or James Loudspeaker, and acoustically treated rooms.
-                    </p>
-                </div>
+                    <!-- McIntosh -->
+                    <a href="https://www.mcintoshlabs.com/" target="_blank" rel="noopener" class="bg-gradient-to-br from-blue-900 to-blue-800 rounded-xl p-8 shadow-lg hover:shadow-2xl transition group text-white">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-24 h-24 bg-black rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border-2 border-white">
+                                <img src="../images/partners/mcintosh.png" alt="McIntosh" class="max-w-full max-h-full p-2" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'text-3xl font-serif text-white\'>Mc</div>'">
+                            </div>
+                            <h4 class="text-xl font-bold mb-3">McIntosh</h4>
+                            <p class="text-sm text-gray-200 mb-4">Legendary American audio with 70+ years of engineering excellence and iconic blue meters</p>
+                            <span class="text-amber-400 font-semibold text-sm group-hover:underline">Visit McIntosh →</span>
+                        </div>
+                    </a>
 
-                <div class="bg-gray-50 rounded-xl p-8">
-                    <div class="text-4xl text-blue-900 mb-4">
-                        <i class="fas fa-couch"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Luxury Seating</h3>
-                    <p class="text-gray-600">
-                        Premium theater seating with power recliners, heated seats, built-in tactile transducers, and custom upholstery to match your home's aesthetic.
-                    </p>
-                </div>
+                    <!-- Sonus Faber -->
+                    <a href="https://www.sonusfaber.com/" target="_blank" rel="noopener" class="bg-gradient-to-br from-amber-900 to-amber-800 rounded-xl p-8 shadow-lg hover:shadow-2xl transition group text-white">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                <img src="../images/partners/sonus-faber.png" alt="Sonus Faber" class="max-w-full max-h-full p-2" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'text-2xl font-serif text-gray-900\'>SF</div>'">
+                            </div>
+                            <h4 class="text-xl font-bold mb-3">Sonus Faber</h4>
+                            <p class="text-sm text-gray-200 mb-4">Italian craftsmanship meets acoustic perfection—speakers as beautiful as they sound</p>
+                            <span class="text-amber-400 font-semibold text-sm group-hover:underline">Visit Sonus Faber →</span>
+                        </div>
+                    </a>
 
-                <div class="bg-gray-50 rounded-xl p-8">
-                    <div class="text-4xl text-blue-900 mb-4">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Smart Control</h3>
-                    <p class="text-gray-600">
-                        One-touch control via Crestron or Control4—dim lights, close shades, start your movie, and adjust volume from a single remote or mobile app.
-                    </p>
-                </div>
-
-                <div class="bg-gray-50 rounded-xl p-8">
-                    <div class="text-4xl text-blue-900 mb-4">
-                        <i class="fas fa-dice"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Acoustic Treatment</h3>
-                    <p class="text-gray-600">
-                        Professional room analysis, bass traps, acoustic panels, and soundproofing to optimize audio performance and prevent sound bleed to adjacent rooms.
-                    </p>
-                </div>
-
-                <div class="bg-gray-50 rounded-xl p-8">
-                    <div class="text-4xl text-blue-900 mb-4">
-                        <i class="fas fa-gamepad"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Gaming Integration</h3>
-                    <p class="text-gray-600">
-                        Low-latency 4K gaming with PlayStation 5, Xbox Series X, and PC support, plus custom lighting effects that sync with on-screen action.
-                    </p>
                 </div>
             </div>
 
-            <!-- Why Choose Us -->
-            <div class="bg-blue-50 rounded-2xl p-10 mb-12">
-                <h2 class="text-3xl font-bold mb-6 text-gray-900">Why Choose King Systems for Your Private Cinema?</h2>
-                <ul class="space-y-4 text-lg text-gray-700">
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                        <span><strong>Colorado Expertise:</strong> We understand high-altitude considerations, mountain home acoustics, and local building codes.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                        <span><strong>Custom Design:</strong> Every theater is unique—designed for your space, budget, and viewing preferences.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                        <span><strong>Premium Brands:</strong> We partner with Sony, JVC, McIntosh, Bowers & Wilkins, Crestron, and other industry leaders.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
-                        <span><strong>Ongoing Support:</strong> 24/7 remote support plans ensure your theater always performs flawlessly.</span>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Colorado Intent Section -->
-            <div class="my-16">
-                <h2 class="text-3xl font-bold mb-6">Private Cinema Installation Denver & Colorado</h2>
-                <p class="text-lg text-gray-600 leading-relaxed mb-6">
-                    Since 2002, King Systems has designed and built custom private cinemas for Colorado's most discerning homeowners. From downtown Denver penthouses to Crested Butte mountain estates, we create cinematic experiences that rival commercial theaters—with the comfort and convenience of home. Our installations feature premium brands like Sony 4K laser projectors, McIntosh amplification, Dolby Atmos immersive audio, and Crestron control systems.
-                </p>
-                <p class="text-lg text-gray-600 leading-relaxed">
-                    Every private cinema is custom-designed for your space, budget, and viewing preferences. We handle everything: architectural acoustics, seating selection, lighting design, equipment calibration, and ongoing support. Whether you're converting a basement, building a dedicated cinema room, or creating a multi-purpose media space, King Systems delivers premium service from concept to completion. <a href="/contact.html" class="text-blue-600 hover:text-blue-800 underline">Schedule a consultation</a> to discuss your vision.
-                </p>
-            </div>
-
-            <!-- 24/7 Support Callout -->
-            <div class="bg-gradient-to-br from-blue-900 to-blue-800 rounded-2xl p-10 mb-12 text-white">
-                <div class="flex flex-col md:flex-row items-center gap-8">
-                    <div class="flex-shrink-0">
-                        <div class="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
-                            <i class="fas fa-headset text-amber-400 text-5xl"></i>
+            <!-- McIntosh Spotlight -->
+            <div class="mb-20">
+                <div class="bg-gradient-to-r from-black to-gray-900 rounded-2xl overflow-hidden shadow-2xl border-2 border-blue-500">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                        <div class="p-12 text-white flex flex-col justify-center">
+                            <div class="text-blue-400 mb-4">
+                                <i class="fas fa-star text-3xl"></i>
+                            </div>
+                            <h3 class="text-3xl font-bold mb-6">McIntosh: 70 Years of Audio Excellence</h3>
+                            <p class="text-lg mb-6 leading-relaxed">
+                                There's a reason McIntosh amplifiers and processors are the choice of discerning audiophiles worldwide. Handcrafted in Binghamton, New York, every McIntosh component combines timeless industrial design with state-of-the-art engineering. Those iconic blue Watt meters? They're not just beautiful—they're a promise of performance that has defined high-end audio for over seven decades.
+                            </p>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-blue-400 mt-1 mr-3"></i>
+                                    <span>Power Guard® technology prevents clipping</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-blue-400 mt-1 mr-3"></i>
+                                    <span>Legendary build quality with lifetime support</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-blue-400 mt-1 mr-3"></i>
+                                    <span>Timeless aesthetic that elevates any space</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-blue-400 mt-1 mr-3"></i>
+                                    <span>Home theater processors with Dolby Atmos and DTS:X</span>
+                                </li>
+                            </ul>
+                            <a href="https://www.mcintoshlabs.com/" target="_blank" rel="noopener" class="inline-flex items-center bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition w-fit">
+                                Explore McIntosh
+                                <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                        <div class="h-full min-h-[400px] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1545128485-c400e7702796?q=80&w=2000');">
                         </div>
                     </div>
-                    <div class="flex-1 text-center md:text-left">
-                        <h3 class="text-3xl font-bold mb-3">Always-On Support for Your Cinema</h3>
-                        <p class="text-xl text-blue-100 mb-4">
-                            Enjoy your private cinema worry-free with 24/7 remote monitoring and support. We catch issues before they interrupt movie night.
-                        </p>
-                        <ul class="grid md:grid-cols-2 gap-3 text-blue-100 mb-6">
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-amber-400"></i>
-                                <span>Real-time system health monitoring</span>
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-amber-400"></i>
-                                <span>Instant issue alerts</span>
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-amber-400"></i>
-                                <span>Remote troubleshooting</span>
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-amber-400"></i>
-                                <span>Automatic software updates</span>
-                            </li>
-                        </ul>
-                        <a href="/residential/support.html" class="inline-flex items-center gap-2 bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-amber-700 transition">
-                            <span>Learn About 24/7 Support</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
                 </div>
             </div>
 
-            <!-- CTA -->
-            <div class="text-center">
-                <h2 class="text-3xl font-bold mb-4">Ready to Build Your Dream Private Cinema?</h2>
-                <p class="text-xl text-gray-600 mb-8">Schedule a consultation to discuss your vision and get a custom quote.</p>
-                <a href="/contact.html" class="bg-amber-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-amber-700 transition inline-flex items-center">
-                    Schedule Consultation
-                    <i class="fas fa-arrow-right ml-2"></i>
-                </a>
+            <!-- What Makes a Great Home Theater -->
+            <div class="mb-20 bg-gray-50 py-16 px-8 rounded-2xl">
+                <h3 class="text-3xl font-bold mb-12 text-center">The Elements of Cinema Perfection</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-volume-up text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Reference Audio</h4>
+                        <p class="text-gray-600">Pro Audio Technology speakers deliver studio-reference accuracy with cinema-level dynamics</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-tv text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">4K/8K Projection</h4>
+                        <p class="text-gray-600">Cutting-edge laser or lamp-based projectors with HDR and wide color gamut</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-cube text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Acoustic Treatment</h4>
+                        <p class="text-gray-600">Engineered room acoustics that eliminate reflections and optimize sound clarity</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-couch text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Luxury Seating</h4>
+                        <p class="text-gray-600">Power recliners with heat, massage, and ambient lighting for ultimate comfort</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-lightbulb text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Lighting Control</h4>
+                        <p class="text-gray-600">Automated dimming and scene control that responds to your viewing preferences</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-microchip text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Smart Integration</h4>
+                        <p class="text-gray-600">One-touch control via Crestron, Control4, or Savant for seamless operation</p>
+                    </div>
+
+                </div>
             </div>
+
+            <!-- Theater Configurations -->
+            <div class="mb-20">
+                <h3 class="text-3xl font-bold mb-12 text-center">Theater Configurations for Every Space</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- Intimate Screening Room -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg border-2 border-gray-100">
+                        <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?q=80&w=2000');"></div>
+                        <div class="p-8">
+                            <h4 class="text-2xl font-bold mb-4">Intimate Screening Room</h4>
+                            <p class="text-gray-600 mb-4">Perfect for couples or small families—4 to 8 seats with high-end audio and immersive projection.</p>
+                            <ul class="space-y-2 text-gray-600 text-sm">
+                                <li>• 100"-150" screen with 4K/HDR projection</li>
+                                <li>• 5.1 or 7.1 surround sound</li>
+                                <li>• Sonus Faber or bookshelf speakers</li>
+                                <li>• Compact room acoustics</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Family Theater -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg border-2 border-gray-100">
+                        <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1606744837616-56c2e9608b76?q=80&w=2000');"></div>
+                        <div class="p-8">
+                            <h4 class="text-2xl font-bold mb-4">Family Theater</h4>
+                            <p class="text-gray-600 mb-4">The heart of home entertainment—8 to 12 seats with Dolby Atmos and game console integration.</p>
+                            <ul class="space-y-2 text-gray-600 text-sm">
+                                <li>• 120"-180" screen with laser projection</li>
+                                <li>• Dolby Atmos 7.1.4 or 9.1.4 system</li>
+                                <li>• Pro Audio Technology in-wall/ceiling speakers</li>
+                                <li>• Gaming and streaming optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Grand Cinema -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg border-2 border-gray-100">
+                        <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1571847501826-c8c1e4b61fae?q=80&w=2000');"></div>
+                        <div class="p-8">
+                            <h4 class="text-2xl font-bold mb-4">Grand Cinema</h4>
+                            <p class="text-gray-600 mb-4">Your private movie palace—12 to 20+ seats with reference-grade performance and luxury finishes.</p>
+                            <ul class="space-y-2 text-gray-600 text-sm">
+                                <li>• 150"-250" screen with high-lumen projection</li>
+                                <li>• Dolby Atmos 15+ channel system</li>
+                                <li>• Pro Audio Technology reference speakers</li>
+                                <li>• Tiered seating with riser platforms</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Multi-Purpose Media Room -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg border-2 border-gray-100">
+                        <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1560185007-cde436f6a4d0?q=80&w=2000');"></div>
+                        <div class="p-8">
+                            <h4 class="text-2xl font-bold mb-4">Multi-Purpose Media Room</h4>
+                            <p class="text-gray-600 mb-4">Theater, gaming, and entertaining—flexible spaces that adapt to how you live.</p>
+                            <ul class="space-y-2 text-gray-600 text-sm">
+                                <li>• Retractable screen or large-format TV</li>
+                                <li>• 5.1 or 7.1 system with in-ceiling speakers</li>
+                                <li>• Lighting scenes for movies and socializing</li>
+                                <li>• Flexible furniture arrangements</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="text-center bg-gray-50 py-16 px-8 rounded-2xl">
+                <h3 class="text-3xl font-bold mb-6">Ready to Build Your Dream Theater?</h3>
+                <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                    From concept to completion, King Systems designs and installs private cinemas that deliver the magic of the movies in the comfort of your home. Schedule a consultation to discuss your vision, space, and budget.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/contact.html" class="bg-blue-900 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-800 transition inline-flex items-center justify-center">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        Schedule Consultation
+                    </a>
+                    <a href="tel:+18552852854" class="bg-amber-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-amber-700 transition inline-flex items-center justify-center">
+                        <i class="fas fa-phone mr-2"></i>
+                        Call 1-855-AVKINGS
+                    </a>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -251,49 +326,51 @@
     <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <div class="bg-white rounded-lg p-2 inline-block mb-4">
-                <img src="../images/logo/ks-logo.png" alt="King Systems" class="h-12 w-auto">
-              </div>
-                    <p class="text-gray-400 text-sm">Colorado's premier luxury technology integration specialists since 2002.</p>
-                    <div class="text-amber-400 text-xl font-semibold mt-4">
-                        <i class="fas fa-phone mr-2"></i>
-                        <a href="tel:+18552852854" class="hover:text-amber-300 transition-colors">1-855-AVKINGS</a>
-                    </div>
+                <!-- Logo & Description -->
+                <div class="col-span-1 md:col-span-2">
+                    <img src="../images/logo/ks-logo.png" alt="King Systems" class="h-16 mb-4 bg-white rounded-lg p-2">
+                    <p class="text-gray-400 mb-4">Colorado's premier luxury technology integration specialists since 2002.</p>
+                    <a href="tel:+18552852854" class="text-amber-600 hover:text-amber-700 font-semibold text-lg transition">
+                        <i class="fas fa-phone mr-2"></i>1-855-AVKINGS
+                    </a>
                 </div>
+
+                <!-- Resources -->
                 <div>
-                    <h4 class="font-semibold mb-4">Resources</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="/portfolio.html" class="hover:text-white transition">Case Studies</a></li>
-                        <li><a href="/blog.html" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="/service-plans.html" class="hover:text-white transition">Service Plans</a></li>
-                        <li><a href="/testimonials.html" class="hover:text-white transition">Testimonials</a></li>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/portfolio.html" class="text-gray-400 hover:text-white transition">Case Studies</a></li>
+                        <li><a href="/blog.html" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="/service-plans.html" class="text-gray-400 hover:text-white transition">Service Plans</a></li>
+                        <li><a href="/testimonials.html" class="text-gray-400 hover:text-white transition">Testimonials</a></li>
                     </ul>
                 </div>
+
+                <!-- Commercial -->
                 <div>
-                    <h4 class="font-semibold mb-4">Commercial</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="/commercial/conference-rooms.html" class="hover:text-white transition">Conference Rooms</a></li>
-                        <li><a href="/commercial/training-rooms.html" class="hover:text-white transition">Training Rooms</a></li>
-                        <li><a href="/commercial/hospitality.html" class="hover:text-white transition">Hospitality</a></li>
-                        <li><a href="/commercial/sound-masking.html" class="hover:text-white transition">Sound Masking</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Residential</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="/residential.html" class="hover:text-white transition">Smart Home Integration</a></li>
-                        <li><a href="/residential/home-theater.html" class="hover:text-white transition">Home Theater</a></li>
-                        <li><a href="/residential/whole-home-audio.html" class="hover:text-white transition">Whole-Home Audio</a></li>
-                        <li><a href="/residential/lighting-control.html" class="hover:text-white transition">Lighting Control</a></li>
+                    <h4 class="text-lg font-semibold mb-4">Commercial</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/commercial/conference-rooms.html" class="text-gray-400 hover:text-white transition">Conference Rooms</a></li>
+                        <li><a href="/commercial/training-rooms.html" class="text-gray-400 hover:text-white transition">Training Rooms</a></li>
+                        <li><a href="/commercial/hospitality.html" class="text-gray-400 hover:text-white transition">Hospitality</a></li>
+                        <li><a href="/commercial/sound-masking.html" class="text-gray-400 hover:text-white transition">Sound Masking</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
-                <p>© 2024 King Systems LLC. All rights reserved. | Colorado's Luxury Technology Specialists</p>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 King Systems LLC. All rights reserved.</p>
+                <p class="mt-2">Over 22 years serving Colorado's residential and commercial technology needs.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
 
 </body>
 </html>
