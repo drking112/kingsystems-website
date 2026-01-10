@@ -1292,6 +1292,111 @@
         </div>
     </div>
 
+    <!-- Let's Talk Button JavaScript -->
+    <script>
+        // Get elements
+        const chatButton = document.getElementById('chatButton');
+        const contactModal = document.getElementById('contactModal');
+        const modalContent = document.getElementById('modalContent');
+        const closeModal = document.getElementById('closeModal');
+        const contactForm = document.getElementById('contactForm');
+
+        // Open modal when "Let's Talk" button is clicked
+        chatButton.addEventListener('click', () => {
+            contactModal.classList.remove('hidden');
+            contactModal.classList.add('flex');
+            // Animate modal in
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+                modalContent.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        });
+
+        // Close modal when X button is clicked
+        closeModal.addEventListener('click', closeModalFunc);
+
+        // Close modal when clicking outside
+        contactModal.addEventListener('click', (e) => {
+            if (e.target === contactModal) {
+                closeModalFunc();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !contactModal.classList.contains('hidden')) {
+                closeModalFunc();
+            }
+        });
+
+        // Close modal function
+        function closeModalFunc() {
+            modalContent.classList.add('scale-95', 'opacity-0');
+            modalContent.classList.remove('scale-100', 'opacity-100');
+            setTimeout(() => {
+                contactModal.classList.add('hidden');
+                contactModal.classList.remove('flex');
+            }, 300);
+        }
+
+        // Handle form submission
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+            
+            // Show loading state
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+            submitButton.disabled = true;
+            
+            try {
+                // Here you can add your form submission logic
+                // For now, we'll just simulate a submission
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                
+                // Success message
+                submitButton.innerHTML = '<i class="fas fa-check mr-2"></i>Message Sent!';
+                submitButton.classList.remove('bg-blue-900', 'hover:bg-blue-800');
+                submitButton.classList.add('bg-green-600');
+                
+                // Reset form
+                setTimeout(() => {
+                    contactForm.reset();
+                    closeModalFunc();
+                    submitButton.innerHTML = originalButtonText;
+                    submitButton.disabled = false;
+                    submitButton.classList.remove('bg-green-600');
+                    submitButton.classList.add('bg-blue-900', 'hover:bg-blue-800');
+                }, 2000);
+                
+                // Optional: Send to your backend or email service
+                // Example: 
+                // const response = await fetch('/api/contact', {
+                //     method: 'POST',
+                //     headers: { 'Content-Type': 'application/json' },
+                //     body: JSON.stringify(data)
+                // });
+                
+            } catch (error) {
+                console.error('Form submission error:', error);
+                submitButton.innerHTML = '<i class="fas fa-exclamation-triangle mr-2"></i>Error - Try Again';
+                submitButton.classList.remove('bg-blue-900');
+                submitButton.classList.add('bg-red-600');
+                
+                setTimeout(() => {
+                    submitButton.innerHTML = originalButtonText;
+                    submitButton.disabled = false;
+                    submitButton.classList.remove('bg-red-600');
+                    submitButton.classList.add('bg-blue-900');
+                }, 3000);
+            }
+        });
+    </script>
+
     <script src="js/main.js?v=20251229-3"></script>
 </body>
 </html>
