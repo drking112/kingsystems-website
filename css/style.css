@@ -163,6 +163,7 @@
 .reviews-track {
     display: flex;
     animation: scrollReviews 60s linear infinite;
+    width: max-content;
 }
 
 .reviews-track:hover {
@@ -180,6 +181,18 @@
 
 .review-card {
     animation: fadeIn 0.6s ease-out;
+}
+
+/* Ensure reviews scroll on mobile */
+@media (max-width: 768px) {
+    .reviews-track {
+        animation: scrollReviews 60s linear infinite !important;
+    }
+    
+    .review-card {
+        width: 20rem !important; /* 320px for better mobile fit */
+        min-width: 20rem;
+    }
 }
 
 /* Smooth Scrolling */
