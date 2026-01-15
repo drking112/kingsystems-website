@@ -374,7 +374,7 @@
                 <p class="text-xl opacity-90">No cost. No obligation. Just expert guidance for your law firm.</p>
             </div>
 
-            <form id="law-assessment-form" class="bg-white text-gray-900 p-8 rounded-xl shadow-2xl">
+            <form id="law-assessment-form" action="https://formspree.io/f/xdaanwjo" method="POST" class="bg-white text-gray-900 p-8 rounded-xl shadow-2xl">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-sm font-semibold mb-2">First Name *</label>
@@ -540,21 +540,11 @@
 
     <script src="js/main.js"></script>
     <script>
-        // Form submission handler
+        // Form submission handler - now sends to Formspree
         document.getElementById('law-assessment-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Collect form data
-            const formData = new FormData(this);
-            
-            // Here you would normally send to your CRM or email system
-            console.log('Assessment form submitted:', Object.fromEntries(formData));
-            
-            // Show success message
-            alert('Thank you! We will contact you within 1 business day to schedule your complimentary assessment.');
-            
-            // Reset form
-            this.reset();
+            // Let the form submit naturally to Formspree
+            // Show success message on the thank you page
+            console.log('Assessment form submitting to Formspree...');
         });
     </script>
 </body>
