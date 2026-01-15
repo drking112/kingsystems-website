@@ -321,3 +321,25 @@ function debounce(func, wait) {
 
 // Log page views (for analytics integration)
 console.log('King Systems - Page loaded:', window.location.pathname);
+
+// OneFirefly Lead Concierge Chat Widget
+window.lhnJsSdkInit = function () {
+    lhnJsSdk.setup = {
+        application_id: "6dd768dd-9278-4f7b-b1ac-3b18294f97fd",
+        application_secret: "rkuhw3gvzgrrykjn0fug//hnm3ud6uwwauyamr0b4dapmwvork"
+    };
+    lhnJsSdk.controls = [{
+        type: "hoc",
+        id: "9f661b59-1a27-4f3b-836a-9659d2f99833"
+    }];
+    lhnJsSdk.options = {
+        custom1: "1094172000000141749"
+    };
+};
+
+(function (d, s) {
+    var newjs, lhnjs = d.getElementsByTagName(s)[0];
+    newjs = d.createElement(s);
+    newjs.src = "https://developer.livehelpnow.net/js/sdk/lhn-jssdk-current.min.js";
+    lhnjs.parentNode.insertBefore(newjs, lhnjs);
+}(document, "script"));

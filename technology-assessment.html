@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Room Technology Assessment | King Systems</title>
+    <meta name="description" content="Take our free 5-minute assessment to evaluate your conference room technology and get personalized recommendations for improvement.">
+    <link rel="stylesheet" href="css/style.css?v=20260110-4">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TZ9QW3J4');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- ZoomInfo Tracking -->
+    <script>
+    (function(){var e=window,t=document,n=function(){var e=t.createElement("script");e.type="text/javascript",e.async=!0,e.src=atob("aHR0cHM6Ly93cy56b29taW5mby5jb20vcGl4ZWwvXUxTdXJtaGZ3Tmh8"),t.getElementsByTagName("body")[0].appendChild(e)},o=e.requestAnimationFrame||e.mozRequestAnimationFrame||e.webkitRequestAnimationFrame;o?o(n):e.addEventListener("load",n,!1)})();
+    var zoominfo = atob("O0dHQ0ZrYGA9Rl9NPF5GNkU8Q0dGXzZCQGBNPF5HNDpfPUY=");
+    </script>
+    <!-- End ZoomInfo -->
+
+    <!-- Facebook Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '3159885230733041');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=3159885230733041&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel -->
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-blue-50">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZ9QW3J4"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="/" class="flex items-center">
+                    <img src="images/logo/ks-logo.png" alt="King Systems" class="h-16 w-auto">
+                </a>
+                <a href="/contact.html" class="bg-amber-600 text-white px-6 py-2 rounded-lg hover:bg-amber-700 transition">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-16 pb-8">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block bg-blue-100 px-4 py-2 rounded-full text-blue-800 font-semibold mb-4">
+                <i class="fas fa-clipboard-check mr-2"></i>FREE 5-MINUTE ASSESSMENT
+            </div>
+            <h1 class="text-5xl font-bold text-gray-900 mb-6">Is Your Conference Room Technology Ready for 2026?</h1>
+            <p class="text-2xl text-gray-600 mb-8">Take our quick assessment to find out where you stand and get personalized recommendations</p>
+            <div class="flex justify-center gap-8 text-center mb-8">
+                <div>
+                    <div class="text-4xl font-bold text-blue-600">5</div>
+                    <div class="text-gray-600">Minutes</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-blue-600">12</div>
+                    <div class="text-gray-600">Questions</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-blue-600">100%</div>
+                    <div class="text-gray-600">Free</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Assessment Section -->
+    <section class="pb-16">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Progress Bar -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-sm font-semibold text-gray-600">Progress</span>
+                    <span class="text-sm font-semibold text-blue-600"><span id="currentQuestion">1</span>/12</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                    <div id="progressBar" class="bg-blue-600 h-3 rounded-full transition-all duration-300" style="width: 8.33%"></div>
+                </div>
+            </div>
+
+            <!-- Question Container -->
+            <div id="questionContainer" class="bg-white rounded-xl shadow-xl p-8">
+                <!-- Questions will be injected here by JavaScript -->
+            </div>
+
+            <!-- Results Container (Hidden initially) -->
+            <div id="resultsContainer" class="hidden"></div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <img src="images/logo/ks-logo.png" alt="King Systems" class="h-12 mx-auto mb-4">
+            <p class="text-gray-400 text-sm">© 2026 King Systems LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        const questions = [
+            {
+                id: 1,
+                question: "How often do meetings start late due to technology issues?",
+                options: [
+                    { text: "Never - our system is perfect", value: 10 },
+                    { text: "Rarely (less than 10% of meetings)", value: 8 },
+                    { text: "Sometimes (10-25% of meetings)", value: 5 },
+                    { text: "Often (25-50% of meetings)", value: 2 },
+                    { text: "Most of the time (50%+ of meetings)", value: 0 }
+                ]
+            },
+            {
+                id: 2,
+                question: "Can remote participants hear and see clearly in your conference rooms?",
+                options: [
+                    { text: "Always - crystal clear audio and video", value: 10 },
+                    { text: "Usually - minor issues occasionally", value: 7 },
+                    { text: "Sometimes - depends on the room", value: 4 },
+                    { text: "Rarely - frequent complaints", value: 2 },
+                    { text: "Never - remote participants struggle constantly", value: 0 }
+                ]
+            },
+            {
+                id: 3,
+                question: "How many steps does it take to start a meeting?",
+                options: [
+                    { text: "One button press - instant start", value: 10 },
+                    { text: "2-3 steps - straightforward", value: 7 },
+                    { text: "4-6 steps - manageable but tedious", value: 4 },
+                    { text: "7-10 steps - complex process", value: 2 },
+                    { text: "More than 10 steps or need IT help", value: 0 }
+                ]
+            },
+            {
+                id: 4,
+                question: "Does your system support both Zoom and Microsoft Teams?",
+                options: [
+                    { text: "Yes, both platforms work seamlessly", value: 10 },
+                    { text: "Yes, but setup is complicated", value: 6 },
+                    { text: "Only one platform works well", value: 3 },
+                    { text: "Neither works reliably", value: 0 },
+                    { text: "Not sure / Don't know", value: 2 }
+                ]
+            },
+            {
+                id: 5,
+                question: "How would you rate the audio quality in your conference rooms?",
+                options: [
+                    { text: "Excellent - everyone hears perfectly", value: 10 },
+                    { text: "Good - minor echo or volume issues", value: 7 },
+                    { text: "Fair - people ask others to repeat often", value: 4 },
+                    { text: "Poor - significant audio problems", value: 2 },
+                    { text: "Terrible - barely usable", value: 0 }
+                ]
+            },
+            {
+                id: 6,
+                question: "How consistent is the experience across all your conference rooms?",
+                options: [
+                    { text: "Identical - same interface in every room", value: 10 },
+                    { text: "Similar - minor differences", value: 7 },
+                    { text: "Varied - each room is different", value: 3 },
+                    { text: "Chaotic - totally different systems", value: 0 },
+                    { text: "We only have one room", value: 10 }
+                ]
+            },
+            {
+                id: 7,
+                question: "How many IT support tickets do you get per month for conference room issues?",
+                options: [
+                    { text: "0-2 tickets - rare issues", value: 10 },
+                    { text: "3-5 tickets - occasional problems", value: 7 },
+                    { text: "6-10 tickets - regular issues", value: 4 },
+                    { text: "11-20 tickets - frequent problems", value: 2 },
+                    { text: "20+ tickets - constant issues", value: 0 }
+                ]
+            },
+            {
+                id: 8,
+                question: "Can employees easily share their laptop screen wirelessly?",
+                options: [
+                    { text: "Yes - one-click wireless sharing", value: 10 },
+                    { text: "Yes - but requires app/setup", value: 7 },
+                    { text: "Sometimes - unreliable connection", value: 4 },
+                    { text: "No - must use cables", value: 2 },
+                    { text: "Don't have wireless capability", value: 0 }
+                ]
+            },
+            {
+                id: 9,
+                question: "How old is your conference room technology?",
+                options: [
+                    { text: "Less than 2 years old", value: 10 },
+                    { text: "2-4 years old", value: 7 },
+                    { text: "5-7 years old", value: 4 },
+                    { text: "8-10 years old", value: 2 },
+                    { text: "More than 10 years old", value: 0 }
+                ]
+            },
+            {
+                id: 10,
+                question: "Do you have remote monitoring and support for your conference rooms?",
+                options: [
+                    { text: "Yes - 24/7 monitoring with proactive alerts", value: 10 },
+                    { text: "Yes - basic monitoring during business hours", value: 7 },
+                    { text: "Partial - some rooms monitored", value: 4 },
+                    { text: "No - only on-site support", value: 2 },
+                    { text: "No support at all", value: 0 }
+                ]
+            },
+            {
+                id: 11,
+                question: "Can you record and archive meetings automatically?",
+                options: [
+                    { text: "Yes - automatic recording and cloud storage", value: 10 },
+                    { text: "Yes - but manual process", value: 6 },
+                    { text: "Sometimes - depends on platform", value: 3 },
+                    { text: "No recording capability", value: 0 },
+                    { text: "Not sure / Don't know", value: 2 }
+                ]
+            },
+            {
+                id: 12,
+                question: "How satisfied are your employees with the conference room technology?",
+                options: [
+                    { text: "Very satisfied - they love it", value: 10 },
+                    { text: "Satisfied - no major complaints", value: 7 },
+                    { text: "Neutral - it works when it works", value: 4 },
+                    { text: "Dissatisfied - frequent complaints", value: 2 },
+                    { text: "Very dissatisfied - constant frustration", value: 0 }
+                ]
+            }
+        ];
+
+        let currentQ = 0;
+        let totalScore = 0;
+        let answers = [];
+
+        function displayQuestion() {
+            const container = document.getElementById('questionContainer');
+            const q = questions[currentQ];
+            
+            let html = `
+                <div class="mb-6">
+                    <div class="text-sm font-semibold text-blue-600 mb-2">Question ${q.id} of 12</div>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">${q.question}</h2>
+                    <div class="space-y-3">
+            `;
+
+            q.options.forEach((option, index) => {
+                html += `
+                    <button onclick="selectAnswer(${option.value}, '${option.text}')" 
+                            class="w-full text-left p-4 border-2 border-gray-200 rounded-lg hover:border-blue-600 hover:bg-blue-50 transition group">
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 rounded-full border-2 border-gray-300 mr-4 group-hover:border-blue-600 flex-shrink-0"></div>
+                            <span class="text-gray-700 group-hover:text-gray-900">${option.text}</span>
+                        </div>
+                    </button>
+                `;
+            });
+
+            html += `
+                    </div>
+                </div>
+            `;
+
+            if (currentQ > 0) {
+                html += `
+                    <button onclick="previousQuestion()" class="text-blue-600 hover:text-blue-800 font-semibold">
+                        <i class="fas fa-arrow-left mr-2"></i>Previous Question
+                    </button>
+                `;
+            }
+
+            container.innerHTML = html;
+            updateProgress();
+        }
+
+        function selectAnswer(value, text) {
+            totalScore += value;
+            answers.push({ question: questions[currentQ].question, answer: text, value: value });
+            currentQ++;
+
+            if (currentQ < questions.length) {
+                displayQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQ > 0) {
+                currentQ--;
+                const lastAnswer = answers.pop();
+                totalScore -= lastAnswer.value;
+                displayQuestion();
+            }
+        }
+
+        function updateProgress() {
+            const progress = ((currentQ + 1) / questions.length) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+            document.getElementById('currentQuestion').textContent = currentQ + 1;
+        }
+
+        function showResults() {
+            const maxScore = 120;
+            const percentage = Math.round((totalScore / maxScore) * 100);
+            
+            let grade, color, interpretation, recommendations;
+
+            if (percentage >= 80) {
+                grade = "Excellent";
+                color = "green";
+                interpretation = "Your conference room technology is ahead of the curve! You have modern, reliable systems that support your team's productivity.";
+                recommendations = [
+                    "Continue your current maintenance and support plan",
+                    "Consider minor upgrades for emerging technologies",
+                    "Document your success as a case study",
+                    "Plan for technology refresh in 2-3 years"
+                ];
+            } else if (percentage >= 60) {
+                grade = "Good";
+                color = "blue";
+                interpretation = "Your conference room technology is working well but has room for improvement. Some upgrades would enhance the user experience and reliability.";
+                recommendations = [
+                    "Standardize systems across all rooms",
+                    "Implement wireless presentation technology",
+                    "Add remote monitoring and support",
+                    "Upgrade audio systems for better clarity",
+                    "Plan technology refresh within 12-18 months"
+                ];
+            } else if (percentage >= 40) {
+                grade = "Needs Improvement";
+                color = "amber";
+                interpretation = "Your conference room technology is holding your team back. Significant upgrades are needed to improve productivity and reduce frustration.";
+                recommendations = [
+                    "Conduct full technology audit",
+                    "Budget for major upgrades within 6-12 months",
+                    "Standardize on modern platforms (Zoom Rooms / Teams Rooms)",
+                    "Implement one-touch meeting start",
+                    "Add professional audio/video systems",
+                    "Include 24/7 monitoring and support"
+                ];
+            } else {
+                grade = "Critical";
+                color = "red";
+                interpretation = "ALERT: Your conference room technology is severely outdated and causing significant productivity losses. Immediate action is required.";
+                recommendations = [
+                    "Schedule immediate consultation with AV integrator",
+                    "Calculate current cost of tech issues (use our ROI calculator)",
+                    "Plan complete technology overhaul",
+                    "Budget for comprehensive upgrades",
+                    "Implement modern, standardized systems",
+                    "Prioritize user training and ongoing support",
+                    "Expected ROI: 6-12 months"
+                ];
+            }
+
+            const container = document.getElementById('questionContainer');
+            container.classList.add('hidden');
+            
+            const resultsContainer = document.getElementById('resultsContainer');
+            resultsContainer.classList.remove('hidden');
+            
+            resultsContainer.innerHTML = `
+                <!-- Score Card -->
+                <div class="bg-white rounded-xl shadow-xl p-8 mb-8">
+                    <div class="text-center mb-8">
+                        <div class="inline-flex items-center justify-center w-32 h-32 rounded-full bg-${color}-100 mb-4">
+                            <span class="text-5xl font-bold text-${color}-600">${percentage}%</span>
+                        </div>
+                        <h2 class="text-4xl font-bold text-gray-900 mb-2">Your Score: ${grade}</h2>
+                        <p class="text-xl text-gray-600">${interpretation}</p>
+                    </div>
+
+                    <div class="bg-${color}-50 rounded-lg p-6 mb-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">
+                            <i class="fas fa-lightbulb text-${color}-600 mr-2"></i>
+                            Our Recommendations:
+                        </h3>
+                        <ul class="space-y-3">
+                            ${recommendations.map(rec => `
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-${color}-600 mt-1 mr-3"></i>
+                                    <span class="text-gray-700">${rec}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+
+                    <div class="text-center">
+                        <button onclick="document.getElementById('reportForm').scrollIntoView({behavior: 'smooth'})" 
+                                class="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition shadow-lg">
+                            <i class="fas fa-file-pdf mr-2"></i>Get Detailed Report & Recommendations
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Report Form -->
+                <div id="reportForm" class="bg-gradient-to-br from-blue-900 to-blue-800 rounded-xl shadow-xl p-8 text-white">
+                    <div class="text-center mb-8">
+                        <i class="fas fa-file-pdf text-6xl mb-4 opacity-80"></i>
+                        <h3 class="text-3xl font-bold mb-3">Get Your Detailed Assessment Report</h3>
+                        <p class="text-xl text-blue-100">Receive a comprehensive PDF with:</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4 mb-8">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                            <i class="fas fa-check-circle text-2xl mb-2"></i>
+                            <p>Your complete assessment results</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                            <i class="fas fa-check-circle text-2xl mb-2"></i>
+                            <p>Personalized recommendations</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                            <i class="fas fa-check-circle text-2xl mb-2"></i>
+                            <p>Technology comparison charts</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                            <i class="fas fa-check-circle text-2xl mb-2"></i>
+                            <p>Budget planning worksheet</p>
+                        </div>
+                    </div>
+
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4 bg-white rounded-lg p-6">
+                        <input type="hidden" name="_subject" value="Assessment Results Request">
+                        <input type="hidden" name="lead_magnet" value="Technology Assessment">
+                        <input type="hidden" name="score" value="${percentage}">
+                        <input type="hidden" name="grade" value="${grade}">
+                        <input type="hidden" name="answers" value='${JSON.stringify(answers)}'>
+
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">First Name *</label>
+                                <input type="text" name="firstName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Last Name *</label>
+                                <input type="text" name="lastName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Work Email *</label>
+                            <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Company Name *</label>
+                            <input type="text" name="company" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                        </div>
+
+                        <button type="submit" class="w-full bg-blue-600 text-white py-4 rounded-lg text-xl font-bold hover:bg-blue-700 transition shadow-lg">
+                            <i class="fas fa-download mr-2"></i>Get My Free Assessment Report
+                        </button>
+                    </form>
+                </div>
+
+                <!-- CTA -->
+                <div class="bg-white rounded-xl shadow-xl p-8 mt-8 text-center">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Ready to Upgrade Your Conference Rooms?</h3>
+                    <p class="text-gray-600 mb-6">Schedule a free consultation to discuss your assessment results and get a custom solution proposal.</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="/contact.html" class="inline-block bg-amber-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-700 transition">
+                            Schedule Consultation
+                        </a>
+                        <a href="tel:+18552852854" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                            Call 1-855-AVKINGS
+                        </a>
+                    </div>
+                </div>
+            `;
+
+            // Track completion
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'CompleteRegistration', {
+                    content_name: 'Technology Assessment',
+                    value: percentage,
+                    status: grade
+                });
+            }
+        }
+
+        // Initialize
+        displayQuestion();
+    </script>
+</body>
+</html>

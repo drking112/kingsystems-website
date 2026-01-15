@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Conference Room ROI Calculator | King Systems</title>
+    <meta name="description" content="Calculate the ROI of upgrading your conference room technology. See how much time and money you're wasting with outdated systems.">
+    <link rel="stylesheet" href="css/style.css?v=20260110-4">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TZ9QW3J4');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- ZoomInfo Tracking -->
+    <script>
+    (function(){var e=window,t=document,n=function(){var e=t.createElement("script");e.type="text/javascript",e.async=!0,e.src=atob("aHR0cHM6Ly93cy56b29taW5mby5jb20vcGl4ZWwvXUxTdXJtaGZ3Tmh8"),t.getElementsByTagName("body")[0].appendChild(e)},o=e.requestAnimationFrame||e.mozRequestAnimationFrame||e.webkitRequestAnimationFrame;o?o(n):e.addEventListener("load",n,!1)})();
+    var zoominfo = atob("O0dHQ0ZrYGA9Rl9NPF5GNkU8Q0dGXzZCQGBNPF5HNDpfPUY=");
+    </script>
+    <!-- End ZoomInfo -->
+
+    <!-- Facebook Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '3159885230733041');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=3159885230733041&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel -->
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZ9QW3J4"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="/" class="flex items-center">
+                        <img src="images/logo/ks-logo.png" alt="King Systems" class="h-16 w-auto">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/commercial.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Commercial</a>
+                    <a href="/residential.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Residential</a>
+                    <a href="/contact.html" class="bg-amber-600 text-white px-6 py-2 rounded-lg hover:bg-amber-700 transition">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-12 bg-gradient-to-br from-red-600 to-red-700 text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                <i class="fas fa-calculator mr-2"></i>FREE ROI CALCULATOR
+            </div>
+            <h1 class="text-5xl font-bold mb-6">How Much is Outdated Conference Room Technology Costing You?</h1>
+            <p class="text-2xl text-red-100 mb-8">Calculate the hidden costs of tech issues, wasted time, and lost productivity</p>
+            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 inline-block">
+                <p class="text-lg">
+                    <i class="fas fa-clock mr-2 text-amber-400"></i>
+                    <strong>Average company wastes $85,000+ per year</strong> on conference room tech problems
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="py-12">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Step 1: Calculator -->
+            <div id="calculator-section" class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Calculate Your Costs</h2>
+                <p class="text-gray-600 mb-8">Answer a few quick questions to see how much your organization is losing to conference room technology issues.</p>
+
+                <div class="space-y-6">
+                    <!-- Question 1 -->
+                    <div class="border-b border-gray-200 pb-6">
+                        <label class="block text-lg font-semibold text-gray-900 mb-3">
+                            1. How many conference rooms do you have?
+                        </label>
+                        <input type="number" id="numRooms" min="1" max="100" value="5" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xl">
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="border-b border-gray-200 pb-6">
+                        <label class="block text-lg font-semibold text-gray-900 mb-3">
+                            2. Average meetings per room per week?
+                        </label>
+                        <input type="number" id="meetingsPerWeek" min="1" max="50" value="10" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xl">
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="border-b border-gray-200 pb-6">
+                        <label class="block text-lg font-semibold text-gray-900 mb-3">
+                            3. How often do meetings start late due to tech issues?
+                        </label>
+                        <select id="delayFrequency" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xl">
+                            <option value="0">Never</option>
+                            <option value="10">Rarely (10% of meetings)</option>
+                            <option value="25" selected>Sometimes (25% of meetings)</option>
+                            <option value="50">Often (50% of meetings)</option>
+                            <option value="75">Most of the time (75%)</option>
+                        </select>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="border-b border-gray-200 pb-6">
+                        <label class="block text-lg font-semibold text-gray-900 mb-3">
+                            4. Average delay time when issues occur (minutes)?
+                        </label>
+                        <input type="number" id="delayMinutes" min="1" max="60" value="10" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xl">
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="border-b border-gray-200 pb-6">
+                        <label class="block text-lg font-semibold text-gray-900 mb-3">
+                            5. Average number of people per meeting?
+                        </label>
+                        <input type="number" id="peoplePerMeeting" min="2" max="50" value="6" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xl">
+                    </div>
+
+                    <!-- Question 6 -->
+                    <div class="border-b border-gray-200 pb-6">
+                        <label class="block text-lg font-semibold text-gray-900 mb-3">
+                            6. Average hourly cost of staff time (salary + benefits)?
+                        </label>
+                        <div class="relative">
+                            <span class="absolute left-4 top-4 text-gray-500 text-xl">$</span>
+                            <input type="number" id="hourlyCost" min="20" max="500" value="75" class="w-full pl-10 pr-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xl">
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">Average US professional: $75-100/hour</p>
+                    </div>
+
+                    <!-- Question 7 -->
+                    <div class="pb-6">
+                        <label class="block text-lg font-semibold text-gray-900 mb-3">
+                            7. Annual IT support costs for conference rooms?
+                        </label>
+                        <div class="relative">
+                            <span class="absolute left-4 top-4 text-gray-500 text-xl">$</span>
+                            <input type="number" id="supportCost" min="0" max="500000" value="25000" step="1000" class="w-full pl-10 pr-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xl">
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">Include help desk time, vendor support contracts, equipment repairs</p>
+                    </div>
+                </div>
+
+                <button onclick="calculateROI()" class="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 rounded-lg text-xl font-bold hover:from-blue-700 hover:to-blue-800 transition shadow-lg">
+                    <i class="fas fa-calculator mr-2"></i>Calculate My Costs
+                </button>
+            </div>
+
+            <!-- Step 2: Results (Hidden initially) -->
+            <div id="results-section" class="hidden">
+                <!-- Results Summary -->
+                <div class="bg-gradient-to-br from-red-600 to-red-700 text-white rounded-2xl shadow-xl p-8 mb-8">
+                    <h2 class="text-3xl font-bold mb-6">Your Annual Cost of Conference Room Issues</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                            <p class="text-red-100 text-sm font-semibold mb-2">WASTED TIME PER YEAR</p>
+                            <p class="text-5xl font-bold" id="totalHours">0</p>
+                            <p class="text-red-100 mt-2">hours of productivity lost</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                            <p class="text-red-100 text-sm font-semibold mb-2">ANNUAL COST</p>
+                            <p class="text-5xl font-bold" id="totalCost">$0</p>
+                            <p class="text-red-100 mt-2">per year in lost productivity + IT costs</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                        <p class="text-lg mb-3"><strong>What this means:</strong></p>
+                        <p id="costInterpretation" class="text-red-50 text-lg"></p>
+                    </div>
+                </div>
+
+                <!-- Detailed Breakdown -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Cost Breakdown</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center py-3 border-b border-gray-200">
+                            <span class="text-gray-700">
+                                <i class="fas fa-clock text-blue-600 mr-2"></i>
+                                Wasted Time Cost
+                            </span>
+                            <span class="text-xl font-bold text-gray-900" id="wastedTimeCost">$0</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-200">
+                            <span class="text-gray-700">
+                                <i class="fas fa-headset text-blue-600 mr-2"></i>
+                                IT Support Cost
+                            </span>
+                            <span class="text-xl font-bold text-gray-900" id="supportCostDisplay">$0</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-t-2 border-gray-300">
+                            <span class="text-xl font-bold text-gray-900">Total Annual Cost</span>
+                            <span class="text-2xl font-bold text-red-600" id="totalCostDisplay">$0</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 p-6 bg-blue-50 rounded-lg">
+                        <h4 class="font-bold text-gray-900 mb-3">Investment Comparison:</h4>
+                        <p class="text-gray-700 mb-2">
+                            <strong>Typical conference room upgrade:</strong> <span class="text-blue-600 font-bold" id="upgradeCost">$25,000-75,000</span>
+                        </p>
+                        <p class="text-gray-700 mb-2">
+                            <strong>ROI Timeline:</strong> <span class="text-green-600 font-bold" id="roiTimeline">6-18 months</span>
+                        </p>
+                        <p class="text-gray-700">
+                            <strong>5-Year Savings:</strong> <span class="text-green-600 font-bold text-xl" id="fiveYearSavings">$0</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Chart -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Cost Visualization</h3>
+                    <div style="height: 400px;">
+                        <canvas id="costChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Get Report CTA -->
+                <div class="bg-gradient-to-br from-amber-500 to-amber-600 rounded-2xl shadow-xl p-8 text-white">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-file-pdf text-6xl mb-4 opacity-80"></i>
+                        <h3 class="text-3xl font-bold mb-3">Get Your Detailed ROI Report</h3>
+                        <p class="text-xl text-amber-100">Receive a comprehensive PDF report with:</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4 mb-8">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                            <i class="fas fa-check-circle text-2xl mb-2"></i>
+                            <p>Your detailed cost analysis</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                            <i class="fas fa-check-circle text-2xl mb-2"></i>
+                            <p>Technology recommendations</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                            <i class="fas fa-check-circle text-2xl mb-2"></i>
+                            <p>Budget planning worksheet</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                            <i class="fas fa-check-circle text-2xl mb-2"></i>
+                            <p>Implementation timeline</p>
+                        </div>
+                    </div>
+
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4 bg-white rounded-lg p-6">
+                        <input type="hidden" name="_subject" value="ROI Calculator - Report Request">
+                        <input type="hidden" name="lead_magnet" value="ROI Calculator">
+                        <input type="hidden" name="annual_cost" id="formAnnualCost">
+                        <input type="hidden" name="wasted_hours" id="formWastedHours">
+
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">First Name *</label>
+                                <input type="text" name="firstName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Last Name *</label>
+                                <input type="text" name="lastName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Work Email *</label>
+                            <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Company Name *</label>
+                            <input type="text" name="company" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500">
+                        </div>
+
+                        <button type="submit" class="w-full bg-amber-600 text-white py-4 rounded-lg text-xl font-bold hover:bg-amber-700 transition shadow-lg">
+                            <i class="fas fa-download mr-2"></i>Get My Free ROI Report
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <img src="images/logo/ks-logo.png" alt="King Systems" class="h-12 mx-auto mb-4">
+            <p class="text-gray-400 text-sm">© 2026 King Systems LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        let chartInstance = null;
+
+        function calculateROI() {
+            // Get inputs
+            const numRooms = parseInt(document.getElementById('numRooms').value);
+            const meetingsPerWeek = parseInt(document.getElementById('meetingsPerWeek').value);
+            const delayFrequency = parseInt(document.getElementById('delayFrequency').value);
+            const delayMinutes = parseInt(document.getElementById('delayMinutes').value);
+            const peoplePerMeeting = parseInt(document.getElementById('peoplePerMeeting').value);
+            const hourlyCost = parseInt(document.getElementById('hourlyCost').value);
+            const supportCost = parseInt(document.getElementById('supportCost').value);
+
+            // Calculate
+            const totalMeetingsPerYear = numRooms * meetingsPerWeek * 52;
+            const affectedMeetings = totalMeetingsPerYear * (delayFrequency / 100);
+            const totalMinutesWasted = affectedMeetings * delayMinutes * peoplePerMeeting;
+            const totalHoursWasted = Math.round(totalMinutesWasted / 60);
+            const wastedTimeCost = Math.round(totalHoursWasted * hourlyCost);
+            const totalAnnualCost = wastedTimeCost + supportCost;
+
+            // Display results
+            document.getElementById('totalHours').textContent = totalHoursWasted.toLocaleString();
+            document.getElementById('totalCost').textContent = '$' + totalAnnualCost.toLocaleString();
+            document.getElementById('wastedTimeCost').textContent = '$' + wastedTimeCost.toLocaleString();
+            document.getElementById('supportCostDisplay').textContent = '$' + supportCost.toLocaleString();
+            document.getElementById('totalCostDisplay').textContent = '$' + totalAnnualCost.toLocaleString();
+
+            // Interpretation
+            let interpretation = '';
+            if (totalAnnualCost < 25000) {
+                interpretation = 'Your costs are relatively low, but there\'s still room for improvement. Even small inefficiencies add up over time.';
+            } else if (totalAnnualCost < 75000) {
+                interpretation = 'You\'re losing significant productivity to conference room issues. A modern upgrade could pay for itself within a year.';
+            } else if (totalAnnualCost < 150000) {
+                interpretation = 'Your organization is bleeding productivity. Modern conference room technology would deliver immediate ROI and transform your meeting experience.';
+            } else {
+                interpretation = 'CRITICAL: You\'re losing over $' + (totalAnnualCost/1000).toFixed(0) + 'K per year! Upgrading your conference room technology is not optional—it\'s essential for your organization\'s success.';
+            }
+            document.getElementById('costInterpretation').textContent = interpretation;
+
+            // Investment comparison
+            let upgradeCost = '';
+            if (numRooms <= 3) {
+                upgradeCost = '$25,000-$75,000';
+            } else if (numRooms <= 10) {
+                upgradeCost = '$75,000-$250,000';
+            } else {
+                upgradeCost = '$250,000-$500,000+';
+            }
+            document.getElementById('upgradeCost').textContent = upgradeCost;
+
+            const avgUpgradeCost = numRooms * 50000;
+            const monthsToROI = Math.round((avgUpgradeCost / totalAnnualCost) * 12);
+            document.getElementById('roiTimeline').textContent = monthsToROI + ' months';
+
+            const fiveYearSavings = (totalAnnualCost * 5) - avgUpgradeCost;
+            document.getElementById('fiveYearSavings').textContent = '$' + fiveYearSavings.toLocaleString();
+
+            // Set hidden form fields
+            document.getElementById('formAnnualCost').value = totalAnnualCost;
+            document.getElementById('formWastedHours').value = totalHoursWasted;
+
+            // Show results
+            document.getElementById('results-section').classList.remove('hidden');
+            document.getElementById('results-section').scrollIntoView({ behavior: 'smooth' });
+
+            // Create chart
+            createChart(wastedTimeCost, supportCost);
+
+            // Track event
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'ViewContent', {
+                    content_name: 'ROI Calculator Results',
+                    value: totalAnnualCost,
+                    currency: 'USD'
+                });
+            }
+        }
+
+        function createChart(wastedTimeCost, supportCost) {
+            const ctx = document.getElementById('costChart');
+            
+            if (chartInstance) {
+                chartInstance.destroy();
+            }
+
+            chartInstance = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Wasted Time', 'IT Support'],
+                    datasets: [{
+                        data: [wastedTimeCost, supportCost],
+                        backgroundColor: ['#DC2626', '#F59E0B'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: {
+                                    size: 14
+                                },
+                                padding: 20
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
