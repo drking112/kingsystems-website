@@ -4,9 +4,57 @@
 
 ---
 
-## 📅 Latest Updates (January 5, 2025)
+## 📅 Latest Updates (January 17, 2025)
 
-### 🎯 MAJOR UPDATE - Real Project Photos Integration
+### 🎯 CRITICAL FIXES - Site-Wide Updates
+
+#### ✅ Completed Today (January 17, 2025)
+1. ✅ **AVKINGS Phone Number Correction** (40+ files)
+   - Updated toll-free number: 1-855-285-2854 → **1-855-285-4647**
+   - Display format standardized: **1-855-AVKINGS**
+   - Updated across all pages, footers, and contact sections
+
+2. ✅ **Curated Audio Rebranding** (42+ files)
+   - Replaced all instances: "Whole-Home Audio" → **"Curated Audio"**
+   - Updated navigation links, page titles, and content
+   - Maintained SEO-friendly URLs (kept /residential/whole-home-audio.html)
+
+3. ✅ **Complete Footer Navigation Standardization** (75+ files)
+   - **Commercial section**: Expanded from 4 to 8 items
+     - Added: Digital Signage, Cabling & Fiber, Video Walls, Commercial Shades
+   - **Residential section**: Expanded from 4 to 6 items
+     - Added: Shades & Window Treatments, Control Systems
+   - Standardized contact info, professional associations, and social links
+
+4. ✅ **Mobile Hamburger Menu Fix** (43 files)
+   - **Issue**: Mobile menu button not working on commercial page and other pages
+   - **Root cause**: Missing `bg-white border-t` classes made menu invisible
+   - **Solution**: Updated all mobile menu divs with proper styling
+   - **Result**: Mobile menu now works consistently across ALL pages
+
+5. ✅ **Content Corrections**
+   - Commercial page: Removed "Denver" from "Commercial AV Integrator Denver" heading
+   - Added period punctuation to multiple sections for consistency
+
+#### 📊 Total Files Updated: 75+
+- Root Pages: 14 files
+- Commercial Subdirectory: 7 files  
+- Residential Subdirectory: 6 files
+- Industries Pages: 4 files
+- Case Studies: 7 files
+- Blog Posts: 3 files
+- Resources: 4 files
+- Service Plans: 3 files
+- Portfolio Pages: 3 files
+- Law/Utility Pages: 2 files
+- Education/Healthcare: 2 files
+- Templates: 2 files
+
+---
+
+## 📅 Previous Updates (January 5, 2025)
+
+### 🎯 Real Project Photos Integration
 
 #### ✅ Completed Today (3 New Case Studies + Photo Integration)
 1. ✅ **3 New Case Study Pages with Photo Galleries**
