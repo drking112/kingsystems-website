@@ -1,0 +1,80 @@
+# FILES TO UPLOAD - PLAIN LIST
+
+## Root Directory (18 files)
+about.html
+blog.html
+case-studies.html
+commercial.html
+commercial-service-plans.html
+contact.html
+index.html
+portfolio.html
+portfolio-commercial.html
+portfolio-residential.html
+residential.html
+residential-service-plans.html
+robots.txt
+service-plans.html
+sitemap.html
+sitemap.xml
+STANDARD-FOOTER.html
+README.md
+
+## blog/ (3 files)
+blog/aspen-estate-project-showcase.html
+blog/commercial-av-best-practices.html
+blog/smart-home-trends-2025.html
+
+## case-studies/ (7 files)
+case-studies/air-force-academy-falcon-stadium.html
+case-studies/city-of-brighton-municipal-projects.html
+case-studies/comcast-enterprise-nationwide.html
+case-studies/davita-corporate-headquarters.html
+case-studies/denver-art-museum.html
+case-studies/snobahn-indoor-training-facility.html
+case-studies/unicom-capital-penthouse.html
+
+## commercial/ (8 files)
+commercial/cabling-fiber.html
+commercial/conference-rooms.html
+commercial/digital-signage.html
+commercial/hospitality.html
+commercial/sound-masking.html
+commercial/training-rooms.html
+commercial/video-walls.html
+
+## css/ (1 file)
+css/style.css
+
+## education/ (1 file)
+education/smart-boards.html
+
+## healthcare/ (1 file)
+healthcare/security-surveillance.html
+
+## industries/ (4 files)
+industries/corporate.html
+industries/education.html
+industries/government.html
+industries/healthcare.html
+
+## js/ (2 files)
+js/main.js
+js/schema-markup-templates.js
+
+## residential/ (4 files)
+residential/lighting-control.html
+residential/private-cinema.html
+residential/support.html
+residential/whole-home-audio.html
+
+## resources/ (4 files)
+resources/commercial-av-costs.html
+resources/how-to-choose-commercial-av-integrator.html
+resources/law-assessment-page.html
+resources/law-conference-room-roi-calculator.html
+
+---
+
+TOTAL: 53 files to upload
+Images: Already on GitHub (no upload needed)

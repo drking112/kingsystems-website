@@ -1,0 +1,92 @@
+KING SYSTEMS WEBSITE - DEPLOYMENT FILE LIST
+January 17, 2025
+==========================================
+
+All files updated today - Listed alphabetically:
+
+ROOT DIRECTORY FILES:
+- about.html
+- blog.html
+- case-studies.html
+- commercial.html
+- commercial-service-plans.html
+- contact.html
+- index.html
+- law-assessment-page.html
+- law-conference-room-roi-calculator.html
+- portfolio.html
+- portfolio-commercial.html
+- portfolio-residential.html
+- README.md
+- residential.html
+- residential-service-plans.html
+- service-plans.html
+
+BLOG SUBDIRECTORY:
+- blog/aspen-estate-project-showcase.html
+- blog/commercial-av-best-practices.html
+- blog/smart-home-trends-2025.html
+
+CASE STUDIES SUBDIRECTORY:
+- case-studies/air-force-academy-falcon-stadium.html
+- case-studies/city-of-brighton-municipal-projects.html
+- case-studies/comcast-enterprise-nationwide.html
+- case-studies/davita-corporate-headquarters.html
+- case-studies/denver-art-museum.html
+- case-studies/snobahn-indoor-training-facility.html
+- case-studies/unicom-capital-penthouse.html
+
+COMMERCIAL SUBDIRECTORY:
+- commercial/cabling-fiber.html
+- commercial/conference-rooms.html
+- commercial/digital-signage.html
+- commercial/hospitality.html
+- commercial/sound-masking.html
+- commercial/training-rooms.html
+- commercial/video-walls.html
+
+EDUCATION SUBDIRECTORY:
+- education/smart-boards.html
+
+HEALTHCARE SUBDIRECTORY:
+- healthcare/security-surveillance.html
+
+INDUSTRIES SUBDIRECTORY:
+- industries/corporate.html
+- industries/education.html
+- industries/government.html
+- industries/healthcare.html
+
+RESIDENTIAL SUBDIRECTORY:
+- residential/control-systems.html
+- residential/lighting-control.html
+- residential/private-cinema.html
+- residential/shades.html
+- residential/support.html
+- residential/whole-home-audio.html
+
+RESOURCES SUBDIRECTORY:
+- resources/commercial-av-costs.html
+- resources/how-to-choose-commercial-av-integrator.html
+
+DOCUMENTATION FILES (Optional - for reference):
+- DEPLOYMENT-SUMMARY-JAN17-2025.md
+- HERO-OVERLAY-RESTORATION-JAN17-2025.md
+- MOBILE-MENU-FIX-SUMMARY-JAN17.md
+- QUICK-VERIFICATION-MOBILE-MENU.md
+- STATS-UPDATE-JAN17-2025.md
+
+==========================================
+TOTAL FILES TO DEPLOY: 56 HTML files + 1 README
+==========================================
+
+DEPLOYMENT NOTES:
+- All phone numbers updated to 1-855-AVKINGS (1-855-285-4647)
+- "Curated Audio" branding applied throughout
+- Mobile menu fixed on all pages
+- Hero overlays added for better readability
+- Footer navigation standardized across site
+- Conference room partners section updated with clickable logos
+
+RECOMMENDED COMMIT MESSAGE:
+"Complete site-wide updates: mobile menu fix, AVKINGS phone, Curated Audio rebrand, hero overlays, footer navigation, stats update, technology partners"

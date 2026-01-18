@@ -1,0 +1,180 @@
+KING SYSTEMS WEBSITE - FINAL DEPLOYMENT FILE LIST
+January 17, 2025 - Complete Update
+==========================================
+
+HTML FILES TO DEPLOY (57 files):
+
+ROOT DIRECTORY FILES:
+- about.html
+- blog.html
+- case-studies.html
+- commercial.html
+- commercial-service-plans.html
+- contact.html
+- index.html
+- law-assessment-page.html
+- law-conference-room-roi-calculator.html
+- portfolio.html
+- portfolio-commercial.html
+- portfolio-residential.html
+- README.md
+- residential.html
+- residential-service-plans.html
+- service-plans.html
+
+BLOG SUBDIRECTORY:
+- blog/aspen-estate-project-showcase.html
+- blog/commercial-av-best-practices.html
+- blog/smart-home-trends-2025.html
+
+CASE STUDIES SUBDIRECTORY:
+- case-studies/air-force-academy-falcon-stadium.html
+- case-studies/city-of-brighton-municipal-projects.html
+- case-studies/comcast-enterprise-nationwide.html
+- case-studies/davita-corporate-headquarters.html
+- case-studies/denver-art-museum.html
+- case-studies/snobahn-indoor-training-facility.html
+- case-studies/unicom-capital-penthouse.html
+
+COMMERCIAL SUBDIRECTORY:
+- commercial/cabling-fiber.html
+- commercial/conference-rooms.html ⭐ UPDATED TODAY (partners + text)
+- commercial/digital-signage.html
+- commercial/hospitality.html
+- commercial/sound-masking.html
+- commercial/training-rooms.html
+- commercial/video-walls.html
+
+EDUCATION SUBDIRECTORY:
+- education/smart-boards.html
+
+HEALTHCARE SUBDIRECTORY:
+- healthcare/security-surveillance.html
+
+INDUSTRIES SUBDIRECTORY:
+- industries/corporate.html
+- industries/education.html
+- industries/government.html
+- industries/healthcare.html
+
+RESIDENTIAL SUBDIRECTORY:
+- residential/control-systems.html
+- residential/lighting-control.html
+- residential/private-cinema.html
+- residential/shades.html
+- residential/support.html
+- residential/whole-home-audio.html
+
+RESOURCES SUBDIRECTORY:
+- resources/commercial-av-costs.html
+- resources/how-to-choose-commercial-av-integrator.html
+
+==========================================
+PARTNER LOGO FILES TO DEPLOY (4 NEW):
+==========================================
+
+NEW LOGOS (Add to images/partners/):
+- images/partners/intel.png ⭐ NEW
+- images/partners/microsoft.png ⭐ NEW
+- images/partners/sennheiser.png ⭐ NEW
+- images/partners/shure.png ⭐ NEW
+
+NOTE: You should already have these other logos in GitHub:
+- biamp.png
+- cisco.png
+- control4.png
+- crestron.png
+- extreme-networks.png
+- logitech.png
+- lutron.png
+- mcintosh.png
+- qsc.png
+- ruckus.png
+- samsung.png
+- savant.png
+- sonos.png
+- sonus-faber.png
+- sony.png
+- yealink.png
+
+==========================================
+SUMMARY OF ALL CHANGES TODAY:
+==========================================
+
+1. ✅ Mobile menu fix (bg-white border-t) - 43 files
+2. ✅ AVKINGS phone correction (1-855-285-4647) - 40+ files
+3. ✅ Curated Audio rebrand - 42+ files
+4. ✅ Footer navigation expansion (8 commercial, 6 residential) - 75+ files
+5. ✅ Stats update (500+ → 10,000+) - index.html
+6. ✅ Hero overlay restoration - 15 files
+7. ✅ Hero overlay darkness increase - 4 files
+8. ✅ Conference room partners (10 clickable logos) - conference-rooms.html
+9. ✅ Regional → National positioning - commercial.html, conference-rooms.html
+10. ✅ Commercial page heading (removed "Denver") - commercial.html
+11. ✅ Conference room page heading (removed "Denver") - conference-rooms.html
+
+==========================================
+TOTAL FILES TO DEPLOY:
+==========================================
+- 56 HTML files
+- 1 README.md
+- 4 NEW partner logo PNG files
+
+TOTAL: 61 files
+
+==========================================
+DEPLOYMENT STEPS:
+==========================================
+
+1. UPLOAD HTML FILES (57 files)
+   - Copy all HTML files listed above from GenSpark to GitHub
+   - Preserve directory structure
+
+2. UPLOAD NEW PARTNER LOGOS (4 files)
+   - Copy these 4 NEW PNG files to images/partners/ folder:
+     • intel.png
+     • microsoft.png
+     • sennheiser.png
+     • shure.png
+
+3. GIT COMMIT
+   Use this commit message:
+   
+   "Complete site-wide updates: mobile menu, AVKINGS phone, Curated Audio, 
+   hero overlays, stats, technology partners, regional positioning"
+   
+   Description:
+   - Fixed mobile menu visibility (43 files)
+   - Updated AVKINGS phone to 1-855-285-4647
+   - Rebranded to Curated Audio (42+ files)
+   - Expanded footer navigation (75+ files)
+   - Updated stats to 10,000+ projects
+   - Added dark overlays to all hero images
+   - Added 10 clickable technology partner logos
+   - Updated regional positioning for national capability
+   - Added 4 new partner logos (Shure, Sennheiser, Intel, Microsoft)
+
+4. PUSH TO MAIN BRANCH
+
+5. VERIFY DEPLOYMENT
+   - Check https://kingsystems-website.pages.dev/
+   - Wait 2-3 minutes for Cloudflare rebuild
+   - Test mobile menu on various pages
+   - Verify partner logos display on conference rooms page
+   - Check stats show 10,000+ on homepage
+
+==========================================
+QUICK CHECKLIST:
+==========================================
+
+□ All 56 HTML files copied to GitHub
+□ README.md updated
+□ 4 new partner logos copied to images/partners/
+□ Git add all files
+□ Git commit with message above
+□ Git push to main
+□ Wait for Cloudflare rebuild (2-3 min)
+□ Test on live site
+□ Clear browser cache if needed
+
+==========================================
