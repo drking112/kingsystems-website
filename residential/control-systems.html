@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Control Systems | King Systems Colorado</title>
+    <meta name="description" content="Whole-home automation with Crestron Home OS, Control4, and Savant. One interface for lighting, climate, audio, video, shades, and security.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TZ9QW3J4');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- ZoomInfo Tracking -->
+    <script>
+    (function(){var e=window,t=document,n=function(){var e=t.createElement("script");e.type="text/javascript",e.async=!0,e.src=atob("aHR0cHM6Ly93cy56b29taW5mby5jb20vcGl4ZWwvXUxTdXJtaGZ3Tmh8"),t.getElementsByTagName("body")[0].appendChild(e)},o=e.requestAnimationFrame||e.mozRequestAnimationFrame||e.webkitRequestAnimationFrame;o?o(n):e.addEventListener("load",n,!1)})();
+    var zoominfo = atob("O0dHQ0ZrYGA9Rl9NPF5GNkU8Q0dGXzZCQGBNPF5HNDpfPUY=");
+    </script>
+    <!-- End ZoomInfo -->
+
+    <!-- Facebook Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '3159885230733041');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=3159885230733041&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel -->
+</head>
+<body class="bg-white text-gray-900 font-sans antialiased">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZ9QW3J4"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="/" class="flex items-center">
+                        <img src="../images/logo/ks-logo.png" alt="King Systems" class="h-16 w-auto mb-4">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/commercial.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Commercial</a>
+                    <a href="/residential.html" class="text-blue-900 font-medium">Residential</a>
+                    <a href="/portfolio.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Portfolio</a>
+                    <a href="/blog.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Blog</a>
+                    <a href="/about.html" class="text-gray-700 hover:text-blue-900 font-medium transition">About</a>
+                    <a href="/service-plans.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Service Plans</a>
+                    <a href="/contact.html" class="bg-amber-600 text-white px-6 py-2 rounded-lg hover:bg-amber-700 transition">Contact Us</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-900">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white border-t pb-4">
+                <a href="/commercial.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Commercial</a>
+                <a href="/residential.html" class="block px-4 py-2 text-blue-900 font-semibold rounded">Residential</a>
+                <a href="/portfolio.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Portfolio</a>
+                <a href="/blog.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Blog</a>
+                <a href="/about.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">About</a>
+                <a href="/service-plans.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Service Plans</a>
+                <a href="/contact.html" class="block px-4 py-2 bg-amber-600 text-white text-center rounded-lg">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Elegant control interface -->
+    <section class="relative h-[600px] flex items-center justify-center text-white" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=2000') center/cover; margin-top: 80px;">
+        <div class="text-center z-10 max-w-4xl mx-auto px-4">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Control Systems & Simplicity</h1>
+            <p class="text-xl md:text-2xl mb-8">One interface. Every system. Effortless control of your entire home from anywhere.</p>
+            <a href="/contact.html" class="bg-amber-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-amber-700 transition inline-block">
+                Discover Simplicity
+            </a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Breadcrumb -->
+            <div class="mb-8">
+                <a href="/residential.html" class="inline-flex items-center text-blue-900 hover:text-amber-600 font-semibold transition">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Back to Residential Services
+                </a>
+            </div>
+
+            <!-- Introduction -->
+            <div class="max-w-4xl mx-auto mb-16 text-center">
+                <h2 class="text-4xl font-bold mb-6">Technology Should Serve You, Not Complicate Your Life</h2>
+                <p class="text-xl text-gray-600 leading-relaxed mb-6">
+                    Imagine controlling your entire home—lighting, climate, shades, audio, video, security—from a single, elegant interface. No juggling remotes. No confusion. Just intuitive, one-touch control that makes complex technology feel simple. That's the promise of Crestron Home OS, Control4, and Savant: whole-home automation that works the way you think.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    King Systems designs and programs control systems that unite every technology in your home into a seamless experience, accessible from touchpanels, smartphones, tablets, or voice commands.
+                </p>
+            </div>
+
+            <!-- Featured Manufacturers -->
+            <div class="mb-20">
+                <h3 class="text-3xl font-bold mb-12 text-center">World-Class Control Platforms</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    
+                    <!-- Crestron Home OS -->
+                    <a href="https://www.crestron.com/Products/Featured-Solutions/Crestron-Home" target="_blank" rel="noopener" class="bg-gradient-to-br from-blue-900 to-blue-800 rounded-xl p-8 shadow-lg hover:shadow-2xl transition group text-white">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                <img src="../images/partners/crestron.png" alt="Crestron" class="max-w-full max-h-full p-2">
+                            </div>
+                            <h4 class="text-xl font-bold mb-3">Crestron Home OS</h4>
+                            <p class="text-sm text-gray-200 mb-4">The gold standard in luxury automation—unparalleled reliability and customization</p>
+                            <span class="text-amber-400 font-semibold text-sm group-hover:underline">Visit Crestron Home →</span>
+                        </div>
+                    </a>
+
+                    <!-- Control4 -->
+                    <a href="https://www.control4.com/" target="_blank" rel="noopener" class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-8 shadow-lg hover:shadow-2xl transition group">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                <img src="../images/partners/control4.png" alt="Control4" class="max-w-full max-h-full p-2">
+                            </div>
+                            <h4 class="text-xl font-bold mb-3 group-hover:text-blue-900 transition">Control4</h4>
+                            <p class="text-sm text-gray-600 mb-4">Elegant simplicity with powerful automation—perfect balance of ease and capability</p>
+                            <span class="text-amber-600 font-semibold text-sm group-hover:underline">Visit Control4 →</span>
+                        </div>
+                    </a>
+
+                    <!-- Savant -->
+                    <a href="https://www.savant.com/" target="_blank" rel="noopener" class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-8 shadow-lg hover:shadow-2xl transition group">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                <img src="../images/partners/savant.png" alt="Savant" class="max-w-full max-h-full p-2">
+                            </div>
+                            <h4 class="text-xl font-bold mb-3 group-hover:text-blue-900 transition">Savant</h4>
+                            <p class="text-sm text-gray-600 mb-4">Apple-inspired design meets professional automation—beauty and intelligence</p>
+                            <span class="text-amber-600 font-semibold text-sm group-hover:underline">Visit Savant →</span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- Crestron Home OS Spotlight -->
+            <div class="mb-20">
+                <div class="bg-gradient-to-r from-blue-900 to-blue-700 rounded-2xl overflow-hidden shadow-2xl">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                        <div class="p-12 text-white flex flex-col justify-center">
+                            <div class="text-amber-400 mb-4">
+                                <i class="fas fa-crown text-3xl"></i>
+                            </div>
+                            <h3 class="text-3xl font-bold mb-6">Crestron Home OS: Our Flagship Platform</h3>
+                            <p class="text-lg mb-6 leading-relaxed">
+                                When you demand the absolute best, Crestron Home OS delivers. Born from decades of commercial-grade reliability and engineered for the most discerning homeowners, Crestron provides unmatched customization, rock-solid performance, and the ability to integrate virtually any device or system in your home.
+                            </p>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-amber-400 mt-1 mr-3"></i>
+                                    <span>Unlimited scalability—from apartments to estates</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-amber-400 mt-1 mr-3"></i>
+                                    <span>Commercial-grade reliability for 24/7 operation</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-amber-400 mt-1 mr-3"></i>
+                                    <span>Integrates with 30,000+ devices and systems</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-amber-400 mt-1 mr-3"></i>
+                                    <span>Fully customizable interfaces and automation logic</span>
+                                </li>
+                            </ul>
+                            <a href="https://www.crestron.com/Products/Featured-Solutions/Crestron-Home" target="_blank" rel="noopener" class="inline-flex items-center bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-amber-700 transition w-fit">
+                                Explore Crestron Home OS
+                                <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                        <div class="h-full min-h-[400px] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2000');">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What You Can Control -->
+            <div class="mb-20 bg-gray-50 py-16 px-8 rounded-2xl">
+                <h3 class="text-3xl font-bold mb-12 text-center">One Interface for Everything</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                    
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-lightbulb text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Lighting</h4>
+                        <p class="text-gray-600 text-sm">Every light in your home, controlled by room, scene, or schedule</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-thermometer-half text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Climate</h4>
+                        <p class="text-gray-600 text-sm">Thermostats, radiant floors, and HVAC systems unified</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-window-maximize text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Shades</h4>
+                        <p class="text-gray-600 text-sm">Motorized shades and blinds throughout your home</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-music text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Audio</h4>
+                        <p class="text-gray-600 text-sm">Multi-room audio with source selection and volume control</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-tv text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Video</h4>
+                        <p class="text-gray-600 text-sm">TVs, projectors, streaming devices, and cable boxes</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-shield-alt text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Security</h4>
+                        <p class="text-gray-600 text-sm">Cameras, door locks, alarm systems, and access control</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-network-wired text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Network</h4>
+                        <p class="text-gray-600 text-sm">WiFi, routers, switches, and network diagnostics</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-swimming-pool text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Pool & Spa</h4>
+                        <p class="text-gray-600 text-sm">Temperature, jets, lighting, and water features</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- The Power of Scenes -->
+            <div class="mb-20">
+                <h3 class="text-3xl font-bold mb-12 text-center">The Magic of One-Touch Scenes</h3>
+                <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+                    Scenes orchestrate multiple systems with a single tap—transforming your home's mood and function instantly.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- Good Morning -->
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-8 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-sun text-white text-xl"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold">Good Morning</h4>
+                        </div>
+                        <p class="text-gray-700 mb-4">Your day starts perfectly—automated or manually triggered.</p>
+                        <ul class="space-y-2 text-gray-600 text-sm">
+                            <li>• Shades open gradually to natural light</li>
+                            <li>• Bedroom lights brighten slowly</li>
+                            <li>• Kitchen lights turn on</li>
+                            <li>• Thermostat adjusts to daytime temperature</li>
+                            <li>• Bathroom radiant floors activate</li>
+                            <li>• News or music begins playing</li>
+                        </ul>
+                    </div>
+
+                    <!-- Movie Night -->
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-8 shadow-lg text-white">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-film text-white text-xl"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold">Movie Night</h4>
+                        </div>
+                        <p class="text-gray-300 mb-4">Transform your space into a cinema with one touch.</p>
+                        <ul class="space-y-2 text-gray-300 text-sm">
+                            <li>• All lights dim to 5%</li>
+                            <li>• Shades close completely</li>
+                            <li>• Projector powers on</li>
+                            <li>• Audio system activates (surround sound mode)</li>
+                            <li>• Screen descends</li>
+                            <li>• Climate adjusts for comfort</li>
+                        </ul>
+                    </div>
+
+                    <!-- Entertaining -->
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-users text-white text-xl"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold">Entertaining</h4>
+                        </div>
+                        <p class="text-gray-700 mb-4">Set the perfect ambiance for guests.</p>
+                        <ul class="space-y-2 text-gray-600 text-sm">
+                            <li>• Living areas set to 60% lighting</li>
+                            <li>• Accent lights highlight artwork</li>
+                            <li>• Whole-home audio plays party playlist</li>
+                            <li>• Outdoor lights illuminate pathways</li>
+                            <li>• Pool/spa lights activate</li>
+                            <li>• Climate optimized for comfort</li>
+                        </ul>
+                    </div>
+
+                    <!-- Good Night -->
+                    <div class="bg-gradient-to-br from-indigo-900 to-blue-900 rounded-xl p-8 shadow-lg text-white">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-moon text-white text-xl"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold">Good Night</h4>
+                        </div>
+                        <p class="text-gray-300 mb-4">Secure and prepare your home for sleep.</p>
+                        <ul class="space-y-2 text-gray-300 text-sm">
+                            <li>• All lights turn off (except nightlights)</li>
+                            <li>• Doors lock automatically</li>
+                            <li>• Security system arms to "Stay" mode</li>
+                            <li>• Thermostats lower for sleeping</li>
+                            <li>• Shades close</li>
+                            <li>• Audio systems power down</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Control Options -->
+            <div class="mb-20">
+                <h3 class="text-3xl font-bold mb-12 text-center">Control From Anywhere, Any Device</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-mobile-alt text-white text-3xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">Smartphone & Tablet</h4>
+                        <p class="text-gray-600 text-sm">iOS and Android apps with full control anywhere</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-tablet-alt text-white text-3xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">Wall-Mounted Touchpanels</h4>
+                        <p class="text-gray-600 text-sm">Elegant interfaces throughout your home</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-microphone text-white text-3xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">Voice Control</h4>
+                        <p class="text-gray-600 text-sm">Amazon Alexa, Google Assistant, Apple Siri</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-hand-pointer text-white text-3xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">Custom Keypads</h4>
+                        <p class="text-gray-600 text-sm">Physical buttons for your favorite scenes</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h3>
+                <div class="max-w-4xl mx-auto space-y-4">
+                    
+                    <!-- FAQ 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <button class="faq-question w-full text-left px-6 py-4 font-semibold text-lg hover:bg-gray-50 transition flex justify-between items-center">
+                            <span>What's the difference between Crestron Home, Control4, and Savant?</span>
+                            <i class="fas fa-chevron-down transition-transform"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-4 text-gray-600">
+                            <p class="pt-2"><strong>Crestron Home OS:</strong> The gold standard for luxury automation. Unparalleled reliability, infinite customization, and enterprise-grade performance. Best for clients who want the absolute best and most flexible system. Higher investment, highest capability.</p>
+                            <p class="mt-3"><strong>Control4:</strong> Perfect balance of simplicity and power. Elegant interface, robust ecosystem, excellent reliability. Great for homeowners who want comprehensive automation without complexity. Mid-to-upper price range.</p>
+                            <p class="mt-3"><strong>Savant:</strong> Premium Apple-inspired experience with stunning interfaces and seamless iOS integration. Ideal for tech-savvy clients who value design aesthetics and Apple ecosystem integration. Upper price range.</p>
+                            <p class="mt-3">We help you choose based on your home's needs, your lifestyle, and your budget—not based on what we prefer to install.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <button class="faq-question w-full text-left px-6 py-4 font-semibold text-lg hover:bg-gray-50 transition flex justify-between items-center">
+                            <span>How much does a whole-home control system cost?</span>
+                            <i class="fas fa-chevron-down transition-transform"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-4 text-gray-600">
+                            <p class="pt-2">Investment varies based on home size, system complexity, and platform choice:</p>
+                            <ul class="mt-3 space-y-2 ml-6">
+                                <li><strong>Starter System (2-3 bedrooms):</strong> $15,000 - $30,000</li>
+                                <li><strong>Comprehensive System (4-6 bedrooms):</strong> $30,000 - $75,000</li>
+                                <li><strong>Luxury Estate System (6+ bedrooms):</strong> $75,000 - $250,000+</li>
+                            </ul>
+                            <p class="mt-3">These ranges include professional design, installation, programming, training, and initial support. Systems control lighting, climate, audio/video, security, shades, and more from a single interface.</p>
+                            <p class="mt-3">Schedule a consultation for a detailed estimate based on your specific home and goals.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <button class="faq-question w-full text-left px-6 py-4 font-semibold text-lg hover:bg-gray-50 transition flex justify-between items-center">
+                            <span>Can I control everything from my phone?</span>
+                            <i class="fas fa-chevron-down transition-transform"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-4 text-gray-600">
+                            <p class="pt-2">Yes! All three platforms (Crestron, Control4, Savant) offer robust mobile apps for iOS and Android that give you full control from anywhere in the world.</p>
+                            <p class="mt-3"><strong>Control options include:</strong></p>
+                            <ul class="mt-2 space-y-2 ml-6">
+                                <li>• Smartphone apps (iOS & Android)</li>
+                                <li>• Tablets (wall-mounted or portable)</li>
+                                <li>• Wall keypads (elegant, dedicated controls)</li>
+                                <li>• Touch screens (in-wall or tabletop)</li>
+                                <li>• Voice control (Alexa, Google, Siri integration)</li>
+                                <li>• Remote access from anywhere</li>
+                            </ul>
+                            <p class="mt-3">Most clients use a combination: keypads for convenience, phones when away, and voice for hands-free control.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <button class="faq-question w-full text-left px-6 py-4 font-semibold text-lg hover:bg-gray-50 transition flex justify-between items-center">
+                            <span>What happens if the system stops working or I need changes?</span>
+                            <i class="fas fa-chevron-down transition-transform"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-4 text-gray-600">
+                            <p class="pt-2">King Systems provides comprehensive lifecycle support—we're your long-term technology partner:</p>
+                            <ul class="mt-3 space-y-2 ml-6">
+                                <li><strong>24/7 Support:</strong> Emergency hotline for critical issues</li>
+                                <li><strong>Service Plans:</strong> Annual maintenance, priority response, remote support</li>
+                                <li><strong>System Updates:</strong> Software updates, feature additions, optimization</li>
+                                <li><strong>Expansion:</strong> Add rooms, devices, or capabilities as needs change</li>
+                                <li><strong>Warranty:</strong> 1-year parts/labor; extended options available</li>
+                            </ul>
+                            <p class="mt-3">Unlike online DIY systems, you have a local team who knows your home and can respond quickly—not a call center across the country.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <button class="faq-question w-full text-left px-6 py-4 font-semibold text-lg hover:bg-gray-50 transition flex justify-between items-center">
+                            <span>How long does installation take?</span>
+                            <i class="fas fa-chevron-down transition-transform"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-4 text-gray-600">
+                            <p class="pt-2">Timeline depends on project scope and home size:</p>
+                            <ul class="mt-3 space-y-2 ml-6">
+                                <li><strong>Design & Consultation:</strong> 1-2 weeks</li>
+                                <li><strong>Pre-wire (new construction):</strong> 3-5 days during framing</li>
+                                <li><strong>Equipment Installation:</strong> 3-7 days (existing homes)</li>
+                                <li><strong>Programming & Testing:</strong> 1-3 days</li>
+                                <li><strong>Training & Handoff:</strong> Half-day session</li>
+                            </ul>
+                            <p class="mt-3"><strong>Typical Projects:</strong></p>
+                            <ul class="mt-2 space-y-1 ml-6">
+                                <li>• 3,000-5,000 sq ft home: 2-3 weeks total</li>
+                                <li>• 5,000-10,000 sq ft home: 3-6 weeks total</li>
+                                <li>• Estate (10,000+ sq ft): 6-12 weeks total</li>
+                            </ul>
+                            <p class="mt-3">We coordinate with your builder/remodeler and work around your schedule to minimize disruption.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 6 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <button class="faq-question w-full text-left px-6 py-4 font-semibold text-lg hover:bg-gray-50 transition flex justify-between items-center">
+                            <span>Do you work on existing homes or only new construction?</span>
+                            <i class="fas fa-chevron-down transition-transform"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-4 text-gray-600">
+                            <p class="pt-2">We specialize in both new construction and retrofit installations:</p>
+                            <p class="mt-3"><strong>New Construction:</strong> Ideal timing for comprehensive automation. We work with your builder from framing through finish to pre-wire and install a complete system.</p>
+                            <p class="mt-3"><strong>Existing Homes:</strong> Absolutely! Modern wireless technologies make retrofits much easier than before. We can add automation without tearing apart walls using:</p>
+                            <ul class="mt-2 space-y-1 ml-6">
+                                <li>• Wireless lighting control (Lutron RadioRA, Caséta, or Ketra)</li>
+                                <li>• Wireless shades (battery-powered options)</li>
+                                <li>• Network-based audio systems</li>
+                                <li>• Strategic wire runs only where needed</li>
+                            </ul>
+                            <p class="mt-3">Over 50% of our projects are existing homes. We'll assess your home and recommend the best approach—wired, wireless, or hybrid.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="text-center bg-gray-50 py-16 px-8 rounded-2xl">
+                <h3 class="text-3xl font-bold mb-6">Experience True Simplicity</h3>
+                <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                    Schedule a consultation with our automation specialists. We'll assess your home, understand your lifestyle, and design a control system that makes technology invisible—and your life easier.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/contact.html" class="bg-blue-900 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-800 transition inline-flex items-center justify-center">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        Schedule Consultation
+                    </a>
+                    <a href="tel:+18552854647" class="bg-amber-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-amber-700 transition inline-flex items-center justify-center">
+                        <i class="fas fa-phone mr-2"></i>
+                        Call (303) 410-0924
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="bg-white rounded-lg p-2 inline-block mb-4">
+                <img src="../images/logo/ks-logo.png" alt="King Systems" class="h-12 w-auto">
+              </div>
+                    <p class="text-gray-400 text-sm">Colorado's premier luxury technology integration specialists since 2002.</p>
+                    <div class="text-amber-400 text-xl font-semibold mt-4">
+                        <i class="fas fa-phone mr-2"></i>
+                        <a href="tel:+18552854647" class="hover:text-amber-300 transition-colors">1-855-AVKINGS</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/portfolio.html" class="hover:text-white transition">Case Studies</a></li>
+                        <li><a href="/blog.html" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="/service-plans.html" class="hover:text-white transition">Service Plans</a></li>
+                        <li><a href="/testimonials.html" class="hover:text-white transition">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Commercial</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/commercial/conference-rooms.html" class="hover:text-white transition">Conference Rooms</a></li>
+                        <li><a href="/commercial/training-rooms.html" class="hover:text-white transition">Training Rooms</a></li>
+                        <li><a href="/commercial/hospitality.html" class="hover:text-white transition">Hospitality</a></li>
+                        <li><a href="/commercial/sound-masking.html" class="hover:text-white transition">Sound Masking</a></li>
+                        <li><a href="/commercial/digital-signage.html" class="hover:text-white transition">Digital Signage</a></li>
+                        <li><a href="/commercial/cabling-fiber.html" class="hover:text-white transition">Cabling & Fiber</a></li>
+                        <li><a href="/commercial/video-walls.html" class="hover:text-white transition">Video Walls</a></li>
+                        <li><a href="https://www.lutron.com/us/en/window-treatments/commercial-shades" target="_blank" rel="noopener" class="hover:text-white transition">Commercial Shades</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Residential</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/residential.html" class="hover:text-white transition">Smart Home Integration</a></li>
+                        <li><a href="/residential/shades.html" class="hover:text-white transition">Shades & Window Treatments</a></li>
+                        <li><a href="/residential/lighting-control.html" class="hover:text-white transition">Lighting Control</a></li>
+                        <li><a href="/residential/private-cinema.html" class="hover:text-white transition">Private Cinema</a></li>
+                        <li><a href="/residential/whole-home-audio.html" class="hover:text-white transition">Curated Audio</a></li>
+                        <li><a href="/residential/control-systems.html" class="hover:text-white transition">Control Systems</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+                <p>© 2024 King Systems LLC. All rights reserved. | Colorado's Luxury Technology Specialists</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // FAQ Accordion Script
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                // Toggle current FAQ
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+                
+                // Optional: Close other FAQs (uncomment if you want accordion behavior)
+                // document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+                //     if (otherAnswer !== answer) {
+                //         otherAnswer.classList.add('hidden');
+                //         otherAnswer.previousElementSibling.querySelector('i').classList.remove('fa-chevron-up');
+                //         otherAnswer.previousElementSibling.querySelector('i').classList.add('fa-chevron-down');
+                //     }
+                // });
+            });
+        });
+    </script>
+
+</body>
+</html>
