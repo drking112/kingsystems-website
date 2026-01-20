@@ -1,0 +1,166 @@
+1	{
+     2	  "projects": [
+     3	    {
+     4	      "id": "appaloosa",
+     5	      "name": "29 Appaloosa",
+     6	      "location": "Colorado",
+     7	      "folder": "29 Appaloosa",
+     8	      "images": ["K54", "K55", "K56", "K57", "K58", "K59"],
+     9	      "extension": "jpg"
+    10	    },
+    11	    {
+    12	      "id": "blake",
+    13	      "name": "Blake Residence",
+    14	      "location": "Colorado",
+    15	      "folder": "Blake",
+    16	      "images": ["Blake1", "Blake2", "Blake3", "Blake4", "Blake5", "Blake6", "Blake7", "Blake8", "Blake9", "Blake10", "Blake11", "Blake12", "Blake13", "Blake14", "Blake15", "Blake16", "Blake17", "Blake18", "Blake19", "Blake20", "Blake21", "Blake22"],
+    17	      "extension": "jpg"
+    18	    },
+    19	    {
+    20	      "id": "coburn",
+    21	      "name": "Coburn Estate",
+    22	      "location": "Colorado",
+    23	      "folder": "Coburn",
+    24	      "images": ["kscob-7darkercrop", "kscob-14", "kscob-19", "kscob-21", "kscob-36", "kscob-43", "kscob-46", "kscob-53", "kscob-54", "kscob-64", "Coburn - AV Rack", "Coburn - Dining ...", "Coburn - Firepla...", "Coburn - Firepla...", "Coburn - Fireplace", "Coburn - Media ...", "Coburn - MstBe...", "Coburn - Theate...", "Coburn - TV Ma..."],
+    25	      "extension": "jpg"
+    26	    },
+    27	    {
+    28	      "id": "cook",
+    29	      "name": "Cook Residence",
+    30	      "location": "Colorado",
+    31	      "folder": "Cook",
+    32	      "images": ["Cook1", "Cook2", "Cook3", "Cook4", "Cook5", "Cook6", "Cook7", "Cook8", "Cook9", "Cook10", "Cook11", "Cook12", "Cook13", "Cook14", "Cook15", "Cook16", "Cook17", "Cook18", "Cook19", "Cook20", "Cook21", "Cook22", "Cook23", "Cook24", "Cook25", "Cook26", "Cook27", "Cook28", "Cook29", "Cook30", "Cook31", "Cook32", "Cook33", "Cook34"],
+    33	      "extension": "jpg"
+    34	    },
+    35	    {
+    36	      "id": "donnelly",
+    37	      "name": "Donnelly Home",
+    38	      "location": "Colorado",
+    39	      "folder": "Donnelly",
+    40	      "images": ["Exterior 001", "Exterior 002", "Exterior 003", "Exterior 004", "Family Room T V 002", "Family Room TV", "Garage Network Rack 001", "Garage Network Rack 002", "Lower Left Bed TV", "Lower Middle Bed TV", "Lower right Bed 002", "Lower Right Bed", "Master TV", "Media 001", "Media 002", "Media 003", "Media 004", "Media 005"],
+    41	      "extension": "jpg"
+    42	    },
+    43	    {
+    44	      "id": "downtown",
+    45	      "name": "Downtown CB Showroom",
+    46	      "location": "Crested Butte",
+    47	      "folder": "Downtown CB Showroom",
+    48	      "images": ["KingExt1", "KingExt2", "KingExt3", "KS1", "KS2", "KS3"],
+    49	      "extension": "jpg"
+    50	    },
+    51	    {
+    52	      "id": "eastlack",
+    53	      "name": "Eastlack Property",
+    54	      "location": "Colorado",
+    55	      "folder": "Eastlack",
+    56	      "images": ["Eastlack1", "Eastlack2", "Eastlack3", "Eastlack4"],
+    57	      "extension": "jpg"
+    58	    },
+    59	    {
+    60	      "id": "herring",
+    61	      "name": "Herring Estate",
+    62	      "location": "Colorado",
+    63	      "folder": "Herring",
+    64	      "images": ["H2", "H3", "H4", "H5", "H7", "H14", "H16", "H17", "H18", "H19", "H20", "H21", "H23", "H24", "H25", "H26"],
+    65	      "extension": "jpg"
+    66	    },
+    67	    {
+    68	      "id": "koonsman",
+    69	      "name": "Koonsman Hero",
+    70	      "location": "Colorado",
+    71	      "folder": "Koonsman Hero",
+    72	      "images": ["K1", "K14", "K16", "K19", "K20", "K21", "K22", "K23", "K24", "K25", "K27"],
+    73	      "extension": "jpg"
+    74	    },
+    75	    {
+    76	      "id": "lee",
+    77	      "name": "Lee Residence",
+    78	      "location": "Colorado",
+    79	      "folder": "Lee",
+    80	      "images": ["lee (1)", "lee (2)", "lee (3)", "lee (4)", "lee (5)", "lee (6)", "lee (7)", "lee (8)", "lee (9)", "lee (10)", "lee (11)", "lee (12)", "lee (13)", "lee (14)", "lee (15)", "lee (16)", "lee (17)", "lee (18)", "lee (19)", "lee (20)", "lee (21)", "lee (22)", "lee (23)", "lee (24)", "lee (25)"],
+    81	      "extension": "jpg"
+    82	    },
+    83	    {
+    84	      "id": "lodge",
+    85	      "name": "Lodge at Mountaineer Square",
+    86	      "location": "Crested Butte",
+    87	      "folder": "Lodge at Mountaineer Square",
+    88	      "images": ["LMS AV Rack Aft...", "LMS AV Rack Aft...", "LMS AV Rack Aft...", "LMS AV Rack Bef...", "LMS AV Rack Bef..."],
+    89	      "extension": "jpg"
+    90	    },
+    91	    {
+    92	      "id": "parks",
+    93	      "name": "Parks Home",
+    94	      "location": "Colorado",
+    95	      "folder": "Parks",
+    96	      "images": ["Parks1", "Parks2", "Parks3"],
+    97	      "extension": "jpg"
+    98	    },
+    99	    {
+   100	      "id": "piering",
+   101	      "name": "Piering Estate",
+   102	      "location": "Colorado",
+   103	      "folder": "Piering",
+   104	      "images": ["CR1", "CR2", "CR3", "CR4", "CR5", "CR6", "CR11", "CR16", "CR17"],
+   105	      "extension": "jpg"
+   106	    },
+   107	    {
+   108	      "id": "pulliam",
+   109	      "name": "Pulliam Residence",
+   110	      "location": "Colorado",
+   111	      "folder": "Pulliam",
+   112	      "images": ["501 Gothic Aven...", "501 Gothic Aven...", "501 Gothic Aven...", "501 Gothic Aven...", "501 Gothic Aven...", "501 Gothic Aven...", "501 Gothic Aven...", "501 Gothic Avenue", "501 Gothic Aven...", "501 Gothic Aven...", "501 Gothic Aven...", "501 Gothic Aven..."],
+   113	      "extension": "jpg"
+   114	    },
+   115	    {
+   116	      "id": "pyramid",
+   117	      "name": "Pyramid Home",
+   118	      "location": "Colorado",
+   119	      "folder": "Pyramid",
+   120	      "images": ["P1", "P2", "P3", "P4", "P15", "P16", "P17", "P18"],
+   121	      "extension": "jpg"
+   122	    },
+   123	    {
+   124	      "id": "scarp",
+   125	      "name": "Scarp Ridge Lodge",
+   126	      "location": "Colorado",
+   127	      "folder": "Scarp Ridge Lodge",
+   128	      "images": ["2", "4", "5", "6", "7", "8", "9", "17", "18", "19", "20", "21", "22", "26", "29", "30", "31", "32", "33", "34", "37", "38", "39", "40", "41", "42", "51", "four.panels", "james in ceiling s...", "screen"],
+   129	      "extension": "jpg"
+   130	    },
+   131	    {
+   132	      "id": "tattersall",
+   133	      "name": "Tattersall Estate",
+   134	      "location": "Crested Butte",
+   135	      "folder": "Tattersall",
+   136	      "images": ["Tattersall1", "Tattersall2", "Tattersall3", "Tattersall5", "Tattersall6", "Tattersall7", "Tattersall8", "Tattersall9"],
+   137	      "extension": "jpg"
+   138	    },
+   139	    {
+   140	      "id": "warner",
+   141	      "name": "Warner Residence",
+   142	      "location": "Denver",
+   143	      "folder": "Warner",
+   144	      "images": ["IMG_1507-HDR", "IMG_1564-HDR", "IMG_1576-HDR", "IMG_1684-HDR-...", "IMG_1704-HDR-...", "IMG_1708-HDR", "IMG_1750-HDR", "IMG_1765-HDR-...", "IMG_1789-HDR", "IMG_1895-HDR-...", "IMG_1928-HDR", "IMG_7200", "IMG_7200-2", "IMG_7202", "IMG_7224", "IMG_7227-Edit", "IMG_7358-Edit", "IMG_7388-Edit", "IMG_7415-Edit", "IMG_7416-Edit", "IMG_7421-Edit", "IMG_7460-Edit", "IMG_7463-Edit", "IMG_7469-Edit", "IMG_7480", "IMG_7492-Edit", "IMG_7575-Edit", "IMG_7603-Edit", "IMG_7607-Edit", "IMG_7622-Edit"],
+   145	      "extension": "jpg"
+   146	    },
+   147	    {
+   148	      "id": "westcb",
+   149	      "name": "West CB Property",
+   150	      "location": "Crested Butte",
+   151	      "folder": "West CB",
+   152	      "subfolder": "Pictures",
+   153	      "images": ["image1", "image2", "image3", "image4", "image5", "image6", "image7", "image8", "image9", "image10", "image11", "image12"],
+   154	      "extension": "jpg"
+   155	    },
+   156	    {
+   157	      "id": "weyel",
+   158	      "name": "Weyel Estate",
+   159	      "location": "Colorado",
+   160	      "folder": "Weyel",
+   161	      "images": ["W1", "W2", "W3", "W4", "Weyel1", "Weyel1a", "Weyel1ext", "Weyel2", "Weyel2a", "Weyel3", "Weyel3a", "Weyel4", "Weyel4a", "Weyel5", "Weyel5a", "Weyel6", "Weyel6a", "Weyel7", "Weyel7a", "Weyel8", "Weyel8a", "Weyel9", "Weyel9a", "Weyel10", "Weyel11", "Weyel12 2", "Weyel12", "Weyel13"],
+   162	      "extension": "jpg"
+   163	    }
+   164	  ]
+   165	}
+   166	
