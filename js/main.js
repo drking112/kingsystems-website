@@ -239,24 +239,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 
-    // Add loading state to buttons
-    document.querySelectorAll('button[type="submit"]').forEach(button => {
-        button.addEventListener('click', function(e) {
-            if (this.form && !this.form.checkValidity()) {
-                return;
-            }
-            
-            const originalText = this.innerHTML;
-            this.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
-            this.disabled = true;
-            
-            // Re-enable after form submission
-            setTimeout(() => {
-                this.innerHTML = originalText;
-                this.disabled = false;
-            }, 2000);
-        });
-    });
+    // Note: Form loading states are handled individually by each form's submit event listener
 
     // Logo slider pause on hover (additional support)
     const logoTracks = document.querySelectorAll('.logo-track, .client-track');
