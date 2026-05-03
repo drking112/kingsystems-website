@@ -65,7 +65,7 @@
                     <a href="/residential.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Residential</a>
                     <a href="/portfolio.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Portfolio</a>
                     <a href="/about.html" class="text-gray-700 hover:text-blue-900 font-medium transition">About</a>
-                    <a href="/contact.html" class="bg-amber-600 text-white px-6 py-2 rounded-lg hover:bg-amber-700 transition">Get Started</a>
+                    <a href="/contact.html" class="bg-amber-600 text-white px-6 py-2 rounded-lg hover:bg-amber-700 transition">Schedule a Free Assessment</a>
                 </div>
                 <div class="md:hidden">
                     <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-900">
@@ -79,10 +79,36 @@
                 <a href="/residential.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Residential</a>
                 <a href="/portfolio.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Portfolio</a>
                 <a href="/about.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">About</a>
-                <a href="/contact.html" class="block px-4 py-2 bg-amber-600 text-white text-center rounded-lg">Get Started</a>
+                <a href="/contact.html" class="block px-4 py-2 bg-amber-600 text-white text-center rounded-lg">Schedule a Free Assessment</a>
             </div>
         </div>
     </nav>
+
+    <!-- Sticky CTA (Desktop - Top Right) -->
+    <div id="sticky-cta-desktop" class="hidden md:block fixed top-24 right-8 z-40 opacity-0 transition-opacity duration-300">
+        <a href="/contact.html" class="bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-amber-700 transition shadow-lg inline-flex items-center">
+            Free Assessment →
+        </a>
+        <button onclick="dismissStickyCTA()" class="absolute -top-2 -right-2 bg-gray-800 text-white w-6 h-6 rounded-full text-xs hover:bg-gray-900 transition">
+            ×
+        </button>
+    </div>
+
+    <!-- Sticky CTA (Mobile - Bottom Bar) -->
+    <div id="sticky-cta-mobile" class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-blue-900 text-white shadow-2xl opacity-0 transition-opacity duration-300">
+        <div class="flex items-center justify-between px-4 py-3">
+            <div class="flex-1">
+                <p class="text-xs font-semibold mb-1">Get Your Free AV Assessment</p>
+                <a href="tel:+13034100924" class="text-sm text-amber-400 font-bold"><i class="fas fa-phone mr-1"></i>(303) 410-0924</a>
+            </div>
+            <a href="/contact.html" class="bg-amber-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-amber-700 transition text-sm">
+                Schedule Now
+            </a>
+            <button onclick="dismissStickyCTA()" class="ml-2 text-white/70 hover:text-white text-xl px-2">
+                ×
+            </button>
+        </div>
+    </div>
 
     <!-- Hero -->
     <section class="relative h-96 flex items-center justify-center text-white" style="background: linear-gradient(135deg, rgba(30, 58, 138, 0.6), rgba(12, 74, 110, 0.5)), url('https://sspark.genspark.ai/cfimages?u1=2%2B%2FL8NPR2kYG0cET4QygiKYrD7Lwv9PlH9iX2KNZ%2BO3QJJ5XnKyFKKllqn8pupnQ4lIIiHtzqfYIr94NxGLgBMv5Oz6dAZDG%2ByNRIKpS4Q%3D%3D&u2=xsXi9u4Yo3qCAxnN&width=2560') center/cover; margin-top: 80px;">
@@ -430,7 +456,7 @@
                 <h3 class="text-3xl font-bold mb-4">Ready to Discuss Your Government Project?</h3>
                 <p class="text-xl text-gray-600 mb-8">Let's review your facility requirements and security needs.</p>
                 <a href="/contact.html" class="bg-blue-900 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-800 transition inline-block">
-                    Schedule Government Consultation
+                    Schedule a Free Assessment
                 </a>
             </div>
         </div>
@@ -469,7 +495,7 @@
                         <li><a href="/commercial/digital-signage.html" class="hover:text-white transition">Digital Signage</a></li>
                         <li><a href="/commercial/cabling-fiber.html" class="hover:text-white transition">Cabling & Fiber</a></li>
                         <li><a href="/commercial/video-walls.html" class="hover:text-white transition">Video Walls</a></li>
-                        <li><a href="https://www.lutron.com/us/en/window-treatments/commercial-shades" target="_blank" rel="noopener" class="hover:text-white transition">Commercial Shades</a></li>
+                        <li><a href="/commercial/commercial-shades.html" target="_self" class="hover:text-white transition">Commercial Shades</a></li>
                     </ul>
                 </div>
                 <div>
@@ -485,7 +511,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
-                <p>© 2024 King Systems LLC. All rights reserved. | Colorado's Luxury Technology Specialists</p>
+                <p>© 2026 King Systems LLC. All rights reserved. | Colorado's Luxury Technology Specialists</p>
             </div>
         </div>
     </footer>

@@ -93,6 +93,32 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
+    <!-- Sticky CTA (Desktop - Top Right) -->
+    <div id="sticky-cta-desktop" class="hidden md:block fixed top-24 right-8 z-40 opacity-0 transition-opacity duration-300">
+        <a href="/contact.html" class="bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-amber-700 transition shadow-lg inline-flex items-center">
+            Free Assessment →
+        </a>
+        <button onclick="dismissStickyCTA()" class="absolute -top-2 -right-2 bg-gray-800 text-white w-6 h-6 rounded-full text-xs hover:bg-gray-900 transition">
+            ×
+        </button>
+    </div>
+
+    <!-- Sticky CTA (Mobile - Bottom Bar) -->
+    <div id="sticky-cta-mobile" class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-blue-900 text-white shadow-2xl opacity-0 transition-opacity duration-300">
+        <div class="flex items-center justify-between px-4 py-3">
+            <div class="flex-1">
+                <p class="text-xs font-semibold mb-1">Get Your Free AV Assessment</p>
+                <a href="tel:+13034100924" class="text-sm text-amber-400 font-bold"><i class="fas fa-phone mr-1"></i>(303) 410-0924</a>
+            </div>
+            <a href="/contact.html" class="bg-amber-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-amber-700 transition text-sm">
+                Schedule Now
+            </a>
+            <button onclick="dismissStickyCTA()" class="ml-2 text-white/70 hover:text-white text-xl px-2">
+                ×
+            </button>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="bg-white shadow-md fixed w-full top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -109,7 +135,7 @@
                     <a href="/blog.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Blog</a>
                     <a href="/about.html" class="text-gray-700 hover:text-blue-900 font-medium transition">About</a>
                     <a href="/service-plans.html" class="text-gray-700 hover:text-blue-900 font-medium transition">Service Plans</a>
-                    <a href="/contact.html" class="bg-amber-600 text-white px-6 py-2 rounded-lg hover:bg-amber-700 transition">Contact Us</a>
+                    <a href="/contact.html" class="bg-amber-600 text-white px-6 py-2 rounded-lg hover:bg-amber-700 transition">Schedule a Free Assessment</a>
                 </div>
                 <div class="md:hidden">
                     <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-900">
@@ -125,7 +151,7 @@
                 <a href="/blog.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Blog</a>
                 <a href="/about.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">About</a>
                 <a href="/service-plans.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded">Service Plans</a>
-                <a href="/contact.html" class="block px-4 py-2 bg-amber-600 text-white text-center rounded-lg">Contact Us</a>
+                <a href="/contact.html" class="block px-4 py-2 bg-amber-600 text-white text-center rounded-lg">Schedule a Free Assessment</a>
             </div>
             </div>
         </div>
@@ -674,7 +700,7 @@
                     As a leading commercial AV integrator based in Colorado, King Systems has been designing and installing state-of-the-art conference room technology since 2002—serving clients throughout Colorado and beyond. Whether you're upgrading a single huddle room or standardizing AV across an entire corporate campus, we deliver turnkey solutions that eliminate technical frustration and maximize productivity.
                 </p>
                 <p class="text-lg text-gray-600 leading-relaxed">
-                    Our conference room installations serve Fortune 500 companies, government agencies, law firms, and growing businesses across multiple locations. From Crestron control systems and Zoom Rooms to wireless presentation and integrated video conferencing, we provide white-glove service from design through ongoing support. <a href="/resources/commercial-av-costs.html" class="text-blue-600 hover:text-blue-800 underline">Learn about conference room AV pricing</a> or <a href="/contact.html" class="text-blue-600 hover:text-blue-800 underline">schedule a consultation</a> to discuss your project.
+                    Our conference room installations serve Fortune 500 companies, government agencies, law firms, and growing businesses across multiple locations. From Crestron control systems and Zoom Rooms to wireless presentation and integrated video conferencing, we provide white-glove service from design through ongoing support. <a href="/resources/commercial-av-costs.html" class="text-blue-600 hover:text-blue-800 underline">Learn about conference room AV pricing</a> or <a href="/contact.html" class="text-blue-600 hover:text-blue-800 underline">talk to a specialist</a> to discuss your project.
                 </p>
             </div>
 
@@ -784,7 +810,7 @@
                                 <li><strong>Enterprise:</strong> $200,000-500,000+ (Custom everything, redundancy, ultimate performance)</li>
                             </ul>
                             <p class="mt-3"><strong>What's Included:</strong> Displays, cameras, microphones, speakers, DSP processors, control systems, video conferencing platform licenses (Zoom Rooms/Teams Rooms), network infrastructure, cable management, installation, programming, training, and 1-year warranty.</p>
-                            <p class="mt-3">Schedule a consultation for a detailed quote based on your specific requirements.</p>
+                            <p class="mt-3">Schedule your free conference room assessment for a detailed quote based on your specific requirements.</p>
                         </div>
                     </div>
 
@@ -1001,8 +1027,9 @@
             <div class="text-center bg-gradient-to-br from-blue-900 to-blue-700 text-white rounded-2xl p-12">
                 <h3 class="text-3xl font-bold mb-4">Ready to Upgrade Your Conference Rooms?</h3>
                 <p class="text-xl mb-8">Let's design a solution that fits your needs and budget.</p>
+                <p class="text-sm italic text-blue-100 mb-4">No obligation. No sales pressure. Just an honest assessment of what your space needs — and what it would cost.</p>
                 <a href="/contact.html" class="bg-amber-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-amber-700 transition inline-block">
-                    Schedule Consultation
+                    Schedule Your Free Conference Room Assessment
                 </a>
             </div>
         </div>
@@ -1041,7 +1068,7 @@
                         <li><a href="/commercial/digital-signage.html" class="hover:text-white transition">Digital Signage</a></li>
                         <li><a href="/commercial/cabling-fiber.html" class="hover:text-white transition">Cabling & Fiber</a></li>
                         <li><a href="/commercial/video-walls.html" class="hover:text-white transition">Video Walls</a></li>
-                        <li><a href="https://www.lutron.com/us/en/window-treatments/commercial-shades" target="_blank" rel="noopener" class="hover:text-white transition">Commercial Shades</a></li>
+                        <li><a href="/commercial/commercial-shades.html" target="_self" class="hover:text-white transition">Commercial Shades</a></li>
                     </ul>
                 </div>
                 <div>
@@ -1057,7 +1084,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
-                <p>© 2024 King Systems LLC. All rights reserved. | Colorado's Luxury Technology Specialists</p>
+                <p>© 2026 King Systems LLC. All rights reserved. | Colorado's Luxury Technology Specialists</p>
             </div>
         </div>
     </footer>
