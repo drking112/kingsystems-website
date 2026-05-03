@@ -302,6 +302,34 @@ function debounce(func, wait) {
     };
 }
 
+// Sticky CTA functionality for commercial/industry pages
+function dismissStickyCTA() {
+    sessionStorage.setItem('ks-sticky-cta-dismissed', 'true');
+    const desktop = document.getElementById('sticky-cta-desktop');
+    const mobile = document.getElementById('sticky-cta-mobile');
+    if (desktop) desktop.style.display = 'none';
+    if (mobile) mobile.style.display = 'none';
+}
+
+// Show sticky CTA on scroll (commercial/industry pages only)
+window.addEventListener('scroll', () => {
+    if (sessionStorage.getItem('ks-sticky-cta-dismissed') === 'true') return;
+    
+    const desktop = document.getElementById('sticky-cta-desktop');
+    const mobile = document.getElementById('sticky-cta-mobile');
+    
+    if (desktop || mobile) {
+        const scrollY = window.pageYOffset;
+        if (scrollY > 300) {
+            if (desktop) desktop.style.opacity = '1';
+            if (mobile) mobile.style.opacity = '1';
+        } else {
+            if (desktop) desktop.style.opacity = '0';
+            if (mobile) mobile.style.opacity = '0';
+        }
+    }
+});
+
 // Log page views (for analytics integration)
 console.log('King Systems - Page loaded:', window.location.pathname);
 
