@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>King Systems · Social Manager</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0A1628;color:#F8F9FA;font-family:-apple-system,BlinkMacSystemFont,'Inter',sans-serif;min-height:100vh}
+  select,input,button{font-family:inherit}
+  ::-webkit-scrollbar{width:4px}
+  ::-webkit-scrollbar-track{background:#0A1628}
+  ::-webkit-scrollbar-thumb{background:#2A3F5F;border-radius:2px}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+
+// ── CONFIG ────────────────────────────────────────────────────────────────────
+const API_KEY = "YOUR_ANTHROPIC_API_KEY_HERE";
+
+const PILLARS = [
+  {id:"thought_leadership",label:"Thought Leadership",pct:30,color:"#C9A84C"},
+  {id:"client_wins",label:"Client Wins / Case Studies",pct:25,color:"#3B82F6"},
+  {id:"culture",label:"Behind the Scenes / Culture",pct:20,color:"#10B981"},
+  {id:"federal",label:"Federal & Government",pct:15,color:"#8B5CF6"},
+  {id:"industry",label:"Industry News / Engagement",pct:10,color:"#F59E0B"},
+];
+
+const PLATFORMS = [
+  {id:"linkedin",label:"LinkedIn",icon:"in",charMin:800,charMax:1500,freq:"Primary",color:"#0077B5"},
+  {id:"instagram",label:"Instagram",icon:"IG",charMin:150,charMax:400,freq:"Secondary",color:"#E1306C"},
+  {id:"facebook",label:"Facebook",icon:"f",charMin:200,charMax:500,freq:"Tertiary",color:"#1877F2"},
+  {id:"x",label:"X (Twitter)",icon:"𝕏",charMin:240,charMax:280,freq:"Punchy",color:"#555"},
+];
+
+const HASHTAGS = {
+  linkedin:"#CommercialAV #AVIntegration #EnterpriseAV #ProAV #SystemsIntegration",
+  instagram:"#CommercialAV #AVIntegration #ProAV #TechIntegration #SmartOffice",
+  facebook:"#CommercialAV #AVIntegration #EnterpriseAV #ColoradoBusiness",
+  x:"#CommercialAV #AVIntegration #ProAV",
+};
+
+const COMPANY_PROMPT = `You are the social media content engine for King Systems LLC, a premium commercial AV and low-voltage technology integration firm based in Colorado, founded in 2002.
+
+BRAND VOICE: Confident but not arrogant. Expert but not condescending. 24 years of earned authority. Moderate wit (5/10). Write for senior executives and IT directors — skip basics, get to the insight.
+
+RULES:
+- Lead with specific outcome, number, or insight — NEVER a generic statement
+- Commercial/enterprise only. No residential.
+- Never name specific clients — use "a nationwide telecommunications leader," "a top-tier financial institution," "a major federal agency"
+- Specific numbers always: "25 conference rooms," "95% ticket reduction"
+- Active voice: "King Systems installed" not "was installed"
+- Translate every feature into a business outcome
+- Premium positioning only — no pricing, discounts, value messaging
+- Reference credentials (CMMC Level 1 Verified, DBE/MWBE/SBE, SBA 8a Alumni, Cisco PSPO Federal Partner) in ~15% of posts on government/federal topics
+- No politics, no residential, no specific federal facility details
+
+BANNED PHRASES: "In today's fast-paced world" "In an ever-evolving landscape" "Game-changer" "Cutting-edge" "Seamless" "State-of-the-art" "Innovative solution" "Empower" "Transform your" "Did you know"
+BANNED EMOJIS: No rocket/lightbulb/fire/sparkles to open. Max 2 emojis total.
+IMAGE STYLE: Full integrated environments. Wide-angle architectural shots. No glowing brains, holographic globes, binary code, futuristic UI overlays.
+
+QUALITY CHECK — post must pass all 5:
+1. Leads with specific outcome/number/insight
+2. Zero banned phrases
+3. One technical feature → business outcome
+4. Specific contextual CTA
+5. Only King Systems could have written this
+
+Return ONLY valid JSON: {"post":"text","hashtags":"tags","imageBrief":"direction","pillar":"id","qualityScore":8,"hook":"strategy"}`;
+
+const PERSONAL_PROMPT = `You write LinkedIn posts for David King, President and co-founder of King Systems LLC. He co-founded the company in Colorado in 2002 at age 17, left CU Boulder due to financial hardship, and built the business for 24 years without conventional financing. King Systems holds federal contractor status, CE Pro 100 recognition, CMMC Level 1 verified, DBE/MWBE/SBE certifications, and serves major enterprise and federal clients.
+
+David is simultaneously the technical leader, creative director, and chief relationship officer. Direct, confident, authority earned from 24 years of hands-on work.
+
+VOICE RULES:
+- First person: "I," "we" (King Systems), "my team"
+- Founder who has seen everything — not a marketer
+- Hard-won lessons, contrarian takes, real observations
+- DO NOT use: "I'm excited to share" "I'm proud to announce" "Humbled" "Grateful to announce"
+- DO use: short punchy opener → personal observation → industry insight → specific takeaway
+- No emojis to open. Max 1 emoji if it serves meaning.
+- End with a direct question or sharp statement — not a generic CTA
+- Aggressive line breaks: 1-2 sentences per paragraph, never a wall of text
+- 800-1200 characters sweet spot
+
+SAME CONTENT RULES as company — no client names, no residential, premium positioning only, no banned phrases.
+
+Return ONLY valid JSON: {"post":"text with \\n\\n for paragraph breaks","hashtags":"tags","imageBrief":"direction or personal photo on-site","pillar":"id","qualityScore":8,"hook":"strategy","reachTip":"why this outperforms company page"}`;
+
+const STORAGE_KEY = "ks-social-v3";
+
+// ── STORAGE (localStorage for static HTML) ────────────────────────────────────
+function loadPosts() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]"); }
+  catch { return []; }
+}
+function savePosts(posts) {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(posts)); }
+  catch(e) { console.error(e); }
+}
+
+// ── APP ───────────────────────────────────────────────────────────────────────
+const {useState, useEffect, useCallback, useRef} = React;
+
+function App() {
+  const [view, setView] = useState("calendar");
+  const [posts, setPosts] = useState(() => loadPosts());
+  const [generating, setGenerating] = useState(false);
+  const [genLog, setGenLog] = useState("");
+  const [platform, setPlatform] = useState("linkedin");
+  const [pillar, setPillar] = useState("");
+  const [topic, setTopic] = useState("");
+  const [voice, setVoice] = useState("company");
+  const [draft, setDraft] = useState(null);
+  const [toast, setToast] = useState("");
+  const [weekOffset, setWeekOffset] = useState(0);
+  const [modal, setModal] = useState(null);
+  const [apiKey, setApiKey] = useState(() => localStorage.getItem("ks-api-key") || API_KEY);
+  const [showSettings, setShowSettings] = useState(false);
+
+  useEffect(() => { savePosts(posts); }, [posts]);
+
+  const showToast = (msg) => { setToast(msg); setTimeout(() => setToast(""), 3000); };
+
+  const getNextPillar = useCallback(() => {
+    const counts = Object.fromEntries(PILLARS.map(p => [p.id, 0]));
+    posts.forEach(p => { if(counts[p.pillar] !== undefined) counts[p.pillar]++; });
+    const total = posts.length || 1;
+    let best = PILLARS[0], maxGap = -Infinity;
+    PILLARS.forEach(p => {
+      const gap = p.pct - (counts[p.id]/total)*100;
+      if(gap > maxGap) { maxGap = gap; best = p; }
+    });
+    return best.id;
+  }, [posts]);
+
+  const getNextSlot = (v) => {
+    const days = v === "personal" ? [4] : [1];
+    const existing = posts.filter(p => (p.voice||"company") === v).map(p => new Date(p.date));
+    let c = new Date(); c.setHours(9,0,0,0);
+    for(let i=0; i<90; i++) {
+      if(days.includes(c.getDay())) {
+        const taken = existing.some(d => Math.abs(d-c) < 3.6e6*6);
+        if(!taken && c > new Date()) break;
+      }
+      c.setDate(c.getDate()+1);
+    }
+    return c.toISOString();
+  };
+
+  const generate = async () => {
+    const key = apiKey.trim();
+    if(!key || key === "YOUR_ANTHROPIC_API_KEY_HERE") {
+      setShowSettings(true);
+      showToast("Add your API key in Settings first");
+      return;
+    }
+    setGenerating(true); setDraft(null);
+    const pid = pillar || getNextPillar();
+    const pil = PILLARS.find(p => p.id === pid);
+    const plat = PLATFORMS.find(p => p.id === platform);
+    const isP = voice === "personal";
+
+    let trends = "";
+    try {
+      setGenLog("Pulling live AV industry intelligence...");
+      const r = await fetch("https://api.anthropic.com/v1/messages", {
+        method:"POST",
+        headers:{"Content-Type":"application/json","x-api-key":key,"anthropic-version":"2023-06-01","anthropic-dangerous-direct-browser-calls":"true"},
+        body:JSON.stringify({
+          model:"claude-sonnet-4-6", max_tokens:800,
+          tools:[{type:"web_search_20250305",name:"web_search"}],
+          messages:[{role:"user",content:`Search for latest 2025-2026 news: commercial AV integration trends, ${pil.label} for AV integrators, Q-SYS OR Crestron OR Biamp OR enterprise conferencing. Summarize 3-5 current topics with stats an AV integration firm could post about.`}]
+        })
+      });
+      const d = await r.json();
+      trends = d.content?.filter(b=>b.type==="text").map(b=>b.text).join("\n") || "";
+    } catch(e) { console.warn("Search failed, continuing:", e); }
+
+    setGenLog(isP ? "Writing in David King's voice..." : "Generating brand post...");
+
+    try {
+      const sys = isP ? PERSONAL_PROMPT : COMPANY_PROMPT;
+      const prompt = `${topic ? "TOPIC: "+topic+"\n" : ""}${trends ? "CURRENT TRENDS:\n"+trends+"\n" : ""}
+PLATFORM: ${plat.label} (${plat.charMin}-${plat.charMax} chars)
+PILLAR: ${pil.label}
+HASHTAGS: ${HASHTAGS[platform]}
+VOICE: ${isP ? "David King first person, personal LinkedIn" : "King Systems brand, "+plat.label}
+RECENT PILLARS: ${posts.slice(-8).map(p=>p.pillar).join(", ")||"none"}
+
+Generate one publish-ready post. Return ONLY valid JSON.`;
+
+      const r2 = await fetch("https://api.anthropic.com/v1/messages", {
+        method:"POST",
+        headers:{"Content-Type":"application/json","x-api-key":key,"anthropic-version":"2023-06-01","anthropic-dangerous-direct-browser-calls":"true"},
+        body:JSON.stringify({model:"claude-sonnet-4-6",max_tokens:1000,system:sys,messages:[{role:"user",content:prompt}]})
+      });
+      const d2 = await r2.json();
+      const raw = d2.content?.map(b=>b.text||"").join("").trim().replace(/```json|```/g,"").trim();
+      const parsed = JSON.parse(raw);
+      setDraft({...parsed, platform, date:getNextSlot(voice), pillar:pid, voice, status:"draft", id:Date.now().toString(), chars:parsed.post?.length||0});
+      setGenLog("");
+    } catch(e) { setGenLog("Failed — check API key or try again."); console.error(e); }
+    setGenerating(false);
+  };
+
+  const approve = () => {
+    if(!draft) return;
+    setPosts(prev => [draft,...prev]);
+    setDraft(null); setTopic("");
+    showToast("Scheduled ✓");
+    setView("calendar");
+  };
+
+  const deletePost = id => { setPosts(prev=>prev.filter(p=>p.id!==id)); showToast("Removed"); };
+  const markDone = id => { setPosts(prev=>prev.map(p=>p.id===id?{...p,status:"published"}:p)); showToast("Marked published"); };
+
+  // Calendar helpers
+  const weekDates = () => {
+    const today = new Date();
+    const mon = new Date(today);
+    mon.setDate(today.getDate() - today.getDay() + 1 + weekOffset*7);
+    return Array.from({length:7},(_,i)=>{ const d=new Date(mon); d.setDate(mon.getDate()+i); return d; });
+  };
+  const postsForDate = d => posts.filter(p => new Date(p.date).toDateString()===d.toDateString());
+
+  // Stats
+  const total = posts.length;
+  const published = posts.filter(p=>p.status==="published").length;
+  const scheduled = posts.filter(p=>p.status!=="published").length;
+  const brandCount = posts.filter(p=>(p.voice||"company")==="company").length;
+  const personalCount = posts.filter(p=>p.voice==="personal").length;
+  const pillarCounts = Object.fromEntries(PILLARS.map(p=>[p.id,0]));
+  posts.forEach(p=>{ if(pillarCounts[p.pillar]!==undefined) pillarCounts[p.pillar]++; });
+
+  // ── STYLES ──────────────────────────────────────────────────────────────────
+  const C = {
+    navy:"#0A1628", slate:"#1E2D45", slateL:"#2A3F5F",
+    gold:"#C9A84C", white:"#F8F9FA", muted:"#7A8FA6", text:"#CBD5E1"
+  };
+  const card = {background:C.slate,borderRadius:12,padding:14,marginBottom:10,border:`1px solid ${C.slateL}`};
+  const cardGold = {...card,border:`1px solid ${C.gold}55`};
+  const label = {fontSize:10,color:C.gold,fontWeight:700,letterSpacing:"0.8px",textTransform:"uppercase",marginBottom:6,display:"block"};
+  const sel = {width:"100%",background:C.navy,border:`1px solid ${C.slateL}`,borderRadius:8,color:C.white,padding:"9px 12px",fontSize:13,marginBottom:10,outline:"none"};
+  const inp = {...sel,marginBottom:10};
+  const btnGold = {width:"100%",background:"linear-gradient(135deg,#C9A84C,#7A5A0A)",color:C.navy,border:"none",borderRadius:10,padding:13,fontSize:14,fontWeight:700,cursor:"pointer"};
+  const btnOut = {background:"transparent",border:`1px solid ${C.slateL}`,color:C.muted,borderRadius:8,padding:"7px 12px",fontSize:12,cursor:"pointer"};
+  const btnSm = (bg) => ({background:bg||C.slate,border:`1px solid ${C.slateL}`,color:C.white,borderRadius:6,padding:"5px 10px",fontSize:11,cursor:"pointer",marginRight:5});
+  const platBadge = pid => { const p=PLATFORMS.find(x=>x.id===pid); return {background:(p?.color||"#888")+"22",color:p?.color||"#888",border:`1px solid ${(p?.color||"#888")}44`,borderRadius:6,padding:"2px 7px",fontSize:10,fontWeight:600,display:"inline-block"}; };
+  const pilBadge = pid => { const p=PILLARS.find(x=>x.id===pid); return {background:(p?.color||"#888")+"22",color:p?.color||"#888",border:`1px solid ${(p?.color||"#888")}44`,borderRadius:6,padding:"2px 7px",fontSize:10,fontWeight:600,display:"inline-block",marginLeft:5}; };
+  const voiceBadge = v => ({background:v==="personal"?"#C9A84C22":"#0077B522",color:v==="personal"?"#C9A84C":"#0077B5",border:`1px solid ${v==="personal"?"#C9A84C44":"#0077B544"}`,borderRadius:6,padding:"2px 7px",fontSize:10,fontWeight:700,display:"inline-block",marginLeft:5});
+  const divider = {borderTop:`1px solid ${C.slateL}`,margin:"10px 0"};
+  const postText = {fontSize:13,color:C.text,lineHeight:1.65,whiteSpace:"pre-wrap",wordBreak:"break-word"};
+
+  const wk = weekDates();
+  const dayNames = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+
+  // ── VIEWS ────────────────────────────────────────────────────────────────────
+
+  const CalendarView = () => {
+    const [filter, setFilter] = useState("all");
+    const filtered = filter==="all" ? posts : posts.filter(p=>(p.voice||"company")===filter);
+    return (
+      <div style={{padding:"18px 16px"}}>
+        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:3}}>
+          <div style={{fontSize:17,fontWeight:700,color:C.white}}>Calendar</div>
+          <div style={{display:"flex",gap:6}}>
+            <button style={btnOut} onClick={()=>setWeekOffset(w=>w-1)}>←</button>
+            <button style={btnOut} onClick={()=>setWeekOffset(0)}>Now</button>
+            <button style={btnOut} onClick={()=>setWeekOffset(w=>w+1)}>→</button>
+          </div>
+        </div>
+        <div style={{fontSize:11,color:C.muted,marginBottom:12}}>
+          {wk[0].toLocaleDateString("en-US",{month:"short",day:"numeric"})} – {wk[6].toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})}
+        </div>
+
+        {/* Week grid */}
+        <div style={{display:"grid",gridTemplateColumns:"repeat(7,1fr)",gap:3,marginBottom:12}}>
+          {wk.map((date,i) => {
+            const dp = postsForDate(date);
+            const isToday = date.toDateString()===new Date().toDateString();
+            return (
+              <div key={i} style={{background:isToday?"#C9A84C11":C.slate,border:`1px solid ${isToday?"#C9A84C":dp.length?"#3B82F644":C.slateL}`,borderRadius:7,padding:"6px 3px",minHeight:65}}>
+                <div style={{fontSize:8,color:isToday?C.gold:C.muted,fontWeight:600,textAlign:"center",marginBottom:2}}>{dayNames[i]}</div>
+                <div style={{fontSize:12,fontWeight:700,color:isToday?C.gold:C.white,textAlign:"center",marginBottom:4}}>{date.getDate()}</div>
+                {dp.map(p => {
+                  const pl = PLATFORMS.find(x=>x.id===p.platform);
+                  const isP = p.voice==="personal";
+                  return (
+                    <div key={p.id} onClick={()=>setModal(p)} style={{background:(isP?"#C9A84C":(pl?.color||"#3B82F6"))+"33",borderRadius:3,padding:"2px 3px",marginBottom:2,cursor:"pointer"}}>
+                      <div style={{fontSize:8,color:isP?C.gold:(pl?.color||C.white),fontWeight:700,overflow:"hidden",whiteSpace:"nowrap",textOverflow:"ellipsis"}}>{isP?"👤":"🏢"} {pl?.label}</div>
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Legend */}
+        <div style={{display:"flex",gap:14,marginBottom:12}}>
+          {[{c:"#0077B5",t:"Brand (Mon)"},{c:C.gold,t:"David (Thu)"}].map(x=>(
+            <div key={x.t} style={{display:"flex",alignItems:"center",gap:5,fontSize:11,color:C.muted}}>
+              <span style={{width:8,height:8,borderRadius:"50%",background:x.c,display:"inline-block"}}/>
+              {x.t}
+            </div>
+          ))}
+        </div>
+
+        {/* Filter */}
+        <div style={{display:"flex",gap:6,marginBottom:12}}>
+          {["all","company","personal"].map(f=>(
+            <button key={f} onClick={()=>setFilter(f)} style={{background:filter===f?C.slate:"transparent",border:`1px solid ${filter===f?"#C9A84C44":C.slateL}`,borderRadius:20,padding:"4px 12px",fontSize:11,color:filter===f?C.gold:C.muted,cursor:"pointer"}}>
+              {f==="all"?"All":f==="company"?"🏢 Brand":"👤 David"}
+            </button>
+          ))}
+        </div>
+
+        <div style={{fontSize:10,color:C.gold,fontWeight:700,marginBottom:8}}>UPCOMING ({filtered.filter(p=>p.status!=="published").length})</div>
+        {filtered.filter(p=>p.status!=="published").length===0 && (
+          <div style={{...card,textAlign:"center",padding:"30px 20px",color:C.muted,fontSize:13}}>No posts scheduled. Hit Generate ⚡</div>
+        )}
+        {filtered.filter(p=>p.status!=="published")
+          .sort((a,b)=>new Date(a.date)-new Date(b.date))
+          .slice(0,6).map(p => {
+            const pl = PLATFORMS.find(x=>x.id===p.platform);
+            const isP = p.voice==="personal";
+            const sd = new Date(p.date);
+            return (
+              <div key={p.id} style={{...card,borderColor:isP?"#C9A84C44":C.slateL}}>
+                <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start"}}>
+                  <div style={{display:"flex",gap:4,flexWrap:"wrap"}}>
+                    <span style={platBadge(p.platform)}>{pl?.label}</span>
+                    <span style={voiceBadge(p.voice||"company")}>{isP?"👤 David":"🏢 Brand"}</span>
+                  </div>
+                  <div style={{fontSize:10,color:C.muted}}>{sd.toLocaleDateString("en-US",{month:"short",day:"numeric"})}</div>
+                </div>
+                <div style={{fontSize:12,color:C.text,lineHeight:1.5,marginTop:8,overflow:"hidden",display:"-webkit-box",WebkitLineClamp:2,WebkitBoxOrient:"vertical"}}>{p.post}</div>
+                <div style={{display:"flex",marginTop:8,gap:5}}>
+                  <button style={btnSm("#10B98122")} onClick={()=>markDone(p.id)}>✓ Published</button>
+                  <button style={btnSm()} onClick={()=>setModal(p)}>View</button>
+                  <button style={btnSm("#EF444422")} onClick={()=>deletePost(p.id)}>Delete</button>
+                </div>
+              </div>
+            );
+          })}
+      </div>
+    );
+  };
+
+  const GenerateView = () => (
+    <div style={{padding:"18px 16px"}}>
+      <div style={{fontSize:17,fontWeight:700,color:C.white,marginBottom:3}}>Generate Post</div>
+      <div style={{fontSize:12,color:C.muted,marginBottom:14}}>Live web search · King Systems voice · pillar-balanced</div>
+
+      <div style={card}>
+        {/* Voice toggle */}
+        <span style={label}>Voice / Account</span>
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8,marginBottom:12}}>
+          {[{id:"company",icon:"🏢",title:"Company Page",sub:"King Systems LLC",c:"#0077B5"},{id:"personal",icon:"👤",title:"Personal Profile",sub:"David King · President",c:C.gold}].map(vm=>(
+            <button key={vm.id} onClick={()=>setVoice(vm.id)} style={{background:voice===vm.id?vm.c+"22":"#0A1628",border:`2px solid ${voice===vm.id?vm.c:C.slateL}`,borderRadius:10,padding:"10px 8px",cursor:"pointer",textAlign:"left"}}>
+              <div style={{fontSize:18,marginBottom:3}}>{vm.icon}</div>
+              <div style={{fontSize:12,fontWeight:700,color:voice===vm.id?vm.c:C.white}}>{vm.title}</div>
+              <div style={{fontSize:10,color:C.muted,marginTop:1}}>{vm.sub}</div>
+              {vm.id==="personal"&&voice==="personal"&&<div style={{fontSize:9,color:"#10B981",marginTop:4,fontWeight:600}}>↑ 5–10× more reach</div>}
+            </button>
+          ))}
+        </div>
+
+        {voice==="personal"&&(
+          <div style={{background:"#10B98111",border:"1px solid #10B98133",borderRadius:8,padding:"10px 12px",marginBottom:12,fontSize:11,color:"#10B981",lineHeight:1.5}}>
+            <strong>Reach advantage:</strong> Your personal LinkedIn profile gets 5–10× more impressions than the company page. Current company baseline: ~16 impressions/post. Personal target: 300–800+.
+          </div>
+        )}
+
+        {/* Platform */}
+        <span style={label}>Platform</span>
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:6,marginBottom:12}}>
+          {PLATFORMS.map(p=>(
+            <button key={p.id} onClick={()=>setPlatform(p.id)} style={{background:platform===p.id?p.color+"22":"#0A1628",border:`1px solid ${platform===p.id?p.color:C.slateL}`,borderRadius:8,padding:"9px 8px",color:platform===p.id?p.color:C.muted,fontSize:12,fontWeight:600,cursor:"pointer"}}>
+              {p.label}
+              <div style={{fontSize:9,fontWeight:400,marginTop:1,opacity:0.7}}>{p.freq}</div>
+            </button>
+          ))}
+        </div>
+
+        {/* Pillar */}
+        <span style={label}>Content Pillar</span>
+        <select style={sel} value={pillar} onChange={e=>setPillar(e.target.value)}>
+          <option value="">Auto-select (fills most underrepresented)</option>
+          {PILLARS.map(p=><option key={p.id} value={p.id}>{p.label} ({p.pct}%)</option>)}
+        </select>
+        {!pillar&&<div style={{fontSize:11,color:C.gold,marginBottom:10,padding:"7px 10px",background:"#C9A84C11",borderRadius:6}}>Auto-pick: <strong>{PILLARS.find(p=>p.id===getNextPillar())?.label}</strong></div>}
+
+        {/* Topic */}
+        <span style={label}>Topic / Angle (optional)</span>
+        <input style={inp} value={topic} onChange={e=>setTopic(e.target.value)}
+          placeholder={voice==="personal"?"e.g. lesson from a federal project, building without VC...":"e.g. MTR conferencing, Q-SYS room booking, CMMC..."}/>
+
+        <button style={{...btnGold,opacity:generating?0.6:1}} onClick={generate} disabled={generating}>
+          {generating?`⚡ ${genLog||"Working..."}`:`Generate ${voice==="personal"?"👤 Personal":"🏢 Brand"} Post`}
+        </button>
+      </div>
+
+      {draft&&(
+        <div style={cardGold}>
+          <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:10}}>
+            <div style={{fontSize:13,fontWeight:700,color:C.gold}}>{draft.voice==="personal"?"👤 David King Draft":"🏢 Brand Draft"}</div>
+            <div style={{fontSize:10,color:C.muted}}>{draft.chars} chars</div>
+          </div>
+          <div style={{display:"flex",gap:5,marginBottom:8,flexWrap:"wrap"}}>
+            <span style={platBadge(draft.platform)}>{PLATFORMS.find(p=>p.id===draft.platform)?.label}</span>
+            <span style={pilBadge(draft.pillar)}>{PILLARS.find(p=>p.id===draft.pillar)?.label}</span>
+            <span style={{fontSize:10,color:"#10B981",background:"#10B98122",padding:"2px 7px",borderRadius:6,border:"1px solid #10B98144"}}>Quality: {draft.qualityScore}/10</span>
+          </div>
+          <div style={{height:3,borderRadius:2,background:`linear-gradient(90deg,#C9A84C ${draft.qualityScore*10}%,#2A3F5F ${draft.qualityScore*10}%)`,marginBottom:10}}/>
+          {draft.reachTip&&<div style={{padding:"8px 10px",background:"#10B98111",borderRadius:7,border:"1px solid #10B98133",fontSize:11,color:"#10B981",marginBottom:10}}><strong>Reach tip:</strong> {draft.reachTip}</div>}
+          <div style={divider}/>
+          {draft.hook&&<div style={{fontSize:10,color:C.muted,marginBottom:5}}>Hook: {draft.hook}</div>}
+          <div style={postText}>{draft.post}</div>
+          <div style={divider}/>
+          <div style={{fontSize:10,color:C.muted,marginBottom:4}}>HASHTAGS</div>
+          <div style={{fontSize:11,color:"#3B82F6",marginBottom:10}}>{draft.hashtags}</div>
+          <div style={{fontSize:10,color:C.muted,marginBottom:4}}>IMAGE BRIEF</div>
+          <div style={{fontSize:11,color:C.text,background:C.navy,padding:10,borderRadius:8,lineHeight:1.5,marginBottom:10}}>{draft.imageBrief}</div>
+          <div style={{fontSize:10,color:C.muted}}>SCHEDULED: {new Date(draft.date).toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"})} · 9:00 AM MT</div>
+          <div style={{display:"flex",gap:8,marginTop:12}}>
+            <button style={{...btnGold,flex:1}} onClick={approve}>Schedule Post</button>
+            <button style={{...btnOut,padding:"11px 14px"}} onClick={()=>{setDraft(null);generate();}}>↺</button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+
+  const QueueView = () => (
+    <div style={{padding:"18px 16px"}}>
+      <div style={{fontSize:17,fontWeight:700,color:C.white,marginBottom:12}}>Post Queue</div>
+      <div style={{display:"flex",gap:8,marginBottom:14}}>
+        {[{l:"🏢 Brand",n:brandCount,c:"#0077B5"},{l:"👤 David",n:personalCount,c:C.gold},{l:"Published",n:published,c:"#10B981"}].map(m=>(
+          <div key={m.l} style={{...card,flex:1,textAlign:"center",padding:"10px 6px",marginBottom:0}}>
+            <div style={{fontSize:20,fontWeight:800,color:m.c}}>{m.n}</div>
+            <div style={{fontSize:9,color:C.muted,textTransform:"uppercase",marginTop:2}}>{m.l}</div>
+          </div>
+        ))}
+      </div>
+      {posts.length===0&&<div style={{...card,textAlign:"center",padding:"30px 20px",color:C.muted}}>No posts yet.</div>}
+      {[...posts].sort((a,b)=>new Date(a.date)-new Date(b.date)).map(p=>{
+        const pl=PLATFORMS.find(x=>x.id===p.platform);
+        const isP=p.voice==="personal";
+        const sd=new Date(p.date);
+        return (
+          <div key={p.id} style={{...card,opacity:p.status==="published"?0.55:1,borderColor:isP?"#C9A84C44":C.slateL}}>
+            <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:6}}>
+              <div style={{display:"flex",gap:4,flexWrap:"wrap"}}>
+                <span style={platBadge(p.platform)}>{pl?.label}</span>
+                <span style={voiceBadge(p.voice||"company")}>{isP?"👤 David":"🏢 Brand"}</span>
+                <span style={pilBadge(p.pillar)}>{PILLARS.find(x=>x.id===p.pillar)?.label}</span>
+              </div>
+              <div style={{fontSize:10,color:p.status==="published"?"#10B981":C.gold}}>{p.status==="published"?"✓ Published":sd.toLocaleDateString("en-US",{month:"short",day:"numeric"})}</div>
+            </div>
+            <div style={{fontSize:12,color:C.text,lineHeight:1.5,marginBottom:8,overflow:"hidden",display:"-webkit-box",WebkitLineClamp:2,WebkitBoxOrient:"vertical"}}>{p.post}</div>
+            <div style={{display:"flex",gap:5}}>
+              {p.status!=="published"&&<button style={btnSm("#10B98122")} onClick={()=>markDone(p.id)}>✓ Published</button>}
+              <button style={btnSm()} onClick={()=>setModal(p)}>View</button>
+              <button style={btnSm("#EF444422")} onClick={()=>deletePost(p.id)}>Delete</button>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+
+  const AnalyticsView = () => (
+    <div style={{padding:"18px 16px"}}>
+      <div style={{fontSize:17,fontWeight:700,color:C.white,marginBottom:14}}>Analytics</div>
+
+      <div style={{...card,borderColor:"#10B98144",background:"#10B98108"}}>
+        <div style={{fontSize:11,color:"#10B981",fontWeight:700,marginBottom:6}}>TWO-TRACK REACH STRATEGY</div>
+        <div style={{fontSize:12,color:C.text,lineHeight:1.6}}>
+          <strong style={{color:"#0077B5"}}>🏢 Monday (Brand):</strong> Credibility, case studies, credentials. ~16 impressions/post baseline.<br/><br/>
+          <strong style={{color:C.gold}}>👤 Thursday (David):</strong> First-person thought leadership. Target 300–800+ impressions. LinkedIn gives personal profiles 5–10× more reach than company pages.
+        </div>
+        <div style={{marginTop:10,display:"flex",gap:8}}>
+          <div style={{flex:1,background:C.navy,borderRadius:8,padding:"8px 10px",textAlign:"center"}}>
+            <div style={{fontSize:16,fontWeight:800,color:C.muted}}>~16</div>
+            <div style={{fontSize:9,color:C.muted}}>Company avg</div>
+          </div>
+          <div style={{display:"flex",alignItems:"center",fontSize:14,color:"#10B981"}}>→</div>
+          <div style={{flex:1,background:C.navy,borderRadius:8,padding:"8px 10px",textAlign:"center"}}>
+            <div style={{fontSize:16,fontWeight:800,color:"#10B981"}}>300–800+</div>
+            <div style={{fontSize:9,color:C.muted}}>Personal target</div>
+          </div>
+        </div>
+      </div>
+
+      <div style={card}>
+        <span style={label}>Pillar Distribution</span>
+        {PILLARS.map(p=>{
+          const actual = total>0 ? Math.round((pillarCounts[p.id]/total)*100) : 0;
+          const gap = p.pct-actual;
+          return (
+            <div key={p.id} style={{marginBottom:10}}>
+              <div style={{display:"flex",justifyContent:"space-between",marginBottom:3}}>
+                <span style={{fontSize:11,color:C.text}}>{p.label}</span>
+                <span style={{fontSize:10,color:gap>5?"#EF4444":gap>0?"#F59E0B":"#10B981"}}>{actual}%/{p.pct}% {gap>0?`(+${gap}% needed)`:"✓"}</span>
+              </div>
+              <div style={{height:7,background:C.navy,borderRadius:4,overflow:"hidden"}}>
+                <div style={{height:"100%",width:`${Math.min(actual,100)}%`,background:p.color,borderRadius:4}}/>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      <div style={card}>
+        <span style={label}>Voice Mix</span>
+        <div style={{display:"flex",gap:8}}>
+          {[{l:"🏢 Brand",n:brandCount,c:"#0077B5"},{l:"👤 David",n:personalCount,c:C.gold}].map(m=>(
+            <div key={m.l} style={{flex:1,background:C.navy,borderRadius:8,padding:"10px",textAlign:"center"}}>
+              <div style={{fontSize:22,fontWeight:800,color:m.c}}>{m.n}</div>
+              <div style={{fontSize:10,color:C.muted,marginTop:2}}>{m.l}</div>
+            </div>
+          ))}
+        </div>
+        {personalCount===0&&<div style={{marginTop:10,fontSize:11,color:"#F59E0B",padding:"8px 10px",background:"#F59E0B11",borderRadius:6,border:"1px solid #F59E0B33"}}>No personal posts yet — highest-leverage move for reach growth.</div>}
+      </div>
+
+      <div style={card}>
+        <span style={label}>API Status</span>
+        {PLATFORMS.map(p=>(
+          <div key={p.id} style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:7}}>
+            <span style={{fontSize:12,color:C.text}}>{p.label}</span>
+            <span style={{fontSize:10,color:"#F59E0B",background:"#F59E0B11",padding:"3px 9px",borderRadius:20,border:"1px solid #F59E0B33"}}>Ready to wire</span>
+          </div>
+        ))}
+        <div style={{fontSize:11,color:C.muted,marginTop:8,borderTop:`1px solid ${C.slateL}`,paddingTop:8}}>Add platform credentials to enable auto-publishing.</div>
+      </div>
+    </div>
+  );
+
+  const SettingsView = () => {
+    const [localKey, setLocalKey] = useState(apiKey);
+    return (
+      <div style={{padding:"18px 16px"}}>
+        <div style={{fontSize:17,fontWeight:700,color:C.white,marginBottom:4}}>Settings</div>
+        <div style={{fontSize:12,color:C.muted,marginBottom:16}}>Configure your Anthropic API key</div>
+        <div style={card}>
+          <span style={label}>Anthropic API Key</span>
+          <input type="password" style={inp} value={localKey} onChange={e=>setLocalKey(e.target.value)} placeholder="sk-ant-..."/>
+          <div style={{fontSize:11,color:C.muted,marginBottom:12}}>Get your key at console.anthropic.com · Stored locally in your browser only.</div>
+          <button style={btnGold} onClick={()=>{ setApiKey(localKey); localStorage.setItem("ks-api-key",localKey); showToast("API key saved ✓"); }}>Save Key</button>
+        </div>
+        <div style={card}>
+          <span style={label}>Data</span>
+          <div style={{fontSize:12,color:C.text,marginBottom:10}}>All posts stored locally in your browser (localStorage). Clears if you clear browser data.</div>
+          <button style={{...btnOut,color:"#EF4444",borderColor:"#EF444444"}} onClick={()=>{ if(confirm("Delete all posts?")){ setPosts([]); showToast("Cleared"); } }}>Clear All Posts</button>
+        </div>
+      </div>
+    );
+  };
+
+  // ── MODAL ────────────────────────────────────────────────────────────────────
+  const Modal = () => {
+    if(!modal) return null;
+    const pl = PLATFORMS.find(x=>x.id===modal.platform);
+    const isP = modal.voice==="personal";
+    return (
+      <div style={{position:"fixed",inset:0,background:"#000000CC",zIndex:500,overflowY:"auto",padding:14}} onClick={()=>setModal(null)}>
+        <div style={{background:C.slate,borderRadius:14,padding:18,border:`1px solid ${isP?"#C9A84C88":"#C9A84C44"}`,maxWidth:600,margin:"16px auto"}} onClick={e=>e.stopPropagation()}>
+          <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:12}}>
+            <div style={{fontSize:14,fontWeight:700,color:C.gold}}>{isP?"👤 David King — Personal":"🏢 Brand Post"}</div>
+            <button style={{background:"none",border:"none",color:C.muted,fontSize:20,cursor:"pointer"}} onClick={()=>setModal(null)}>×</button>
+          </div>
+          <div style={{display:"flex",gap:5,marginBottom:10,flexWrap:"wrap"}}>
+            <span style={platBadge(modal.platform)}>{pl?.label}</span>
+            <span style={voiceBadge(modal.voice||"company")}>{isP?"👤 David":"🏢 Brand"}</span>
+            <span style={pilBadge(modal.pillar)}>{PILLARS.find(p=>p.id===modal.pillar)?.label}</span>
+            {modal.qualityScore&&<span style={{fontSize:10,color:"#10B981",background:"#10B98122",padding:"2px 7px",borderRadius:6,border:"1px solid #10B98144"}}>Score: {modal.qualityScore}/10</span>}
+          </div>
+          <div style={{fontSize:10,color:C.muted,marginBottom:10}}>{new Date(modal.date).toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"})} · 9:00 AM MT</div>
+          {modal.reachTip&&<div style={{padding:"7px 10px",background:"#10B98111",borderRadius:7,border:"1px solid #10B98133",fontSize:11,color:"#10B981",marginBottom:10}}><strong>Reach:</strong> {modal.reachTip}</div>}
+          <div style={divider}/>
+          {modal.hook&&<div style={{fontSize:10,color:C.muted,marginBottom:5}}>Hook: {modal.hook}</div>}
+          <div style={postText}>{modal.post}</div>
+          <div style={divider}/>
+          <div style={{fontSize:10,color:C.muted,marginBottom:4}}>HASHTAGS</div>
+          <div style={{fontSize:11,color:"#3B82F6",marginBottom:10}}>{modal.hashtags}</div>
+          {modal.imageBrief&&<>
+            <div style={{fontSize:10,color:C.muted,marginBottom:4}}>IMAGE BRIEF</div>
+            <div style={{fontSize:11,color:C.text,background:C.navy,padding:10,borderRadius:8,lineHeight:1.5}}>{modal.imageBrief}</div>
+          </>}
+          <div style={{marginTop:14,display:"flex",gap:8}}>
+            {modal.status!=="published"&&<button style={{...btnGold,flex:1}} onClick={()=>{markDone(modal.id);setModal(null);}}>Mark Published</button>}
+            <button style={{...btnOut,padding:"11px 14px"}} onClick={()=>setModal(null)}>Close</button>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  // ── RENDER ───────────────────────────────────────────────────────────────────
+  return (
+    <div style={{minHeight:"100vh",background:C.navy,color:C.white,paddingBottom:80}}>
+      {toast&&<div style={{position:"fixed",bottom:88,left:"50%",transform:"translateX(-50%)",background:C.gold,color:C.navy,padding:"9px 18px",borderRadius:20,fontWeight:700,fontSize:12,zIndex:200,whiteSpace:"nowrap"}}>{toast}</div>}
+      <Modal/>
+
+      {/* Header */}
+      <div style={{background:"linear-gradient(135deg,#0A1628,#1E2D45)",borderBottom:"1px solid #C9A84C33",padding:"14px 18px",position:"sticky",top:0,zIndex:100}}>
+        <div style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+          <div style={{display:"flex",alignItems:"center",gap:10}}>
+            <div style={{width:34,height:34,background:"linear-gradient(135deg,#C9A84C,#7A5A0A)",borderRadius:8,display:"flex",alignItems:"center",justifyContent:"center",fontWeight:900,fontSize:13,color:C.navy}}>KS</div>
+            <div>
+              <div style={{fontSize:14,fontWeight:700,color:C.white}}>King Systems</div>
+              <div style={{fontSize:10,color:C.gold,fontWeight:500,letterSpacing:"0.5px",textTransform:"uppercase"}}>Social Manager</div>
+            </div>
+          </div>
+          <div style={{display:"flex",alignItems:"center",gap:10}}>
+            <div style={{textAlign:"right"}}>
+              <div style={{fontSize:10,color:C.gold}}>{brandCount} brand · {personalCount} personal</div>
+              <div style={{fontSize:9,color:C.muted}}>Mon (brand) · Thu (David)</div>
+            </div>
+            <button onClick={()=>setView(view==="settings"?"calendar":"settings")} style={{background:"none",border:"none",fontSize:18,cursor:"pointer",color:view==="settings"?C.gold:C.muted}}>⚙️</button>
+          </div>
+        </div>
+      </div>
+
+      {/* Content */}
+      {view==="calendar"&&<CalendarView/>}
+      {view==="generate"&&<GenerateView/>}
+      {view==="queue"&&<QueueView/>}
+      {view==="analytics"&&<AnalyticsView/>}
+      {view==="settings"&&<SettingsView/>}
+
+      {/* Nav */}
+      <nav style={{display:"flex",background:C.navy,borderTop:`1px solid ${C.slate}`,padding:"6px 10px",position:"fixed",bottom:0,left:0,right:0,zIndex:100,justifyContent:"space-around"}}>
+        {[{id:"calendar",label:"Calendar",icon:"📅"},{id:"generate",label:"Generate",icon:"⚡"},{id:"queue",label:"Queue",icon:"📋"},{id:"analytics",label:"Analytics",icon:"📊"}].map(n=>(
+          <button key={n.id} onClick={()=>setView(n.id)} style={{flex:1,padding:"7px 4px",background:view===n.id?C.slate:"transparent",border:view===n.id?"1px solid #C9A84C44":"1px solid transparent",borderRadius:8,color:view===n.id?C.gold:C.muted,fontSize:10,fontWeight:view===n.id?600:400,cursor:"pointer",textAlign:"center"}}>
+            <div style={{fontSize:15}}>{n.icon}</div>
+            <div>{n.label}</div>
+          </button>
+        ))}
+      </nav>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+</script>
+</body>
+</html>
