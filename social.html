@@ -156,56 +156,71 @@ function App() {
   const generate = async () => {
     const key = apiKey.trim();
     if(!key || key === "YOUR_ANTHROPIC_API_KEY_HERE") {
-      setShowSettings(true);
+      setView("settings");
       showToast("Add your API key in Settings first");
       return;
     }
     setGenerating(true); setDraft(null);
+    setGenLog("Generating post...");
     const pid = pillar || getNextPillar();
     const pil = PILLARS.find(p => p.id === pid);
     const plat = PLATFORMS.find(p => p.id === platform);
     const isP = voice === "personal";
 
-    let trends = "";
-    try {
-      setGenLog("Pulling live AV industry intelligence...");
-      const r = await fetch("https://api.anthropic.com/v1/messages", {
-        method:"POST",
-        headers:{"Content-Type":"application/json","x-api-key":key,"anthropic-version":"2023-06-01","anthropic-dangerous-direct-browser-calls":"true"},
-        body:JSON.stringify({
-          model:"claude-sonnet-4-6", max_tokens:800,
-          tools:[{type:"web_search_20250305",name:"web_search"}],
-          messages:[{role:"user",content:`Search for latest 2025-2026 news: commercial AV integration trends, ${pil.label} for AV integrators, Q-SYS OR Crestron OR Biamp OR enterprise conferencing. Summarize 3-5 current topics with stats an AV integration firm could post about.`}]
-        })
-      });
-      const d = await r.json();
-      trends = d.content?.filter(b=>b.type==="text").map(b=>b.text).join("\n") || "";
-    } catch(e) { console.warn("Search failed, continuing:", e); }
-
-    setGenLog(isP ? "Writing in David King's voice..." : "Generating brand post...");
-
     try {
       const sys = isP ? PERSONAL_PROMPT : COMPANY_PROMPT;
-      const prompt = `${topic ? "TOPIC: "+topic+"\n" : ""}${trends ? "CURRENT TRENDS:\n"+trends+"\n" : ""}
+      const prompt = `${topic ? "SPECIFIC TOPIC: "+topic+"\n" : ""}
 PLATFORM: ${plat.label} (${plat.charMin}-${plat.charMax} chars)
 PILLAR: ${pil.label}
 HASHTAGS: ${HASHTAGS[platform]}
-VOICE: ${isP ? "David King first person, personal LinkedIn" : "King Systems brand, "+plat.label}
-RECENT PILLARS: ${posts.slice(-8).map(p=>p.pillar).join(", ")||"none"}
+VOICE: ${isP ? "David King first person, personal LinkedIn post" : "King Systems LLC brand voice, "+plat.label+" post"}
+RECENT PILLARS USED: ${posts.slice(-8).map(p=>p.pillar).join(", ")||"none yet"}
+TODAY: ${new Date().toLocaleDateString("en-US",{month:"long",year:"numeric"})}
 
-Generate one publish-ready post. Return ONLY valid JSON.`;
+Generate one complete publish-ready post grounded in current AV industry trends and insights. Return ONLY valid JSON, no markdown, no explanation.`;
 
-      const r2 = await fetch("https://api.anthropic.com/v1/messages", {
-        method:"POST",
-        headers:{"Content-Type":"application/json","x-api-key":key,"anthropic-version":"2023-06-01","anthropic-dangerous-direct-browser-calls":"true"},
-        body:JSON.stringify({model:"claude-sonnet-4-6",max_tokens:1000,system:sys,messages:[{role:"user",content:prompt}]})
+      const resp = await fetch("https://api.anthropic.com/v1/messages", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": key,
+          "anthropic-version": "2023-06-01",
+          "anthropic-dangerous-direct-browser-calls": "true"
+        },
+        body: JSON.stringify({
+          model: "claude-sonnet-4-6",
+          max_tokens: 1024,
+          system: sys,
+          messages: [{ role: "user", content: prompt }]
+        })
       });
-      const d2 = await r2.json();
-      const raw = d2.content?.map(b=>b.text||"").join("").trim().replace(/```json|```/g,"").trim();
+
+      if(!resp.ok) {
+        const err = await resp.json().catch(()=>({}));
+        const msg = err?.error?.message || `API error ${resp.status}`;
+        setGenLog("Error: " + msg);
+        setGenerating(false);
+        return;
+      }
+
+      const data = await resp.json();
+      const raw = data.content?.map(b=>b.text||"").join("").trim().replace(/```json|```/g,"").trim();
       const parsed = JSON.parse(raw);
-      setDraft({...parsed, platform, date:getNextSlot(voice), pillar:pid, voice, status:"draft", id:Date.now().toString(), chars:parsed.post?.length||0});
+      setDraft({
+        ...parsed,
+        platform,
+        date: getNextSlot(voice),
+        pillar: pid,
+        voice,
+        status: "draft",
+        id: Date.now().toString(),
+        chars: parsed.post?.length || 0
+      });
       setGenLog("");
-    } catch(e) { setGenLog("Failed — check API key or try again."); console.error(e); }
+    } catch(e) {
+      console.error(e);
+      setGenLog("Failed: " + (e.message || "Unknown error. Check API key and try again."));
+    }
     setGenerating(false);
   };
 
