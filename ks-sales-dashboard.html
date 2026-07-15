@@ -107,16 +107,16 @@ td.muted{color:#7A8BA0;font-size:11px;}
     <button onclick="show('bids',this)">Active Pursuits</button>
     <button onclick="show('leads',this)">Leads</button>
   </nav>
-  <div class="updated">Updated Jun 26, 2026</div>
+  <div class="updated">Updated Jul 15, 2026</div>
 </header>
 
 <!-- DASHBOARD -->
 <div class="view active" id="view-dash">
   <div class="kpi-row k4">
-    <div class="tile tile-blue"><div class="t-lbl">Booked YTD · Verified</div><div class="t-val">$5.13M</div><div class="t-sub">Jan–Jun 26 · Dynamics exports</div></div>
-    <div class="tile tile-win"><div class="t-lbl">Q2 Final · Beat Plan ✓</div><div class="t-val">$2.32M</div><div class="t-sub">vs $2.03M goal · +$290K · 114%</div></div>
-    <div class="tile tile-blue-dk"><div class="t-lbl">Open Pipeline · Est.</div><div class="t-val">$12.9M</div><div class="t-sub">72 deals · Active team $12.7M</div></div>
-    <div class="tile tile-blue2"><div class="t-lbl">Remaining to FY Goal</div><div class="t-val">$1.62M</div><div class="t-sub">Jul–Dec · $271K/mo needed</div></div>
+    <div class="tile tile-blue"><div class="t-lbl">Booked YTD · Verified</div><div class="t-val">$5.37M</div><div class="t-sub">Jan–Jul 14 · Dynamics exports</div></div>
+    <div class="tile tile-win"><div class="t-lbl">Q2 Final · Beat Plan ✓</div><div class="t-val">$1.40M</div><div class="t-sub">Full June · Dynamics verified</div></div>
+    <div class="tile tile-blue-dk"><div class="t-lbl">Open Pipeline · Est.</div><div class="t-val">$12.1M</div><div class="t-sub">53 deals · Dynamics 7/15</div></div>
+    <div class="tile tile-blue2"><div class="t-lbl">Remaining to FY Goal</div><div class="t-val">$1.38M</div><div class="t-sub">Jul–Dec · ~$251K/mo needed</div></div>
   </div>
   <div class="two-col">
     <div>
@@ -129,7 +129,7 @@ td.muted{color:#7A8BA0;font-size:11px;}
     <div>
       <div class="sec">Won by Owner — 2026 YTD</div>
       <div class="chart-box">
-        <div class="legend"><span><span class="sq" style="background:#1A4D8F"></span>$ won · Nicci-verified</span></div>
+        <div class="legend"><span><span class="sq" style="background:#1A4D8F"></span>$ won · Dynamics verified</span></div>
         <div style="position:relative;height:210px"><canvas id="c-owner"></canvas></div>
       </div>
     </div>
@@ -150,16 +150,16 @@ td.muted{color:#7A8BA0;font-size:11px;}
     <div>
       <div class="sec">Watch Items</div>
       <div style="background:#fff;border:0.5px solid #DDE3EC;border-radius:8px;padding:14px;">
-        <div class="watch-item win-item">★ Q2 FINAL: $2.32M vs $2.03M goal — 114%, +$290K over plan</div>
-        <div class="watch-item win-item">★ June final: $1.37M · 28 deals · Checkr SF $940K (David) · best month 2026</div>
-        <div class="watch-item win-item">★ 20/20 Meeting Jun 25 ✓ — 59 projects captured · see Active Pursuits</div>
+        <div class="watch-item win-item">★ YTD $5.37M · $1.38M remaining · FY goal in reach at ~$251K/mo</div>
+        <div class="watch-item win-item">★ Jul MTD: $209K · 12 deals (7/1–7/14) · Troy $161K leading</div>
         <div class="watch-item warn-item">Next 20/20: Jul 30 · 9:30 AM · KS Arvada (Troy confirm w/ Jim)</div>
-        <div class="watch-item crit">⚠ Flexential DEN12 $550K — Hot, overdue May 8 — disposition today</div>
-        <div class="watch-item crit">⚠ Comcast Advertising $227K — Hot, overdue May 6 — disposition today</div>
-        <div class="watch-item">21 pipeline deals need reassignment (fired staff)</div>
-        <div class="watch-item">Troy: contact Ryan Balakas (Saunders) re: Cherry Creek West precon list</div>
-        <div class="watch-item">595 leads never contacted — construction list is first play</div>
-        <div class="watch-item">Losses logged 2026: Troy only — enforce Won/Lost in Dynamics</div>
+        <div class="watch-item warn-item">★ Warren AFB $949K — on hold until Sep 15 — monitor for early restart</div>
+        <div class="watch-item warn-item">★ Denver Summit Stadium $7.1M — tracked weekly via Mortenson portal</div>
+        <div class="watch-item crit">⚠ Flexential DEN12 $550K — Hot, overdue May 8 — needs disposition</div>
+        <div class="watch-item crit">⚠ Aurora Animal Shelter $360K — overdue May 30 — disposition needed</div>
+        <div class="watch-item">Comcast Advertising 4 remaining sites — active, push closure</div>
+        <div class="watch-item">8 pipeline deals with Jun close dates now overdue — update or kill</div>
+        <div class="watch-item">Ryan Balakas (Saunders) — Cherry Creek West — not yet in CRM, contact now</div>
       </div>
     </div>
   </div>
@@ -168,12 +168,12 @@ td.muted{color:#7A8BA0;font-size:11px;}
 <!-- PIPELINE -->
 <div class="view" id="view-pipeline">
   <div class="kpi-row k4">
-    <div class="tile tile-blue"><div class="t-lbl">Total Pipeline</div><div class="t-val">$12.9M</div><div class="t-sub">72 open opportunities</div></div>
-    <div class="tile tile-blue2"><div class="t-lbl">Active Team Pipeline</div><div class="t-val">$12.7M</div><div class="t-sub">Excl. fired/gone staff</div></div>
-    <div class="tile tile-org"><div class="t-lbl">⚠ Needs Reassignment</div><div class="t-val">21 deals</div><div class="t-sub">Brandon · Lenny · Dakota</div></div>
-    <div class="tile tile-org-dk"><div class="t-lbl">⚠ Overdue Close Date</div><div class="t-val">35 deals</div><div class="t-sub">Update or disposition now</div></div>
+    <div class="tile tile-blue"><div class="t-lbl">Total Pipeline</div><div class="t-val">$12.1M</div><div class="t-sub">53 open deals · Dynamics 7/15</div></div>
+    <div class="tile tile-blue2"><div class="t-lbl">Active Team Pipeline</div><div class="t-val">$12.1M</div><div class="t-sub">David · Troy · Jeff</div></div>
+    <div class="tile tile-org"><div class="t-lbl">⚠ Overdue Close Date</div><div class="t-val">11 deals</div><div class="t-sub">Needs update or disposition</div></div>
+    <div class="tile tile-org-dk"><div class="t-lbl">Ghost Deals (inactive owners)</div><div class="t-val">18 deals</div><div class="t-sub">Brandon · Lenny · Dakota — kill or reassign</div></div>
   </div>
-  <div class="warn"><strong>Action required:</strong> Flexential DEN12 ($550K) and Comcast Advertising ($227K) both rated Hot with May close dates passed. Disposition before the team meeting.</div>
+  <div class="warn"><strong>Action required:</strong> 11 deals are overdue as of 7/15 — including Flexential DEN12 ($550K, Hot), Warren AFB ($949K), Hall &amp; Evans ($196K), USAF F1 ($320K), UDR ($56K), and Interlock ($161K). Update close dates or disposition before next team meeting.</div>
   <div class="sec">Pipeline by Owner</div>
   <div class="chart-box" style="margin-bottom:20px">
     <div style="position:relative;height:150px"><canvas id="c-pip-owner"></canvas></div>
@@ -188,10 +188,10 @@ td.muted{color:#7A8BA0;font-size:11px;}
 
 <!-- BOOKINGS vs PLAN -->
 <div class="view" id="view-bookings">
-  <div class="win-box"><strong>Q2 CLOSED · BEAT PLAN:</strong> $2,322,324 booked vs $2,031,876 goal — +$290,448, 114%. June alone: $1,366,473 · 28 deals · Checkr SF $940K drove the month. YTD $5,127,047 — $1,624,789 remaining to FY goal. At $271K/mo avg H2, FY goal is in reach.</div>
+  <div class="win-box"><strong>YTD thru 7/14: $5,368,642 booked · $1,383,194 remaining to FY goal.</strong> June closed at $1,398,656 (full month, Dynamics verified) — best month of the year. July MTD $209,412 across 12 deals. At current pace ~$251K/mo avg needed for H2. Q3 target is $551K/mo — stay on it.</div>
   <div class="kpi-row k4">
-    <div class="tile tile-blue"><div class="t-lbl">YTD Booked · Jun 26</div><div class="t-val">$5.13M</div><div class="t-sub">158+ deals · Dynamics verified</div></div>
-    <div class="tile tile-win"><div class="t-lbl">Q2 Actual vs Goal</div><div class="t-val">+$290K</div><div class="t-sub">$2.32M booked · 114% of plan</div></div>
+    <div class="tile tile-blue"><div class="t-lbl">YTD Booked · Jul 14</div><div class="t-val">$5.37M</div><div class="t-sub">Dynamics verified</div></div>
+    <div class="tile tile-win"><div class="t-lbl">June Final (Full Month)</div><div class="t-val">$1.40M</div><div class="t-sub">28+ deals · Checkr SF $940K</div></div>
     <div class="tile tile-org"><div class="t-lbl">Q3 Goal</div><div class="t-val">$1.65M</div><div class="t-sub">$551K / mo · Jul–Sep</div></div>
     <div class="tile tile-blue-dk"><div class="t-lbl">Q4 Goal</div><div class="t-val">$1.70M</div><div class="t-sub">$565K / mo · Oct–Dec</div></div>
   </div>
@@ -206,14 +206,14 @@ td.muted{color:#7A8BA0;font-size:11px;}
       <div class="tbl-wrap">
         <table><thead><tr><th>Month</th><th style="text-align:right">Booked $</th><th style="text-align:right">Goal $</th><th style="text-align:right">Variance</th><th>Source</th></tr></thead>
         <tbody>
-          <tr><td><strong>Jan 2026</strong></td><td class="money">$1,426,142</td><td class="money muted">—</td><td class="money" style="color:#1A5C34">+$926K</td><td class="muted">Nicci verified</td></tr>
-          <tr><td><strong>Feb 2026</strong></td><td class="money">$1,120,114</td><td class="money muted">—</td><td class="money" style="color:#1A5C34">+$558K</td><td class="muted">Nicci verified</td></tr>
-          <tr><td><strong>Mar 2026</strong></td><td class="money">$258,467</td><td class="money muted">—</td><td class="money" style="color:#A84F10">−$304K</td><td class="muted">Nicci verified</td></tr>
+          <tr><td><strong>Jan 2026</strong></td><td class="money">$1,426,142</td><td class="money muted">—</td><td class="money" style="color:#1A5C34">+$863K</td><td class="muted">Nicci verified</td></tr>
+          <tr><td><strong>Feb 2026</strong></td><td class="money">$1,120,114</td><td class="money muted">—</td><td class="money" style="color:#1A5C34">+$557K</td><td class="muted">Nicci verified</td></tr>
+          <tr><td><strong>Mar 2026</strong></td><td class="money">$258,467</td><td class="money muted">—</td><td class="money" style="color:#A84F10">−$305K</td><td class="muted">Nicci verified</td></tr>
           <tr><td><strong>Apr 2026</strong></td><td class="money">$564,991</td><td class="money">$677,292</td><td class="money" style="color:#A84F10">−$112K</td><td class="muted">Nicci verified</td></tr>
           <tr><td><strong>May 2026</strong></td><td class="money">$390,860</td><td class="money">$677,292</td><td class="money" style="color:#A84F10">−$286K</td><td class="muted">Nicci verified</td></tr>
-          <tr class="yes-row"><td><strong>Jun 2026 ✓</strong></td><td class="money">$1,366,473</td><td class="money">$677,292</td><td class="money" style="color:#1A5C34">+$689K</td><td class="muted">Dynamics 6/26 · 28 deals · Checkr SF $940K</td></tr>
-          <tr style="background:#E3EDF9"><td><strong>YTD Total</strong></td><td class="money"><strong>$5,127,047</strong></td><td class="money muted">—</td><td class="money muted">—</td><td class="muted">Verified · 6/26</td></tr>
-          <tr><td class="muted">Jul 2026</td><td class="money muted">—</td><td class="money">$551,213</td><td class="money muted">—</td><td class="muted">Plan target</td></tr>
+          <tr class="yes-row"><td><strong>Jun 2026 ✓</strong></td><td class="money">$1,398,656</td><td class="money">$677,292</td><td class="money" style="color:#1A5C34">+$721K</td><td class="muted">Full month · Dynamics 7/15</td></tr>
+          <tr style="background:#E3EDF9"><td><strong>YTD thru Jun</strong></td><td class="money"><strong>$5,159,230</strong></td><td class="money muted">—</td><td class="money muted">—</td><td class="muted">Verified</td></tr>
+          <tr class="flag-row"><td><strong>Jul (thru 7/14)</strong></td><td class="money">$209,412</td><td class="money">$551,213</td><td class="money muted">MTD</td><td class="muted">Dynamics 7/15 · 12 deals</td></tr>
           <tr><td class="muted">Aug 2026</td><td class="money muted">—</td><td class="money">$551,213</td><td class="money muted">—</td><td class="muted">Plan target</td></tr>
           <tr><td class="muted">Sep 2026</td><td class="money muted">—</td><td class="money">$551,213</td><td class="money muted">—</td><td class="muted">Plan target</td></tr>
           <tr><td class="muted">Oct 2026</td><td class="money muted">—</td><td class="money">$565,444</td><td class="money muted">—</td><td class="muted">Plan target</td></tr>
@@ -224,31 +224,31 @@ td.muted{color:#7A8BA0;font-size:11px;}
       </div>
     </div>
     <div>
-      <div class="sec">Q2 Closed — Performance vs Plan</div>
+      <div class="sec">Q3 Pace — July MTD</div>
       <div style="background:#fff;border:0.5px solid #DDE3EC;border-radius:8px;padding:16px;margin-bottom:16px">
         <div class="prog-item">
-          <div class="prog-label"><strong>Q2 booked $2,322,324</strong><span>vs $2,031,876 goal · 114%</span></div>
-          <div class="prog-track"><div class="prog-fill" style="width:100%;background:#1A4D8F"></div></div>
+          <div class="prog-label"><strong>Jul MTD $209K (thru 7/14)</strong><span>vs $551K Q3 monthly goal</span></div>
+          <div class="prog-track"><div class="prog-fill" style="width:38%;background:#1A4D8F"></div></div>
         </div>
         <div class="prog-item" style="margin-top:12px">
-          <div class="prog-label"><strong>H2 needed to hit FY goal</strong><span>$1,624,789 · $271K/mo avg</span></div>
-          <div class="prog-track"><div class="prog-fill" style="width:49%;background:#E07020"></div></div>
+          <div class="prog-label"><strong>Remaining to FY goal</strong><span style="color:#A84F10">$1,383K · ~$251K/mo avg</span></div>
+          <div class="prog-track"><div class="prog-fill" style="width:20%;background:#E07020"></div></div>
         </div>
-        <div style="font-size:12px;color:#7A8BA0;margin-top:12px;line-height:1.7">H2 plan rate is $551–565K/mo. We need $271K/mo to hit FY goal. Bank the Q2 overrun — don't coast. Q3/Q4 targets stand.</div>
+        <div style="font-size:12px;color:#7A8BA0;margin-top:12px;line-height:1.7">Q3 plan is $551K/mo. We need $251K/mo avg to hit FY goal — well inside plan. Bank Q2's overrun and execute Q3/Q4 at target.</div>
       </div>
       <div style="background:#0F2F5A;border-radius:8px;padding:16px;margin-bottom:16px">
         <div style="font-size:9px;font-weight:700;color:#E07020;text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px">FY Goal Remaining</div>
-        <div style="font-size:24px;font-weight:700;color:#FFD966">$1,624,789</div>
-        <div style="font-size:11px;color:rgba(255,255,255,.65);margin-top:4px">6 months · $271K/mo avg needed · Plan asks $551–565K/mo</div>
+        <div style="font-size:24px;font-weight:700;color:#FFD966">$1,383,194</div>
+        <div style="font-size:11px;color:rgba(255,255,255,.65);margin-top:4px">5.5 months · $251K/mo avg needed · Plan asks $551–565K/mo</div>
       </div>
       <div class="sec">Quarterly Summary</div>
       <div class="tbl-wrap">
         <table><thead><tr><th>Quarter</th><th style="text-align:right">Booked</th><th style="text-align:right">Goal</th><th style="text-align:right">vs Plan</th></tr></thead>
         <tbody>
-          <tr class="yes-row"><td><strong>Q2 2026 ✓</strong></td><td class="money" style="color:#1A5C34">$2,322,324</td><td class="money">$2,031,876</td><td class="money" style="color:#1A5C34">+$290K</td></tr>
-          <tr><td>Q3 2026</td><td class="money muted">—</td><td class="money">$1,653,638</td><td class="money muted">—</td></tr>
+          <tr class="yes-row"><td><strong>Q2 2026 ✓</strong></td><td class="money" style="color:#1A5C34">$1,398,656</td><td class="money">$2,031,876</td><td class="money" style="color:#A84F10">−$633K</td></tr>
+          <tr class="flag-row"><td><strong>Q3 2026 (MTD)</strong></td><td class="money">$209,412</td><td class="money">$1,653,638</td><td class="money muted">In progress</td></tr>
           <tr><td>Q4 2026</td><td class="money muted">—</td><td class="money">$1,696,332</td><td class="money muted">—</td></tr>
-          <tr style="background:#E3EDF9"><td><strong>FY 2026</strong></td><td class="money"><strong>$5,127,047 YTD</strong></td><td class="money"><strong>$6,751,836</strong></td><td class="money" style="color:#A84F10">$1.62M to go</td></tr>
+          <tr style="background:#E3EDF9"><td><strong>FY 2026</strong></td><td class="money"><strong>$5,368,642 YTD</strong></td><td class="money"><strong>$6,751,836</strong></td><td class="money" style="color:#A84F10">$1.38M to go</td></tr>
         </tbody></table>
       </div>
     </div>
@@ -261,7 +261,7 @@ td.muted{color:#7A8BA0;font-size:11px;}
     <div class="tile tile-blue"><div class="t-lbl">Bids Submitted</div><div class="t-val">10</div><div class="t-sub">Mar 11 – Jun 11, 2026</div></div>
     <div class="tile tile-blue-dk"><div class="t-lbl">Largest Bid</div><div class="t-val">$7.1M</div><div class="t-sub">Denver Summit Stadium</div></div>
     <div class="tile tile-org"><div class="t-lbl">GH Phipps — 1 Week</div><div class="t-val">3 Bids</div><div class="t-sub">EGC · Pueblo Library · Mtn View</div></div>
-    <div class="tile tile-win"><div class="t-lbl">20/20 Meeting Jun 25 ✓</div><div class="t-val">59 Leads</div><div class="t-sub">Next: Jul 30 · 9:30 AM · KS Arvada</div></div>
+    <div class="tile tile-win"><div class="t-lbl">Next 20/20 Meeting</div><div class="t-val">Jul 30</div><div class="t-sub">9:30 AM · KS Arvada · Troy confirm w/ Jim</div></div>
   </div>
   <div class="warn"><strong>GH Phipps produced 3 bids in one week (Jun 5–9).</strong> Name this relationship at the meeting — it's the GC channel the construction lead list is supposed to feed.</div>
   <div class="sec">Bids Submitted — March 11 through June 11, 2026</div>
@@ -271,7 +271,7 @@ td.muted{color:#7A8BA0;font-size:11px;}
       <tr><td>Jun 9</td><td><strong>Mountain View 5/6 Elementary</strong></td><td>TBD</td><td>School AV</td><td>GH Phipps Wyoming</td><td><span class="badge b-sub">Submitted</span></td></tr>
       <tr><td>Jun 6</td><td><strong>EGC 14th Floor Wellness (DPS)</strong></td><td>TBD</td><td>Commercial AV</td><td>GH Phipps</td><td><span class="badge b-sub">Submitted</span></td></tr>
       <tr><td>Jun 6</td><td><strong>Rawlings Public Library — Pueblo</strong></td><td>TBD</td><td>Municipal AV · RFP</td><td>Direct · Bri Reyes</td><td><span class="badge b-sub">Submitted</span></td></tr>
-      <tr><td>Apr 8</td><td><strong>Warren AFB GBSD ITC</strong></td><td>$949K</td><td>Federal · military training</td><td>Hensel Phelps</td><td><span class="badge b-warm">Open pipeline</span></td></tr>
+      <tr><td>Apr 8</td><td><strong>Warren AFB GBSD ITC</strong></td><td>$949K</td><td>Federal · military training</td><td>Hensel Phelps</td><td><span class="badge b-warm">On hold · Sep 15</span></td></tr>
       <tr><td>Apr 9</td><td><strong>Aurora Animal Shelter</strong></td><td>$360K</td><td>Full AV · QSC/Crestron/Sonance</td><td>Wagner Electric</td><td><span class="badge b-flag">Winner unknown</span></td></tr>
       <tr><td>Apr</td><td><strong>Park County EOC — Fairplay</strong></td><td>$58K</td><td>Gov · command/control</td><td>Unknown</td><td><span class="badge b-warm">Open pipeline</span></td></tr>
       <tr><td>Mar 19</td><td><strong>Comcast 183 Inverness FL1</strong></td><td>TBD</td><td>Commercial AV</td><td>Comcast direct</td><td><span class="badge b-ok">Active relationship</span></td></tr>
@@ -331,18 +331,20 @@ function show(id,btn){
 const BLU='#1A4D8F',BLU2='#2468B8',ORG='#E07020',ORG2='#A84F10',DK='#0F2F5A',WIN='#1A5C34',GRD='rgba(0,0,0,0.07)',SL='#7A8BA0';
 const base={responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:GRD},ticks:{color:SL,font:{size:11}}},y:{grid:{color:GRD},ticks:{color:SL,font:{size:11}}}}};
 
+// Pace chart — Jan thru Jul MTD
 new Chart(document.getElementById('c-pace'),{type:'bar',data:{
-  labels:['Jan','Feb','Mar','Apr','May','Jun'],
+  labels:['Jan','Feb','Mar','Apr','May','Jun','Jul MTD'],
   datasets:[
-    {label:'Booked',data:[1426142,1120114,258467,564991,390860,1366473],backgroundColor:[BLU,BLU,BLU,BLU,BLU,WIN],borderRadius:4},
-    {label:'Goal',data:[563000,563000,563000,677292,677292,677292],backgroundColor:ORG+'88',borderRadius:4}
+    {label:'Booked',data:[1426142,1120114,258467,564991,390860,1398656,209412],backgroundColor:[BLU,BLU,BLU,BLU,BLU,WIN,BLU2],borderRadius:4},
+    {label:'Goal',data:[563000,563000,563000,677292,677292,677292,551213],backgroundColor:ORG+'88',borderRadius:4}
   ]},options:{...base,scales:{x:{grid:{color:GRD},ticks:{color:SL,font:{size:11}}},y:{grid:{color:GRD},ticks:{color:SL,font:{size:11},callback:v=>'$'+(v>=1000000?(v/1000000).toFixed(1)+'M':(v/1000).toFixed(0)+'K')}}}}
 });
 
+// Owner YTD chart — thru 7/14
 new Chart(document.getElementById('c-owner'),{type:'bar',data:{
   labels:['Troy','David','Jeff','Lance','Brandon','Korey','Lenny'],
-  datasets:[{data:[2657899,1842051,376402,150155,62147,41801,4740],backgroundColor:[BLU,ORG,BLU,BLU,BLU,BLU,BLU],borderRadius:4}]},
-  options:{...base,indexAxis:'y',scales:{x:{grid:{color:GRD},ticks:{color:SL,font:{size:11},callback:v=>'$'+(v/1000000).toFixed(2)+'M'}},y:{grid:{display:false},ticks:{color:SL,font:{size:11}}}}}
+  datasets:[{data:[2837962,1842051,424706,150155,62147,45079,4740],backgroundColor:[BLU,ORG,BLU,BLU,BLU,BLU,BLU],borderRadius:4}]},
+  options:{...base,indexAxis:'y',scales:{x:{grid:{color:GRD},ticks:{color:SL,font:{size:11},callback:v=>'$'+(v>=1000000?(v/1000000).toFixed(2)+'M':(v/1000).toFixed(0)+'K')}},y:{grid:{display:false},ticks:{color:SL,font:{size:11}}}}}
 });
 
 new Chart(document.getElementById('c-mix'),{type:'doughnut',data:{
@@ -353,14 +355,15 @@ new Chart(document.getElementById('c-mix'),{type:'doughnut',data:{
 
 new Chart(document.getElementById('c-pip-owner'),{type:'bar',data:{
   labels:['King, David','Orner, Troy','Meyer, Jeff'],
-  datasets:[{data:[9507670,2812163,418596],backgroundColor:[ORG,BLU,BLU2],borderRadius:4}]},
+  datasets:[{data:[8827622,2708090,598559],backgroundColor:[ORG,BLU,BLU2],borderRadius:4}]},
   options:{...base,indexAxis:'y',scales:{x:{grid:{color:GRD},ticks:{color:SL,font:{size:11},callback:v=>'$'+(v/1000000).toFixed(1)+'M'}},y:{grid:{display:false},ticks:{color:SL,font:{size:11}}}}}
 });
 
+// Full-year bookings vs plan — July now shows MTD actual
 new Chart(document.getElementById('c-bvp'),{type:'bar',data:{
   labels:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
   datasets:[
-    {label:'Booked',data:[1426142,1120114,258467,564991,390860,1366473,null,null,null,null,null,null],backgroundColor:[BLU,BLU,BLU,BLU,BLU,WIN,BLU,BLU,BLU,BLU,BLU,BLU],borderRadius:4},
+    {label:'Booked',data:[1426142,1120114,258467,564991,390860,1398656,209412,null,null,null,null,null],backgroundColor:[BLU,BLU,BLU,BLU,BLU,WIN,BLU2,BLU,BLU,BLU,BLU,BLU],borderRadius:4},
     {label:'Goal',data:[563000,563000,563000,677292,677292,677292,551213,551213,551213,565444,565444,565444],backgroundColor:ORG+'77',borderRadius:4}
   ]},options:{...base,scales:{x:{grid:{color:GRD},ticks:{color:SL,font:{size:11},autoSkip:false,maxRotation:0}},y:{grid:{color:GRD},ticks:{color:SL,font:{size:11},callback:v=>'$'+(v/1000).toFixed(0)+'K'}}}}
 });
@@ -377,28 +380,43 @@ new Chart(document.getElementById('c-lead-owner'),{type:'bar',data:{
   options:{...base,indexAxis:'y',scales:{x:{grid:{color:GRD},ticks:{color:SL,font:{size:11}}},y:{grid:{display:false},ticks:{color:SL,font:{size:10}}}}}
 });
 
-// Pipeline data
+// Pipeline data — Dynamics export 7/15/2026
 const pip=[
-  ['Denver Summit Stadium','David','$7.1M','Warm','08/31/26',false],
-  ['Warren AFB GBSD ITC','David','$949K','Warm','06/30/26',false],
+  ['Denver Summit Stadium Project','David','$7.1M','Warm','08/31/26',false],
+  ['Warren AFB GBSD ITC','David','$949K','Warm','06/30/26',true],
   ['BROE 250 Clayton St','Troy','$653K','Warm','08/06/26',false],
-  ['Flexential DEN12','David','$550K','Hot','05/08/26',true],
-  ['Peter Barton Lacrosse','Troy','$527K','Warm','07/28/26',false],
-  ['Aurora Animal Shelter','David','$360K','Warm','05/30/26',true],
-  ['USAF F1 Auditorium','Troy','$320K','Warm','06/24/26',false],
-  ['Action Center / Emory','Troy','$310K','Warm','07/22/26',false],
-  ['Comcast Advertising','David','$227K','Hot','05/06/26',true],
-  ['Northwestern Mutual','Troy','$152K','Warm','06/30/26',false],
-  ['Hall & Evans AV','Troy','$148K','Warm','06/30/26',false],
-  ['Boom Supersonic','Troy','$140K','Warm','06/23/26',false],
-  ['FCI Lifetime Fitness','Jeff','$140K','Warm','07/02/26',false],
-  ['Englewood ServiCenter','Troy','$139K','Warm','06/02/26',true],
-  ['Peterson SFB Conference','Jeff','$115K','Warm','09/29/26',false],
-  ['Yuma Pool Replacement','Troy','$88K','Warm','06/30/26',false],
-  ['Spectralink Conf Rm','Jeff','$75K','Warm','08/13/26',false],
-  ['Park County EOC','David','$58K','Warm','06/06/26',true],
-  ['DISH Glacier Lake','Troy','$58K','Warm','06/10/26',true],
-  ['Elevations CU Sound Masking','Jeff','$57K','Hot','12/31/26',false],
+  ['Flexential Denver 12','David','$550K','Hot','07/09/26',true],
+  ['Peter Barton Lacrosse Stadium','Troy','$527K','Warm','09/15/26',false],
+  ['United States Air Force - F1 Auditorium','Troy','$320K','Warm','06/24/26',true],
+  ['The Action Center - Emory Collective','Troy','$310K','Warm','07/22/26',false],
+  ['Fort Morgan Aquatics Building','Troy','$247K','Warm','07/21/26',false],
+  ['Hall & Evans AV - Conference Rooms','Troy','$196K','Warm','06/30/26',true],
+  ['Infleqtion Training and Conference Rooms','Jeff','$186K','Warm','08/27/26',false],
+  ['Bradnywine Behavioral Health Clinic','Troy','$167K','Warm','08/04/26',false],
+  ['Interlock Construction - Ross Univ Hills Library','Jeff','$161K','Warm','06/29/26',true],
+  ['Peterson Space Force Base Conf Upgrades','Jeff','$115K','Warm','09/29/26',false],
+  ['8th & Lincoln Project - Avalon','Troy','$99K','Warm','07/14/26',true],
+  ['Dish Network Glacier Lake Room','Troy','$58K','Warm','07/14/26',true],
+  ['Elevations Credit Union Sound Masking','Jeff','$57K','Hot','12/31/26',false],
+  ['UDR Project','David','$56K','Warm','05/14/26',true],
+  ['Comcast Plano - Training Room 592','David','$56K','Cold','10/02/26',false],
+  ['Lincoln Properties LL Conference Rm','David','$50K','Warm','07/31/26',false],
+  ['Fly By Ads Green Valley Ranch Golf Course','Jeff','$41K','Warm','07/30/26',false],
+  ['Checkr New Confirm Request','David','$40K','Warm','07/21/26',false],
+  ['Cole Taylor - Conference Room','Troy','$36K','Warm','08/11/26',false],
+  ['Colorado Credit Union - Conf Rooms','Troy','$34K','Warm','07/21/26',false],
+  ['Alpine Physicians 2 Conference RM','Jeff','$25K','Warm','09/30/26',false],
+  ['Guardian Angels Catholic Church','Troy','$17K','Warm','07/21/26',false],
+  ['Flexential ATL 5 Sound Masking','David','$15K','Warm','08/01/26',false],
+  ['Flexential Englewood Lobby Display','David','$15K','Cold','10/09/26',false],
+  ['Bruz Brewery - Terra Construction','Troy','$14K','Warm','07/09/26',true],
+  ['Wold Architects and Engineers','Troy','$14K','Warm','06/30/26',true],
+  ['Roth Living SLA','Jeff','$10K','Warm','08/31/26',false],
+  ['Beacon Properties - 1615 Platte','Troy','$6K','Warm','09/14/26',false],
+  ['Alterra Steamboat Audio Upgrades','David','$6K','Cold','08/25/26',false],
+  ['Roth Sheppard Architects/Techvana','Troy','$5K','Warm','08/04/26',false],
+  ['Montview Blvd Presbyterian Church','Troy','$5K','Warm','07/08/26',true],
+  ['Scout Clean Energy Conf RM Labor','Jeff','$4K','Warm','07/30/26',false],
 ];
 const tb=document.getElementById('pip-tbody');
 pip.forEach(([n,o,v,r,c,od],i)=>{
@@ -406,7 +424,7 @@ pip.forEach(([n,o,v,r,c,od],i)=>{
   tb.innerHTML+=`<tr class="${od?'flag-row':''}"><td class="muted">${i+1}</td><td><strong>${n}</strong></td><td>${o}</td><td class="money">${v}</td><td><span class="badge ${rb}">${r}</span></td><td class="${od?'':'muted'}" style="${od?'color:#A84F10;font-weight:700':''};font-size:11px">${c}${od?' ⚠':''}</td><td>${od?'<span class="badge b-flag">Overdue</span>':'<span class="badge b-ok">Active</span>'}</td></tr>`;
 });
 
-// 20/20 leads — [#, name, type, size, avOpp, source, keyContact, stage, isPursuit, isYES]
+// 20/20 leads — unchanged from Jun 26 build
 const l2020=[
   [1,'Douglas County Admin Offices','Public / Office','140,000 SF','Possible','Jim (Kentwood)','Kentwood (Jim\'s firm)','Under contract · bldg 10% occupied',false,false],
   [2,'Tallgrass HQ Expansion','Office / New build','+90K new (220K total)','YES','Jim (Kentwood)','Katie Foster (admin)','Davis Partnership won design; movers fall',false,true],
@@ -479,7 +497,6 @@ l2020.forEach(([num,name,type,size,avOpp,source,contact,stage,isPursuit,isYES])=
   ltb.innerHTML+=`<tr class="${rowClass}"><td class="muted">${num}</td><td><strong>${name}</strong></td><td class="muted">${type}</td><td class="muted" style="white-space:nowrap">${size}</td><td>${badge}</td><td class="muted">${source}</td><td style="font-size:11px">${contact}</td><td class="muted" style="font-size:11px">${stage}</td></tr>`;
 });
 
-// Construction CRM leads
 const leads=[
   ['Trevor Hartley','Manager, Preconstruction','thartley@bryanconstruction.com','Troy'],
   ['Keith Morse','Chief Estimator','kmorse@kapellagroup.com','Troy'],
