@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>King Systems — Sales Command Center 2026</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:Arial,sans-serif;background:#F2F4F7;color:#1A1A2E;}
+header{background:#0F2F5A;display:flex;align-items:stretch;justify-content:space-between;padding:0;}
+.brand{padding:14px 24px;}
+.brand-kicker{font-size:9px;font-weight:700;color:#E07020;letter-spacing:.12em;text-transform:uppercase;}
+.brand-name{font-family:Georgia,serif;font-size:20px;color:#fff;font-weight:700;line-height:1.1;}
+nav{display:flex;align-items:center;}
+nav button{background:none;border:none;color:rgba(255,255,255,.55);font-size:12px;font-weight:700;letter-spacing:.05em;padding:0 20px;height:100%;cursor:pointer;text-transform:uppercase;border-bottom:3px solid transparent;transition:all .15s;}
+nav button:hover{color:#fff;background:rgba(255,255,255,.06);}
+nav button.active{color:#FFD966;border-bottom-color:#E07020;}
+.updated{padding:14px 24px;color:rgba(255,255,255,.4);font-size:11px;align-self:center;}
+.view{display:none;padding:24px;max-width:1400px;margin:0 auto;}
+.view.active{display:block;}
+
+/* KPI TILES */
+.kpi-row{display:grid;gap:12px;margin-bottom:22px;}
+.k4{grid-template-columns:repeat(4,1fr);}
+.k3{grid-template-columns:repeat(3,1fr);}
+.k2{grid-template-columns:repeat(2,1fr);}
+.tile{border-radius:8px;padding:16px 18px;}
+.tile-blue{background:#1A4D8F;}
+.tile-blue2{background:#2468B8;}
+.tile-blue-dk{background:#0F2F5A;}
+.tile-org{background:#E07020;}
+.tile-org-dk{background:#A84F10;}
+.t-lbl{font-size:9px;font-weight:700;color:rgba(255,255,255,.7);letter-spacing:.1em;text-transform:uppercase;margin-bottom:7px;}
+.tile-org .t-lbl,.tile-org-dk .t-lbl{color:rgba(255,255,255,.8);}
+.t-val{font-size:26px;font-weight:700;color:#fff;line-height:1;}
+.tile-org .t-val,.tile-org-dk .t-val{color:#FFD966;}
+.t-sub{font-size:11px;color:rgba(255,255,255,.7);margin-top:4px;}
+
+/* SECTION */
+.sec{font-size:13px;font-weight:700;color:#0F2F5A;border-bottom:3px solid #E07020;padding-bottom:5px;margin:22px 0 12px;}
+
+/* TWO/THREE COL */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;}
+
+/* CHART BOXES */
+.chart-box{background:#fff;border:0.5px solid #DDE3EC;border-radius:8px;padding:14px;}
+
+/* TABLES */
+.tbl-wrap{background:#fff;border:0.5px solid #DDE3EC;border-radius:8px;overflow:hidden;margin-bottom:20px;}
+.tbl-head{background:#0F2F5A;color:#fff;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;}
+.tbl-head span{color:rgba(255,255,255,.5);font-weight:400;}
+table{width:100%;border-collapse:collapse;}
+thead th{background:#1A4D8F;color:#fff;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:8px 12px;text-align:left;}
+tbody tr{border-bottom:0.5px solid #EEF1F6;}
+tbody tr:hover{background:#F7F9FC;}
+tbody tr:last-child{border-bottom:none;}
+td{padding:7px 12px;vertical-align:middle;color:#1A1A2E;font-size:12px;}
+td.money{font-family:'Courier New',monospace;font-weight:700;text-align:right;}
+td.muted{color:#7A8BA0;font-size:11px;}
+.flag-row td{background:#FFF3DC!important;}
+.flag-row:hover td{background:#FFE8C0!important;}
+
+/* BADGES */
+.badge{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;letter-spacing:.03em;}
+.b-hot{background:#FFF0DC;color:#A84F10;}
+.b-warm{background:#E3EDF9;color:#1A4D8F;}
+.b-cold{background:#EEF1F6;color:#7A8BA0;}
+.b-flag{background:#FFE8C0;color:#A84F10;}
+.b-ok{background:#E6F4E6;color:#2E7D32;}
+.b-sub{background:#FFF0DC;color:#A84F10;}
+
+/* WARN BOX */
+.warn{background:#FFF3DC;border-left:4px solid #E07020;border-radius:0 8px 8px 0;padding:11px 15px;font-size:12px;color:#1A1A2E;margin-bottom:18px;line-height:1.6;}
+.warn strong{color:#A84F10;}
+
+/* PROGRESS */
+.prog-item{margin-bottom:10px;}
+.prog-label{display:flex;justify-content:space-between;font-size:12px;margin-bottom:3px;color:#1A1A2E;}
+.prog-label span{color:#7A8BA0;}
+.prog-track{height:8px;background:#EEF1F6;border-radius:4px;overflow:hidden;}
+.prog-fill{height:100%;border-radius:4px;}
+
+/* WATCH ITEMS */
+.watch-item{font-size:12px;padding:7px 0;border-bottom:0.5px solid #EEF1F6;line-height:1.5;}
+.watch-item:last-child{border-bottom:none;}
+.watch-item.crit{color:#A84F10;font-weight:700;}
+.watch-item.warn-item{color:#E07020;font-weight:700;}
+
+/* LEAD CARDS */
+.lead-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
+.lead-card{background:#fff;border:0.5px solid #DDE3EC;border-radius:6px;padding:10px 14px;}
+.lead-name{font-weight:700;font-size:12px;color:#0F2F5A;}
+.lead-title{font-size:11px;color:#7A8BA0;margin:2px 0;}
+.lead-email{font-size:11px;color:#1A4D8F;}
+.lead-owner{font-size:10px;color:#E07020;margin-top:4px;text-transform:uppercase;letter-spacing:.04em;font-weight:700;}
+
+/* LEGEND */
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:8px;font-size:12px;color:#7A8BA0;}
+.legend span{display:flex;align-items:center;gap:5px;}
+.legend .sq{width:10px;height:10px;border-radius:2px;flex-shrink:0;}
+
+/* STAT ROWS */
+.stat-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:0.5px solid #EEF1F6;}
+.stat-row:last-child{border-bottom:none;}
+.stat-lbl{font-size:12px;color:#7A8BA0;}
+.stat-val{font-size:13px;font-weight:700;color:#0F2F5A;}
+
+@media(max-width:900px){.k4,.k3{grid-template-columns:repeat(2,1fr);}.two-col,.three-col{grid-template-columns:1fr;}.lead-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="brand-kicker">King Systems LLC · Denver</div>
+    <div class="brand-name">Sales Command Center</div>
+  </div>
+  <nav>
+    <button class="active" onclick="show('dash',this)">Dashboard</button>
+    <button onclick="show('pipeline',this)">Pipeline</button>
+    <button onclick="show('bookings',this)">Bookings vs Plan</button>
+    <button onclick="show('bids',this)">Active Pursuits</button>
+    <button onclick="show('leads',this)">Leads</button>
+  </nav>
+  <div class="updated">Updated Jun 22, 2026</div>
+</header>
+
+<!-- ═══ DASHBOARD ═══ -->
+<div class="view active" id="view-dash">
+  <div class="kpi-row k4">
+    <div class="tile tile-blue"><div class="t-lbl">Booked YTD · Verified</div><div class="t-val">$4.85M</div><div class="t-sub">Jan–Jun 22 · Dynamics exports</div></div>
+    <div class="tile tile-blue2"><div class="t-lbl">Rest-of-Year Goal</div><div class="t-val">$1.91M</div><div class="t-sub">$551K/mo Q3 · $565K/mo Q4</div></div>
+    <div class="tile tile-blue-dk"><div class="t-lbl">Open Pipeline · Est.</div><div class="t-val">$12.9M</div><div class="t-sub">72 deals · Active team $12.7M</div></div>
+    <div class="tile tile-org-dk"><div class="t-lbl">⚠ Overdue Close Dates</div><div class="t-val">35</div><div class="t-sub">Needs update or disposition</div></div>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <div class="sec">2026 Bookings Pace</div>
+      <div class="chart-box">
+        <div class="legend"><span><span class="sq" style="background:#1A4D8F"></span>Booked</span><span><span class="sq" style="background:#E07020;opacity:.7"></span>Goal</span></div>
+        <div style="position:relative;height:210px"><canvas id="c-pace" role="img" aria-label="Monthly bookings vs goal 2026">Jan $1.51M Feb $1.14M Mar $284K Apr $573K May $391K Jun $113K</canvas></div>
+      </div>
+    </div>
+    <div>
+      <div class="sec">Won by Owner — 2026</div>
+      <div class="chart-box">
+        <div class="legend"><span><span class="sq" style="background:#1A4D8F"></span>$ won (partial deal-level set)</span></div>
+        <div style="position:relative;height:210px"><canvas id="c-owner" role="img" aria-label="Won by owner 2026">Troy $707K David $336K Lance $150K Jeff $136K Korey $39K</canvas></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="two-col" style="margin-top:4px">
+    <div>
+      <div class="sec">Deal Size Mix — Where the Dollars Are</div>
+      <div class="chart-box">
+        <div class="legend">
+          <span><span class="sq" style="background:#0F2F5A"></span>&lt;$5K</span>
+          <span><span class="sq" style="background:#1A4D8F"></span>$5–25K</span>
+          <span><span class="sq" style="background:#E07020"></span>$25–100K</span>
+          <span><span class="sq" style="background:#A84F10"></span>&gt;$100K</span>
+        </div>
+        <div style="position:relative;height:190px"><canvas id="c-mix" role="img" aria-label="Deal size mix donut">Deal size mix</canvas></div>
+      </div>
+    </div>
+    <div>
+      <div class="sec">Watch Items</div>
+      <div style="background:#fff;border:0.5px solid #DDE3EC;border-radius:8px;padding:14px;">
+        <div class="watch-item warn-item">★ Jun exceeded goal — $1.09M booked. YTD $4.85M. $1.91M to go.</div>
+        <div class="watch-item crit">⚠ Flexential DEN12 $550K — Hot, overdue May 8 — disposition today</div>
+        <div class="watch-item crit">⚠ Comcast Advertising $227K — Hot, overdue May 6 — disposition today</div>
+        <div class="watch-item warn-item">★ Norwood PK-12 $881K — RFIs Jun 15 · Bid Jun 23 2:00 PM</div>
+        <div class="watch-item warn-item">★ 20/20 Leads Mtg — Jun 25 · Acquilano's 1407 Larimer · Troy + Jeff</div>
+        <div class="watch-item">21 pipeline deals need reassignment (fired staff)</div>
+        <div class="watch-item">Troy: contact Ryan Balakas (Saunders) re: Cherry Creek West precon list</div>
+        <div class="watch-item">595 leads never contacted — construction list is first play</div>
+        <div class="watch-item">Losses logged 2026: Troy only — enforce Won/Lost in Dynamics</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PIPELINE ═══ -->
+<div class="view" id="view-pipeline">
+  <div class="kpi-row k4">
+    <div class="tile tile-blue"><div class="t-lbl">Total Pipeline</div><div class="t-val">$12.9M</div><div class="t-sub">72 open opportunities</div></div>
+    <div class="tile tile-blue2"><div class="t-lbl">Active Team Pipeline</div><div class="t-val">$12.7M</div><div class="t-sub">Excl. fired/gone staff</div></div>
+    <div class="tile tile-org"><div class="t-lbl">⚠ Needs Reassignment</div><div class="t-val">21 deals</div><div class="t-sub">Brandon · Lenny · Dakota</div></div>
+    <div class="tile tile-org-dk"><div class="t-lbl">⚠ Overdue Close Date</div><div class="t-val">35 deals</div><div class="t-sub">Update or disposition now</div></div>
+  </div>
+  <div class="warn"><strong>Action required:</strong> Flexential DEN12 ($550K) and Comcast Advertising ($227K) both rated Hot with May close dates passed. Disposition before the team meeting.</div>
+  <div class="sec">Pipeline by Owner</div>
+  <div class="chart-box" style="margin-bottom:20px">
+    <div style="position:relative;height:150px"><canvas id="c-pip-owner" role="img" aria-label="Pipeline by owner. David $9.5M Troy $2.8M Jeff $419K">Pipeline by owner</canvas></div>
+  </div>
+  <div class="sec">All Open Opportunities — Top 25</div>
+  <div class="tbl-wrap">
+    <div class="tbl-head">Open Pipeline · Sorted by Est. Revenue <span>Orange rows = overdue close date</span></div>
+    <table><thead><tr><th>#</th><th>Opportunity</th><th>Owner</th><th style="text-align:right">Est. Revenue</th><th>Rating</th><th>Close Date</th><th>Status</th></tr></thead>
+    <tbody id="pip-tbody"></tbody></table>
+  </div>
+</div>
+
+<!-- ═══ BOOKINGS vs PLAN ═══ -->
+<div class="view" id="view-bookings">
+  <div class="warn">Goals = Revised Profit Planner (DEN 2–4Q). FY goal $6,751,836 · Q2 $2,031,876 · Q3 $1,653,638 · Q4 $1,696,332.</div>
+  <div class="kpi-row k4">
+    <div class="tile tile-blue"><div class="t-lbl">YTD Booked</div><div class="t-val">$4.01M</div><div class="t-sub">Jan–Jun 11</div></div>
+    <div class="tile tile-blue2"><div class="t-lbl">Q2 Goal</div><div class="t-val">$2.03M</div><div class="t-sub">$677K / mo</div></div>
+    <div class="tile tile-org"><div class="t-lbl">Q3 Goal</div><div class="t-val">$1.65M</div><div class="t-sub">$551K / mo</div></div>
+    <div class="tile tile-blue-dk"><div class="t-lbl">Q4 Goal</div><div class="t-val">$1.70M</div><div class="t-sub">$565K / mo</div></div>
+  </div>
+  <div class="sec">Monthly Bookings vs Revised Plan — Full Year 2026</div>
+  <div class="chart-box" style="margin-bottom:20px">
+    <div class="legend"><span><span class="sq" style="background:#1A4D8F"></span>Booked</span><span><span class="sq" style="background:#E07020;opacity:.65"></span>Goal</span></div>
+    <div style="position:relative;height:260px"><canvas id="c-bvp" role="img" aria-label="Full year 2026 monthly bookings vs plan">2026 bookings vs plan</canvas></div>
+  </div>
+  <div class="two-col">
+    <div>
+      <div class="sec">Monthly Detail</div>
+      <div class="tbl-wrap">
+        <table><thead><tr><th>Month</th><th style="text-align:right">Booked $</th><th style="text-align:right">Goal $</th><th style="text-align:right">Variance</th><th>Source</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Jan 2026</strong></td><td class="money">$1,426,142</td><td class="money muted">—</td><td class="money" style="color:#2E7D32">+$944K</td><td class="muted">Tracker = Dynamics</td></tr>
+          <tr><td><strong>Feb 2026</strong></td><td class="money">$1,120,114</td><td class="money muted">—</td><td class="money" style="color:#2E7D32">+$578K</td><td class="muted">Tracker = Dynamics</td></tr>
+          <tr><td><strong>Mar 2026</strong></td><td class="money">$258,467</td><td class="money muted">—</td><td class="money" style="color:#A84F10">−$279K</td><td class="muted">Tracker = Dynamics</td></tr>
+          <tr><td><strong>Apr 2026</strong></td><td class="money">$564,991</td><td class="money">$677,292</td><td class="money" style="color:#A84F10">−$104K</td><td class="muted">Tracker = Dynamics</td></tr>
+          <tr><td><strong>May 2026</strong></td><td class="money">$390,860</td><td class="money">$677,292</td><td class="money" style="color:#A84F10">−$286K</td><td class="muted">Dynamics 6/11 · 31 deals</td></tr>
+          <tr><td><strong>Jun 2026 (thru 6/22)</strong></td><td class="money">$1,085,140</td><td class="money">$677,292</td><td class="money" style="color:#2E7D32">+$408K</td><td class="muted">Dynamics 6/22 · incl. Checkr SF $940K</td></tr>
+          <tr style="background:#E3EDF9"><td><strong>YTD Total</strong></td><td class="money"><strong>$4,845,715</strong></td><td class="money muted">—</td><td class="money muted">—</td><td class="muted">Verified</td></tr>
+          <tr><td class="muted">Jul 2026</td><td class="money muted">—</td><td class="money">$551,213</td><td class="money muted">—</td><td class="muted">Plan target</td></tr>
+          <tr><td class="muted">Aug 2026</td><td class="money muted">—</td><td class="money">$551,213</td><td class="money muted">—</td><td class="muted">Plan target</td></tr>
+          <tr><td class="muted">Sep 2026</td><td class="money muted">—</td><td class="money">$551,213</td><td class="money muted">—</td><td class="muted">Plan target</td></tr>
+          <tr><td class="muted">Oct 2026</td><td class="money muted">—</td><td class="money">$565,444</td><td class="money muted">—</td><td class="muted">Plan target</td></tr>
+          <tr><td class="muted">Nov 2026</td><td class="money muted">—</td><td class="money">$565,444</td><td class="money muted">—</td><td class="muted">Plan target</td></tr>
+          <tr><td class="muted">Dec 2026</td><td class="money muted">—</td><td class="money">$565,444</td><td class="money muted">—</td><td class="muted">Plan target</td></tr>
+          <tr style="background:#0F2F5A"><td style="color:#FFD966;font-weight:700">FY 2026 Goal</td><td class="money" style="color:#FFD966;font-weight:700">$6,751,836</td><td class="money muted" style="color:rgba(255,255,255,.5)">—</td><td class="money muted" style="color:rgba(255,255,255,.5)">—</td><td class="muted" style="color:rgba(255,255,255,.4)">Revised Profit Planner</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+    <div>
+      <div class="sec">Run Rate vs Gap</div>
+      <div style="background:#fff;border:0.5px solid #DDE3EC;border-radius:8px;padding:16px;margin-bottom:16px">
+        <div class="prog-item">
+          <div class="prog-label"><strong>Mar–May avg $416K/mo</strong><span>vs $677K Q2 goal</span></div>
+          <div class="prog-track"><div class="prog-fill" style="width:61%;background:#1A4D8F"></div></div>
+        </div>
+        <div class="prog-item" style="margin-top:12px">
+          <div class="prog-label"><strong>Gap to Q2 plan</strong><span style="color:#A84F10">≈ $261K/mo</span></div>
+          <div class="prog-track"><div class="prog-fill" style="width:39%;background:#E07020"></div></div>
+        </div>
+        <div style="font-size:12px;color:#7A8BA0;margin-top:12px;line-height:1.7">One added $25–60K deal per week closes this gap. Not a transformation — execution.</div>
+      </div>
+      
+      <div class="sec" style="margin-top:20px">Quarterly Goals</div>
+      <div class="tbl-wrap">
+        <table><thead><tr><th>Quarter</th><th style="text-align:right">Goal</th><th style="text-align:right">Monthly Avg</th></tr></thead>
+        <tbody>
+          <tr><td>Q2 2026</td><td class="money">$2,031,876</td><td class="money">$677K</td></tr>
+          <tr><td>Q3 2026</td><td class="money">$1,653,638</td><td class="money">$551K</td></tr>
+          <tr><td>Q4 2026</td><td class="money">$1,696,332</td><td class="money">$565K</td></tr>
+          <tr style="background:#E3EDF9"><td><strong>FY 2026</strong></td><td class="money"><strong>$6,751,836</strong></td><td class="money muted">—</td><td>—</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ ACTIVE PURSUITS ═══ -->
+<div class="view" id="view-bids">
+  <div class="kpi-row k4">
+    <div class="tile tile-blue"><div class="t-lbl">Bids Submitted</div><div class="t-val">10</div><div class="t-sub">Mar 11 – Jun 11, 2026</div></div>
+    <div class="tile tile-blue-dk"><div class="t-lbl">Largest Bid</div><div class="t-val">$7.1M</div><div class="t-sub">Denver Summit Stadium</div></div>
+    <div class="tile tile-org"><div class="t-lbl">GH Phipps — 1 Week</div><div class="t-val">3 Bids</div><div class="t-sub">EGC · Pueblo Library · Mtn View</div></div>
+    <div class="tile tile-org-dk"><div class="t-lbl">20/20 Targets</div><div class="t-val">7 Projects</div><div class="t-sub">Meeting Jun 25 · Acquilano's</div></div>
+  </div>
+  <div class="warn"><strong>GH Phipps produced 3 bids in one week (Jun 5–9).</strong> Name this relationship at the meeting — it's the GC channel the construction lead list is supposed to feed.</div>
+  <div class="sec">Bids Submitted — March 11 through June 11, 2026</div>
+  <div class="tbl-wrap">
+    <table><thead><tr><th>Date</th><th>Project</th><th>Est. Value</th><th>Type</th><th>GC / Owner</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>Jun 9</td><td><strong>Mountain View 5/6 Elementary</strong></td><td>TBD</td><td>School AV</td><td>GH Phipps Wyoming</td><td><span class="badge b-sub">Submitted</span></td></tr>
+      <tr><td>Jun 6</td><td><strong>EGC 14th Floor Wellness (DPS)</strong></td><td>TBD</td><td>Commercial AV</td><td>GH Phipps</td><td><span class="badge b-sub">Submitted</span></td></tr>
+      <tr><td>Jun 6</td><td><strong>Rawlings Public Library — Pueblo</strong></td><td>TBD</td><td>Municipal AV · RFP</td><td>Direct · Bri Reyes</td><td><span class="badge b-sub">Submitted</span></td></tr>
+      <tr><td>Apr 8</td><td><strong>Warren AFB GBSD ITC</strong></td><td>$949K</td><td>Federal · military training</td><td>Hensel Phelps</td><td><span class="badge b-warm">Open pipeline</span></td></tr>
+      <tr><td>Apr 9</td><td><strong>Aurora Animal Shelter</strong></td><td>$360K</td><td>Full AV · QSC/Crestron/Sonance</td><td>Unknown GC</td><td><span class="badge b-flag">Winner unknown</span></td></tr>
+      <tr><td>Apr</td><td><strong>Park County EOC — Fairplay</strong></td><td>$58K</td><td>Gov · command/control</td><td>Unknown</td><td><span class="badge b-warm">Open pipeline</span></td></tr>
+      <tr><td>Mar 19</td><td><strong>Comcast 183 Inverness FL1</strong></td><td>TBD</td><td>Commercial AV</td><td>Comcast direct</td><td><span class="badge b-ok">Active relationship</span></td></tr>
+      <tr><td>Mar 17</td><td><strong>Excalibur Classical Academy</strong></td><td>TBD</td><td>Budgetary AV</td><td>Avalon Communications</td><td><span class="badge b-flag">Needs disposition</span></td></tr>
+      <tr><td>Mar 10</td><td><strong>Denver Summit Stadium</strong></td><td>$7.1M</td><td>Stadium AV · suites/bowl</td><td>Mortenson (prequalified)</td><td><span class="badge b-warm">Open · Aug 31</span></td></tr>
+      <tr><td>Pre-Mar</td><td><strong>Cutter Security / Ferrari Storage</strong></td><td>TBD</td><td>Security / AV</td><td>Private</td><td><span class="badge b-cold">Lost</span></td></tr>
+    </tbody></table>
+  </div>
+  <div class="sec" style="margin-top:4px">20/20 Leads Group — Targets for June 25</div>
+  <div class="warn"><strong>Don (FitzMartin)</strong> has used KS for pricing without awarding. Lead with DBE + CMMC Level 1, not price. <strong>Troy owns Don. Jeff takes Acquilano.</strong></div>
+  <div class="tbl-wrap">
+    <table><thead><tr><th>Target</th><th>Scope</th><th>KS Owner</th><th>Key Contact</th><th>Action Before Jun 25</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Denver Summit Stadium</strong></td><td>$7.1M · NWSL · opens 2028</td><td>David</td><td>Mortenson precon</td><td>Lead with this — most compelling</td></tr>
+      <tr><td><strong>SCIF / Buckley SFB</strong></td><td>~18 acres · secure AV/LV</td><td>Troy</td><td>Don FitzMartin</td><td>Lead DBE + CMMC, not price</td></tr>
+      <tr><td><strong>1670 Broadway</strong></td><td>HDR + HUD · large floor blocks</td><td>Troy</td><td>Don FitzMartin</td><td>Get his read on turnover timeline</td></tr>
+      <tr><td><strong>Dream Chaser / Sierra Space</strong></td><td>Aerospace · critical environment</td><td>Troy</td><td>Don FitzMartin</td><td>Verify involvement first</td></tr>
+      <tr><td><strong>Red Bull ~45K SF (Majestic)</strong></td><td>Experiential · AV · signage</td><td>Jeff</td><td>Melissa Marlow, CEO Acquilano</td><td>Reopen warmly — years since contact</td></tr>
+      <tr><td><strong>Compassion International (COS)</strong></td><td>Office + broadcast / media</td><td>Jeff</td><td>Acquilano team</td><td>Verify Acquilano involvement first</td></tr>
+      <tr class="flag-row"><td><strong style="color:#A84F10">Cherry Creek West ⚠</strong></td><td>Mixed-use · 8-story office · 2029</td><td>Troy</td><td>Ryan Balakas, Saunders VP/GM</td><td style="color:#A84F10;font-weight:700">Contact Balakas re: precon list NOW</td></tr>
+    </tbody></table>
+  </div>
+</div>
+
+<!-- ═══ LEADS ═══ -->
+<div class="view" id="view-leads">
+  <div class="kpi-row k4">
+    <div class="tile tile-blue"><div class="t-lbl">Total Leads in CRM</div><div class="t-val">634</div><div class="t-sub">In Dynamics since 2021</div></div>
+    <div class="tile tile-org-dk"><div class="t-lbl">Never Contacted</div><div class="t-val">595</div><div class="t-sub">94% — Status = New</div></div>
+    <div class="tile tile-blue2"><div class="t-lbl">Qualified</div><div class="t-val">35</div><div class="t-sub">5.5% past first contact</div></div>
+    <div class="tile tile-org"><div class="t-lbl">⚠ Sami's Leads</div><div class="t-val">46</div><div class="t-sub">Fired — reassign Troy / Jeff</div></div>
+  </div>
+  <div class="warn"><strong>The construction list is already built.</strong> 99 untouched contacts — VPs of PreCon, Chief Estimators, Project Directors at Bryan, DPR, Weitz, Sun, Melton, ZAPECS, Flintco and others. All in Troy's name. Call, don't email.</div>
+  <div class="two-col">
+    <div>
+      <div class="sec">Untouched Leads by Industry</div>
+      <div class="chart-box">
+        <div class="legend"><span><span class="sq" style="background:#1A4D8F"></span>Count</span><span><span class="sq" style="background:#E07020"></span>Priority</span></div>
+        <div style="position:relative;height:230px"><canvas id="c-industry" role="img" aria-label="Untouched leads by industry. Construction 99 dominates">Leads by industry</canvas></div>
+      </div>
+    </div>
+    <div>
+      <div class="sec">Untouched Leads by Owner</div>
+      <div class="chart-box">
+        <div class="legend"><span><span class="sq" style="background:#1A4D8F"></span>Active owner</span><span><span class="sq" style="background:#E07020"></span>Reassign needed</span></div>
+        <div style="position:relative;height:230px"><canvas id="c-lead-owner" role="img" aria-label="Untouched leads by owner">Leads by owner</canvas></div>
+      </div>
+    </div>
+  </div>
+  <div class="sec">Construction Contacts — 99 Untouched (first 30 shown)</div>
+  <div class="lead-grid" id="lead-grid"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+function show(id,btn){
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+  document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
+  document.getElementById('view-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+const BLU='#1A4D8F',BLU2='#2468B8',ORG='#E07020',ORG2='#A84F10',DK='#0F2F5A',GRD='rgba(0,0,0,0.07)',SL='#7A8BA0';
+const base={responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:GRD},ticks:{color:SL,font:{size:11}}},y:{grid:{color:GRD},ticks:{color:SL,font:{size:11}}}}};
+
+new Chart(document.getElementById('c-pace'),{type:'bar',data:{
+  labels:['Jan','Feb','Mar','Apr','May','Jun'],
+  datasets:[
+    {label:'Booked',data:[1507097,1140901,284260,573010,390860,113497],backgroundColor:BLU,borderRadius:4},
+    {label:'Goal',data:[563000,563000,563000,677292,677292,677292],backgroundColor:ORG+'88',borderRadius:4}
+  ]},options:{...base,scales:{x:{grid:{color:GRD},ticks:{color:SL,font:{size:11}}},y:{grid:{color:GRD},ticks:{color:SL,font:{size:11},callback:v=>'$'+(v>=1000000?(v/1000000).toFixed(1)+'M':(v/1000).toFixed(0)+'K')}}}}
+});
+
+new Chart(document.getElementById('c-owner'),{type:'bar',data:{
+  labels:['Troy','David','Jeff','Lance','Korey'],
+  datasets:[{data:[2416790,1793681,376402,150155,41801],backgroundColor:[BLU,ORG,BLU,BLU,BLU],borderRadius:4}]},
+  options:{...base,indexAxis:'y',scales:{x:{grid:{color:GRD},ticks:{color:SL,font:{size:11},callback:v=>'$'+(v/1000).toFixed(0)+'K'}},y:{grid:{display:false},ticks:{color:SL,font:{size:11}}}}}
+});
+
+new Chart(document.getElementById('c-mix'),{type:'doughnut',data:{
+  labels:['<$5K','$5–25K','$25–100K','>$100K'],
+  datasets:[{data:[185856,403046,906019,3350794],backgroundColor:[DK,BLU,ORG,ORG2],borderWidth:3,borderColor:'#fff'}]},
+  options:{responsive:true,maintainAspectRatio:false,cutout:'62%',plugins:{legend:{display:false}},layout:{padding:10}}
+});
+
+new Chart(document.getElementById('c-pip-owner'),{type:'bar',data:{
+  labels:['King, David','Orner, Troy','Meyer, Jeff'],
+  datasets:[{data:[9507670,2812163,418596],backgroundColor:[ORG,BLU,BLU2],borderRadius:4}]},
+  options:{...base,indexAxis:'y',scales:{x:{grid:{color:GRD},ticks:{color:SL,font:{size:11},callback:v=>'$'+(v/1000000).toFixed(1)+'M'}},y:{grid:{display:false},ticks:{color:SL,font:{size:11}}}}}
+});
+
+new Chart(document.getElementById('c-bvp'),{type:'bar',data:{
+  labels:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+  datasets:[
+    {label:'Booked',data:[1426142,1120114,258467,564991,390860,1085140,null,null,null,null,null,null],backgroundColor:BLU,borderRadius:4},
+    {label:'Goal',data:[563000,563000,563000,677292,677292,677292,551213,551213,551213,565444,565444,565444],backgroundColor:ORG+'77',borderRadius:4}
+  ]},options:{...base,scales:{x:{grid:{color:GRD},ticks:{color:SL,font:{size:11},autoSkip:false,maxRotation:0}},y:{grid:{color:GRD},ticks:{color:SL,font:{size:11},callback:v=>'$'+(v/1000).toFixed(0)+'K'}}}}
+});
+
+new Chart(document.getElementById('c-industry'),{type:'bar',data:{
+  labels:['Construction','SMB','Legal','Enterprise','Other'],
+  datasets:[{data:[99,8,6,3,9],backgroundColor:[ORG,BLU,BLU,BLU,BLU],borderRadius:4}]},
+  options:{...base,indexAxis:'y',scales:{x:{grid:{color:GRD},ticks:{color:SL,font:{size:11}}},y:{grid:{display:false},ticks:{color:SL,font:{size:11}}}}}
+});
+
+new Chart(document.getElementById('c-lead-owner'),{type:'bar',data:{
+  labels:['David (429)','Troy (112)','Sami – reassign (46)','Jeff (4)'],
+  datasets:[{data:[429,112,46,4],backgroundColor:[BLU,BLU,ORG,BLU],borderRadius:4}]},
+  options:{...base,indexAxis:'y',scales:{x:{grid:{color:GRD},ticks:{color:SL,font:{size:11}}},y:{grid:{display:false},ticks:{color:SL,font:{size:10}}}}}
+});
+
+const pip=[
+  ['Denver Summit Stadium','David','$7.1M','Warm','08/31/26',false],
+  ['Warren AFB GBSD ITC','David','$949K','Warm','06/30/26',false],
+  ['BROE 250 Clayton St','Troy','$653K','Warm','08/06/26',false],
+  ['Flexential DEN12','David','$550K','Hot','05/08/26',true],
+  ['Peter Barton Lacrosse','Troy','$527K','Warm','07/28/26',false],
+  ['Aurora Animal Shelter','David','$360K','Warm','05/30/26',true],
+  ['USAF F1 Auditorium','Troy','$320K','Warm','06/24/26',false],
+  ['Action Center / Emory','Troy','$310K','Warm','07/22/26',false],
+  ['Comcast Advertising','David','$227K','Hot','05/06/26',true],
+  ['Northwestern Mutual','Troy','$152K','Warm','06/30/26',false],
+  ['Hall & Evans AV','Troy','$148K','Warm','06/30/26',false],
+  ['Boom Supersonic','Troy','$140K','Warm','06/23/26',false],
+  ['FCI Lifetime Fitness','Jeff','$140K','Warm','07/02/26',false],
+  ['Englewood ServiCenter','Troy','$139K','Warm','06/02/26',true],
+  ['Peterson SFB Conference','Jeff','$115K','Warm','09/29/26',false],
+  ['Yuma Pool Replacement','Troy','$88K','Warm','06/30/26',false],
+  ['Spectralink Conf Rm','Jeff','$75K','Warm','08/13/26',false],
+  ['Park County EOC','David','$58K','Warm','06/06/26',true],
+  ['DISH Glacier Lake','Troy','$58K','Warm','06/10/26',true],
+  ['Elevations CU Sound Masking','Jeff','$57K','Hot','12/31/26',false],
+];
+const tb=document.getElementById('pip-tbody');
+pip.forEach(([n,o,v,r,c,od],i)=>{
+  const rb=r==='Hot'?'b-hot':r==='Warm'?'b-warm':'b-cold';
+  tb.innerHTML+=`<tr class="${od?'flag-row':''}">
+    <td class="muted">${i+1}</td><td><strong>${n}</strong></td><td>${o}</td>
+    <td class="money">${v}</td>
+    <td><span class="badge ${rb}">${r}</span></td>
+    <td class="${od?'':'muted'}" style="${od?'color:#A84F10;font-weight:700':''}; font-size:11px">${c}${od?' ⚠':''}</td>
+    <td>${od?'<span class="badge b-flag">Overdue</span>':'<span class="badge b-ok">Active</span>'}</td>
+  </tr>`;
+});
+
+const leads=[
+  ['Trevor Hartley','Manager, Preconstruction','thartley@bryanconstruction.com','Troy'],
+  ['Keith Morse','Chief Estimator','kmorse@kapellagroup.com','Troy'],
+  ['Darin Hendrixson','Commercial Project Developer','dhendrixson@meltondb.com','Troy'],
+  ['Phillip Blakeman','Manager, Preconstruction','blakemanp@dpr.com','Troy'],
+  ['Tyler Clements','Senior Project Manager','clementst@dpr.com','Troy'],
+  ['Mark Sparks','Sr. Manager, Preconstruction','mark.sparks@weitz.com','Troy'],
+  ['Laura Eathorne','VP and General Manager','laura.eathorne@weitz.com','Troy'],
+  ['Ellis Burge','Manager, Preconstruction','ellis.burge@weitz.com','Troy'],
+  ['Scott Solem','VP, PreConstruction','scotts@sunconstruction.com','Troy'],
+  ['Blake Gudahl','Construction Estimator','blakeg@sunconstruction.com','Troy'],
+  ['JW Stamison','VP, Area & Manager','jw.stamison@flintco.com','Troy'],
+  ['Dennis Wolfe','VP, Operations','dwolfe@markyoungconstruction.com','Troy'],
+  ['Nicholas Rosenbeck','PreCon Manager','nrosenbeck@markyoungconstruction.com','Troy'],
+  ['Taylor Cable','Project Director','cablet@zapecs.com','Troy'],
+  ['Evan Anundsen','Project Director','anundsene@zapecs.com','Troy'],
+  ['Fritz Miller','Senior Project Manager','millerf@zapecs.com','Troy'],
+  ['Tom Bolda','Manager, Preconstruction','tbolda@mtechg.com','Troy'],
+  ['Mark McKinney','Vice President','mmckinney@mtechg.com','Troy'],
+  ['Kevin Blair','Chief Executive Officer','kblair@newground.com','Troy'],
+  ['Bradley Ritner','Design Director, Retail','britner@newground.com','Troy'],
+];
+const lg=document.getElementById('lead-grid');
+leads.forEach(([name,title,email,owner])=>{
+  lg.innerHTML+=`<div class="lead-card"><div class="lead-name">${name}</div><div class="lead-title">${title}</div><div class="lead-email">${email}</div><div class="lead-owner">Owner: ${owner}</div></div>`;
+});
+</script>
+</body>
+</html>
